@@ -1,12 +1,16 @@
 import React from 'react'
 import styles from "./Register.module.scss"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+//Font Awesome:
 
 
 
 export const Register = () => {
+
+
   return (
-    <div className="base-container">
+    <article className="base-container">
       <div className="header">Sign Up</div>
       <div className="content">
         <div className="form">
@@ -28,8 +32,9 @@ export const Register = () => {
         </div>
         <p>Already have an account? <a>Login</a></p>
         <p>or sign in with</p>
+       <i className="fab "></i><i className="fab fa-twitter"></i><i className="fab fa-google"></i>
       </div>
-    </div>
+    </article>
   )
 }
 
