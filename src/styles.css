@@ -4,17 +4,19 @@
 * {
   box-sizing: border-box;
   font-family: Nunito;
-  padding: 5px;
+  padding: 0px;
   margin: auto;
 }
 
 body {
-  max-width: 90%;
+  background-color: #FFFFFF;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Commissioner;
   text-align: center;
+  color: #000000;
+  padding: 10px;
 }
 
 img {
@@ -76,4 +78,8 @@ input {
 nav {
   display: flex;
   z-index: 1;
+}
+
+a {
+  text-decoration: none;
 }
