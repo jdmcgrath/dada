@@ -3,7 +3,9 @@ import AddChick from "./addChick/AddChick"
 export const App = () => {
   return (
     <>
-      <AddChick />
+        <h1>Dada</h1>
+        {/* <AddChick />
+        <Categories /> */}
     </>
   ) 
 }
