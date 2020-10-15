@@ -1,4 +1,4 @@
-const cards = [
+const cardsArr = [
     {
         "title":"Activity Ideas",
         "image":"https://via.placeholder.com/150",
@@ -22,4 +22,4 @@ const cards = [
 
 ]
 
-export default cards;
+export default cardsArr;
