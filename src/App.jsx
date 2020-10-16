@@ -4,6 +4,7 @@ import Categories from "./components/Categories/Categories"
 export const App = () => {
   return (
     <>
+        <h1>Dada</h1>
         <Categories />
     </>
   )
