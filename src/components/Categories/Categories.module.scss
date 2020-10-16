@@ -2,38 +2,37 @@
 div{
     width: 80vw;
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 50px;
 h1{
     font-size: 24px;
 }
 
-.catContainer{
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 20px;
-    
-    .card{
-        height: 50%;
-        margin: auto;
-        flex: 0 0 50%;
-        padding: 10px;
-        padding-bottom: 20px;
-        position: relative;
-        
-        a{
-            h2{
-                font-size: 14px;
-                text-align: center;
-                position: absolute;
-                left: 20px;
-                top: 15px;
-                z-index: 1;
-                padding: 0;
-            }
+    .catContainer{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: $colourTwo;
+        border-radius: 20px;
+        padding-top:20px;
 
-            img{
-                border-radius:5px;
-            }
+        .card{
+            height: 50%;
+            margin: auto;
+            flex: 0 0 50%;
+            padding: 10px;
+            padding-bottom: 30px;
+            position: relative;
+
+            a{
+                h2{
+                    font-size: 14px;
+                    text-align: center;
+                    color: $fontColour;
+                    position: absolute;
+                    left: 20px;
+                    top: 15px;
+                    z-index: 1;
+                    padding: 0;
+                }
 
             p{
                 color: $tertiaryColor;
@@ -43,5 +42,4 @@ h1{
             }
         }
     }
-}
 }
