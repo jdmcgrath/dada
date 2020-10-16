@@ -1,0 +1,41 @@
+div {
+  width: 80vw;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+div h1 {
+  font-size: 24px;
+}
+div .catContainer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+}
+div .catContainer .card {
+  height: 50%;
+  margin: auto;
+  flex: 0 0 50%;
+  padding: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+div .catContainer .card a h2 {
+  font-size: 14px;
+  text-align: center;
+  color: #000000;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  z-index: 1;
+  padding: 0;
+}
+div .catContainer .card a img {
+  border-radius: 5px;
+}
+div .catContainer .card a p {
+  color: #000000;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.6em;
+}
