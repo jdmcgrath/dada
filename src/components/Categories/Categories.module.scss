@@ -34,18 +34,11 @@ h1{
                     padding: 0;
                 }
 
-                img{
-                    border-radius:5px;
-                }
-
-                p{
-                    color: $fontColour;
-                    font-size: 13px;
-                    font-weight: bold;
-                    line-height: 1.6em;
-                    height:20px;
-
-                }
+            p{
+                color: $tertiaryColor;
+                font-size: 13px;
+                font-weight: bold;
+                line-height: 1.6em;
             }
         }
     }
