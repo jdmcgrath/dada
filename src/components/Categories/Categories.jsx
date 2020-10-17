@@ -15,7 +15,7 @@ const Categories = () => {
                     <section className={styles.card}>
                         <a href="https://github.com/nology-tech/dada">
                             <h2>{card.title}</h2>
-                            <img src={card.image} alt="an image"/>
+                            <img src={card.image} alt="added to allow build to happen"/>
                             <p>{card.info}</p>
                         </a>
                     </section>
