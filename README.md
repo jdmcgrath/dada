@@ -1,3 +1,5 @@
+## A project for "Dada!" built by _nology students from the Mariana intake.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
