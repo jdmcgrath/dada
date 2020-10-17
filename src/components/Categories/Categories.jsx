@@ -13,7 +13,7 @@ const Categories = () => {
             {cardsArr.map((card) => {
                 return (
                     <section className={styles.card}>
-                        <a href="">
+                        <a href="#">
                             <h2>{card.title}</h2>
                             <img src={card.image}/>
                             <p>{card.info}</p>
