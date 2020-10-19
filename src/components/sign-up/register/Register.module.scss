@@ -4,124 +4,95 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-.pageContainer{
+
+body {
+    background-color: white;
+}
+
+.baseContainer {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 5px;
-    width: 80vw;
-    height: 100vh;
-    margin: 0 auto;
-    .header{
+  
+    .header {
+      font-size: 24px;
+      font-family: "Open Sans", sans-serif;
+      padding-top: 10px;
+      text-align: center;
+    }
+  
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding-top: 0px;
+      .terms {
+          font-size: 11px;
+          padding: 20px 0px;
+          text-align: center;
+      }
+      .orSignIn {
+        font-size: 16px;
+        padding: 20px 0px;
+        text-align: center;
+      }
+      .form {
+        margin-top: 2em;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        width: 100%;
-        flex-direction: column;
-        padding-top: 10vh;
-        h1 {
-            font-size: 1.4rem;
-            // margin-bottom: 10px;
-        }
-        img{
-            margin: 3vh;
-            border: 1px solid gray;
-            border-radius: 50%;
-            height: 130px;
-            width: 130px;
-            // margin-top: 3vh;
-        }
-    }
-    .form{
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-        input {
-            margin: 2.3vh 0px;
-            padding-left: 15px;
+        padding-top: 0px;
+
+        .formGroup {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: fit-content;
+          padding-top: 10px;
+          label {
+            font-size: 20px;
+          }
+          input {
+            margin-top: 6px;
+            min-width: 18em;
+            height: 37px;
+            padding: 0px 10px;
+            font-size: 16px;
+            font-family: "Open Sans", sans-serif;
+            background-color: none;
+            border: solid 1px black;
+            border-radius: 4px;
+            margin-bottom: 0px;
+            transition: all 250ms ease-in-out;
             width: 100%;
-            height: 7vh;
-            border-radius: 5px;
-            border: 1px solid gray;
-            color: black;
-            font-size: 1rem;
-            &::placeholder {
-                color: black;
-            }
+          }
+            &:focus {
+              outline: none;
+              box-shadow: 0px 0px 12px 0.8px #3474dbb2;
+          }
         }
-        button{
-            margin: 2vh 0px;
-            padding-left: 5px;
-            border-radius:5px;
-            width: 100%;
-            height: 7vh;
-            background-color: transparent;
-            border: 1px solid gray;
-            font-weight: bold;
-            font-size: 1rem;
-        }
+      }
     }
-}*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-.pageContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 5px;
-    width: 80vw;
-    height: 100vh;
-    margin: 0 auto;
-    .header{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        flex-direction: column;
-        padding-top: 10vh;
-        h1 {
-            font-size: 1.4rem;
-            // margin-bottom: 10px;
-        }
-        img{
-            margin: 3vh;
-            border: 1px solid gray;
-            border-radius: 50%;
-            height: 130px;
-            width: 130px;
-            // margin-top: 3vh;
-        }
+  
+    .footer {
+      margin: 0px auto;
+      padding-top: 10px;
     }
-    .form{
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-        input {
-            margin: 2.3vh 0px;
-            padding-left: 15px;
-            width: 100%;
-            height: 7vh;
-            border-radius: 5px;
-            border: 1px solid gray;
-            color: black;
-            font-size: 1rem;
-            &::placeholder {
-                color: black;
-            }
-        }
-        button{
-            margin: 2vh 0px;
-            padding-left: 5px;
-            border-radius:5px;
-            width: 100%;
-            height: 7vh;
-            background-color: transparent;
-            border: 1px solid gray;
-            font-weight: bold;
-            font-size: 1rem;
-        }
-    }
-}
+  }
+
+  //Button
+.btn {
+    font-size: 21px;
+    padding: 5px 20px;
+    border: solid 1px black;
+    background-color: white;
+    width: 100%;
+    color: black;
+    transition: all 250ms ease-in-out;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+        box-shadow: 0px 0px 12px 0.8px #3474dbb2;
+      }
+  }
+  

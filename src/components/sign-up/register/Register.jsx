@@ -10,28 +10,28 @@ export const Register = () => {
 
 
   return (
-    <article className="base-container">
-      <div className="header">Sign Up</div>
-      <div className="content">
-        <div className="form">
-          <div className="form-group">
+    <article className={styles.baseContainer}>
+      <div className={styles.header}>Sign Up</div>
+      <div className={styles.content}>
+        <div className={styles.form}>
+          <div className={styles.formGroup}>
             <input type="text" placeholder="Name"/>
             </div>
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <input type="email" placeholder="Email"/>
             </div>
-          <div className="form-group">
-            <input type="password" placeholder="password"/>
+          <div className={styles.formGroup}>
+            <input type="password" placeholder="Password"/>
             </div>
-          <p>I read and agree to <strong>Terms and Condition</strong></p>
+          <p className={styles.terms}>I read and agree to <strong>Terms and Condition</strong></p>
         </div>
-        <div className="footer">
-          <button type="button" className="btn">
+        <div className={styles.footer}>
+          <button type="button" className={styles.btn}>
             Sign Up
           </button>
         </div>
-        <p>Already have an account? <a>Login</a></p>
-        <p>or sign in with</p>
+        <p className={styles.terms}>Already have an account? <strong><a>Login</a></strong></p>
+        <p className={styles.orSignIn}>or sign in with</p>
        <i className="fab "></i><i className="fab fa-twitter"></i><i className="fab fa-google"></i>
       </div>
     </article>
