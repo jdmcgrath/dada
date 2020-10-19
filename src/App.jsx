@@ -6,6 +6,7 @@ import Register from './components/sign-up/register';
 export const App = () => {
   return (
     <>
+
         <Categories />
         {/* <h1>Dada</h1> */}
         {/* <Categories /> */}
