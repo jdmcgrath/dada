@@ -13,9 +13,9 @@ const Categories = () => {
             {cardsArr.map((card) => {
                 return (
                     <section className={styles.card}>
-                        <a href="">
+                        <a href="https://github.com/nology-tech/dada">
                             <h2>{card.title}</h2>
-                            <img src={card.image}/>
+                            <img src={card.image} alt="added to allow build to happen"/>
                             <p>{card.info}</p>
                         </a>
                     </section>

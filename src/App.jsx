@@ -11,7 +11,6 @@ import InputData from "./components/data/Input.js";
 export const App = () => {
   return (
     <>
-        {/* <Categories /> */}
         <AddChick InputData={InputData} />
         {/* <Input InputData={InputData} /> */}
     </>
