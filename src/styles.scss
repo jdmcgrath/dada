@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: $colourOne;
+    background-color: $backgroundColor;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
     // font-family: Dosis;
     // font-family: Nunito;
     text-align: center;
-    color: $fontColour;
+    color: $primaryColor;
     padding: 10px;
   }
 
