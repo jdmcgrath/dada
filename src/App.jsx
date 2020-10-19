@@ -3,7 +3,6 @@ import Categories from "./components/Categories/Categories"
 export const App = () => {
   return (
     <>
-        <NavBar />
 
         <Categories />
     </>
