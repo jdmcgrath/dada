@@ -1,11 +1,16 @@
-import React from 'react'
+import React from 'react';
+import Article from '../Article/Article';
 
-const ArticleList = () => {
+
+const ArticleList = (props) => {
   return (
     <div>
-      
+      {props.articles.map((article) => {
+        return <Article article={article} />
+      })}
     </div>
   )
 }
 
 export default ArticleList
+

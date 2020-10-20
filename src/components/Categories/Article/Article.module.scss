@@ -1,0 +1,23 @@
+@import "../../../../Sass/abstracts/variables";
+
+.grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 100px 100px;
+}
+
+.articleTitle {
+    text-align: left;
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+.articleReadTime {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.articleImg {
+    grid-column-start: 2;
+    grid-row-start: span 2;
+}

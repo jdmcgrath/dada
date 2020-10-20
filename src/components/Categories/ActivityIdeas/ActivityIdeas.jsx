@@ -2,8 +2,11 @@ import React from 'react';
 import styles from './ActivityIdeas.module.scss';
 import VideoList from '../VideoList';
 import ArticleList from '../ArticleList';
+import articles from '../../data/articles';
 
-const ActivityIdeas = () => {
+
+const ActivityIdeas = () => {  
+  
   return (
     //   <nav>Top Navbar</nav>
     <div>
@@ -16,7 +19,7 @@ const ActivityIdeas = () => {
       </div>
       
       {/* <VideoList /> */}
-      <ArticleList />
+      <ArticleList articles={articles} className={styles.articleList}/>
     </div>
   )
 }
