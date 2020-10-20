@@ -1,47 +1,25 @@
-
-//MB - Is this the correct naming convention for colour variables
-// (ie colourOne, colourTwo, etc)
-// OR
-// $colourBackground, $colourHeader, $colourButton ???
-// I'm not sure - but the latter makes more sense to me
-
-
-
 // Light mode
 
 // 1. 
-$colourOne: #FFFFFF;
-$colourTwo: #FFFFFF;
+$backgroundColor: #f9f4e7;
+$colourTwo: #f9f4e7;
 $colourThree: #FFD5C2;
 $colourFour: #F28F3b;
 $colourFive: #C8553D;
 $colourSix: #588B8B;
 $fontColour: #000000;
 
-//2.
-// $colourOne: #495867;
-// $colourTwo: #577399;
-// $colourThree: #bdd5ea;
-// $colourFour: #f7f7ff;
-// $colourFive: #fe5f55;
-// $fontColour: #000000;
+//Jake's 1
+// $backgroundColor:#E4F9FF;
+// $primaryColor:#0077B6;
+// $secondaryColor:#4FCAFF;
+// $tertiaryColor:#4FCAFF;
 
-//3.
-// $colourOne: #2d3142;
-// $colourTwo: #4f5d75;
-// $colourThree: #bfc0c0;
-// $colourFour: #ffffff;
-// $colourFive: #ef8354;
-// $fontColour: #000000;
-
-//4.
-// $colourOne: #2d3142;
-// $colourTwo: #4f5d75;
-// $colourThree: #bfc0c0;
-// $colourFour: #ffffff;
-// $colourFive: #ef8354;
-// $fontColour: #000000;
-
+//Jake's 2
+$backgroundColor:#FFF5F1;
+$primaryColor:#F58764;
+$secondaryColor:#F58764;
+$tertiaryColor:#929191;
 
 // Dark mode
 
