@@ -10,7 +10,11 @@ export const Register = () => {
 
 
   return (
+<<<<<<< HEAD
     <article className={styles.baseContainer}>
+=======
+    <article className={styles.pageContainer}>
+>>>>>>> c308c185664b376dc3d8745bbdd34fb3d67d05a2
       <div className={styles.header}>Sign Up</div>
       <div className={styles.content}>
         <div className={styles.form}>
@@ -21,7 +25,11 @@ export const Register = () => {
             <input type="email" placeholder="Email"/>
             </div>
           <div className={styles.formGroup}>
+<<<<<<< HEAD
             <input type="password" placeholder="Password"/>
+=======
+            <input type="password" placeholder="password"/>
+>>>>>>> c308c185664b376dc3d8745bbdd34fb3d67d05a2
             </div>
           <p className={styles.terms}>I read and agree to <strong>Terms and Condition</strong></p>
         </div>
