@@ -1,3 +1,6 @@
+@import "../../../Sass/abstracts/variables";
+@import "../../assets/styles/main.scss";
+
 .globalNav{ 
     display: flex;
     // gap: 70vw;
@@ -18,4 +21,6 @@
 
 .pageTitle {
     font-size: 0.5rem;
-}
+} 
+
+//add padding to navbar

@@ -1,4 +1,7 @@
 @import "../../../Sass/abstracts/variables";
+@import "../../assets/styles/main.scss";
+
+
 div{
     width: 80vw;
     margin: 0 auto;
@@ -7,12 +10,11 @@ h1{
     font-size: 24px;
 }
 
-    .catContainer{
+     .catContainer{
         display: flex;
         flex-wrap: wrap;
         background-color: $colourTwo;
         border-radius: 20px;
-        padding-top:20px;
 
         .card{
             height: 50%;
@@ -41,5 +43,5 @@ h1{
                 line-height: 1.6em;
             }
         }
-    }
+     }
 }};
