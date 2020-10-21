@@ -1,43 +1,36 @@
 import React from 'react';
-import AddChick from "./components/addChick/AddChick";
-import Categories from "./components/Categories/Categories";
-import Register from './components/sign-up/register';
-import NavBar from './components/NavBar';
-// import { render } from "react-dom";
-// import { Link, Router } from '@reach/router';
+import AddChick from "./components/addChick/AddChick"
+import Categories from "./components/Categories/Categories"
+import InputData from "./components/data/Input.js";
+import BookSmarts from "./components/bookSmarts/BookSmarts";
+import Routes from "./containers/Routes/Routing";
+// import Input from "./components/Input";
+// import library from "./components/data/fa-library";
+// import FloatPlaceHolder from "./components/FloatPlaceHolder.module.scss";
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+// import Register from './components/sign-up/register';
 
 export const App = () => {
   return (
     <>
-    <Router>
-      <div className='App'>
+
+<div className='App'>
         <Route path="/addchick" component={AddChick} />
         <Route path="/categories" component={Categories} />
         <Route path="/register" component={Register} />
 
       </div>
-    </Router>
+    
 
-
-
-
-
-
-
-
-     {/* <section>
-       <Link to="categories">
-       Categories
-       </Link>
-       <Link to="sign-up">
-       <button>Register</button>
-       </Link>
-       <button>AddChick</button>
-      
-       </section>  */}
+        {/* { <AddChick InputData={InputData} /> } */}
+        {/* {/<Input InputData={InputData} /> } */}
+        <BookSmarts />
+        {/* {<Categories /> } */}
+        {/* { <h1>Dada</h1> } */}
+        {/* {<Categories /> } */}
+        {/* {<AddChick /> } */}
+        <Routes />
     </>
   )
 }
