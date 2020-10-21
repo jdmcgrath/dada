@@ -1,3 +1,5 @@
+@import "../../assets/styles/main.scss";
+
 
 *{
     margin: 0;
@@ -5,9 +7,10 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-.pageContainer{
+
+.header{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     border-radius: 5px;
     width: 80vw;
