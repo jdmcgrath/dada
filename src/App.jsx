@@ -1,17 +1,28 @@
 import React from 'react';
-import SOS from "./components/Categories/SOS/SOS";
 import AddChick from "./components/addChick/AddChick"
+import SOS from "./components/Categories/SOS/SOS";
 import Categories from "./components/Categories/Categories"
-import Register from './components/sign-up/register'
-import NavBar from './components/NavBar'
+import InputData from "./components/data/Input.js";
+import BookSmarts from "./components/bookSmarts/BookSmarts";
+import Routes from "./containers/Routes/Routing";
+// import Input from "./components/Input";
+// import library from "./components/data/fa-library";
+// import FloatPlaceHolder from "./components/FloatPlaceHolder.module.scss";
+
+
+// import Register from './components/sign-up/register';
 
 export const App = () => {
   return (
     <>
-    <NavBar />
-        <SOS />
-        {/* <Categories /> */}
-        {/*<AddChick />*/}
+        {/* { <AddChick InputData={InputData} /> } */}
+        {/* {/<Input InputData={InputData} /> } */}
+        <BookSmarts />
+        {/* {<Categories /> } */}
+        {/* { <h1>Dada</h1> } */}
+        {/* {<Categories /> } */}
+        {/* {<AddChick /> } */}
+        <Routes />
     </>
   )
 }
