@@ -7,13 +7,9 @@ import NavBar from './components/NavBar'
 export const App = () => {
   return (
     <>
-
-    <NavBar />
-
         <Categories />
-        {/* <h1>Dada</h1> */}
         {/* <Categories /> */}
-        <AddChick />
+        {/*<AddChick />*/}
     </>
   )
 }
