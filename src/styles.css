@@ -1,43 +1,43 @@
-@import url("https://fonts.googleapis.com/css2?family=Commissioner&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Commissioner&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
-* {
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap"); */
+/* * {
   box-sizing: border-box;
   font-family: Nunito;
-  padding: 0px;
-  margin: auto;
-}
+  padding: 0;
+  margin: 0;
+} */
 
-body {
+/* body {
   background-color: #FFF5F1;
-}
+} */
 
-h1, h2, h3, h4, h5, h6 {
+/* h1, h2, h3, h4, h5, h6 {
   font-family: Commissioner;
-  text-align: center;
-  color: #F58764;
-  padding: 10px;
-}
+  /* text-align: center; */
+  /* color: #F58764; */
+  /* padding: 10px; */
+/* } */ 
 
-img {
+/* img {
   height: 100%;
   width: 100%;
   position: relative;
   object-fit: cover;
   display: flex;
-}
+} */
 
-.roundedImg {
+/* .roundedImg {
   border-radius: 50%;
   border: 1px solid black;
-}
+} */
 
-p {
+/* p {
   font-size: 1.5rem;
   z-index: 1;
-}
+} */
 
-button {
+/* button {
   display: block;
   width: 80%;
   height: 50px;
@@ -45,18 +45,18 @@ button {
   font-size: 1.3rem;
   border-radius: 10px;
   position: relative;
-}
+} */
 
-i {
+/* i {
   font-size: 3rem;
 }
 
 ul {
   font-size: 1.5rem;
   position: absolute;
-}
+} */
 
-li {
+/* li {
   text-decoration: none;
 }
 
@@ -66,9 +66,9 @@ form {
   display: flex;
   flex-direction: column;
   text-align: center;
-}
+} */
 
-input {
+/* input {
   height: auto;
   width: 90%;
   border-radius: 10px;
@@ -82,4 +82,4 @@ nav {
 
 a {
   text-decoration: none;
-}
+} */
