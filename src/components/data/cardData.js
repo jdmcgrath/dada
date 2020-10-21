@@ -8,7 +8,7 @@ const cardsArr = [
     {
         "title":"SOS!",
         "image":"https://via.placeholder.com/150",
-        "info":"Dealing with common bahaviour issues",
+        "info":"Dealing with common behaviour issues",
         "path":"/sos"
         
     },
