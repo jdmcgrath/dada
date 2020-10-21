@@ -7,9 +7,10 @@ import { Link } from "@reach/router";
 const Categories = () => {
 
     return (
-        <div>
-            <h1>What are you looking for?</h1>
-            
+        <div className={styles.pageContainer}>
+            <header>
+                <h1>What are you looking for?</h1>
+            </header>
             <div className={styles.catContainer}>
             {cardsArr.map((card) => {
                 return (

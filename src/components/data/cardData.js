@@ -8,9 +8,13 @@ const cardsArr = [
     {
         "title":"SOS!",
         "image":"https://via.placeholder.com/150",
+<<<<<<< HEAD
         "info":"Dealing with common bahaviour issues",
         "path":"/sos"
         
+=======
+        "info":"Dealing with common behaviour issues"
+>>>>>>> 8e13b7efff8d14f308cdf79d5c0e8575a81d4743
     },
     {
         "title":"Book Smarts",
