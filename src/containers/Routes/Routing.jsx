@@ -1,5 +1,6 @@
 import React from "react";
 import { Router } from "@reach/router";
+
 import Categories from "../../components/Categories";
 import SignUp from "../../components/sign-up";
 import AddChick from "../../addChick";
@@ -8,7 +9,7 @@ import VideoList from "../../components/Categories/VideoList";
 import ArticleList from "../../components/Categories/ArticleList";
 
 
-const Routing = () => {
+const Routes = () => {
     return(
         <Router>
             <Categories path="categories" />
