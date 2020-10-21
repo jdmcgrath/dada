@@ -1,7 +1,6 @@
 .formContainer{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 90%;
 
     input {
@@ -13,7 +12,7 @@
         border: 1px solid gray;
         color: black;
         font-size: 1rem;
-
+        
         &::placeholder {
             color: black;
         }
