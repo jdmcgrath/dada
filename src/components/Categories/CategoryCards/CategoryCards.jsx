@@ -1,7 +1,10 @@
-import React from "react";
-import styles from "./CategoryCards.module.scss";
+// category cards folder can be removed
 
-export default CategoryCards;
+
+// import React from "react";
+// import styles from "./CategoryCards.module.scss";
+
+// export default CategoryCards;
 
 
 
