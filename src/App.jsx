@@ -4,6 +4,7 @@ import Categories from "./components/Categories/Categories"
 import InputData from "./components/data/Input.js";
 import BookSmarts from "./components/bookSmarts/BookSmarts";
 import Routes from "./containers/Routes/Routes";
+import NavBar from "./components/NavBar";
 import Register from "./components/sign-up/register"
 import { Router, Link } from "@reach/router"
 
@@ -17,8 +18,10 @@ import { Router, Link } from "@reach/router"
 // import Register from './components/sign-up/register';
 
 export const App = () => {
+
   return (
     <>
+        <NavBar />   
         <Routes />
 
     
