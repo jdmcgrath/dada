@@ -1,25 +1,35 @@
 import React from 'react';
-import styles from "./AddChick.module.scss"
+import styles from './AddChick.module.scss';
+import Input from "../Input/Input";
 
 const addChick = (props) => {
+    const {type, id, placeholder, autocomplete} = props.InputData;
+
+
+
+
     return (
         <div className={styles.pageContainer}>
-        <header className={styles.header}>
-                <h1>Add Chick</h1>
-                <img className={styles.circularImg} src="" alt=" " srcset=""/>
-
-                
-        </header>
-        <form className={styles.formContainer}>
-            <label for="name"></label>
-            <input type="text" id="name" placeholder="Name"></input>
-            <label for="gender"></label>
-            <input type="text" id="gender" placeholder="Gender"></input>
-            <label for="birthdate"></label>
-            <input type="date" id="birthdate" placeholder="Date of Birth"></input>
-            <button type="submit">Save</button>
-        </form>
+            <header className={styles.header}>
+                    <h1>Add Chick</h1>
+                    <img className={styles.circularImg} src="" alt=" " srcset=""/>  
+            </header>
+            <form className={styles.formContainer}>
+                <div className={styles.inputWrapper}>
+                    <label for="name"></label>
+                    {/* <Input InputData={ InputData }/> */}
+                    <input type={type} id={id} placeholder={placeholder} autoCapitalize= {autocomplete}></input>
+                    <label for="gender"></label>
+                    <input type={type} id={id} placeholder={placeholder} autoCapitalize= {autocomplete}></input>
+                    <input type={type} id={id} placeholder={placeholder} autoCapitalize= {autocomplete}></input>
+                    <label for="birthdate"></label>
+                </div>
+            </form>
+        {/* </div>  </form>
+        </div>  </form> */}
     </div>
+    
+    
     ); 
 }
 

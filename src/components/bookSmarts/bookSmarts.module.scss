@@ -1,10 +1,11 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+.pageContainer {
+    height: 90vh;
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
 }
 
-.pageContainer {
-    height: 100vh;
-    width: 100%;
+div {
+    padding: 0;
+    width: 90vw;
 }
