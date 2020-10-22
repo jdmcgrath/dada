@@ -1,3 +1,5 @@
+@import "../../assets/styles/main.scss";
+
 
 *{
     margin: 0;
@@ -5,9 +7,10 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-.pageContainer{
+
+.header{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     border-radius: 5px;
     width: 80vw;
@@ -20,7 +23,7 @@
         align-items: center;
         width: 100%;
         flex-direction: column;
-        padding-top: 10vh;
+        padding-top: 5vh;
 
         h1 {
             font-size: 1.4rem;
@@ -40,23 +43,33 @@
     .form{
         display: flex;
         flex-direction: column;
-        width: 90%;
-    
-        input {
-            margin: 2.3vh 0px;
-            padding-left: 15px;
-            width: 100%;
-            height: 7vh;
-            border-radius: 5px;
-            border: 1px solid gray;
-            color: black;
-            font-size: 1rem;
-
-            &::placeholder {
+        // width: 90%;
+        .inputWrapper{
+            position: relative;
+            input {
+                margin: 2.3vh 0px;
+                padding-left: 15px;
+                width: 100%;
+                height: 7vh;
+                border-radius: 5px;
+                border: 1px solid gray;
                 color: black;
+                font-size: 1rem;
+                position: relative;
+    
+            
+                &::placeholder {
+                    transition: 0.2s;
+                }
+                &:focus::placeholder{
+                    transform: translate(-0px, -15px);
+                    font-size: 0.5rem;
+                    }
             }
             
+            
         }
+   
         button{
             margin: 2vh 0px;
             padding-left: 5px;

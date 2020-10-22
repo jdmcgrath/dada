@@ -3,14 +3,14 @@ import styles from "./AddChick.module.scss"
 
 const addChick = (props) => {
     return (
-   <div className={styles.pageContainer}>
+        <div className={styles.pageContainer}>
         <header className={styles.header}>
                 <h1>Add Chick</h1>
-                <img src="" alt=" " srcset=""/>
+                <img className={styles.circularImg} src="" alt=" " srcset=""/>
 
                 
         </header>
-        <form className={styles.form}>
+        <form className={styles.formContainer}>
             <label for="name"></label>
             <input type="text" id="name" placeholder="Name"></input>
             <label for="gender"></label>
