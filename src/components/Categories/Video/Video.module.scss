@@ -1,0 +1,39 @@
+
+
+
+
+
+
+.playerWrapper {
+  position: relative;
+  padding-top: 56.25%;/* Player ratio: 100 / (1280 / 720) */
+  margin: 10px;
+
+}
+ 
+.reactPlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.videoTitle {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumbnailBox {
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5%;
+  margin: 2%;
+}
+
+.videoTags {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5%;
+}

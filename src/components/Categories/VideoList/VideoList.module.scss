@@ -1,1 +1,15 @@
 @import '../../../../Sass/abstracts/_variables.scss';
+
+
+
+.videoListHeader {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+}
