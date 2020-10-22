@@ -19,12 +19,21 @@ import { Router, Link } from "@reach/router"
 
 export const App = () => {
 
+  // const [previousPage, setPreviousPage] = useState([])
+
+  // const grabPreviousPage = () => {
+  //   const arrPreviousPage = []
+    
+
+  //   arrPreviousPage.push({previousPage})
+  // }
+  console.log(window.location.pathname);
+
   return (
     <>
-        <NavBar />   
+        <NavBar /*pass setPreviuosPage through here*//>   
         <Routes />
 
-    
 
         {/* { <AddChick InputData={InputData} /> } */}
         {/* {/<Input InputData={InputData} /> } */}

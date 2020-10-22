@@ -22,7 +22,7 @@ const Routes = () => {
             <AddChick path="add-chick" />
             <ActivityIdeas path="categories/activity-ideas" />
             <VideoList path="categories/activity-ideas/video-list" />
-            <ArticleList path="article-list" />
+            <ArticleList path="categories/activity-ideas/article-list" />
             <BookSmarts path="book-smarts" />
         </Router>
     )
