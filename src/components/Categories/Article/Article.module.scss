@@ -1,9 +1,16 @@
 @import "../../../assets/styles/main.scss";
 
+.articleContainer {
+  // border-top: 1px solid darkslategrey;
+  border-bottom: 1px solid darkslategrey;
+  // margin: 3% 0;
+  padding: 3% 0;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 100px 100px;
+    grid-template-rows: 75px 75px;
 }
 
 .articleTitle {
@@ -20,4 +27,5 @@
 .articleImg {
     grid-column-start: 2;
     grid-row-start: span 2;
+    border-radius: 5%;
 }

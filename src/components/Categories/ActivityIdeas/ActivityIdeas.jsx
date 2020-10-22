@@ -20,7 +20,7 @@ const ActivityIdeas = () => {
 
   return (
     //   <nav>Top Navbar</nav>
-    <div>
+    <div className={styles.activityIdeas}>
         {/* Buttons to select whether you wish to view a video or article */}
       <button id="videoBtn" onClick={setList}>Videos</button>
   <button id="articleBtn" onClick={setList} >Articles</button>

@@ -41,6 +41,13 @@ const videos = [
     "source": "YouTube",
     "url": 'https://www.youtube.com/watch?v=1ZYbU82GVz4',
     "keyword": 'sleep'
+  },
+
+  {
+    "vidID": 6, 
+    "source": "Vimeo",
+    "url": 'https://vimeo.com/95710885',
+    "keyword": 'fatherhood'
   }
   
   ]

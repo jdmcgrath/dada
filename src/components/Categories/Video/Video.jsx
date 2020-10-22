@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactPlayer from 'react-player/lazy';
+import ReactPlayer from 'react-player';
 import styles from './Video.module.scss';
 
 
@@ -17,10 +17,15 @@ const Video = (props) => {
         <ReactPlayer
           className={styles.reactPlayer}
           url={props.video.url}
+          controls='true'
           width='100%'
-          height='auto'
+          height='100%'
+          config={{
+            youtube: {
+              playerVars: { showinfo: 1 }
+            },
+          }}
         />
-        <br/><br/>
       </div>
       <div className={styles.videoTags}>
         <p>
@@ -30,7 +35,6 @@ const Video = (props) => {
           Fav Icon
         </p>
       </div>
-        <br/>
     </div>
   )
 }
