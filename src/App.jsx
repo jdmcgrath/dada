@@ -1,10 +1,5 @@
-import React from 'react';
-import AddChick from "./components/addChick/AddChick"
-import Categories from "./components/Categories/Categories"
-import InputData from "./components/data/Input.js";
-import BookSmarts from "./components/bookSmarts/BookSmarts";
+import React from "react";
 import Routes from "./containers/Routes/Routes";
-import Register from "./components/sign-up/register"
 import { Router, Link } from "@reach/router"
 
 
@@ -19,19 +14,8 @@ import { Router, Link } from "@reach/router"
 export const App = () => {
   return (
     <>
-        <Routes />
-
-    
-
-        {/* { <AddChick InputData={InputData} /> } */}
-        {/* {/<Input InputData={InputData} /> } */}
-        {/* <BookSmarts /> */}
-        {/* {<Categories /> } */}
-        {/* { <h1>Dada</h1> } */}
-        {/* {<Categories /> } */}
-        {/* {<AddChick /> } */}
-        {/* <Routes /> */}
+      <Routes />
     </>
-  )
+  );
 }
 export default App;
