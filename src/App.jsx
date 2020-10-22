@@ -1,5 +1,5 @@
 import React from 'react';
-import AddChick from "./components/AddChick/AddChick"
+import AddChick from "./components/addChick/AddChick";
 import Categories from "./components/Categories/Categories"
 import InputData from "./components/data/Input.js";
 import BookSmarts from "./components/bookSmarts/BookSmarts";
