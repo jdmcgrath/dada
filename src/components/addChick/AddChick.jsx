@@ -26,6 +26,8 @@ const addChick = (props) => {
                 <button type="submit">Save</button>
             </form>
     </div>
+    
+    
     ); 
 }
 
