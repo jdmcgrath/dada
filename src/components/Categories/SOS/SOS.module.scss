@@ -1,0 +1,55 @@
+@import "../../../assets/styles/abstracts/variables";
+@import "../../../assets/styles/main.scss";
+
+
+div{
+    width: 80vw;
+    margin: 0 auto;
+    padding-top: 20px;
+h1{
+    font-size: 24px;
+}
+
+     .catContainer{
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        //background-color: $colourTwo;
+        background-color: white;
+        border-radius: 20px;
+
+        .card{
+            height: 35%;
+            width: fit-content;
+            margin: auto;
+            flex: 0 0 50%;
+            padding: 15px;
+            position: relative;
+            // border radius on image?
+            img{ 
+                width:105%;
+                border-radius: 5%;
+            }
+
+            a{
+                h2{
+                    font-size: 14px;
+                    text-align: center;
+                    color: $fontColour;
+                    position: absolute;
+                    left: 25px;
+                    top: 20px;
+                    z-index: 1;
+                    padding: 0;
+                }
+
+            p{
+                color: $tertiaryColor;
+                font-size: 13px;
+                font-weight: bold;
+                line-height: 1.6em;
+                height:20px;
+            }
+        }
+     }
+}};
