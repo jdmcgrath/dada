@@ -5,8 +5,7 @@ import Input from "../../components/Input";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 
-const addChick = (props) => {
-    console.log(props)
+const AddChick = (props) => {
     return (
         <div className={styles.pageContainer}>
             <header className={styles.header}>
@@ -31,4 +30,4 @@ const addChick = (props) => {
     ); 
 }
 
-export default addChick;
+export default AddChick;
