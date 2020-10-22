@@ -19,14 +19,14 @@ import { Router, Link } from "@reach/router"
 export const App = () => {
   return (
     <>
-        <AddChick InputData={InputData} />
+        {/* <AddChick InputData={InputData} /> */}
         {/* <Input InputData={InputData} />  */}
-        <BookSmarts />
+        {/* <BookSmarts /> */}
         {/* {<Categories /> } */}
         {/* { <h1>Dada</h1> } */}
         {/* {<Categories /> } */}
         {/* {<AddChick /> } */}
-        {/* <Routes /> */}
+        <Routes />
     </> 
   )
 }

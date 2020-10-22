@@ -11,8 +11,10 @@ const AddChick = (props) => {
             <header className={styles.header}>
                 <h2>Add Chick</h2>
                 <div className={styles.imageContainer}>
-                    <img className={styles.circularImg} src="" alt=" " srcset=""/>
-                    <FontAwesomeIcon icon={faPlusCircle} />
+                    {/* <img className={styles.circularImg} src="" alt=" " srcset=""/> */}
+                    <span class={styles.faIcon}>
+                        <FontAwesomeIcon icon={faPlusCircle} />
+                    </span>
                 </div>      
             </header>
             <form className={styles.formContainer}>
