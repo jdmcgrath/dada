@@ -3,8 +3,13 @@ import AddChick from "./components/AddChick/AddChick"
 import Categories from "./components/Categories/Categories"
 import InputData from "./components/data/Input.js";
 import BookSmarts from "./components/bookSmarts/BookSmarts";
-import Routes from "./containers/Routes/Routing";
-import Input from "./components/Input";
+import Routes from "./containers/Routes/Routes";
+import Register from "./components/sign-up/register"
+import { Router, Link } from "@reach/router"
+
+
+
+// import Input from "./components/Input";
 // import library from "./components/data/fa-library";
 // import FloatPlaceHolder from "./components/FloatPlaceHolder.module.scss";
  
@@ -21,8 +26,8 @@ export const App = () => {
         {/* { <h1>Dada</h1> } */}
         {/* {<Categories /> } */}
         {/* {<AddChick /> } */}
-        <Routes />
-    </>
+        {/* <Routes /> */}
+    </> 
   )
 }
 export default App;

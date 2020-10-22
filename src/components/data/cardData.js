@@ -1,4 +1,4 @@
-const cardsArr = [
+export const cardsArr = [
     {
         "title":"Activity Ideas",
         "image":"https://via.placeholder.com/150",
@@ -8,7 +8,7 @@ const cardsArr = [
     {
         "title":"SOS!",
         "image":"https://via.placeholder.com/150",
-        "info":"Dealing with common bahaviour issues",
+        "info":"Dealing with common behaviour issues",
         "path":"/sos"
         
     },
@@ -25,6 +25,47 @@ const cardsArr = [
         "path":"/up-your-game"
     },
 
-]
+]; 
 
-export default cardsArr;
+export const SOScardsArr = [
+
+    {
+    "title":"Tantrums",
+    "image":"https://via.placeholder.com/150",
+    "info":"",
+    "path":"Tantrums"
+},
+{
+    "title":"Aggression",
+    "image":"https://via.placeholder.com/150",
+    "info":"",
+    "path":"/aggression"
+    
+},
+{
+    "title":"Screaming",
+    "image":"https://via.placeholder.com/150",
+    "info":"",
+    "path":"/screaming"
+},
+{
+    "title":"Whining",
+    "image":"https://via.placeholder.com/150.png",
+    "info":"",
+    "path":"/whining"
+},
+{
+    "title":"Sleep Issues",
+    "image":"https://via.placeholder.com/150.png",
+    "info":"",
+    "path":"/sleep Issues"
+}, 
+{
+    "title":"Swearing",
+    "image":"https://via.placeholder.com/150.png",
+    "info":"",
+    "path":"/swearing"
+}];
+
+
+
