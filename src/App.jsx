@@ -14,9 +14,9 @@ import Routes from "./containers/Routes/Routing";
 export const App = () => {
   return (
     <>
-        {/* { <AddChick InputData={InputData} /> } */}
-        {/* {/<Input InputData={InputData} /> } */}
-        <BookSmarts />
+        {/* <AddChick InputData={InputData} /> */}
+        {/* <Input InputData={InputData} /> */}
+        {/* <BookSmarts /> */}
         {/* {<Categories /> } */}
         {/* { <h1>Dada</h1> } */}
         {/* {<Categories /> } */}
