@@ -1,0 +1,75 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    max-height: 100px;
+    margin: 0 auto;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+
+    span{
+        opacity: 0.6;
+        transition: 0.2s;
+        &:hover{
+            color: red;
+            opacity: 1;
+        } 
+    }
+    span:nth-child(1){
+        opacity: 0.6;
+        transition: 0.2s;
+        &:hover{
+            color: blue;
+            opacity: 1;
+        } 
+    }
+    .bookSmartInfo {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 80%;
+        height: 100vh;
+        padding-top: 0px;
+
+        h3{
+            text-align: left !important;
+            padding-left: 0;
+            font-size: .7rem;
+            font-weight: bold;
+        }
+        p{
+            font-size: 0.6rem;
+            display: flex;
+        }
+       
+
+        .bookSmartVotes {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-top: 0px;
+        }
+    }
+    .bookSmartImage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0px;
+
+        .imagePlaceholder {
+            font-size: 4rem;
+            color: lightgrey;
+        }
+    }
+}
