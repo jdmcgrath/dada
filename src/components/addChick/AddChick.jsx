@@ -6,7 +6,7 @@ const addChick = (props) => {
     const {type, id, placeholder, autocomplete} = props.InputData;
 
 
-
+ 
 
     return (
         <div className={styles.pageContainer}>
