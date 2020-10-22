@@ -4,6 +4,7 @@ import Categories from "./components/Categories/Categories"
 import InputData from "./components/data/Input.js";
 import BookSmarts from "./components/bookSmarts/BookSmarts";
 import Routes from "./containers/Routes/Routes";
+import SplashScreen from "./components/SplashScreen/SplashScreen"
 import Register from "./components/sign-up/register"
 import { Router, Link } from "@reach/router"
 
@@ -20,8 +21,7 @@ export const App = () => {
   return (
     <>
         <Routes />
-
-    
+        <SplashScreen />
 
         {/* { <AddChick InputData={InputData} /> } */}
         {/* {/<Input InputData={InputData} /> } */}
