@@ -9,7 +9,7 @@ import { Link } from "@reach/router";
 const SOS = () => { 
     
         return (
-            <div className={styles.pageContainer}>
+            <div className={styles.SOSpageContainer}>
                 {/* <header>
                     <h1>SOS</h1>
                 </header> */}
