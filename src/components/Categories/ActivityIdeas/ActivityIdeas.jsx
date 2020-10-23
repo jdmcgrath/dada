@@ -13,22 +13,22 @@ const ActivityIdeas = () => {
 
   const [toggleList, setToggleList] = useState(true);
 
-  const showSomething = toggleList ? <VideoList videos={videos} id="videoList" className={styles.videoList} /> : <ArticleList articles={articles} id="articleList" className={styles.articleList} />
+  const showClickedList = toggleList ? <VideoList videos={videos} id="videoList" className={styles.videoList} /> : <ArticleList articles={articles} id="articleList" className={styles.articleList} />
 
 
 
   return (
-    //   <nav>Top Navbar</nav>
     <div className={styles.activityIdeas}>
 
-    
-        <button onClick={() => setToggleList(true)}>Videos</button>
-      <button onClick={() => setToggleList(false)}>Articles</button>
-
-    <div className="filter">
-      {/* Tabbed buttons to click for filtered lists based on keywords */}
+    <div className={styles.btnContainer}>
+      <button className={styles.button} onClick={() => setToggleList(true)}>Videos</button>
+      <button className={styles.button} onClick={() => setToggleList(false)}>Articles</button>
     </div>
-      {showSomething}
+
+    <div>
+      {showClickedList}
+    </div>
+      
     </div>
   )
 }

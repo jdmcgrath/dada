@@ -2,5 +2,17 @@
 
 .activityIdeas {
   padding: 5%;
+ 
+  .btnContainer {
+    display: inline-flex;
+    justify-content: space-between;
+   .button{
+    font-size: 1.75rem;
+    letter-spacing: 0.15rem;
+    font-family: Nunito;
+    padding: 0 2%;
+
+  } 
+  }
   
 }
