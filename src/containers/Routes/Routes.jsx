@@ -8,7 +8,7 @@ import ActivityIdeas from "../../components/Categories/ActivityIdeas";
 import VideoList from "../../components/Categories/VideoList";
 import ArticleList from "../../components/Categories/ArticleList";
 import BookSmarts from "../../components/bookSmarts/BookSmarts";
-
+import SOS from "../../components/Categories/SOS";
 
 
 const Routes = () => {
@@ -24,6 +24,7 @@ const Routes = () => {
             <VideoList path="categories/activity-ideas/video-list" />
             <ArticleList path="categories/activity-ideas/article-list" />
             <BookSmarts path="book-smarts" />
+            <SOS path="sos"/>
         </Router>
     )
 }

@@ -27,7 +27,7 @@ export const App = () => {
 
   //   arrPreviousPage.push({previousPage})
   // }
-  console.log(window.location.pathname);
+  //console.log(window.location.pathname);
 
   return (
     <>
@@ -37,12 +37,7 @@ export const App = () => {
 
         {/* { <AddChick InputData={InputData} /> } */}
         {/* {/<Input InputData={InputData} /> } */}
-        {/* <BookSmarts /> */}
-        {/* {<Categories /> } */}
-        {/* { <h1>Dada</h1> } */}
-        {/* {<Categories /> } */}
-        {/* {<AddChick /> } */}
-        {/* <Routes /> */}
+       
     </>
   )
 }
