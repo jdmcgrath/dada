@@ -10,8 +10,8 @@ const SplashScreen = () => {
                 <img src={splash} alt="splash"/>
                 <p>Parenting Coach in Your Pocket</p>
                 {/* <div> */}
-                    <button>Get Dadvice</button>
-                    <p>Already have an account? <span>Log in</span> or <span>Sign up</span></p>
+                    <button className={styles.dadviceBtn}>Get Dadvice</button>
+                    <p className={styles.underButtonText}>Already have an account? <span>Log in</span> or <span>Sign up</span></p>
                 {/* </div> */}
         </div>
         </div>

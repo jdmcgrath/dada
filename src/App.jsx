@@ -6,6 +6,7 @@ import BookSmarts from "./components/bookSmarts/BookSmarts";
 import Routes from "./containers/Routes/Routes";
 import NavBar from "./components/NavBar";
 import Register from "./components/sign-up/register"
+import SOS from "./components/SplashScreen/SplashScreen"
 import { Router, Link } from "@reach/router"
 
 
@@ -31,7 +32,9 @@ export const App = () => {
 
   return (
     <>
-        <NavBar /*pass setPreviuosPage through here*//>   
+        {/* <NavBar pass setPreviuosPage through here/>  */}
+        <SOS />
+
         <Routes />
 
         {/* { <AddChick InputData={InputData} /> } */}
