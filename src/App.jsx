@@ -46,7 +46,7 @@ export const App = () => {
         {/* { <h1>Dada</h1> } */}
         {/* {<Categories /> } */}
         {/* {<AddChick /> } */}
-        <Routes />
+        
     </> 
   )
 }

@@ -26,8 +26,8 @@ const Routes = () => {
             <ActivityIdeas path="categories/activity-ideas" />
             <VideoList path="categories/activity-ideas/video-list" />
             <ArticleList path="categories/activity-ideas/article-list" />
-            <BookSmarts path="book-smarts" />
-            <SOS path="sos"/>
+            <BookSmarts path="categories/book-smarts" />
+            <SOS path="categories/sos"/>
         </Router>
     )
 }
