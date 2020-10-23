@@ -21,11 +21,6 @@
             position: relative;
             // border radius on image?
 
-            img{ 
-                width:105%;
-                border-radius: 5%;
-            }
-
             a{
 
                 h2{
@@ -39,13 +34,19 @@
                     padding: 0;
                 }
 
-            p{
+                img{ 
+                    width:105%;
+                    border-radius: 5%;
+                }
+
+                p {
                 // color: $tertiaryColor;
                 font-size: 13px;
                 font-weight: bold;
                 line-height: 1.6em;
                 height:20px;
+                }
             }
         }
-     }
-}};
+    }
+};
