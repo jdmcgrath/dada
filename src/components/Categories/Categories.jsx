@@ -7,21 +7,19 @@ import { Link } from "@reach/router";
 const Categories = () => {
 
     return (
-        <div className={styles.pageContainer}>
+        <div className={styles.catPageContainer}>
             <header>
                 <h1>What are you looking for?</h1>
             </header>
             <div className={styles.catContainer}>
             {cardsArr.map((card) => {
                 return (
-                    <section className={styles.card}>
-                        {/* <a href="https://github.com/nology-tech/dada"> */}
+                    <section className={styles.card}> 
                         <Link to={card.path}>
                             <h2>{card.title}</h2>
-                            <img src={card.image} alt="category-alt-text"/>
-                            <p>{card.info}</p>
+                            <img src={card.image} alt=""/>
+                            <span className={styles.linkText}><p>{card.info}</p></span>
                         </Link>
-                        {/* </a> */}
                     </section>
                 )
             }

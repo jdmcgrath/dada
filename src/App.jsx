@@ -7,6 +7,7 @@ import Routes from "./containers/Routes/Routes";
 import NavBar from "./components/NavBar";
 import Register from "./components/sign-up/register"
 import { Router, Link } from "@reach/router"
+import SOS from "./components/Categories/SOS/SOS"
 
 
 
