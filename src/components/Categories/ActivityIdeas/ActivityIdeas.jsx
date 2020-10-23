@@ -13,7 +13,7 @@ const ActivityIdeas = () => {
 
 
   return (
-    <div className={styles.activityIdeas}>
+  <div className={styles.activityIdeas}>
 
     <div className={styles.btnContainer}>
       <button className={styles.button} onClick={() => setToggleList(true)}>Videos</button>
@@ -23,8 +23,8 @@ const ActivityIdeas = () => {
     <div>
       {showClickedList}
     </div>
-      
-    </div>
+
+  </div>
   );
 };
 

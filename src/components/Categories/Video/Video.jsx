@@ -5,12 +5,13 @@ import styles from './Video.module.scss';
 
 const Video = (props) => {
 
-  const {vidID, source, url, keyword} = props.video
+  const {url, keyword} = props.video
 
   return (
     <div className={styles.thumbnailBox}>
       <h3 className={styles.videoTitle}>
         Video Title
+        {/* replace with channel name pulled from YouTube api */}
       </h3>
       
       <div className={styles.playerWrapper}>
