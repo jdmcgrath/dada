@@ -1,7 +1,8 @@
 import React from "react";
 import Routes from "./containers/Routes/Routes";
-import { Router, Link } from "@reach/router";
-import NavBar from './components/NavBar'
+import NavBar from "./components/NavBar";
+import Register from "./components/sign-up/register"
+import { Router, Link } from "@reach/router"
 
 
 
