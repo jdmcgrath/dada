@@ -6,6 +6,7 @@ import BookSmarts from "./components/bookSmarts/BookSmarts";
 import Routes from "./containers/Routes/Routes";
 import Register from "./components/sign-up/register"
 import { Router, Link } from "@reach/router"
+import SOS from "./components/SOS/SOS"
 
 
 
@@ -19,7 +20,7 @@ import { Router, Link } from "@reach/router"
 export const App = () => {
   return (
     <>
-        <Routes />
+        <SOS />
 
     
 
