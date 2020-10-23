@@ -17,13 +17,14 @@ const ActivityIdeas = () => {
     setToggleList(!toggleList);
   }
 
+import {Link} from '@reach/router';
 
   return (
     //   <nav>Top Navbar</nav>
     <div className={styles.activityIdeas}>
         {/* Buttons to select whether you wish to view a video or article */}
-      <button id="videoBtn" onClick={setList}>Videos</button>
-  <button id="articleBtn" onClick={setList} >Articles</button>
+      <Link to = "video-list" ><button>Videos</button></Link>
+      <Link to = "article-list"><button>Articles</button></Link>
 
     <div className="filter">
       {/* Tabbed buttons to click for filtered lists based on keywords */}

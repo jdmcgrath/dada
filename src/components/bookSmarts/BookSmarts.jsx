@@ -5,18 +5,13 @@ import cardData from "./data"
 
 const bookSmarts = () => {
 
-  const getBookInfo = (bookInfo) => (
-    <div key={bookInfo.id}>
-       
-      <BookSmartCard bookInfo={bookInfo}/>
-    </div>
+  const getBookInfo = (cardData) => (
+      <BookSmartCard cardData={cardData}/>
   )
 
   return (
     <section className={styles.pageContainer}>
-      {cardData.map((card) => {
-        return <BookSmartCard cardData={card}/>;
-      })}
+      {cardData.map(getBookInfo)}
     </section>
 
     // <section>
@@ -26,3 +21,4 @@ const bookSmarts = () => {
 };
 
 export default bookSmarts;
+
