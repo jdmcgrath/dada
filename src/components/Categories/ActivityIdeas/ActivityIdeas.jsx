@@ -1,19 +1,14 @@
-import React, { useState } from 'react';
-import styles from './ActivityIdeas.module.scss';
-import VideoList from '../VideoList';
-import ArticleList from '../ArticleList';
-import articles from '../../data/articles';
-import videos from '../../data/videos';
+import React, { useState } from "react";
+import styles from "./ActivityIdeas.module.scss";
+import VideoList from "../VideoList";
+import ArticleList from "../ArticleList";
+import articles from "../../data/articles";
+import videos from "../../data/videos";
 
-
-
-
-const ActivityIdeas = () => {  
-
-
+const ActivityIdeas = () => {
   const [toggleList, setToggleList] = useState(true);
 
-  const showClickedList = toggleList ? <VideoList videos={videos} id="videoList" className={styles.videoList} /> : <ArticleList articles={articles} id="articleList" className={styles.articleList} />
+    const showClickedList = toggleList ? <VideoList videos={videos} id="videoList" className={styles.videoList} /> : <ArticleList articles={articles} id="articleList" className={styles.articleList} />
 
 
 
@@ -30,7 +25,7 @@ const ActivityIdeas = () => {
     </div>
       
     </div>
-  )
-}
+  );
+};
 
-export default ActivityIdeas
+export default ActivityIdeas;
