@@ -10,7 +10,7 @@
 .grid {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 75px 75px;
+    grid-template-rows: 50px 50px;
 }
 
 .articleTitle {
@@ -22,6 +22,9 @@
 .articleReadTime {
     grid-column-start: 1;
     grid-row-start: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
 }
 
 .articleImg {
