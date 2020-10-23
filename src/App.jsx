@@ -31,16 +31,13 @@ export const App = () => {
 
   return (
     <>
-<<<<<<< HEAD
         <NavBar /*pass setPreviuosPage through here*//>   
         <Routes />
 
 
         {/* { <AddChick InputData={InputData} /> } */}
         {/* {/<Input InputData={InputData} /> } */}
-       
-    </>
-=======
+      
         {/* <AddChick InputData={InputData} /> */}
         {/* <Input InputData={InputData} />  */}
         {/* <BookSmarts /> */}
@@ -50,7 +47,6 @@ export const App = () => {
         {/* {<AddChick /> } */}
         <Routes />
     </> 
->>>>>>> ff186915acd0f1677209b04f582a5ec9863ae405
   )
 }
 export default App;
