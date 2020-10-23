@@ -10,6 +10,9 @@ import ArticleList from "../../components/Categories/ArticleList";
 import BookSmarts from "../../components/bookSmarts/BookSmarts";
 import SOS from "../../components/Categories/SOS";
 
+import InputData from "../../components/data/Input";
+
+
 
 const Routes = () => {
 
