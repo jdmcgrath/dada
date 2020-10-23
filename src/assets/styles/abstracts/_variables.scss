@@ -7,6 +7,20 @@
 
 // Light mode
 
+/* =========================================================================================================
+                                               COLOUR PALETTES
+/* =======================================================================================================*/
+
+
+// Tatiana's Colour Palette
+
+$orange: #FF9201;
+$lightBlue: #4BBFE8;
+$turquoise: #4DC6B8;
+$midBlue: #199FB7;
+$navyBlue: #074B77;
+$black: #042621;
+
 // 1. 
 $backgroundColor: #f9f4e7;
 $colourTwo: #f9f4e7;
@@ -16,6 +30,36 @@ $colourFive: #C8553D;
 $colourSix: #588B8B;
 $fontColour: #000000;
 
+
+/* =========================================================================================================
+                                               TYPOGRAPHY
+/* =======================================================================================================*/
+
+// Font sizes converted from pt to px, from Tatiana's Figma Sheet
+
+// Main Content - p tags etc.
+$baseFontSize: 14px;
+
+// Header font sizes
+$h1FontSize: 2rem;
+$h2FontSize: 1.5rem;
+$h3FontSize: 1.5rem;
+$h4FontSize: 1.5rem;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Jake's 1
 // $backgroundColor:#E4F9FF;
 // $primaryColor:#0077B6;
@@ -23,10 +67,10 @@ $fontColour: #000000;
 // $tertiaryColor:#4FCAFF;
 
 //Jake's 2
-$backgroundColor:#FFF5F1;
-$primaryColor:#F58764;
-$secondaryColor:#F58764;
-$tertiaryColor:#929191;
+// $backgroundColor:#FFF5F1;
+// $primaryColor:#F58764;
+// $secondaryColor:#F58764;
+// $tertiaryColor:#929191;
 
 // Dark mode
 

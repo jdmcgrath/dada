@@ -33,19 +33,14 @@ export const App = () => {
   return (
     <>
         <NavBar /*pass setPreviuosPage through here*//>   
-        <Routes />
-
-
+        {/* <Routes /> */}
+        {/* <Register /> */}
+        {/* <SOS /> */}
         {/* { <AddChick InputData={InputData} /> } */}
         {/* {/<Input InputData={InputData} /> } */}
-      
-        {/* <AddChick InputData={InputData} /> */}
-        {/* <Input InputData={InputData} />  */}
         {/* <BookSmarts /> */}
         {/* {<Categories /> } */}
         {/* { <h1>Dada</h1> } */}
-        {/* {<Categories /> } */}
-        {/* {<AddChick /> } */}
         <Routes />
     </> 
   )

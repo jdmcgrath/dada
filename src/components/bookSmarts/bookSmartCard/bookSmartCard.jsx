@@ -29,7 +29,7 @@ const BookSmartCard = (props) => {
         <section className={styles.cardContainer}>
             <div className={styles.bookInfoContainer}>
                 <div className={styles.bookSmartInfo}>
-                    <h3 className={styles.bookTitle}>{Title}</h3>
+                    <h2 className={styles.bookTitle}>{Title}</h2>
                     <p className={styles.bookAuthor}>{Author}, {publishDate}</p>
                 </div>
                 <div className={styles.bookSmartVotes}>
