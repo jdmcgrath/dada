@@ -1,50 +1,59 @@
 @import "../../assets/styles/abstracts/variables";
 @import "../../assets/styles/main.scss";
 
-.pageContainer {
-    width: 80vw;
+* {
+    text-decoration: none;
+}
+
+.catPageContainer {
+    width: 100%;
     margin: 0 auto;
-    padding-top: 50px;
+    padding: 2em 0 0 0;
+    
     
     h1{
-        font-size: 24px;
+        font-size: 1.25em;
+        text-align: center;
+        font-weight: bold;
     }
 
     .catContainer{
         display: flex;
         flex-wrap: wrap;
-        //background-color: $colourTwo;
         background-color: white;
-        border-radius: 20px;
-
+ 
         .card {
-            height: 50%;
-            margin: auto;
+
             flex: 0 0 50%;
-            padding: 10px;
-            padding-bottom: 30px;
+            width: 25%;
+            padding: 5px;
+            margin-bottom: 50px;
             position: relative;
-
-            a {
-                h2{
-                    font-size: 14px;
-                    text-align: center;
-                    color: $fontColour;
-                    position: absolute;
-                    left: 20px;
-                    top: 15px;
-                    z-index: 1;
-                    padding: 0;
-                }
-
-                p {
-                    color: $tertiaryColor;
-                    font-size: 13px;
-                    font-weight: bold;
-                    line-height: 1.6em;
-                    height:20px;
-                }
+            
+            img {
+                width: 130px;
             }
+                
+            p {                  
+                color: $fontColour;
+                font-size: 13px;
+                font-weight: bold;
+                line-height: 1.6em;
+                height:20px;
+            }
+            
+  
+            h2{
+                font-size: 0.8em;
+                text-align: center;
+                color: $fontColour;
+                position: absolute;
+                left: 15px;
+                top: 15px;
+                z-index: 1;
+                padding: 0;
+            }
+        
         }
     }
 }
