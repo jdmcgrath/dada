@@ -8,6 +8,7 @@ import NavBar from "./components/NavBar";
 import Register from "./components/sign-up/register"
 import SOS from "./components/SplashScreen/SplashScreen"
 import { Router, Link } from "@reach/router"
+import SOS from "./components/Categories/SOS/SOS"
 
 
 
