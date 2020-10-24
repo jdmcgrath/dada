@@ -17,12 +17,9 @@ const BookSmartCard = (props) => {
       setCount(addCount => addCount + 1)
     }
     const {
-        id,
         Title, 
         Author,
-        publishDate,
-        Votes,
-        Img
+        publishDate
     } = props.cardData;
 
     return (
