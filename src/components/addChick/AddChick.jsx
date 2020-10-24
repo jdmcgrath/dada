@@ -24,7 +24,7 @@ const AddChick = (props) => {
                 <Input InputData={props.InputData[1]} />
                 <label for="birthdate"></label>
                 <input type="date" id="birthdate" placeholder="Date of Birth"></input>
-                <button type="submit">Save</button>
+                <button type="submit" className={styles.formBtn}>Save</button>
             </form>
     </div>
     
