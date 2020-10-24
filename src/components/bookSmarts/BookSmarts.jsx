@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import styles from "./bookSmarts.module.scss";
 import BookSmartCard from "./bookSmartCard";
 import cardData from "./data"
