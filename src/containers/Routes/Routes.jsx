@@ -2,13 +2,13 @@ import React from "react";
 import { Router } from "@reach/router";
 
 import Categories from "../../components/Categories";
-import SignUp from "../../components/sign-up/register";
-import AddChick from "../../components/addChick/AddChick";
-import ActivityIdeas from "../../components/Categories/ActivityIdeas";
-import VideoList from "../../components/Categories/VideoList";
-import ArticleList from "../../components/Categories/ArticleList";
-import BookSmarts from "../../components/bookSmarts/BookSmarts";
-import SOS from "../../components/Categories/SOS";
+import SignUp from "../../components/SignUp/register";
+import AddChick from "../../components/AddChick/AddChick";
+import ActivityIdeas from "../../components/ActivityIdeas";
+import VideoList from "../../components/VideoList";
+import ArticleList from "../../components/ArticleList";
+import BookSmarts from "../../components/BookSmarts/BookSmarts";
+import SOS from "../../components/SOS";
 
 const Routes = () => {
     return(
