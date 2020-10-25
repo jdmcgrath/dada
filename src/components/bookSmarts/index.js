@@ -1,3 +1,3 @@
-import bookSmarts from "./bookSmarts";
+import BookSmarts from "./BookSmarts";
 
-export default bookSmarts;
+export default BookSmarts;
