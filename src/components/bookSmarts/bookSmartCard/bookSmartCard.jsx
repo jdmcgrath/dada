@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import styles from './bookSmartCard.module.scss';
+import styles from './BookSmartCard.module.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleUp,
