@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./BookSmarts.module.scss";
 import BookSmartCard from "./BookSmartCard";
-import cardData from "./data"
+import cardData from "../../data/bookSmartData";
 
 const BookSmarts = () => {
 
