@@ -3,7 +3,7 @@ import { Router } from "@reach/router";
 
 import Categories from "../../components/Categories";
 import SignUp from "../../components/SignUp/register";
-import AddChick from "../../components/AddChick/AddChick";
+import AddChick from "../../components/AddChick";
 import ActivityIdeas from "../../components/ActivityIdeas";
 import VideoList from "../../components/VideoList";
 import ArticleList from "../../components/ArticleList";
