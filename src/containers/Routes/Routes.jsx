@@ -6,7 +6,7 @@ import SignUp from "../../components/SignUp/register";
 import ActivityIdeas from "../../components/ActivityIdeas";
 import VideoList from "../../components/VideoList";
 import ArticleList from "../../components/ArticleList";
-import BookSmarts from "../../components/BookSmarts/BookSmarts";
+import BookSmarts from "../../components/BookSmarts";
 import AddChick from "../../components/AddChick";
 import SOS from "../../components/SOS";
 
