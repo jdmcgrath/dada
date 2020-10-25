@@ -9,6 +9,7 @@ import VideoList from "../../components/Categories/VideoList";
 import ArticleList from "../../components/Categories/ArticleList";
 import BookSmarts from "../../components/bookSmarts/BookSmarts";
 import SOS from "../../components/Categories/SOS";
+import BookInfo from "../../components/bookSmarts/BookInfo";
 
 const Routes = () => {
     return(
@@ -20,6 +21,7 @@ const Routes = () => {
             <VideoList path="categories/activity-ideas/video-list" />
             <ArticleList path="categories/activity-ideas/article-list" />
             <BookSmarts path="book-smarts" />
+            <BookInfo path="book-smarts/book-info" />
             <SOS path="sos"/>
         </Router>
     )

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import styles from './bookSmartCard.module.scss';
+import { Link } from '@reach/router';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleUp,
@@ -36,6 +37,7 @@ const BookSmartCard = (props) => {
                 </div> 
             </div> 
             <div className={styles.bookSmartImage}>
+                <Link to="book-info" />
                 {/* <img src={Img} alt="book-cover-image"></img> */}
                 <span class={styles.imagePlaceholder}><FontAwesomeIcon icon={faImage} /></span>
             </div>    

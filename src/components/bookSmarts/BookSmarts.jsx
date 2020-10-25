@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./bookSmarts.module.scss";
 import BookSmartCard from "./bookSmartCard";
-import cardData from "./data"
+import cardData from "./data";
 
 const bookSmarts = () => {
 
   const getBookInfo = (cardData) => (
-      <BookSmartCard cardData={cardData}/>
+      <BookSmartCard cardData={cardData} />
   )
 
   return (
