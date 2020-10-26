@@ -1,16 +1,7 @@
-import React from "react";
+import React from 'react';
 import Routes from "./containers/Routes/Routes";
-import { Router, Link } from "@reach/router";
-import NavBar from './components/NavBar'
+import NavBar from "./components/NavBar";
 
-
-
-// import Input from "./components/Input";
-// import library from "./components/data/fa-library";
-// import FloatPlaceHolder from "./components/FloatPlaceHolder.module.scss";
- 
-
-// import Register from './components/sign-up/register';
 
 export const App = () => {
 
@@ -26,9 +17,9 @@ export const App = () => {
 
   return (
     <>
-      <NavBar />
-      <Routes />
-    </>
-  );
+        <NavBar /*pass setPreviuosPage through here*//>   
+        <Routes />
+    </> 
+  )
 }
 export default App;

@@ -9,6 +9,7 @@
     padding-bottom: 5px;
     border-bottom: 1px solid black;
 
+    
     .bookInfoContainer {
         display: flex;
         flex-direction: column;
@@ -22,6 +23,7 @@
 
             .bookTitle {
                 font-size: .7rem;
+                font-weight: 700;
             }
     
             .bookAuthor {

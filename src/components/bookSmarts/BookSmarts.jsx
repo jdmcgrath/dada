@@ -1,10 +1,11 @@
-import React, {useState} from "react";
-import styles from "./bookSmarts.module.scss";
-import BookSmartCard from "./bookSmartCard";
-import cardData from "./data"
+import React from "react";
+import styles from "./BookSmarts.module.scss";
+import BookSmartCard from "./BookSmartCard";
+import cardData from "../../data/bookSmartData";
 
-const bookSmarts = () => {
+const BookSmarts = () => {
 
+  
   const getBookInfo = (cardData) => (
       <BookSmartCard cardData={cardData}/>
   )
@@ -20,5 +21,5 @@ const bookSmarts = () => {
   );
 };
 
-export default bookSmarts;
+export default BookSmarts;
 

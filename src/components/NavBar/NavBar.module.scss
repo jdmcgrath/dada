@@ -3,15 +3,17 @@
 
 .globalNav{ 
     display: flex;
+    justify-content: space-between;
     // gap: 70vw;
     top: 0px;
-    width: 80vw;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
 }
 
 .backButton{ 
     font-size: 1.6rem;
     color: grey;
-    margin-right: 10vw;
 }
 
 .ellipses{ 
@@ -21,7 +23,9 @@
 } 
 
 .pageTitle {
-    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
     color: black;
 } 
 

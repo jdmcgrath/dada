@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import styles from './bookSmartCard.module.scss';
+import styles from './BookSmartCard.module.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleUp,
@@ -7,6 +7,7 @@ import { faArrowCircleUp,
          faImage } from "@fortawesome/free-solid-svg-icons";
 
 
+         
 const BookSmartCard = (props) => {
     const [count, setCount] = useState(0);
     const reduceCount = () => {
@@ -17,19 +18,16 @@ const BookSmartCard = (props) => {
       setCount(addCount => addCount + 1)
     }
     const {
-        id,
         Title, 
         Author,
-        publishDate,
-        Votes,
-        Img
+        publishDate
     } = props.cardData;
 
     return (
         <section className={styles.cardContainer}>
             <div className={styles.bookInfoContainer}>
                 <div className={styles.bookSmartInfo}>
-                    <h3 className={styles.bookTitle}>{Title}</h3>
+                    <h2 className={styles.bookTitle}>{Title}</h2>
                     <p className={styles.bookAuthor}>{Author}, {publishDate}</p>
                 </div>
                 <div className={styles.bookSmartVotes}>
