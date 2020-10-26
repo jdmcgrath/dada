@@ -1,9 +1,8 @@
 import React from 'react'
 import styles from "./Register.module.scss"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SocialFollow from './SocialFollow';
 
-//Font Awesome:
 
 
 
@@ -31,7 +30,7 @@ export const Register = () => {
             Sign Up
           </button>
         </div>
-        <p className={styles.terms}>Already have an account? <strong><a>Login</a></strong></p>
+        <p className={styles.terms}>Already have an account? <strong><a href="https://github.com/nology-tech/dada">Login</a></strong></p>
         <p className={styles.orSignIn}>or sign in with</p>
         < SocialFollow />
       </div>

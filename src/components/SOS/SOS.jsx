@@ -17,20 +17,20 @@ const SOS = () => {
                 {SOScardsArr.map((card) => {
                     return (
                         <section className={styles.card}>
-                            {/* <a href="https://github.com/nology-tech/dada"> */}
+                            <a href="https://github.com/nology-tech/dada">
                             <Link to={card.path}>
                                 <h2>{card.title}</h2>
                                 <img src={card.image} alt="sos-category-alt-text"/>
-                                {/* <p>{card.info}</p> */}
+                                <p>{card.info}</p>
                             </Link>
-                            {/* </a> */}
+                            </a>
                         </section>
                     )
                 }
             )
             }
                 </div>
-        </div>
+            </div>
         );
     }
     

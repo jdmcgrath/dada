@@ -1,10 +1,6 @@
 @import "../../assets/styles/abstracts/variables";
 @import "../../assets/styles/main.scss";
 
-* {
-    text-decoration: none;
-}
-
 .catPageContainer {
     width: 100%;
     margin: 0 auto;
@@ -21,9 +17,10 @@
         display: flex;
         flex-wrap: wrap;
         background-color: white;
+        border: 1px solid black;
+        margin-top: 20px;
  
         .card {
-
             flex: 0 0 50%;
             width: 25%;
             padding: 5px;

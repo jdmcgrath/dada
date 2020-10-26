@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Categories.module.scss";
-import {cardsArr} from "../data/cardData";
+import {cardsArr} from "../../data/cardData";
 import { Link } from "@reach/router";
 
 
@@ -18,7 +18,7 @@ const Categories = () => {
                         <Link to={card.path}>
                             <h2>{card.title}</h2>
                             <img src={card.image} alt=""/>
-                            <span className={styles.linkText}><p>{card.info}</p></span>
+                            <p>{card.info}</p>
                         </Link>
                     </section>
                 )
