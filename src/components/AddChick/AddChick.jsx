@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 
 
-const AaddChick = () => {
+const AddChick = () => {
     return (
         <div className={styles.pageContainer}>
             <header className={styles.header}>
@@ -33,4 +33,4 @@ const AaddChick = () => {
     ); 
 }
 
-export default AaddChick;
+export default AddChick;
