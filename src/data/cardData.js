@@ -9,14 +9,14 @@ export const cardsArr = [
         "title":"SOS!",
         "image":"https://via.placeholder.com/150",
         "info":"Dealing with common behaviour issues",
-        "path":"/sos"
+        "path":"sos"
         
     },
     {
         "title":"Book Smarts",
         "image":"https://via.placeholder.com/150",
         "info":"Highlights from the best parenting books",
-        "path":"/book-smarts"
+        "path":"book-smarts"
     },
     {
         "title":"Up Your Game",
