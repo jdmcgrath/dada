@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./BbookSmarts.module.scss";
-import BbookSmartCard from "./BbookSmartCard";
-import cardData from "../../data/BbookSmartData";
+import styles from "./BookSmarts.module.scss";
+import BookSmartCard from "./BookSmartCard";
+import cardData from "../../data/BookSmartData";
 
 const BookSmarts = () => {
 
@@ -21,5 +21,5 @@ const BookSmarts = () => {
   );
 };
 
-export default BbookSmarts;
+export default BookSmarts;
 
