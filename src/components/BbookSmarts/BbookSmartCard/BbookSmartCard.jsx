@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import styles from './BookSmartCard.module.scss';
+import styles from './BbookSmartCard.module.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleUp,
@@ -44,4 +44,4 @@ const BookSmartCard = (props) => {
     )
 } 
 
-export default BookSmartCard;
+export default BbookSmartCard;
