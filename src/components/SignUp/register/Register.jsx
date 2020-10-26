@@ -3,7 +3,6 @@ import styles from "./Register.module.scss"
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SocialFollow from './SocialFollow';
 
-//Font Awesome:
 
 
 
