@@ -1,2 +1,2 @@
-import AddChick from './AaddChickk';
+import AddChick from './AddChick';
 export default AddChick;
