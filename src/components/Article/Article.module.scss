@@ -1,13 +1,11 @@
-@import "../../../assets/styles/main.scss";
+@import "../../assets/styles/main.scss";
 
 .articleContainer {
-  // border-top: 1px solid darkslategrey;
   border-bottom: 1px solid darkslategrey;
-  // margin: 3% 0;
   padding: 3% 0;
 }
 
-.grid {
+.articleGrid {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 50px 50px;

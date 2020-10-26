@@ -5,14 +5,19 @@ import styles from './Video.module.scss';
 
 const Video = (props) => {
 
-  const {url, keyword} = props.video
+  const { url, keyword, channel, icon, } = props.video
 
   return (
-    <div className={styles.thumbnailBox}>
-      <h3 className={styles.videoTitle}>
-        Video Title
-        {/* replace with channel name pulled from YouTube api */}
-      </h3>
+    <div className={styles.vidListContainer}>
+      <div>
+        <img src={props.video.icon} alt="" className={styles.vidIcon/>
+
+        <h3 className={styles.videoChanText}>
+          {props.video.channel}
+          {/* replace with channel name pulled from YouTube api */}
+        </h3>
+      </div>
+      
       
       <div className={styles.playerWrapper}>
         <ReactPlayer
@@ -28,9 +33,9 @@ const Video = (props) => {
           }}
         />
       </div>
-      <div className={styles.videoTags}>
+      <div className={styles.vidTitle}>
         <p>
-          Tag: {props.video.keyword}
+          {props.video.title}
         </p>
         <p>
           Fav Icon

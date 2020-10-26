@@ -1,15 +1,14 @@
-@import '../../../assets/styles/main.scss';
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import "../../assets/styles/main.scss";
 
 
-.thumbnailBox {
+.vidListContainer {
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
   margin: 3% 0;
   border-radius: 2%;
   box-shadow: 1px 2px 5px 2px grey;
-  .videoTitle {
+  .vidChanText {
     display: flex;
     font-family: Nunito;
     justify-content: center;
@@ -24,7 +23,7 @@
     left: 0;
   }
   }
-  .videoTags {
+  .vidTitle {
     display: flex;
     justify-content: space-between;
     margin: 5% 5%;
