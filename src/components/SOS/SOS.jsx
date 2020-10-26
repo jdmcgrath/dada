@@ -9,10 +9,11 @@ import { Link } from "@reach/router";
 const SOS = () => { 
     
         return (
+            <>
+            <header className={styles.smHeader}>
+                <h1>SOS!</h1>
+            </header>
             <div className={styles.pageContainer}>
-                {/* <header>
-                    <h1>SOS</h1>
-                </header> */}
                 <div className={styles.catContainer}>
                 {SOScardsArr.map((card) => {
                     return (
@@ -31,6 +32,7 @@ const SOS = () => {
             }
                 </div>
             </div>
+            </>
         );
     }
     

@@ -1,2 +1,3 @@
-import BookSmartCard from './BookSmartCard';
+import BookSmartCard from './bookSmartCard';
+
 export default BookSmartCard;
