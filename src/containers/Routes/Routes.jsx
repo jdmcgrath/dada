@@ -10,6 +10,7 @@ import BookSmarts from "../../components/BookSmarts";
 import AddChick from "../../components/AddChick";
 import SOS from "../../components/SOS";
 import SplashScreen from "../../components/SplashScreen";
+import Tantrums from "../../components/Tantrums";
 
 const Routes = () => {
     return (
@@ -23,6 +24,7 @@ const Routes = () => {
         <BookSmarts path="book-smarts" />
         <SOS path="sos" />
         <SplashScreen path="splash" />
+        <Tantrums path="tantrums" />
       </Router>
     );
 }
