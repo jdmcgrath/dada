@@ -7,6 +7,7 @@ import { faArrowCircleUp,
          faImage } from "@fortawesome/free-solid-svg-icons";
 
 
+         
 const BookSmartCard = (props) => {
     const [count, setCount] = useState(0);
     const reduceCount = () => {

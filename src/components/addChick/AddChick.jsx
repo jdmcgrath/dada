@@ -5,6 +5,7 @@ import InputData from "../../data/Input";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 
+
 const AddChick = () => {
     return (
         <div className={styles.pageContainer}>

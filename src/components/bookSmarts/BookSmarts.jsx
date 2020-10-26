@@ -5,6 +5,7 @@ import cardData from "../../data/bookSmartData";
 
 const BookSmarts = () => {
 
+  
   const getBookInfo = (cardData) => (
       <BookSmartCard cardData={cardData}/>
   )
