@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from "./AddChick.module.scss";
-import Input from "../../components/Input";
+import Input from "../Input";
 import InputData from "../../data/Input";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 
 
-const AddChick = () => {
+const AaddChick = () => {
     return (
         <div className={styles.pageContainer}>
             <header className={styles.header}>
@@ -33,4 +33,4 @@ const AddChick = () => {
     ); 
 }
 
-export default AddChick;
+export default AaddChick;
