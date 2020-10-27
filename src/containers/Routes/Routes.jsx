@@ -17,8 +17,8 @@ const Routes = () => {
         <SignUp path="sign-up" />
         <AddChick path="add-chick" />
         <ActivityIdeas path="categories/activity-ideas" />
-        <VideoList path="categories/activity-ideas/video-list" />
-        <ArticleList path="categories/activity-ideas/article-list" />
+        {/* <VideoList path="categories/activity-ideas/video-list" />
+        <ArticleList path="categories/activity-ideas/article-list" /> */}
         <BookSmarts path="book-smarts" />
         <SOS path="sos" />
         <SplashScreen path="splash" />

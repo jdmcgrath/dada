@@ -8,8 +8,8 @@ const ActivityIdeas = () => {
   return (
     <div>
         {/* Buttons to select whether you wish to view a video or article */}
-      <Link to = "video-list" ><button>Videos</button></Link>
-      <Link to = "article-list"><button>Articles</button></Link>
+      {/* <Link to = "video-list" ><button>Videos</button></Link>
+      <Link to = "article-list"><button>Articles</button></Link> */}
 
       <div className="filter">
       {/* Tabbed buttons to click for filtered lists based on keywords */}

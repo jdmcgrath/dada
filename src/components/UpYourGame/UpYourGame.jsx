@@ -1,21 +1,23 @@
 import React from "react";
 import styles from "./UpYourGame.module.scss";
-import { UpYourGameCardData } from "../../data/upYourGameData";
-
+import UpYourGameCards from "./UpYourGameCards";
+import MostDiscussedCards from "./MostDiscussedCards";
 
 const UpYourGame = () => {
   return (
+    <>
     
-      <section>
-        {UpYourGameCardData((card) => {
-          return(
-            <p>working</p>
-          )
-        })}
-      </section>
+    <UpYourGameCards />
+
+    <h1>Most Discussed</h1>
+    <MostDiscussedCards />
+    </>
+          
       
+
     
-  );
-};
+    
+  )
+}
 
 export default UpYourGame;
