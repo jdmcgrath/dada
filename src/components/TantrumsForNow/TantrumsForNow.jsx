@@ -2,7 +2,8 @@ import React from "react";
 import styles from "./TantrumsForNow.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faTimes
+  faTimes,
+  faCircle
 } from "@fortawesome/free-solid-svg-icons";
 
 
@@ -11,11 +12,11 @@ const TantrumsForNow = () => {
     <>
       <div className={styles.whatNotToDo}>
           <h3>What NOT to do:</h3>
-          <ul class="fa-ul">
-            <li><i class="fa-li fa fa-times"></i>Yell or spank</li>
-            <li>Give in just because they are crying</li>
-            <li>Mock or threaten</li>
-            <li>Try to reason with your kid or apply logic</li>
+          <ul className={styles.topUl}>
+            <li><FontAwesomeIcon icon={faTimes} />Yell or spank</li>
+            <li><FontAwesomeIcon icon={faTimes} />Give in just because they are crying</li>
+            <li><FontAwesomeIcon icon={faTimes} />Mock or threaten</li>
+            <li><FontAwesomeIcon icon={faCircle} size="0.1x" className={styles.circle}/>Try to reason with your kid or apply logic</li>
           </ul>
       </div>
       <div className={styles.tryThis}>

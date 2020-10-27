@@ -1,7 +1,16 @@
 @import "../../assets/styles/main.scss";
 
 .whatNotToDo{ 
-    div{ 
-        display: flex;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.topUl{ 
+    list-style-type: none;
+}
+.circle{ 
+    font-size: 0.5rem;
+    margin-bottom: 0.5px;
 }
