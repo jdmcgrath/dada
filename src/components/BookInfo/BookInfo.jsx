@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './BookInfo.module.scss';
 import BookInsightCard from './BookInsightCard';
-import cardData from '../../../data/bookSmartData';
+import cardData from '../../data/bookSmartData';
 
 const BookInfo = () => {
 
