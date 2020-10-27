@@ -14,7 +14,7 @@ const ActivityIdeas = () => {
 
 
   return (
-  <div className={styles.activityIdeas}>
+  <div className={styles.actIdeasContainer}>
 
     <div className={styles.btnContainer}>
       <button className={styles.button} onClick={() => setToggleList(true)}>Videos</button>

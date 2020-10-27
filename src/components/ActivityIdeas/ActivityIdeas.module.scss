@@ -1,6 +1,7 @@
 @import "../../assets/styles/main.scss";
 
-.activityIdeas {
+.actIdeasContainer {
+  margin-top: 10vh;
   padding: 5%;
   .btnContainer {
     display: flex;
@@ -8,7 +9,7 @@
     .button {
       font-size: 1rem;
       font-family: Nunito;
-      padding: 2% 15% !important;
+      padding: 2% 15%;
       background-color: #189FB6;
       color: white;
       border: none;
