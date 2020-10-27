@@ -1,32 +1,37 @@
 @import "../../assets/styles/abstracts/variables";
 @import "../../assets/styles/main.scss";
 
-.globalNav{ 
-    display: flex;
-    justify-content: space-between;
-    // gap: 70vw;
-    top: 0px;
-    width: 80%;
-    margin: 0 auto;
-    padding-top: 20px;
+.navWrapper {
+    width: 100%;
+    position: absolute;
+    background-color: transparent;
+    top: 5%;
+
+    .globalNav{ 
+        display: flex;
+        justify-content: space-between;
+        // gap: 70vw;
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .backButton{ 
+        font-size: 1.6rem;
+        color: grey;
+    }
+    
+    .ellipses{ 
+        font-size: 1.6rem;
+        color: grey;
+        margin-left: 30vw;
+    } 
+    
+    .pageTitle {
+        display: flex;
+        align-items: center;
+        font-size: 1.4rem;
+        color: black;
+    } 
 }
-
-.backButton{ 
-    font-size: 1.6rem;
-    color: grey;
-}
-
-.ellipses{ 
-    font-size: 1.6rem;
-    color: grey;
-    margin-left: 30vw;
-} 
-
-.pageTitle {
-    display: flex;
-    align-items: center;
-    font-size: 1.4rem;
-    color: black;
-} 
 
 //add padding to navbar
