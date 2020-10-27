@@ -3,10 +3,14 @@ import styles from "./Tantrums.module.scss";
 
 const Tantrums = () => {
   return (
-    <div>
-      {/* Buttons to select whether you wish to info for now or later */}
-      <button>For Now</button>
-      <button>For Next Time</button>
+    <div className={styles.pageContainer}>
+            {/* Buttons to select whether you wish to info for now or later */}
+
+      <div className={styles.btnContainer}>
+      <button className={styles.primaryBtn}>For Now</button>
+      <button className={styles.primaryBtn}>For Next Time</button>
+
+      </div>
     </div>
   );
 };
