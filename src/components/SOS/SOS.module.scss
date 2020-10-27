@@ -7,17 +7,19 @@
 }
 
 .pageContainer {
-    width: 100%;
+    // width: 100%;
 
     .gridContainer{
         margin-top: 40px;
         grid-gap: 0.5rem;
-        
+
         .card {
             // height: 100%;
 
             .imageWrapper {
+                display: flex;
                 position: relative;
+                justify-content: center;
                 background-color: $lightBlue;
                 border-radius: 10px;
                 min-height: 25vh;
@@ -32,7 +34,7 @@
                 }
 
                 img {
-                    width: 100%;
+                    width: 50%;
                     border-radius: 12px;
                 }
             }

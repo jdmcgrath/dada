@@ -31,38 +31,38 @@ export const SOScardsArr = [
 
     {
     "title":"Tantrums",
-    "image":"",
+    "image":"../../img/SOS/Tantrums.svg",
     "info":"",
     "path":"Tantrums"
 },
 {
     "title":"Aggression",
-    "image":"",
+    "image":"../../img/SOS/Aggression.svg",
     "info":"",
     "path":"/aggression"
     
 },
 {
     "title":"Screaming",
-    "image":"",
+    "image":"../../img/SOS/Screaming.svg",
     "info":"",
     "path":"/screaming"
 },
 {
     "title":"Whining",
-    "image":"",
+    "image":"../../img/SOS/Whining.svg",
     "info":"",
     "path":"/whining"
 },
 {
     "title":"Sleep Issues",
-    "image":"",
+    "image":"../../img/SOS/SleepIssues.svg",
     "info":"",
     "path":"/sleep Issues"
 }, 
 {
     "title":"Swearing",
-    "image":"",
+    "image":"../../img/SOS/Rejection.svg",
     "info":"",
     "path":"/swearing"
 }];
