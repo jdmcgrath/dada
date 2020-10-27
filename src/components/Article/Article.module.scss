@@ -3,30 +3,32 @@
 .articleContainer {
   border-bottom: 1px solid darkslategrey;
   padding: 3% 0;
-}
-
-.articleGrid {
+  .articleGrid {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 50px 50px;
-}
-
-.articleTitle {
+    .articleTitle {
     text-align: left;
     grid-column-start: 1;
     grid-row-start: 1;
+    }
+    .articleReadTime {
+        grid-column-start: 1;
+        grid-row-start: 2;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+    .articleImg {
+        grid-column-start: 2;
+        grid-row-start: span 2;
+        border-radius: 5%;
+    }
+  }
 }
 
-.articleReadTime {
-    grid-column-start: 1;
-    grid-row-start: 2;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-}
 
-.articleImg {
-    grid-column-start: 2;
-    grid-row-start: span 2;
-    border-radius: 5%;
-}
+
+
+
+

@@ -7,9 +7,9 @@ const Article = (props) => {
   return (
     <div className={styles.articleContainer}>
       <div className={styles.articleGrid}>
-        <h3 className={styles.articleTitle}>{Title}</h3>
+        <h3 className={styles.articleTitle}><a href="">{Title}</a></h3>
         <p className={styles.articleReadTime}>Read  Time: {ReadTime}</p>
-        <img className={styles.articleImg} src= {Image} alt=""/>
+        <a href=""><img className={styles.articleImg} src= {Image} alt=""/></a>
       </div>
     </div>
   );
@@ -19,4 +19,4 @@ export default Article;
 
 
 // need to figure out how these articles will be read.
-// videos will play in the embedded player and can switch to fullscreen and back, but the articles will presumably be from external sites?? need to find this out.
+// videos will play in the embedded player and can switch to fullscreen and back. articles are to be hosted so need to work out how to access them. additional comonent e.g. ArticleReader?

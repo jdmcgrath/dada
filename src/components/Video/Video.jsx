@@ -31,16 +31,18 @@ const Video = (props) => {
           width='100%'
           height='100%'
           config={{
-            // youtube 'showinfo' property has been deprecated
+            // youtube 'showinfo' property has been deprecated so unable to hide title/channel/icon from video itself
           }}
         />
       </div>
-      <div className={styles.vidTitle}>
-        <p>
+      
+      <div className={styles.vidBottomBar}>
+        <p className={styles.vidTitle}>
           {props.video.title}
         </p>
-        <FontAwesomeIcon icon={faBookmark} />
+        <FontAwesomeIcon icon={faBookmark} className={styles.vidBookmark}/>
       </div>
+
     </div>
   )
 }
