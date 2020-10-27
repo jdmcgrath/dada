@@ -8,26 +8,39 @@
   margin: 3% 0;
   border-radius: 2%;
   box-shadow: 1px 2px 5px 2px grey;
-  .vidChanText {
+
+  .vidTopBar{
     display: flex;
-    font-family: Nunito;
-    justify-content: center;
-    align-items: center;
+
+    .vidChanIcon {
+      border-radius: 50%;
+      width: 15%; 
+      padding: 5px;
+    }
+    .vidChanText {
+      font-family: Nunito;
+      justify-content: center;
+      align-self: center;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
   }
+ 
   .playerWrapper {
     position: relative;
     padding-top: 56.25%;
-  .reactPlayer {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+    .reactPlayer {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
   .vidTitle {
     display: flex;
     justify-content: space-between;
-    margin: 5% 5%;
+    margin: 5% 8% 5% 5%;
     font-family: Nunito;
+    font-weight: bold;
   }
 }
 

@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
 import styles from './Video.module.scss';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBookmark } from '@fortawesome/free-solid-svg-icons'; 
+
 
 
 const Video = (props) => {
@@ -8,17 +11,18 @@ const Video = (props) => {
   const { url, keyword, channel, icon, } = props.video
 
   return (
+  
     <div className={styles.vidListContainer}>
-      <div>
-        <img src={props.video.icon} alt="" className={styles.vidIcon/>
 
-        <h3 className={styles.videoChanText}>
+      <div className={styles.vidTopBar}>
+        <img src={props.video.icon} alt="" className={styles.vidChanIcon}/>
+
+        <p className={styles.vidChanText}>
           {props.video.channel}
           {/* replace with channel name pulled from YouTube api */}
-        </h3>
+        </p>
       </div>
-      
-      
+        
       <div className={styles.playerWrapper}>
         <ReactPlayer
           className={styles.reactPlayer}
@@ -27,9 +31,7 @@ const Video = (props) => {
           width='100%'
           height='100%'
           config={{
-            youtube: {
-              playerVars: { showinfo: 1 }
-            },
+            // youtube 'showinfo' property has been deprecated
           }}
         />
       </div>
@@ -37,9 +39,7 @@ const Video = (props) => {
         <p>
           {props.video.title}
         </p>
-        <p>
-          Fav Icon
-        </p>
+        <FontAwesomeIcon icon={faBookmark} />
       </div>
     </div>
   )
