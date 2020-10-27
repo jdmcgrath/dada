@@ -1,0 +1,45 @@
+@import "../../assets/styles/main.scss";
+
+.splashPage{ 
+    position: relative;
+    height: 80vh;
+    justify-content: center;
+}
+
+
+.splash {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+ 
+    img {
+        margin-top: 30vh;
+        width: 200px;
+    }
+
+    .dadviceBtn{ 
+        background-color: white;
+        border: 2px solid rgb(187, 186, 186);
+        margin-top: 25vh;
+        border-radius: 8px;
+        width: 80vw;
+        padding: 3%;
+        font-weight: 550;
+    }
+    p{ 
+        font-size: 1rem;
+        margin-top: 2vh;
+    } 
+    .underButtonText{ 
+        font-size: 0.7rem;
+        span{ 
+            font-weight: 600;
+        }
+    }
+
+
+    
+}
