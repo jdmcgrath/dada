@@ -3,10 +3,7 @@
 
 .lgHeader {
     background-color: $lightBlue; 
-
-    h1 {
-
-    }
+    overflow: hidden;
 }
 
 .pageContainer {
@@ -16,7 +13,7 @@
 
         .card {
             display: flex;
-            min-height: 233px;
+            min-height: 40vh;
 
             .imageTitleContainer{
                 position: relative;

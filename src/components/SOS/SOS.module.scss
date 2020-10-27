@@ -7,51 +7,43 @@
 }
 
 .pageContainer {
-    padding-top: 20px;
+    width: 100%;
 
-    .catContainer{
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        //background-color: $colourTwo;
-        background-color: white;
-        border-radius: 20px;
-
+    .gridContainer{
+        margin-top: 40px;
+        grid-gap: 0.5rem;
+        
         .card {
-            height: 35%;
-            width: fit-content;
-            margin: auto;
-            flex: 0 0 50%;
-            padding: 15px;
-            position: relative;
-            // border radius on image?
+            // height: 100%;
 
-            a{
+            .imageWrapper {
+                position: relative;
+                background-color: $lightBlue;
+                border-radius: 10px;
+                min-height: 25vh;
 
                 h2{
-                    font-size: 14px;
-                    text-align: center;
-                    color: $fontColour;
+                    color: $offWhite;
                     position: absolute;
-                    left: 25px;
-                    top: 20px;
+                    top: 7px;
+                    left: 10px;
                     z-index: 1;
                     padding: 0;
                 }
 
-                img{ 
-                    width:105%;
-                    border-radius: 5%;
+                img {
+                    width: 100%;
+                    border-radius: 12px;
                 }
+            }
 
-                p {
-                // color: $tertiaryColor;
+            p {
+            // color: $tertiaryColor;
                 font-size: 13px;
                 font-weight: bold;
                 line-height: 1.6em;
                 height:20px;
-                }
-            }
+            }    
         }
     }
 };

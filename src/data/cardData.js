@@ -2,7 +2,7 @@
 export const cardsArr = [
     {
         "title":"Activity Ideas",
-        "image": "../../assets/img/CategoryPage/ActivityIdeasPenguin.svg",
+        "image": "../../assets/img/CategoryPage/SOSPenguin.svg",
         "info":"Age appropriate boredom busters",
         "path":"activity-ideas"
     },
@@ -32,38 +32,38 @@ export const SOScardsArr = [
 
     {
     "title":"Tantrums",
-    "image":"https://via.placeholder.com/150",
+    "image":"",
     "info":"",
     "path":"Tantrums"
 },
 {
     "title":"Aggression",
-    "image":"https://via.placeholder.com/150",
+    "image":"",
     "info":"",
     "path":"/aggression"
     
 },
 {
     "title":"Screaming",
-    "image":"https://via.placeholder.com/150",
+    "image":"",
     "info":"",
     "path":"/screaming"
 },
 {
     "title":"Whining",
-    "image":"https://via.placeholder.com/150.png",
+    "image":"",
     "info":"",
     "path":"/whining"
 },
 {
     "title":"Sleep Issues",
-    "image":"https://via.placeholder.com/150.png",
+    "image":"",
     "info":"",
     "path":"/sleep Issues"
 }, 
 {
     "title":"Swearing",
-    "image":"https://via.placeholder.com/150.png",
+    "image":"",
     "info":"",
     "path":"/swearing"
 }];
