@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./bookSmarts.module.scss";
-import BookSmartCard from "./bookSmartCard";
+import styles from "./BookSmarts.module.scss";
+import BookSmartCard from "./BookSmartCard";
 import cardData from "../../data/bookSmartData";
 
 const BookSmarts = () => {

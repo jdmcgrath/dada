@@ -6,8 +6,8 @@ import SignUp from "../../components/SignUp/register";
 import ActivityIdeas from "../../components/ActivityIdeas";
 import VideoList from "../../components/VideoList";
 import ArticleList from "../../components/ArticleList";
-import BookSmarts from "../../components/bookSmarts/index";
-import BookInfo from "../../components/bookSmarts/BookInfo"
+import BookSmarts from "../../components/BookSmarts/BookSmarts";
+import BookInfo from "../../components/BookSmarts/BookInfo";
 // import AddChick from "../../components/AddChick";
 import SOS from "../../components/SOS";
 

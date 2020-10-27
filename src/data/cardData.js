@@ -2,7 +2,7 @@
 export const cardsArr = [
     {
         "title":"Activity Ideas",
-        "image": "../assets/styles/img/CategoryPage/ActivityIdeasPenguin.svg",
+        "image": "../../assets/img/CategoryPage/ActivityIdeasPenguin.svg",
         "info":"Age appropriate boredom busters",
         "path":"activity-ideas"
     },
