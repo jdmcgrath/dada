@@ -17,7 +17,7 @@ export const App = () => {
 
   return (
     <>
-        <NavBar /*pass setPreviuosPage through here*//>   
+        <NavBar /*pass setPreviuosPage through here*//>
         <Routes />
     </> 
   )
