@@ -8,55 +8,28 @@ import {
 
 const TantrumsForNow = () => {
   return (
-  <>
-    <div className={styles.whatNotToDo}>
-      <div>
-      <FontAwesomeIcon icon={faTimes} size="2x" />
-        <h4>Yell or spank</h4>
+    <>
+      <div className={styles.whatNotToDo}>
+          <h3>What NOT to do:</h3>
+          <ul class="fa-ul">
+            <li><i class="fa-li fa fa-times"></i>Yell or spank</li>
+            <li>Give in just because they are crying</li>
+            <li>Mock or threaten</li>
+            <li>Try to reason with your kid or apply logic</li>
+          </ul>
       </div>
-      <div>
-      <FontAwesomeIcon icon={faTimes} size="2x" />
-        <h4>Give in just because they are crying</h4>
+      <div className={styles.tryThis}>
+        <h3>Try this:</h3>
+        <ul>
+          <li>Take a deep breath and calm down</li>
+          <li>Remove your child from a situation, if needed</li>
+          <li>Be firm but gentle</li>
+          <li>Acknowledge your child's feelings, name them</li>
+          <li>Stay calm and consistent</li>
+          <li>Wait, then re-engage when they're starting to cool down</li>
+        </ul>
       </div>
-      <div>
-      <FontAwesomeIcon icon={faTimes} size="2x" />
-        <h4>Mock or threaten</h4>
-      </div>
-      <div>
-      <FontAwesomeIcon icon={faTimes} size="2x" />
-        <h4>Try to reason with your kid or apply logic</h4>
-      </div>
-    </div>
-    <div className={styles.tryThis}>
-    <div>
-    <FontAwesomeIcon icon={faTimes} size="2x" />
-        <h4>Take a deep breath and calm down</h4>
-      </div>
-      <div>
-      <FontAwesomeIcon icon={faTimes} size="2x" />
-        <h4>Remove your child from a situation, if needed</h4>
-      </div>
-      <div>
-      <FontAwesomeIcon icon={faTimes} size="2x" />
-        <h4>Be firm but gentle</h4>
-      </div>
-      <div>
-      <FontAwesomeIcon icon={faTimes} size="2x" />
-        <h4>Acknowledge your child's feelings, name them</h4>
-      </div>
-      <div>
-      <FontAwesomeIcon icon={faTimes} size="2x" />
-        <h4>Stay calm and consistent</h4>
-      </div>
-      <div>
-      <FontAwesomeIcon icon={faTimes} size="2x" />
-        <h4>Wait, then re-engage when they're starting to cool down</h4>
-      </div>
-
-    </div>
-
-
-  </>
+    </>
   );
 };
 
