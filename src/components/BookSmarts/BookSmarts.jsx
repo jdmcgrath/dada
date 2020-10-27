@@ -7,7 +7,7 @@ const BookSmarts = () => {
 
   
   const getBookInfo = (cardData) => (
-      <BookSmartCard cardData={cardData}/>
+      <BookSmartCard cardData={cardData} />
   )
 
   return (
