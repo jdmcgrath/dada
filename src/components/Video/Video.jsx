@@ -4,16 +4,13 @@ import styles from './Video.module.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'; 
 
-
-
 const Video = (props) => {
 
   const { url, channel, icon, title } = props.video
 
   return (
   
-    <div className={styles.vidListContainer}>
-      <div>
+    <div className={styles.vidContainer}>
         <div className={styles.vidTopBar}>
           <img src={icon} alt="" className={styles.vidChanIcon}/>
 
@@ -43,7 +40,6 @@ const Video = (props) => {
           <FontAwesomeIcon icon={faBookmark} className={styles.vidBookmark}/>
         </div>
       </div>
-    </div>
   )
 }
 

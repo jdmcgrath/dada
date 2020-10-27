@@ -9,37 +9,16 @@
     .button {
       font-size: 1rem;
       font-family: Nunito;
-      padding: 2% 15%;
+      padding: 2% 15% !important;
       background-color: #189FB6;
       color: white;
       border: none;
+      outline: none;
       border-radius: 5px;
       box-shadow: 0px 2px 4px 1px grey;
     }
-      #btn {
+      .activeButton {
         background-color: #4BBFE8;
       } 
   }  
-
-
-// .filterList {
-//   margin: 15px 0px;
-//   ul {
-//     display: inline;
-//     list-style-type: none;
-
-//     li {
-//       display: inline;
-//       text-decoration: none;
-//       padding: 0px 5px;
-//       font-size: 0.8rem;
-//       font-family: Nunito;
-
-//     }
-//   }
-// }
 }
-
-// .button:active {
-//   background-color: #4BBFE8;
-// }

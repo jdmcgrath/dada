@@ -1,15 +1,16 @@
 import React from "react";
 import styles from "./Article.module.scss";
+import { Link } from "@reach/router";
 
 const Article = (props) => {
   const {Title, ReadTime, Image} = props.article;
   
   return (
-    <div className={styles.articleContainer}>
-      <div className={styles.articleGrid}>
-        <h3 className={styles.articleTitle}><a href="">{Title}</a></h3>
-        <p className={styles.articleReadTime}>Read  Time: {ReadTime}</p>
-        <a href=""><img className={styles.articleImg} src= {Image} alt=""/></a>
+    <div className={styles.artContainer}>
+      <div className={styles.artGrid}>
+        <h3 className={styles.artTitle}>{Title}</h3>
+        <p className={styles.artReadTime}>Read  Time: {ReadTime}</p>
+        <img className={styles.artImage} src= {Image} alt=""/>
       </div>
     </div>
   );

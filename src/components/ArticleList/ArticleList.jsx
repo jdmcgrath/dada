@@ -2,10 +2,8 @@ import React from 'react';
 import Article from '../Article/Article';
 import styles from './ArticleList.module.scss';
 
-
-
 const ArticleList = (props) => {
-  
+
   return (
     <div className={styles.listContainer}>
       {props.articles.map((article) => {

@@ -4,14 +4,12 @@ import VideoList from "../VideoList";
 import ArticleList from "../ArticleList";
 import articles from "../../data/articles";
 import videos from "../../data/videos";
-import {Link} from '@reach/router';
+import { Link } from '@reach/router';
 
 const ActivityIdeas = () => {
   const [toggleList, setToggleList] = useState(true);
 
-    const showClickedList = toggleList ? <VideoList videos={videos} id="videoList" className={styles.videoList} /> : <ArticleList articles={articles} id="articleList" className={styles.articleList} />
-
-
+    const showClickedList = (toggleList ? <VideoList videos={videos} /> : <ArticleList articles={articles} />)
 
   return (
   <div className={styles.actIdeasContainer}>
