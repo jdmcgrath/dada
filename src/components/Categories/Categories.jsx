@@ -3,7 +3,7 @@ import styles from "./Categories.module.scss";
 import {cardsArr} from "../../data/cardData";
 import { Link } from "@reach/router";
 
-import Binoculars from '../../assets/styles/img/Binoculars.svg';
+import Binoculars from "../../assets/img/Binoculars.svg";
 
 const Categories = () => {
 

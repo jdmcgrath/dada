@@ -10,14 +10,14 @@ export const cardsArr = [
         "title":"SOS!",
         "image":"../assets/styles/img/CategoryPage/SOSPenguin.svg",
         "info":"Dealing with common behaviour issues",
-        "path":"/sos"
+        "path":"sos"
         
     },
     {
         "title":"Book Smarts",
         "image":"https://www.figma.com/file/BfVrYAWrRpU1NDzfIzIoyx/DADA-MidFi?node-id=254%3A521",
         "info":"Highlights from the best parenting books",
-        "path":"/book-smarts"
+        "path":"book-smarts"
     },
     {
         "title":"Up Your Game",
