@@ -7,13 +7,24 @@
     justify-content: flex-start;
 }
 
-.topUl{ 
-    list-style-type: none;
+.whatNotToDoUl{ 
+    
+    li{ 
+        margin: 20px 0 20px 0;
+    }
 }
+
+.tryThisUl {
+    li{ 
+        margin: 20px 0 20px 0;
+    }
+}
+
 .circle{ 
     font-size: 0.5rem;
     margin-bottom: 0.5px;
 }
+
 .tantrumsNextTitle{ 
     margin-top: 30px;
 }
