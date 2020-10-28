@@ -7,7 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 
-const TantrumsForNow = () => {
+const TantrumsForNow = (props) => {
   return (
     <>
       <div className={styles.whatNotToDo}>
@@ -46,6 +46,7 @@ const TantrumsForNow = () => {
           <li>Wait, then re-engage when they're starting to cool down</li>
         </ul>
       </div>
+      <button className={styles.primaryBtn} >Prepare For Next Time</button>
     </>
   );
 };

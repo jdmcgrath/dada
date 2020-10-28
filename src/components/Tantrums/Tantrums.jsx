@@ -7,7 +7,7 @@ const Tantrums = () => {
   const [toggleList, setToggleList] = useState(true);
 
   const showClickedList = toggleList ? (
-    <TantrumsForNow />
+    <TantrumsForNow setToggleList={setToggleList}/>
   ) : (
     <TantrumsForNextTime />
   );

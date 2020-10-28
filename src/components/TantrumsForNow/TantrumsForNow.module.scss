@@ -1,30 +1,32 @@
 @import "../../assets/styles/main.scss";
-
 .whatNotToDo{ 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
 }
-
 .whatNotToDoUl{ 
-    
+    list-style-image: url("../../assets/img/XBulletPoint.svg");
     li{ 
         margin: 20px 0 20px 0;
+        &::marker{ 
+            fill: yellow;
+            background-color: yellow;
+        }
     }
 }
-
 .tryThisUl {
     li{ 
         margin: 20px 0 20px 0;
     }
 }
-
 .circle{ 
     font-size: 0.5rem;
     margin-bottom: 0.5px;
 }
-
 .tantrumsNextTitle{ 
     margin-top: 30px;
+}
+button{ 
+    color: white;
 }
