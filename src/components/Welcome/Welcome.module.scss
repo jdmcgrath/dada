@@ -15,7 +15,7 @@
         align-items: center;
         justify-content: space-evenly;
         padding-bottom: 20px;
-        margin-top: 40px;
+        margin-top: 30px;
 
         .imageContainer {
             margin-top: 10px;
@@ -29,5 +29,6 @@
     .primaryBtn {
         margin-top: 70px;
         color: $offWhite;
+        width: 186px;
     }
 }
