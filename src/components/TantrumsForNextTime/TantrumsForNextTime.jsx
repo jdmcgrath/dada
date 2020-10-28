@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./TantrumsForNextTime.module.scss";
+import Binoculars from "../../assets/img/Binoculars.svg";
 
 const TantrumsForNextTime = () => {
   return (
@@ -26,13 +27,13 @@ const TantrumsForNextTime = () => {
       <h3>Up Your Game</h3>
       <div className={styles.flexContainer}>
         <div className={styles.flexItem}>
-          <img src="" alt=""/>
+          <img src={Binoculars} alt="NOT FINAL"/>
           <h3>Tackling Transitions</h3>
           <p>Read time: 3 min</p>
           <p>Helping your kid switch activities smoothly</p>
         </div> 
         <div className={styles.flexItem}>
-          <img src="" alt=""/>
+          <img src={Binoculars} alt="NOT FINAL"/>
           <h3>"I Want Mom!"</h3>
           <p>Read time: 4 min</p>
           <p>Don't worry, it's not personal</p>

@@ -7,3 +7,14 @@
     border-top: 1px solid #979797;
     width: inherit;
 }
+
+.flexItem {
+    width: 50%;
+    margin: 5px;
+
+    img {
+        display: block;
+        margin: auto;
+        width: 90%;
+    }
+}
