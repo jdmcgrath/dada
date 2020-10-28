@@ -7,24 +7,37 @@ const Tantrums = () => {
   const [toggleList, setToggleList] = useState(true);
 
   const showClickedList = toggleList ? (
-    <TantrumsForNow setToggleList={setToggleList}/>
+    <TantrumsForNow setToggleList={setToggleList} />
   ) : (
     <TantrumsForNextTime />
   );
-  
-  
+
   return (
-    <div className={styles.pageContainer} >
-            {/* Buttons to select whether you wish to info for now or later */}
+    <>
+      <header className={styles.smHeader}>
+        <h1>Tantrums</h1>
+      </header>
+      <div className={styles.pageContainer}>
+        {/* Buttons to select whether you wish to info for now or later */}
 
-      <div className={styles.btnContainer}>
-      <button className={styles.primaryBtn} onClick={() => setToggleList(true)}>For Now</button>
-      <button className={styles.primaryBtn} onClick={() => setToggleList(false)}>For Next Time</button>
+        <div className={styles.btnContainer}>
+          <button
+            className={styles.primaryBtn}
+            onClick={() => setToggleList(true)}
+          >
+            For Now
+          </button>
+          <button
+            className={styles.primaryBtn}
+            onClick={() => setToggleList(false)}
+          >
+            For Next Time
+          </button>
+        </div>
 
+        <div>{showClickedList}</div>
       </div>
-
-      <div>{showClickedList}</div>
-    </div>
+    </>
   );
 };
 
