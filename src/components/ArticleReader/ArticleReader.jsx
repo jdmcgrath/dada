@@ -11,8 +11,8 @@ const ArticleReader = (props) => {
   return (
     
     <div>
-      <h1>HEader</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur iusto, voluptatum blanditiis illum beatae incidunt fugit architecto. Unde, est dicta?</p>
+      <h1>{Title}</h1>
+      <p>{Body}</p>
     </div>
    
   )

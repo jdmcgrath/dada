@@ -11,6 +11,7 @@ import BookInfo from "../../components/BookInfo";
 import AddChick from "../../components/AddChick";
 import SOS from "../../components/SOS";
 import SplashScreen from "../../components/SplashScreen";
+import ArticleReader from "../../components/ArticleReader";
 
 const Routes = () => {
     return(
@@ -25,6 +26,7 @@ const Routes = () => {
             <BookInfo path="book-smarts/book-info" />
             <SOS path="sos"/>
             <SplashScreen path="splash" />
+            <ArticleReader path="article-reader"/>
         </Router>
     )
 }
