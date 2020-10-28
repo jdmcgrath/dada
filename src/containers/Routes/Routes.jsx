@@ -24,7 +24,7 @@ const Routes = () => {
             <ArticleList path="categories/activity-ideas/article-list" />
             <BookSmarts path="book-smarts" />
             <BookInfo path="book-smarts/book-info" />
-            <SOS path="sos"/>
+            <SOS path="/categories/sos"/>
             <SplashScreen path="splash" />
             <ArticleReader path="article-reader"/>
         </Router>
