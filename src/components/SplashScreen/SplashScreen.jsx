@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from "./SplashScreen.module.scss"
-import splash from "../../assets/styles/img/DadaLogoBlue.svg";
+import splash from "../../assets/img/DadaLogoBlue.svg";
 
 
 const SplashScreen = () => {

@@ -7,11 +7,13 @@ import styles from "./NavBar.module.scss"
 const NavBar = () => { 
     return ( 
         <>
-            <nav className={styles.globalNav}>
-                <FontAwesomeIcon icon={faChevronLeft} className={styles.backButton}/>
-                <p className={styles.pageTitle}>Page Title</p>
-                <FontAwesomeIcon icon={faEllipsisV} className={styles.ellipses}/>
-            </nav>
+            <header className={styles.navWrapper}>
+                <nav className={styles.globalNav}>
+                    <FontAwesomeIcon icon={faChevronLeft} className={styles.backButton}/>
+                    {/* <p className={styles.pageTitle}>Page Title</p> */}
+                    <FontAwesomeIcon icon={faEllipsisV} className={styles.ellipses}/>
+                </nav>
+            </header>
         </>
     )
 }

@@ -1,0 +1,20 @@
+.lgHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFF;
+    height: 20vh;
+    width: 100%;  
+    padding: 0 15%;
+}
+
+.smHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 12vh;
+    width: 100%;
+    padding: 0 15%;
+    padding-bottom: 12px;
+}

@@ -1,56 +1,102 @@
 @import "../../assets/styles/abstracts/variables";
 @import "../../assets/styles/main.scss";
 
-.catPageContainer {
-    width: 100%;
-    margin: 0 auto;
-    padding: 2em 0 0 0;
-    
-    
-    h1{
-        font-size: 1.25em;
-        text-align: center;
-        font-weight: bold;
-    }
+.lgHeader {
+    background-color: $lightBlue; 
 
-    .catContainer{
-        display: flex;
-        flex-wrap: wrap;
-        background-color: white;
-        border: 1px solid black;
-        margin-top: 20px;
- 
+    h1 {
+
+    }
+}
+
+.pageContainer {
+
+    .gridContainer {
+        grid-template-rows: repeat(2, 1fr);
+
         .card {
-            flex: 0 0 50%;
-            width: 25%;
-            padding: 5px;
-            margin-bottom: 50px;
-            position: relative;
-            
-            img {
-                width: 130px;
-            }
-                
-            p {                  
-                color: $fontColour;
-                font-size: 13px;
-                font-weight: bold;
-                line-height: 1.6em;
-                height:20px;
-            }
-            
-  
-            h2{
-                font-size: 0.8em;
-                text-align: center;
-                color: $fontColour;
-                position: absolute;
-                left: 15px;
-                top: 15px;
-                z-index: 1;
-                padding: 0;
-            }
+            display: flex;
+            min-height: 233px;
+
+            .imageTitleContainer{
+                position: relative;
+                margin-top: 20px;
+                background-color: #F2F2F2;
+                border-radius: 10px;
+                height: 70%;
+                width: 100%;
         
+                h2{
+                    position: absolute;
+                    color: $black;
+                    font-family: 'Nunito', sans-serif;
+                    top: 7px;
+                    left: 10px;
+                }
+    
+                img {
+                    width: 100%;
+                }
+            }
+
+            .cardSubHeader {
+                color: $black;
+                font-weight: 500;
+                padding-top: 10px;
+            }
         }
     }
 }
+
+// .catPageContainer {
+//     width: 100%;
+//     margin: 0 auto;
+//     padding: 2em 0 0 0;
+    
+    
+//     h1{
+//         font-size: 1.25em;
+//         text-align: center;
+//         font-weight: bold;
+//     }
+
+//     .catContainer{
+//         // display: flex;
+//         // flex-wrap: wrap; 
+//         margin-top: 20px;
+//         display: grid;
+//         grid-template-rows: 1fr 1fr;
+//         grid-template-columns: 1fr 1fr;
+//         grid-gap: 20px;
+//         align-items: center;
+//         justify-content: space-between;
+ 
+        // .card {
+            // img {
+            //     width: 90%;
+                
+            // }
+                
+            // p {                  
+            //     color: $fontColour;
+            //     font-size: 13px;
+            //     font-weight: bold;
+            //     line-height: 1.6em;
+            //     height:20px;
+            // }
+            
+  
+            // h2{
+            //     font-size: 0.8em;
+            //     text-align: center;
+            //     color: $fontColour;
+            //     position: absolute;
+            //     left: 15px;
+            //     top: 15px;
+            //     z-index: 1;
+            //     padding: 0;
+            // }
+        
+//         }
+//     }
+// }
