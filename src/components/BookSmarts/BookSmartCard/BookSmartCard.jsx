@@ -4,17 +4,17 @@ import { Link } from '@reach/router';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleUp,
-         faArrowCircleDown,
+        //  faArrowCircleDown,
          faImage } from "@fortawesome/free-solid-svg-icons";
 
 
          
 const BookSmartCard = (props) => {
     const [count, setCount] = useState(0);
-    const reduceCount = () => {
-        setCount(prevCount => prevCount - 1)
-      ;
-    }
+    // const reduceCount = () => {
+    //     setCount(prevCount => prevCount - 1)
+    //   ;
+    // }
     const increaseCount = () => {
       setCount(addCount => addCount + 1)
     }
@@ -34,7 +34,7 @@ const BookSmartCard = (props) => {
                 <div className={styles.bookSmartVotes}>
                     <span onClick={increaseCount} className={styles.voteIcon}><FontAwesomeIcon icon={faArrowCircleUp} /></span>
                     <h5 className={styles.voteCounter}>{count}</h5>
-                    <span onClick={reduceCount} className={styles.voteIcon}><FontAwesomeIcon icon={faArrowCircleDown} /></span>
+                    {/* <span onClick={reduceCount} className={styles.voteIcon}><FontAwesomeIcon icon={faArrowCircleDown} /></span> */}
                 </div> 
             </div> 
             <div className={styles.bookSmartImage}>
