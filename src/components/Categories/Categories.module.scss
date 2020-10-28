@@ -3,26 +3,26 @@
 
 .lgHeader {
     background-color: $lightBlue; 
-
-    h1 {
-
-    }
+    overflow: hidden;
 }
 
 .pageContainer {
 
     .gridContainer {
-        grid-template-rows: repeat(2, 1fr);
 
         .card {
             display: flex;
-            min-height: 233px;
+            background-color: #DBF1F5;
+            min-height: 35vh;
+            margin-top: 20px;
+            border-radius: 3px;
+            padding-bottom: 10px;
 
             .imageTitleContainer{
+                display: flex;
+                justify-content: center;
                 position: relative;
-                margin-top: 20px;
-                background-color: #F2F2F2;
-                border-radius: 10px;
+                border-radius: 15px;
                 height: 70%;
                 width: 100%;
         
@@ -35,68 +35,16 @@
                 }
     
                 img {
-                    width: 100%;
+                    width: 50%;
                 }
             }
 
             .cardSubHeader {
                 color: $black;
                 font-weight: 500;
-                padding-top: 10px;
+                padding: 10px;
+
             }
         }
     }
 }
-
-// .catPageContainer {
-//     width: 100%;
-//     margin: 0 auto;
-//     padding: 2em 0 0 0;
-    
-    
-//     h1{
-//         font-size: 1.25em;
-//         text-align: center;
-//         font-weight: bold;
-//     }
-
-//     .catContainer{
-//         // display: flex;
-//         // flex-wrap: wrap; 
-//         margin-top: 20px;
-//         display: grid;
-//         grid-template-rows: 1fr 1fr;
-//         grid-template-columns: 1fr 1fr;
-//         grid-gap: 20px;
-//         align-items: center;
-//         justify-content: space-between;
- 
-        // .card {
-            // img {
-            //     width: 90%;
-                
-            // }
-                
-            // p {                  
-            //     color: $fontColour;
-            //     font-size: 13px;
-            //     font-weight: bold;
-            //     line-height: 1.6em;
-            //     height:20px;
-            // }
-            
-  
-            // h2{
-            //     font-size: 0.8em;
-            //     text-align: center;
-            //     color: $fontColour;
-            //     position: absolute;
-            //     left: 15px;
-            //     top: 15px;
-            //     z-index: 1;
-            //     padding: 0;
-            // }
-        
-//         }
-//     }
-// }
