@@ -1,6 +1,7 @@
 @import "../../assets/styles/main.scss";
 
 .btnContainer { 
+    z-index: 1;
     display: flex; 
     justify-content: space-evenly;
     width: inherit;
@@ -11,3 +12,6 @@
         color: white;
     }
 };
+//need it to be: 
+//lighter when selected 
+//darker when not
