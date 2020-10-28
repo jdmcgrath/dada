@@ -14,10 +14,6 @@ const BookSmarts = () => {
     <section className={styles.pageContainer}>
       {cardData.map(getBookInfo)}
     </section>
-
-    // <section>
-    //    {cardData.map(getBookInfo)}
-    // </section>
   );
 };
 
