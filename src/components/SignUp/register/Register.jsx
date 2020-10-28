@@ -13,11 +13,17 @@ export const Register = () => {
       <form className={styles.formContainer}>
         <h2>Sign Up</h2>
         <div className={styles.inputContainer}>
-          <input type="text" placeholder="Name"/>
-          <input type="email" placeholder="Email"/>
-          <input type="password" placeholder="Password"/>
+          <label for="username"></label>
+          <input type="text" id="username" placeholder="Name"/>
+          <label for="user-email"></label>
+          <input type="email" id="user-email" placeholder="Email"/>
+          <label for="user-password"></label>
+          <input type="password" id="user-password" placeholder="Password"/>
         </div>
-        <p className={styles.terms}>I read and agree to <span>Terms and Conditions</span></p>
+        <div className={styles.termsContainer}>
+          <p className={styles.terms}>I read and agree to <span>Terms and Conditions</span></p>
+          <input type="checkbox" id="terms-checkbox"></input>
+        </div>
         <button type="button" className={styles.primaryBtn}>
           Sign Up
         </button>
