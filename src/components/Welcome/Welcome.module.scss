@@ -1,0 +1,33 @@
+@import '../../assets/styles/main.scss';
+@import '../../assets/styles/abstracts/variables';
+
+// #4BBFE8 card background
+.pageContainer {
+    align-items: center;
+
+    .chickCard {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(75, 191, 232, 0.2);
+        border-radius: 10px;
+        width: 80%;
+        height: 50vh;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-bottom: 20px;
+        margin-top: 40px;
+
+        .imageContainer {
+            margin-top: 10px;
+        }
+
+        p {
+            font-weight: 400;
+        }
+    }
+
+    .primaryBtn {
+        margin-top: 70px;
+        color: $offWhite;
+    }
+}
