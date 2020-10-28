@@ -9,10 +9,6 @@
     list-style-image: url("../../assets/img/XBulletPoint.svg");
     li{ 
         margin: 20px 0 20px 0;
-        &::marker{ 
-            fill: yellow;
-            background-color: yellow;
-        }
     }
 }
 .tryThisUl {

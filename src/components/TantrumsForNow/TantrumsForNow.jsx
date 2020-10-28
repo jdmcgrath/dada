@@ -14,23 +14,15 @@ const TantrumsForNow = (props) => {
         <h3>What NOT to do:</h3>
         <ul className={styles.whatNotToDoUl}>
           <li>
-            <FontAwesomeIcon icon={faTimes} />
             Yell or spank
           </li>
           <li>
-            <FontAwesomeIcon icon={faTimes} />
             Give in just because they are crying
           </li>
           <li>
-            <FontAwesomeIcon icon={faTimes} />
             Mock or threaten
           </li>
           <li>
-            <FontAwesomeIcon
-              icon={faCircle}
-              size="0.1x"
-              className={styles.circle}
-            />
             Try to reason with your kid or apply logic
           </li>
         </ul>
