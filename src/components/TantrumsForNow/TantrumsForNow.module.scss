@@ -1,34 +1,34 @@
 @import "../../assets/styles/main.scss";
-.whatNotToDo{ 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+.whatNotToDo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
-.whatNotToDoUl{ 
-    list-style-type: none;
-    li{ 
-        background:url("../../assets/img/XBulletPoint.svg")no-repeat left top;
-        margin: 20px 0 20px 0;
-        padding-left: 40px;
-    }
+.whatNotToDoUl {
+  list-style-type: none;
+  li {
+    background: url("../../assets/img/XBulletPoint.svg") no-repeat left top;
+    margin: 20px 0 20px 0;
+    padding-left: 40px;
+  }
 }
 .tryThisUl {
-    list-style-type: none;
+  list-style-type: none;
 
-    li{ 
-        background:url("../../assets/img/BulletPoint.svg")no-repeat 12px 50%;
-        margin: 20px 0 20px 0;
-        padding-left: 40px;    
-    }
+  li {
+    background: url("../../assets/img/BulletPoint.svg") no-repeat 12px 50%;
+    margin: 20px 0 20px 0;
+    padding-left: 40px;
+  }
 }
-.circle{ 
-    font-size: 0.5rem;
-    margin-bottom: 0.5px;
+.circle {
+  font-size: 0.5rem;
+  margin-bottom: 0.5px;
 }
-.tantrumsNextTitle{ 
-    margin-top: 30px;
+.tantrumsNextTitle {
+  margin-top: 30px;
 }
-button{ 
-    color: white;
+button {
+  color: white;
 }

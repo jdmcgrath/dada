@@ -1,11 +1,7 @@
 import React from "react";
 import styles from "./TantrumsForNow.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faTimes,
-  faCircle
-} from "@fortawesome/free-solid-svg-icons";
-
+import { faTimes, faCircle } from "@fortawesome/free-solid-svg-icons";
 
 const TantrumsForNow = (props) => {
   return (
@@ -13,18 +9,10 @@ const TantrumsForNow = (props) => {
       <div className={styles.whatNotToDo}>
         <h3>What NOT to do:</h3>
         <ul className={styles.whatNotToDoUl}>
-          <li>
-            Yell or spank
-          </li>
-          <li>
-            Give in just because they are crying
-          </li>
-          <li>
-            Mock or threaten
-          </li>
-          <li>
-            Try to reason with your kid or apply logic
-          </li>
+          <li>Yell or spank</li>
+          <li>Give in just because they are crying</li>
+          <li>Mock or threaten</li>
+          <li>Try to reason with your kid or apply logic</li>
         </ul>
       </div>
       <div className={styles.tryThis}>
@@ -38,7 +26,7 @@ const TantrumsForNow = (props) => {
           <li>Wait, then re-engage when they're starting to cool down</li>
         </ul>
       </div>
-      <button className={styles.primaryBtn} >Prepare For Next Time</button>
+      <button className={styles.primaryBtn}>Prepare For Next Time</button>
     </>
   );
 };

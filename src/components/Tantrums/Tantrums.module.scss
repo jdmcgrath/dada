@@ -1,23 +1,22 @@
 @import "../../assets/styles/main.scss";
 
-
 .smHeader {
-    background-color: $black;
-    color: #FFF;
+  background-color: $black;
+  color: #fff;
 }
 
-.btnContainer { 
-    z-index: 1;
-    display: flex; 
-    justify-content: space-evenly;
-    width: inherit;
-    margin-top: 10%;
-    margin-bottom: 30px;
-    button{ 
-        margin: 0 8% 0 8%;
-        color: white;
-    }
-};
-//need it to be: 
-//lighter when not selected 
+.btnContainer {
+  z-index: 1;
+  display: flex;
+  justify-content: space-evenly;
+  width: inherit;
+  margin-top: 10%;
+  margin-bottom: 30px;
+  button {
+    margin: 0 8% 0 8%;
+    color: white;
+  }
+}
+//need it to be:
+//lighter when not selected
 //darker when selected
