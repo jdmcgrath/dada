@@ -8,7 +8,7 @@ export const cardsArr = [
     },
     {
         "title":"SOS!",
-        "image":"../assets/styles/img/CategoryPage/SOSPenguin.svg",
+        "image":"../../assets/img/CategoryPage/SOSPenguin.svg",
         "info":"Dealing with common behaviour issues",
         "path":"sos"
         
