@@ -10,31 +10,21 @@ export const Register = () => {
 
 
   return (
-    <article className={styles.baseContainer}>
-      <div className={styles.header}>Sign Up</div>
-      <div className={styles.content}>
-        <div className={styles.form}>
-          <div className={styles.formGroup}>
-            <input type="text" placeholder="Name"/>
-            </div>
-          <div className={styles.formGroup}>
-            <input type="email" placeholder="Email"/>
-            </div>
-          <div className={styles.formGroup}>
-            <input type="password" placeholder="Password"/>
-            </div>
-          <p className={styles.terms}>I read and agree to <strong>Terms and Condition</strong></p>
+      <form className={styles.formContainer}>
+        <h2>Sign Up</h2>
+        <div className={styles.inputContainer}>
+          <input type="text" placeholder="Name"/>
+          <input type="email" placeholder="Email"/>
+          <input type="password" placeholder="Password"/>
         </div>
-        <div className={styles.footer}>
-          <button type="button" className={styles.btn}>
-            Sign Up
-          </button>
-        </div>
-        <p className={styles.terms}>Already have an account? <strong><a href="https://github.com/nology-tech/dada">Login</a></strong></p>
+        <p className={styles.terms}>I read and agree to <span>Terms and Conditions</span></p>
+        <button type="button" className={styles.primaryBtn}>
+          Sign Up
+        </button>
+        <p className={styles.logIn}>Already have an account? <span><a href="https://github.com/nology-tech/dada">Login</a></span></p>
         <p className={styles.orSignIn}>or sign in with</p>
         < SocialFollow />
-      </div>
-    </article>
+      </form>
   )
 }
 

@@ -11,7 +11,7 @@ const Categories = () => {
             <h1>What are you looking for?</h1>
             <img src={Binoculars} alt="binoculars-img"></img>
         </header>
-        <div className={styles.pageContainer}>
+        <main className={styles.pageContainer}>
             <div className={styles.gridContainer}>
             {cardsArr.map((card) => {
                 return (
@@ -29,7 +29,7 @@ const Categories = () => {
         )
         }
             </div>
-    </div>
+    </main>
     </>
     );
 }
