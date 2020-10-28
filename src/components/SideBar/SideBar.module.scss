@@ -1,0 +1,82 @@
+@import "../../assets/styles/abstracts/variables";
+@import "../../assets/styles/main.scss";
+
+.sideBarContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: $turquoise;
+    color: $offWhite;
+    width: 60%;
+    height: 100vh;
+    opacity: 0.9;
+    padding: 20px;
+
+    .sideBarHeader {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .userChickImg {
+            width: 30%;
+            background-color: $offWhite;
+            border-radius: 50%;
+        }
+
+        .chickInfo {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 60%;
+        }
+    }
+
+    .appPathLinks {
+        margin-top: 20px;
+
+        .appPathItems {
+            .pathItems {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin: 25px 0;
+                margin-left: 15px;
+
+                img {
+                    width: 15%;
+                }
+
+                p {
+                    padding-left: 40px;
+                    color: $offWhite;
+                }
+            }
+        }
+        .appInfoItems {
+            margin-top: 80px;
+
+            .infoItems {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin: 25px 0;
+                margin-left: 15px;
+
+                img {
+                    width: 12%;
+                }
+
+                p {
+                    padding-left: 40px;
+                    color: $offWhite;
+                }
+            }
+        }
+    }
+    .sideBarFooter {
+        position: absolute;
+        bottom: 40px;
+        left: 30px;
+        font-size: 1.2rem;
+    }
+}
