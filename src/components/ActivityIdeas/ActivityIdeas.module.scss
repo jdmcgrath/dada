@@ -6,19 +6,32 @@
   .btnContainer {
     display: flex;
     justify-content: space-between;
-    .button {
+    
+    .activeButton {
       font-size: 1rem;
       font-family: Nunito;
       padding: 2% 15% !important;
-      background-color: #189FB6;
       color: white;
+      background-color: #4BBFE8;
       border: none;
       outline: none;
       border-radius: 5px;
       box-shadow: 0px 2px 4px 1px grey;
     }
-      .activeButton {
-        background-color: #4BBFE8;
-      } 
+
+    .inactiveButton {
+      font-size: 1rem;
+      font-family: Nunito;
+      padding: 2% 15% !important;
+      color: white;
+      border: none;
+      outline: none;
+      background-color: #189FB6;
+      border-radius: 5px;
+      box-shadow: 0px 2px 4px 1px grey;
+    }
+
+
+
   }  
 }

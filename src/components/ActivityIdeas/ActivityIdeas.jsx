@@ -9,17 +9,25 @@ import { Link } from '@reach/router';
 const ActivityIdeas = () => {
   const [toggleList, setToggleList] = useState(true);
 
-    const showClickedList = (toggleList ? <VideoList videos={videos} /> : <ArticleList articles={articles} />)
+    const showClickedList = toggleList ? <VideoList videos={videos} /> : <ArticleList articles={articles} />
+
+    const buttonStyle = toggleList ? styles.activeButton : styles.inactiveButton;
+    
+
 
   return (
   <div className={styles.actIdeasContainer}>
 
     <div className={styles.btnContainer}>
-      <button className={styles.button} onClick={() => setToggleList(true)}>Videos</button>
-      <button className={styles.button} onClick={() => setToggleList(false)}>Articles</button>
+
+    <button id="vidBtn" className={buttonStyle} onClick={() => setToggleList(true)}>Videos</button>
+        <button id="artBtn" className={buttonStyle}  onClick={() => setToggleList(false)}>Articles</button>
+
+
+
     </div>
 
-    <div>
+    <div >
       {showClickedList}
     </div>
 
