@@ -1,20 +1,22 @@
 import React from "react";
-import {upYourGameCardData} from "../../../data/upYourGameData";
+import {upYourGameCardsData} from "../../../data/upYourGameData";
 
-const upYourGameCards =() => {
 
+const UpYourGameCards =() => {
+return(
 <section>  
-{upYourGameCardData.map((upYourGameCardData) => {
+{upYourGameCardData.map((upYourGameArticles) => {
    <section className={styles.upYourGameCard}>
-     <button>{upYourGameCardData.filterTag}</button>
-     <img src={upYourGameCardData.backgroundImage} alt=""/>
-     <img src={upYourGameCardData.profileImage} alt= "" />
-     <h1>{upYourGameCardData.title}</h1>
-     <h2>{upYourGameCardData.subtitle}</h2>
-     <p>{upYourGameCardData.author}</p>
-     <p>{upYourGameCardData.readTime}</p>
+     <button>{upYourGameArticles.filterTag}</button>
+     <img src={upYourGameArticles.backgroundImage} alt=""/>
+     <img src={upYourGameArticles.profileImage} alt= "" />
+     <h1>{upYourGameArticles.title}</h1>
+     <h2>{upYourGameArticles.subtitle}</h2>
+     <p>{upYourGameArticles.author}</p>
+     <p>{upYourGameArticles.readTime}</p>
    </section>
  })}
 </section>
-}
-export default upYourGameCards;
+)}
+
+export default UpYourGameCards;

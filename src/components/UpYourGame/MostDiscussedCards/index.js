@@ -1,3 +1,3 @@
-import MostDiscussedCards from "./MostDiscussedCards";
+import mostDiscussedCards from "./MostDiscussedCards";
 
-export default MostDiscussedCards;
+export default mostDiscussedCards;

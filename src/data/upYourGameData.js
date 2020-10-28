@@ -1,4 +1,4 @@
-export const upYourGameCardData = [
+const upYourGameCardData = [
     {
 
         "tag": "Kids",
@@ -22,7 +22,7 @@ export const upYourGameCardData = [
     }
 ]
 
-export const mostDiscussedData = [ 
+const mostDiscussedData = [ 
     {
     "title":"3 Tactics to Get Your Child to Clean Up",
     "author":"Nathan Drake",
@@ -40,3 +40,4 @@ export const mostDiscussedData = [
 }
 ]
 
+export default upYourGameCardData

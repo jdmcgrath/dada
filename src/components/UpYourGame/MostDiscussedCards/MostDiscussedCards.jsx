@@ -1,16 +1,18 @@
 import React from "react";
-import {mostDiscussedData} from "../../data/upYourGameData";
+import { mostDiscussedData } from "../../../data/upYourGameData";
 
-const mostDiscussedData = () => {
+const MostDiscussedCards = () => {
+  return(
 <section>
-          {mostDiscussedData.map((mostDiscussedData) => {
+          {mostDiscussedData.map((mostDiscussedArticles) => {
+            return(
           <section>  
-            <h1>{mostDiscussedData.title}</h1>
-            <p>{mostDiscussedData.author}</p>
-            <p>{mostDiscussedData.readTime}</p>
+            <h1>{mostDiscussedArticles.title}</h1>
+            <p>{mostDiscussedArticles.author}</p>
+            <p>{mostDiscussedArticles.readTime}</p>
           </section>
-          })}            
+          )})}            
 </section> 
-}
+   )}
 
 export default MostDiscussedCards;
