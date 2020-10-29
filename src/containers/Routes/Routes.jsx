@@ -3,13 +3,13 @@ import { Router } from "@reach/router";
 import Categories from "../../components/Categories";
 import SignUp from "../../components/SignUp/register";
 import ActivityIdeas from "../../components/ActivityIdeas";
-import VideoList from "../../components/VideoList";
-import ArticleList from "../../components/ArticleList";
 import BookSmarts from "../../components/BookSmarts/BookSmarts";
 import BookInfo from "../../components/BookInfo";
 import AddChick from "../../components/AddChick";
 import SOS from "../../components/SOS";
 import SplashScreen from "../../components/SplashScreen";
+import Tantrums from "../../components/Tantrums"
+import ArticleReader from "../../components/ArticleReader";
 import Welcome from "../../components/Welcome";
 import AddChickAge from "../../components/AddChickAge";
 
