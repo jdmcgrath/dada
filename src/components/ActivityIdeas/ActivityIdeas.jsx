@@ -4,7 +4,7 @@ import VideoList from "../VideoList";
 import ArticleList from "../ArticleList";
 import articles from "../../data/articles";
 import videos from "../../data/videos";
-import { Link } from '@reach/router';
+
 const ActivityIdeas = () => {
   const [toggleList, setToggleList] = useState(true);
     const showClickedList = toggleList ? 
@@ -31,12 +31,12 @@ const ActivityIdeas = () => {
     {/* filter headings need to go here */}
     <div className={styles.filterTagsContainer}>
        <ul className={styles.filterTags}>
-        <li><a href="">ALL</a></li>
-        <li><a href="">INDOOR</a></li>
-        <li><a href="">OUTDOOR</a></li>
-        <li><a href="">SOCIAL SKILLS</a></li>
-        <li><a href="">LANGUAGE</a></li>
-        <li><a href="">STRENGTH</a></li>
+        <li><a href="https://github.com/nology-tech/dada">ALL</a></li>
+        <li><a href="https://github.com/nology-tech/dada">INDOOR</a></li>
+        <li><a href="https://github.com/nology-tech/dada">OUTDOOR</a></li>
+        <li><a href="https://github.com/nology-tech/dada">SOCIAL SKILLS</a></li>
+        <li><a href="https://github.com/nology-tech/dada">LANGUAGE</a></li>
+        <li><a href="https://github.com/nology-tech/dada">STRENGTH</a></li>
        </ul>
      </div>
     <div >
