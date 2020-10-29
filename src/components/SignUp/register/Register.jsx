@@ -21,8 +21,9 @@ export const Register = () => {
           <input type="password" id="user-password" placeholder="Password"/>
         </div>
         <div className={styles.termsContainer}>
+        <input type="checkbox" id="terms-checkbox"></input>
+
           <p className={styles.terms}>I read and agree to <span>Terms and Conditions</span></p>
-          <input type="checkbox" id="terms-checkbox"></input>
         </div>
         <button type="button" className={styles.primaryBtn}>
           Sign Up
