@@ -2,7 +2,6 @@ import React from "react";
 import UpYourGameCardData from "../../data/upYourGameData";
 import MostDiscussedCards from "../../data/upYourGameData";
 import Styles from "./UpYourGame.module.scss";
-import NavBar from "../NavBar";
 
 const UpYourGame = () => {
   return (
