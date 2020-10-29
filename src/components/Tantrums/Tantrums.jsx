@@ -56,5 +56,12 @@ const Tantrums = () => {
     </>
   );
 };
+//what we want to happen 
+//depending on state, the button style changes 
+//how to link state to styles 
+//make seperate stylings and have state change them
+// therefore, state must change classnames of the buttons
+//how to format: 
+// enclose each button in a js {}
 
 export default Tantrums;
