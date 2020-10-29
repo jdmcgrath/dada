@@ -2,11 +2,9 @@ import React from 'react';
 import styles from "./AddChick.module.scss";
 import Input from "../Input";
 import InputData from "../../data/Input";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import BoyChick from "../../assets/img/AddChick/BoyChick.svg";
 import GirlChick from "../../assets/img/AddChick/GirlChick.svg";
-import { Link } from '@reach/router';
+
 
 
 
