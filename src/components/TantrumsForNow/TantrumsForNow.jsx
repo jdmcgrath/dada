@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faCircle } from "@fortawesome/free-solid-svg-icons";
 
 const TantrumsForNow = (props) => {
+  const { setToggleList } = props
+
   return (
     <>
       <div className={styles.whatNotToDo}>
@@ -26,9 +28,16 @@ const TantrumsForNow = (props) => {
           <li>Wait, then re-engage when they're starting to cool down</li>
         </ul>
       </div>
-      <button className={styles.primaryBtn}>Prepare For Next Time</button>
+      <button className={styles.primaryBtn} onClick={() => setToggleList(false)}>Prepare For Next Time</button>
     </>
   );
 };
+//what we need it to do: 
+//toggle the items shows to the for next time 
+
+//how? 
+
+//it needs to influence the state, the same way as the next time button 
+
 
 export default TantrumsForNow;
