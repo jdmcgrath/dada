@@ -1,6 +1,5 @@
 import React from "react";
 import { Router } from "@reach/router";
-
 import Categories from "../../components/Categories";
 import SignUp from "../../components/SignUp/register";
 import ActivityIdeas from "../../components/ActivityIdeas";
@@ -12,7 +11,7 @@ import AddChick from "../../components/AddChick";
 import SOS from "../../components/SOS";
 import SplashScreen from "../../components/SplashScreen";
 
-const Routes = () => {
+const Routes = () => { 
     return(
         <Router>
             <Categories path="categories" />
