@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "./TantrumsForNow.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes, faCircle } from "@fortawesome/free-solid-svg-icons";
 
 const TantrumsForNow = (props) => {
   const { setToggleList } = props
