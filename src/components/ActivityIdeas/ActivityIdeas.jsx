@@ -16,16 +16,21 @@ const ActivityIdeas = () => {
 
     const showButtons = toggleList ? 
     <>
-      <button className={styles.activeButton} onClick={() => setToggleList(true)}>Videos</button>
-      <button className={styles.inactiveButton} onClick={() => setToggleList(false)}>Articles</button>
+      <button className={styles.primaryBtn} onClick={() => setToggleList(true)}>Videos</button>
+      <button className={styles.secondaryBtn} onClick={() => setToggleList(false)}>Articles</button>
     </> : 
     <>
-      <button className={styles.inactiveButton} onClick={() => setToggleList(true)}>Videos</button>
-      <button className={styles.activeButton} onClick={() => setToggleList(false)}>Articles</button>
+      <button className={styles.secondaryBtn} onClick={() => setToggleList(true)}>Videos</button>
+      <button className={styles.primaryBtn} onClick={() => setToggleList(false)}>Articles</button>
     </>
 
   return (
-  <div className={styles.actIdeasContainer}>
+
+  <>
+  <div className={styles.smHeader}>
+    <h2>Activity Ideas</h2>
+  </div>
+  <div className={styles.pageContainer}>
 
     <div className={styles.btnContainer}>
       {showButtons}
@@ -49,9 +54,9 @@ const ActivityIdeas = () => {
       {showClickedList}
     </div>
 
-     
-
   </div>
+
+  </>
   );
 };
 
