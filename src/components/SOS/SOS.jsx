@@ -9,21 +9,22 @@ import { Link } from "@reach/router";
 const SOS = () => { 
     
         return (
+            <>
+            <header className={styles.smHeader}>
+                <h1>SOS!</h1>
+            </header>
             <div className={styles.pageContainer}>
-                {/* <header>
-                    <h1>SOS</h1>
-                </header> */}
-                <div className={styles.catContainer}>
+                <div className={styles.gridContainer}>
                 {SOScardsArr.map((card) => {
                     return (
                         <section className={styles.card}>
-                            <a href="https://github.com/nology-tech/dada">
                             <Link to={card.path}>
-                                <h2>{card.title}</h2>
-                                <img src={card.image} alt="sos-category-alt-text"/>
-                                <p>{card.info}</p>
+                                <div className={styles.imageWrapper}>
+                                    <h2>{card.title}</h2>
+                                    <img src={card.image} alt="sos-category-alt-text"/>
+                                </div>
+                                {/* <p>{card.info}</p> */}
                             </Link>
-                            </a>
                         </section>
                     )
                 }
@@ -31,6 +32,7 @@ const SOS = () => {
             }
                 </div>
             </div>
+            </>
         );
     }
     

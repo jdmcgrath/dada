@@ -1,26 +1,26 @@
 export const cardsArr = [
     {
         "title":"Activity Ideas",
-        "image":"https://via.placeholder.com/150",
+        "image": "../../img/CategoryPage/ActivityIdeasPenguin.svg",
         "info":"Age appropriate boredom busters",
         "path":"activity-ideas"
     },
     {
         "title":"SOS!",
-        "image":"https://via.placeholder.com/150",
+        "image":"../../img/CategoryPage/SOSPenguin.svg",
         "info":"Dealing with common behaviour issues",
-        "path":"/sos"
+        "path":"sos"
         
     },
     {
         "title":"Book Smarts",
-        "image":"https://via.placeholder.com/150",
+        "image":"../../img/CategoryPage/BookSmarts.svg",
         "info":"Highlights from the best parenting books",
-        "path":"/book-smarts"
+        "path":"book-smarts"
     },
     {
         "title":"Up Your Game",
-        "image":"https://via.placeholder.com/150.png",
+        "image":"../../img/CategoryPage/UYGPenguin.svg",
         "info":"Tips & Strategies for raising a little person",
         "path":"/up-your-game"
     },
@@ -31,41 +31,39 @@ export const SOScardsArr = [
 
     {
     "title":"Tantrums",
-    "image":"https://via.placeholder.com/150",
+    "image":"../../img/SOS/Tantrums.svg",
     "info":"",
     "path":"Tantrums"
 },
 {
     "title":"Aggression",
-    "image":"https://via.placeholder.com/150",
+    "image":"../../img/SOS/Aggression.svg",
     "info":"",
     "path":"/aggression"
     
 },
 {
     "title":"Screaming",
-    "image":"https://via.placeholder.com/150",
+    "image":"../../img/SOS/Screaming.svg",
     "info":"",
     "path":"/screaming"
 },
 {
     "title":"Whining",
-    "image":"https://via.placeholder.com/150.png",
+    "image":"../../img/SOS/Whining.svg",
     "info":"",
     "path":"/whining"
 },
 {
     "title":"Sleep Issues",
-    "image":"https://via.placeholder.com/150.png",
+    "image":"../../img/SOS/SleepIssues.svg",
     "info":"",
     "path":"/sleep Issues"
 }, 
 {
     "title":"Swearing",
-    "image":"https://via.placeholder.com/150.png",
+    "image":"../../img/SOS/Rejection.svg",
     "info":"",
     "path":"/swearing"
 }];
-
-
 

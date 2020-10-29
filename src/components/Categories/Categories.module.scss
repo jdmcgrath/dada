@@ -1,56 +1,50 @@
 @import "../../assets/styles/abstracts/variables";
 @import "../../assets/styles/main.scss";
 
-.catPageContainer {
-    width: 100%;
-    margin: 0 auto;
-    padding: 2em 0 0 0;
-    
-    
-    h1{
-        font-size: 1.25em;
-        text-align: center;
-        font-weight: bold;
-    }
+.lgHeader {
+    background-color: $lightBlue; 
+    overflow: hidden;
+}
 
-    .catContainer{
-        display: flex;
-        flex-wrap: wrap;
-        background-color: white;
-        border: 1px solid black;
-        margin-top: 20px;
- 
+.pageContainer {
+
+    .gridContainer {
+
         .card {
-            flex: 0 0 50%;
-            width: 25%;
-            padding: 5px;
-            margin-bottom: 50px;
-            position: relative;
-            
-            img {
-                width: 130px;
-            }
-                
-            p {                  
-                color: $fontColour;
-                font-size: 13px;
-                font-weight: bold;
-                line-height: 1.6em;
-                height:20px;
-            }
-            
-  
-            h2{
-                font-size: 0.8em;
-                text-align: center;
-                color: $fontColour;
-                position: absolute;
-                left: 15px;
-                top: 15px;
-                z-index: 1;
-                padding: 0;
-            }
+            display: flex;
+            background-color: #DBF1F5;
+            min-height: 35vh;
+            margin-top: 20px;
+            border-radius: 3px;
+            padding-bottom: 10px;
+
+            .imageTitleContainer{
+                display: flex;
+                justify-content: center;
+                position: relative;
+                border-radius: 15px;
+                height: 70%;
+                width: 100%;
         
+                h2{
+                    position: absolute;
+                    color: $black;
+                    font-family: 'Nunito', sans-serif;
+                    top: 7px;
+                    left: 10px;
+                }
+    
+                img {
+                    width: 50%;
+                }
+            }
+
+            .cardSubHeader {
+                color: $black;
+                font-weight: 500;
+                padding: 10px;
+
+            }
         }
     }
 }
