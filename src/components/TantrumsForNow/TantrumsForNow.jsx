@@ -28,7 +28,9 @@ const TantrumsForNow = (props) => {
           <li>Wait, then re-engage when they're starting to cool down</li>
         </ul>
       </div>
-      <button className={styles.primaryBtn} onClick={() => setToggleList(false)}>Prepare For Next Time</button>
+      <button className={styles.bottomBtn} onClick={() => setToggleList(false)}>
+        Prepare For Next Time
+      </button>
     </>
   );
 };
