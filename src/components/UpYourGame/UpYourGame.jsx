@@ -29,13 +29,13 @@ const UpYourGame = () => {
               )
         })}
 
-        <h1>Most Discussed</h1>
+        <h2>Most Discussed</h2>
           {mostDiscussedData.map((MostDiscussedCards) => {
             return(
           <section className={Styles.mostDiscussedCards}>  
-            <h1>{MostDiscussedCards.title}</h1>
-            <p>{MostDiscussedCards.author}</p>
-            <p>{MostDiscussedCards.readTime}</p>
+            <h3>{MostDiscussedCards.title}</h3>
+            <span>{MostDiscussedCards.author} | </span>
+            <span>{MostDiscussedCards.readTime}</span>
           </section>
           )})}
         </main> 
