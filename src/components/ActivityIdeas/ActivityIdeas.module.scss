@@ -1,45 +1,44 @@
 @import "../../assets/styles/main.scss";
+@import "../../assets/styles/abstracts/variables";
 
-.actIdeasContainer {
-  margin-top: 10vh;
-  padding: 5%;
-  font-family: Nunito;
+.smHeader {
+  background-color: $navyBlue;
+
+  h2 {
+    color: $offWhite;
+  }
+}
+
+.pageContainer {
+  
   .btnContainer {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    
-    .activeButton {
+    margin-top: 20px;
+
+    .primaryBtn {
       font-size: 1rem;
-      font-family: Nunito;
-      padding: 2% 15%;
       color: white;
-      background-color:#189FB6;
-      border: none;
+      background-color: #4BBFE8;
       outline: none;
-      border-radius: 5px;
-      box-shadow: 0px 2px 4px 1px darkgrey;
     }
 
-    .inactiveButton {
+    .secondaryBtn {
       font-size: 1rem;
-      font-family: Nunito;
-      padding: 2% 15%;
       color: white;
-      border: none;
       outline: none;
-      background-color: #4BBFE8;
-      border-radius: 5px;
-      box-shadow: 0px 2px 4px 1px grey;
+      background-color: #189FB6;
     }
   }  
   .filterTagsContainer {
-
+     
     .filterTags {
       display: flex;
       list-style-type: none;
       white-space: nowrap;
       overflow: scroll;
-      margin-top: 5px;
+      margin-top: 10px;
 
       li {
         display: inline-block;
