@@ -3,6 +3,7 @@
 .actIdeasContainer {
   margin-top: 10vh;
   padding: 5%;
+  font-family: Nunito;
   .btnContainer {
     display: flex;
     justify-content: space-between;
@@ -10,19 +11,19 @@
     .activeButton {
       font-size: 1rem;
       font-family: Nunito;
-      padding: 2% 15% !important;
+      padding: 2% 15%;
       color: white;
       background-color:#189FB6;
       border: none;
       outline: none;
       border-radius: 5px;
-      box-shadow: 0px 2px 4px 1px grey;
+      box-shadow: 0px 2px 4px 1px darkgrey;
     }
 
     .inactiveButton {
       font-size: 1rem;
       font-family: Nunito;
-      padding: 2% 15% !important;
+      padding: 2% 15%;
       color: white;
       border: none;
       outline: none;
@@ -30,8 +31,22 @@
       border-radius: 5px;
       box-shadow: 0px 2px 4px 1px grey;
     }
-
-
-
   }  
+  .filterTagsContainer {
+
+    .filterTags {
+      display: flex;
+      list-style-type: none;
+      white-space: nowrap;
+      overflow: scroll;
+      margin-top: 5px;
+
+      li {
+        display: inline-block;
+        padding: 5px;
+      }
+    }
+  }
+ 
+
 }

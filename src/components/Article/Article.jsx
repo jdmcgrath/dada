@@ -6,6 +6,7 @@ const Article = (props) => {
   const {Title, ReadTime, Image} = props.article;
   
   return (
+    // <Link to={}>
     <div className={styles.artContainer}>
       <div className={styles.artGrid}>
         <h3 className={styles.artTitle}>{Title}</h3>
@@ -13,6 +14,7 @@ const Article = (props) => {
         <img className={styles.artImage} src= {Image} alt=""/>
       </div>
     </div>
+    // </Link>
   );
 };
 
