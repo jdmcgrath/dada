@@ -1,1 +1,7 @@
-@import '../../../../Sass/abstracts/_variables.scss';
+@import "../../assets/styles/main.scss";
+
+.vidListContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+}

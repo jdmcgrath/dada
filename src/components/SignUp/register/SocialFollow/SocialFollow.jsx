@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faFacebook,
     faGoogle
-  } from "@fortawesome/free-brands-svg-icons";
+  } 
+  from "@fortawesome/free-brands-svg-icons";
 
 
 const SocialFollow = () => {
