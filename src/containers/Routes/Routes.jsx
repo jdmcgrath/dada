@@ -14,9 +14,6 @@ import Welcome from "../../components/Welcome";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
 
-
-
-
 const Routes = () => {  
     return(
         <Router>
@@ -27,12 +24,12 @@ const Routes = () => {
             <ActivityIdeas path="categories/activity-ideas" />
             <Tantrums path="/categories/sos/tantrums" />
             <ArticleReader path="article-reader" />
-            <BookSmarts path="book-smarts" />
-            <BookInfo path="book-smarts/book-info" />
-            <SOS path="/categories/sos"/>
+            <BookSmarts path="categories/book-smarts" />
+            <BookInfo path="categories/book-smarts/book-info" />
+            <SOS path="categories/sos"/>
             <SplashScreen path="/" />
             <Welcome path="welcome" />
-            <UpYourGame path ="up-your-game" />
+            <UpYourGame path ="/categories/up-your-game" />
         </Router>
     )
 }

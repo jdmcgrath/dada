@@ -10,12 +10,15 @@
     
     
 }
+
+
 .upYourGameArticles{
+  
   height: 349px;
   border-radius: 4px;
   box-shadow: 1px 2px 2px grey;
   margin: 5px;
-  position:relative;
+  position: relative;
   font-family: 'IBM Plex Sans', sans-serif;
   
   .articleTag{
@@ -50,20 +53,43 @@
   h2{
       font-size:$h2FontSize;
       font-weight: 700;
-      padding:40px 0px 10px 15px;
+      padding: 30px 0px 5px 15px;
   }
   h3{
       font-size:15px;
       font-weight: 500;
-      padding:0px 0px 10px 15px;
+      padding: 0px 0px 5px 15px;
       
   }
   p{
-    font-size:15px;
+    font-size: 0.85rem;
     color: rgb(71, 71, 71);
     padding:0px 0px 10px 15px;
     
   }
+
+}
+
+// I tagged these styles on to
+// get it closer to Figma for
+// purposes of the demo on Fri.
+// But they will need changing
+// when you get to adding the
+// icons in the Most Discussed
+// section - Mark
+
+h2 {
+    padding: 20px 0 10px 0;
+}
+
+.mostDiscussedCards {
+    padding: 10px 0 10px 0;
+    font-size: 0.8rem;
+
+    h3 {
+        font-size: 0.9rem;
+    }
+    
 }
 
 

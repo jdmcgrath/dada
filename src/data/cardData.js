@@ -22,7 +22,7 @@ export const cardsArr = [
         "title":"Up Your Game",
         "image":"../../img/CategoryPage/UYGPenguin.svg",
         "info":"Tips & Strategies for raising a little person",
-        "path":"/up-your-game"
+        "path":"up-your-game"
     },
 
 ]; 
@@ -32,25 +32,25 @@ export const SOScardsArr = [
     title: "Tantrums",
     image: "../../img/SOS/Tantrums.svg",
     info: "",
-    path: "./tantrums",
+    path: "tantrums",
   },
   {
     title: "Aggression",
     image: "../../img/SOS/Aggression.svg",
     info: "",
-    path: "/aggression",
+    path: "aggression",
   },
   {
     title: "Screaming",
     image: "../../img/SOS/Screaming.svg",
     info: "",
-    path: "/screaming",
+    path: "screaming",
   },
   {
     title: "Whining",
     image: "../../img/SOS/Whining.svg",
     info: "",
-    path: "/whining",
+    path: "whining",
   },
   {
     title: "Sleep Issues",
@@ -59,10 +59,10 @@ export const SOScardsArr = [
     path: "/sleep Issues",
   },
   {
-    title: "Swearing",
+    title: "Rejection",
     image: "../../img/SOS/Rejection.svg",
     info: "",
-    path: "/swearing",
+    path: "/rejection",
   },
 ];
 

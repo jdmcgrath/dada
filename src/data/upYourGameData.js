@@ -6,7 +6,7 @@ export const upYourGameCardData = [
         "profileImage":"https://images.unsplash.com/photo-1482235225574-c37692835cf3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80",
         "filterTag":"Kids",
         "title":"\"I Want Mom!\"",
-        "subtitle":"Dont worry, it's not personal",
+        "subtitle":"Don't worry, it's not personal",
         "author":"Nathan Drake",
         "readTime":"3 mins"
     },
@@ -34,7 +34,7 @@ export const mostDiscussedData = [
     "readTime":"3 mins",
 },
 {
-    "title":"Avoid Broken Promises and Hallow Threats",
+    "title":"Avoid Broken Promises and Hollow Threats",
     "author":"Megan Platt",
     "readTime":"2 mins",
 }
