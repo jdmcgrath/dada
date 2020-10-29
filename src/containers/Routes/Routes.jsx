@@ -12,8 +12,8 @@ import Tantrums from "../../components/Tantrums"
 import ArticleReader from "../../components/ArticleReader";
 import Welcome from "../../components/Welcome";
 import AddChickAge from "../../components/AddChickAge";
-import VideoList from '../../components/VideoList';
-import ArticleList from "../../components/ArticleList";
+import UpYourGame from "../../components/UpYourGame";
+
 
 
 
@@ -25,8 +25,6 @@ const Routes = () => {
             <AddChick path="add-chick" />
             <AddChickAge path="add-chick-age" />
             <ActivityIdeas path="categories/activity-ideas" />
-            <VideoList path="categories/activity-ideas/video-list" />
-            <ArticleList path="categories/activity-ideas/article-list" />
             <Tantrums path="/categories/sos/tantrums" />
             <ArticleReader path="article-reader" />
             <BookSmarts path="book-smarts" />
@@ -34,6 +32,7 @@ const Routes = () => {
             <SOS path="/categories/sos"/>
             <SplashScreen path="/" />
             <Welcome path="welcome" />
+            <UpYourGame path ="up-your-game" />
         </Router>
     )
 }
