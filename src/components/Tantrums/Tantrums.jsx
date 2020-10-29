@@ -12,6 +12,35 @@ const Tantrums = () => {
     <TantrumsForNextTime />
   );
 
+  const showButtons = toggleList ? (
+    <>
+      <button
+        className={styles.secondaryBtn}
+        onClick={() => setToggleList(true)}
+      >
+        For Now
+      </button>
+      <button
+        className={styles.primaryBtn}
+        onClick={() => setToggleList(false)}
+      >
+        For Next Time
+      </button>
+    </>
+  ) : (
+    <>
+      <button className={styles.primaryBtn} onClick={() => setToggleList(true)}>
+        For Now
+      </button>
+      <button
+        className={styles.secondaryBtn}
+        onClick={() => setToggleList(false)}
+      >
+        For Next Time
+      </button>
+    </>
+  );
+
   return (
     <>
       <header className={styles.smHeader}>
@@ -20,20 +49,7 @@ const Tantrums = () => {
       <div className={styles.pageContainer}>
         {/* Buttons to select whether you wish to info for now or later */}
 
-        <div className={styles.btnContainer}>
-          <button
-            className={styles.primaryBtn}
-            onClick={() => setToggleList(true)}
-          >
-            For Now
-          </button>
-          <button
-            className={styles.primaryBtn}
-            onClick={() => setToggleList(false)}
-          >
-            For Next Time
-          </button>
-        </div>
+        <div className={styles.btnContainer}>{showButtons}</div>
 
         <div>{showClickedList}</div>
       </div>

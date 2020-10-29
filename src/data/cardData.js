@@ -28,42 +28,41 @@ export const cardsArr = [
 ]; 
 
 export const SOScardsArr = [
-
-    {
-    "title":"Tantrums",
-    "image":"../../img/SOS/Tantrums.svg",
-    "info":"",
-    "path":"Tantrums"
-},
-{
-    "title":"Aggression",
-    "image":"../../img/SOS/Aggression.svg",
-    "info":"",
-    "path":"/aggression"
-    
-},
-{
-    "title":"Screaming",
-    "image":"../../img/SOS/Screaming.svg",
-    "info":"",
-    "path":"/screaming"
-},
-{
-    "title":"Whining",
-    "image":"../../img/SOS/Whining.svg",
-    "info":"",
-    "path":"/whining"
-},
-{
-    "title":"Sleep Issues",
-    "image":"../../img/SOS/SleepIssues.svg",
-    "info":"",
-    "path":"/sleep Issues"
-}, 
-{
-    "title":"Swearing",
-    "image":"../../img/SOS/Rejection.svg",
-    "info":"",
-    "path":"/swearing"
-}];
+  {
+    title: "Tantrums",
+    image: "../../img/SOS/Tantrums.svg",
+    info: "",
+    path: "/Tantrums",
+  },
+  {
+    title: "Aggression",
+    image: "../../img/SOS/Aggression.svg",
+    info: "",
+    path: "/aggression",
+  },
+  {
+    title: "Screaming",
+    image: "../../img/SOS/Screaming.svg",
+    info: "",
+    path: "/screaming",
+  },
+  {
+    title: "Whining",
+    image: "../../img/SOS/Whining.svg",
+    info: "",
+    path: "/whining",
+  },
+  {
+    title: "Sleep Issues",
+    image: "../../img/SOS/SleepIssues.svg",
+    info: "",
+    path: "/sleep Issues",
+  },
+  {
+    title: "Swearing",
+    image: "../../img/SOS/Rejection.svg",
+    info: "",
+    path: "/swearing",
+  },
+];
 
