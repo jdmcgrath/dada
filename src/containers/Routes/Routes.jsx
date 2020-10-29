@@ -11,6 +11,7 @@ import BookInfo from "../../components/BookInfo";
 import AddChick from "../../components/AddChick";
 import SOS from "../../components/SOS";
 import SplashScreen from "../../components/SplashScreen";
+import Tantrums from "../../components/Tantrums"
 import Welcome from "../../components/Welcome";
 
 const Routes = () => {
