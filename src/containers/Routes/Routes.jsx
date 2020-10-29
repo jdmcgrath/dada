@@ -17,6 +17,7 @@ import Welcome from "../../components/Welcome";
 const Routes = () => {
     return(
         <Router>
+
             <Categories path="categories" />
             <SignUp path="sign-up" />
             <AddChick path="add-chick" />
@@ -26,7 +27,7 @@ const Routes = () => {
             <BookSmarts path="book-smarts" />
             <BookInfo path="book-smarts/book-info" />
             <SOS path="/categories/sos"/>
-            <SplashScreen path="splash" />
+            <SplashScreen path="/" />
             <ArticleReader path="article-reader"/>
             <Welcome path="welcome" />
         </Router>
