@@ -1,12 +1,14 @@
 import React from "react";
 import UpYourGameCardData from "../../data/upYourGameData";
 import MostDiscussedCards from "../../data/upYourGameData";
+import Styles from "./UpYourGame.module.scss";
+import NavBar from "../NavBar";
 
 const UpYourGame = () => {
   return (
-    <>
-   
-    <section className="">  
+    
+
+    <main className={Styles.pageContainer}> 
 
       {UpYourGameCardData.map((UpYourGameCardData) => {
         return(
@@ -22,11 +24,7 @@ const UpYourGame = () => {
               )
         })}
 
-        </section>
-
         <h1>Most Discussed</h1>
-
-        <section>
           {MostDiscussedCards.map((MostDiscussedCards) => {
             return(
           <section>  
@@ -34,14 +32,8 @@ const UpYourGame = () => {
             <p>{MostDiscussedCards.author}</p>
             <p>{MostDiscussedCards.readTime}</p>
           </section>
-          )})}            
-    </section> 
-   
-
-
-    {/* <UpYourGameCards /> */}
-    {/* <MostDiscussedCards />      */}
-    </>
+          )})}
+        </main> 
     
   );
 }
