@@ -1,6 +1,6 @@
 import React from "react";
-import UpYourGameCardData from "../../data/upYourGameData";
-import MostDiscussedCards from "../../data/upYourGameData";
+import { upYourGameCardData } from "../../data/upYourGameData";
+import { mostDiscussedData } from "../../data/upYourGameData";
 import Styles from "./UpYourGame.module.scss";
 
 const UpYourGame = () => {
@@ -15,7 +15,7 @@ const UpYourGame = () => {
     
 
 
-      {UpYourGameCardData.map((UpYourGameCardData) => {
+      {upYourGameCardData.map((UpYourGameCardData) => {
         return(
            <section className={Styles.upYourGameArticles}>
 
@@ -30,7 +30,7 @@ const UpYourGame = () => {
         })}
 
         <h1>Most Discussed</h1>
-          {MostDiscussedCards.map((MostDiscussedCards) => {
+          {mostDiscussedData.map((MostDiscussedCards) => {
             return(
           <section className={Styles.mostDiscussedCards}>  
             <h1>{MostDiscussedCards.title}</h1>

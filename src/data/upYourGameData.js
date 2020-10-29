@@ -1,4 +1,4 @@
-const upYourGameCardData = [
+export const upYourGameCardData = [
     {
 
         "tag": "Kids",
@@ -19,10 +19,10 @@ const upYourGameCardData = [
         "subtitle": "Helping your kid switch activities smoothly",
         "author":"Dr. John Watson",
         "readTime":"3 mins"
-    }
-]
+    },
+];
 
-const mostDiscussedData = [ 
+export const mostDiscussedData = [ 
     {
     "title":"3 Tactics to Get Your Child to Clean Up",
     "author":"Nathan Drake",
@@ -38,6 +38,5 @@ const mostDiscussedData = [
     "author":"Megan Platt",
     "readTime":"2 mins",
 }
-]
+];
 
-export default upYourGameCardData
