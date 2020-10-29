@@ -31,7 +31,7 @@ const ActivityIdeas = () => {
     {/* filter headings need to go here */}
     <div className={styles.filterTagsContainer}>
        <ul className={styles.filterTags}>
-        <li><a href="https://github.com/nology-tech/dada">ALL</a></li>
+        <li><a className={styles.filterAll} href="https://github.com/nology-tech/dada">ALL</a></li>
         <li><a href="https://github.com/nology-tech/dada">INDOOR</a></li>
         <li><a href="https://github.com/nology-tech/dada">OUTDOOR</a></li>
         <li><a href="https://github.com/nology-tech/dada">SOCIAL SKILLS</a></li>
