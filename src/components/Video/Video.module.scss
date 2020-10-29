@@ -1,0 +1,54 @@
+@import "../../assets/styles/main.scss";
+
+.vidContainer {
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  margin: 3% 0;
+  border-radius: 2%;
+  box-shadow: 1px 2px 5px 2px grey;
+  .vidTopBar{
+    display: flex;
+    .vidChanIcon {
+      border-radius: 50%;
+      width: 15%; 
+      padding: 5px;
+    }
+    .vidChanText {
+      font-family: Nunito;
+      justify-content: center;
+      align-self: center;
+      font-size: 1.3rem;
+      font-weight: bold;
+      padding-left: 3%;
+    }
+  }
+ 
+  .playerWrapper {
+    position: relative;
+    padding-top: 56.25%;
+    .reactPlayer {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .vidBottomBar {
+    display: flex;
+    margin: 5%;
+    justify-content: space-between;
+    .vidTitle {
+      font-family: Nunito;
+      font-weight: bold;
+      width: 80%;
+    } 
+    .vidBookmark {
+      color: orange;
+      font-size: 2rem;
+  
+    }
+  }
+  
+}
+

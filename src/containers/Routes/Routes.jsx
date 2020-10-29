@@ -12,6 +12,7 @@ import AddChick from "../../components/AddChick";
 import SOS from "../../components/SOS";
 import SplashScreen from "../../components/SplashScreen";
 import Tantrums from "../../components/Tantrums"
+import ArticleReader from "../../components/ArticleReader";
 import Welcome from "../../components/Welcome";
 
 const Routes = () => {
@@ -26,6 +27,7 @@ const Routes = () => {
             <SOS path="/categories/sos"/>
             <SplashScreen path="splash" />
             <Tantrums path="tantrums" />
+            <ArticleReader path="article-reader"/>
             <Welcome path="welcome" />
         </Router>
     )

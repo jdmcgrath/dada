@@ -1,11 +1,17 @@
-import React from 'react'
+import React from 'react';
+import Article from '../Article/Article';
+import styles from './ArticleList.module.scss';
 
-const ArticleList = () => {
+const ArticleList = (props) => {
+
   return (
-    <div>
-      <p>Working</p>
+    <div className={styles.listContainer}>
+      {props.articles.map((article) => {
+        return <Article article={article} />
+      })}
     </div>
   )
 }
 
 export default ArticleList
+
