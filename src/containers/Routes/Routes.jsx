@@ -12,7 +12,7 @@ import AddChick from "../../components/AddChick";
 import SOS from "../../components/SOS";
 import SplashScreen from "../../components/SplashScreen";
 import Welcome from "../../components/Welcome";
-import SideBar from "../../components/SideBar";
+// import SideBar from "../../components/SideBar";
 
 const Routes = () => {
     return(
@@ -28,7 +28,7 @@ const Routes = () => {
             <SOS path="/categories/sos"/>
             <SplashScreen path="splash" />
             <Welcome path="welcome" />
-            <SideBar path="sidebar" />
+            {/* <SideBar path="sidebar" /> */}
         </Router>
     )
 }

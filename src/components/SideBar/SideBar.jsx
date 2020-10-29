@@ -17,7 +17,7 @@ const SideBar = () => {
         <section className={styles.sideBarContainer}>
             <header className={styles.sideBarHeader}>
                 <div className={styles.userChickImg}>
-                    <img src="" alt="user-chick-image"/>
+                    <img src="#" alt="user-chick-image" />
                 </div>
                 <div className={styles.chickInfo}>
                     <h3>Alex</h3>

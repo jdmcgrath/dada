@@ -4,13 +4,18 @@
 .sideBarContainer {
     display: flex;
     flex-direction: column;
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
+    // left: 40%;
     background-color: $turquoise;
     color: $offWhite;
     width: 60%;
     height: 100vh;
     opacity: 0.9;
     padding: 20px;
+    z-index: 10;
+    transform: translateX(100%);
 
     .sideBarHeader {
         display: flex;

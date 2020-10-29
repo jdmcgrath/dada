@@ -5,7 +5,7 @@
     width: 100%;
     position: absolute;
     background-color: transparent;
-    top: 5%;
+    z-index: 100;
 
     .globalNav{ 
         display: flex;
@@ -13,25 +13,35 @@
         // gap: 70vw;
         width: 90%;
         margin: 0 auto;
+        padding-top: 30px;
+
+        .faContainer {
+            display: flex;
+            justify-content: space-between;
+
+            .backButton{ 
+                font-size: 1.6rem;
+                color: grey;
+            }
+
+            .ellipses{ 
+                font-size: 1.6rem;
+                color: grey;
+                margin-left: 30vw;
+            } 
+
+            .toggle {
+                transform: translateX(0%);
+            }
+        }
     }
-    
-    .backButton{ 
-        font-size: 1.6rem;
-        color: grey;
-    }
-    
-    .ellipses{ 
-        font-size: 1.6rem;
-        color: grey;
-        margin-left: 30vw;
-    } 
-    
-    .pageTitle {
-        display: flex;
-        align-items: center;
-        font-size: 1.4rem;
-        color: black;
-    } 
+
+    // .pageTitle {
+    //     display: flex;
+    //     align-items: center;
+    //     font-size: 1.4rem;
+    //     color: black;
+    // } 
 }
 
 //add padding to navbar
