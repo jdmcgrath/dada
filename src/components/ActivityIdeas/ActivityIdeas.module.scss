@@ -1,1 +1,51 @@
-@import "../../../assets/styles/main.scss";
+@import "../../assets/styles/main.scss";
+@import "../../assets/styles/abstracts/variables";
+
+.smHeader {
+  background-color: $navyBlue;
+
+  h2 {
+    color: $offWhite;
+  }
+}
+
+.pageContainer {
+  
+  .btnContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    .primaryBtn {
+      font-size: 1rem;
+      color: white;
+      background-color: #4BBFE8;
+      outline: none;
+    }
+
+    .secondaryBtn {
+      font-size: 1rem;
+      color: white;
+      outline: none;
+      background-color: #189FB6;
+    }
+  }  
+  .filterTagsContainer {
+     
+    .filterTags {
+      display: flex;
+      list-style-type: none;
+      white-space: nowrap;
+      overflow: scroll;
+      margin-top: 10px;
+
+      li {
+        display: inline-block;
+        padding: 5px;
+      }
+    }
+  }
+ 
+
+}
