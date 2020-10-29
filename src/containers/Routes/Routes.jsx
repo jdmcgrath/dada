@@ -23,7 +23,7 @@ const Routes = () => {
         <BookSmarts path="book-smarts" />
         <BookInfo path="book-smarts/book-info" />
         <SOS path="/categories/sos" />
-        <SplashScreen path="splash" />
+        <SplashScreen path="/" />
         <Tantrums path="/categories/sos/tantrums" />
         <ArticleReader path="article-reader" />
         <Welcome path="welcome" />
