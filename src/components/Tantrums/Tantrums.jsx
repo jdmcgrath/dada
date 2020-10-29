@@ -11,39 +11,6 @@ const Tantrums = () => {
   ) : (
     <TantrumsForNextTime />
   );
-  const conditionalButtons = () => { 
-    if(toggleList = true){ 
-      <div className={styles.btnContainer}>
-      <button
-        className={styles.selectedBtn}
-        onClick={() => setToggleList(true)}
-      >
-        For Now
-      </button>
-      <button
-        className={styles.primaryBtn}
-        onClick={() => setToggleList(false)}
-      >
-        For Next Time
-      </button>
-    </div>
-  } else { 
-    <div className={styles.btnContainer}>
-    <button
-      className={styles.primaryBtn}
-      onClick={() => setToggleList(true)}
-    >
-      For Now
-    </button>
-    <button
-      className={styles.selectedBtn}
-      onClick={() => setToggleList(false)}
-    >
-      For Next Time
-    </button>
-    </div>
-  }
-  }
 
   return (
     <>
@@ -52,7 +19,21 @@ const Tantrums = () => {
       </header>
       <div className={styles.pageContainer}>
         {/* Buttons to select whether you wish to info for now or later */}
-        {conditionalButtons}
+
+        <div className={styles.btnContainer}>
+          <button
+            className={styles.primaryBtn}
+            onClick={() => setToggleList(true)}
+          >
+            For Now
+          </button>
+          <button
+            className={styles.primaryBtn}
+            onClick={() => setToggleList(false)}
+          >
+            For Next Time
+          </button>
+        </div>
 
         <div>{showClickedList}</div>
       </div>
@@ -65,7 +46,6 @@ const Tantrums = () => {
 //make seperate stylings and have state change them
 // therefore, state must change classnames of the buttons
 //how to format: 
-// enclose each button in a {}
-
+// enclose each button in a js {}
 
 export default Tantrums;
