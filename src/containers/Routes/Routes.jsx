@@ -12,9 +12,12 @@ import Tantrums from "../../components/Tantrums"
 import ArticleReader from "../../components/ArticleReader";
 import Welcome from "../../components/Welcome";
 import AddChickAge from "../../components/AddChickAge";
+import VideoList from '../../components/VideoList';
+import ArticleList from "../../components/ArticleList";
 
 
-const Routes = () => { 
+
+const Routes = () => {  
     return(
         <Router>
             <Categories path="categories" />
