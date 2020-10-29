@@ -15,7 +15,7 @@ const SplashScreen = () => {
                     <button className={styles.dadviceBtn}>Get Dadvice</button>
                                         </Link>
 
-                    <p className={styles.underButtonText}>Already have an account? <span>Log in</span> or <span>Sign up</span></p>
+                    <p className={styles.underButtonText}>Already have an account? <span>Log in</span> or <Link to ="sign-up"><span>Sign up</span></Link></p>
                 {/* </div> */}
         </div>
         </div>
