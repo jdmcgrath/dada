@@ -11,6 +11,8 @@ import AddChick from "../../components/AddChick";
 import SOS from "../../components/SOS";
 import SplashScreen from "../../components/SplashScreen";
 import Welcome from "../../components/Welcome";
+import AddChickAge from "../../components/AddChickAge";
+
 
 const Routes = () => { 
     return(
@@ -18,13 +20,14 @@ const Routes = () => {
             <Categories path="categories" />
             <SignUp path="sign-up" />
             <AddChick path="add-chick" />
+            <AddChickAge path="add-chick-age" />
             <ActivityIdeas path="categories/activity-ideas" />
             <VideoList path="categories/activity-ideas/video-list" />
             <ArticleList path="categories/activity-ideas/article-list" />
             <BookSmarts path="book-smarts" />
             <BookInfo path="book-smarts/book-info" />
             <SOS path="/categories/sos"/>
-            <SplashScreen path="splash" />
+            <SplashScreen path="/" />
             <Welcome path="welcome" />
         </Router>
     )
