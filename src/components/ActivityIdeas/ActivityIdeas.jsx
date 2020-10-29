@@ -16,12 +16,12 @@ const ActivityIdeas = () => {
 
     const showButtons = toggleList ? 
     <>
-      <button className={styles.primaryBtn} onClick={() => setToggleList(true)}>Videos</button>
-      <button className={styles.secondaryBtn} onClick={() => setToggleList(false)}>Articles</button>
-    </> : 
-    <>
       <button className={styles.secondaryBtn} onClick={() => setToggleList(true)}>Videos</button>
       <button className={styles.primaryBtn} onClick={() => setToggleList(false)}>Articles</button>
+    </> : 
+    <>
+      <button className={styles.primaryBtn} onClick={() => setToggleList(true)}>Videos</button>
+      <button className={styles.secondaryBtn} onClick={() => setToggleList(false)}>Articles</button>
     </>
 
   return (
