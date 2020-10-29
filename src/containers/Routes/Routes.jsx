@@ -14,21 +14,21 @@ import ArticleReader from "../../components/ArticleReader";
 import Welcome from "../../components/Welcome";
 
 const Routes = () => {
-    return(
-        <Router>
-            <Categories path="categories" />
-            <SignUp path="sign-up" />
-            <AddChick path="add-chick" />
-            <ActivityIdeas path="categories/activity-ideas" />
-            <BookSmarts path="book-smarts" />
-            <BookInfo path="book-smarts/book-info" />
-            <SOS path="/categories/sos"/>
-            <SplashScreen path="splash" />
-            <Tantrums path="tantrums" />
-            <ArticleReader path="article-reader"/>
-            <Welcome path="welcome" />
-        </Router>
-    )
+    return (
+      <Router>
+        <Categories path="categories" />
+        <SignUp path="sign-up" />
+        <AddChick path="add-chick" />
+        <ActivityIdeas path="categories/activity-ideas" />
+        <BookSmarts path="book-smarts" />
+        <BookInfo path="book-smarts/book-info" />
+        <SOS path="/categories/sos" />
+        <SplashScreen path="splash" />
+        <Tantrums path="/categories/sos/tantrums" />
+        <ArticleReader path="article-reader" />
+        <Welcome path="welcome" />
+      </Router>
+    );
 }
 
 export default Routes;

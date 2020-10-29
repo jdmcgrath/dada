@@ -32,7 +32,7 @@ export const SOScardsArr = [
     title: "Tantrums",
     image: "../../img/SOS/Tantrums.svg",
     info: "",
-    path: "/Tantrums",
+    path: "./tantrums",
   },
   {
     title: "Aggression",
