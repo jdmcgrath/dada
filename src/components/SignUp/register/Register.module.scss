@@ -11,14 +11,16 @@
     font-size: 25px;
   }
   
-  button {
-    width: 45%;
+  .primaryBtn {
+    width: 90%;
     margin: 0 auto;
     margin-top: 20px;
     text-align: center;
-    color: $offWhite;
+    // color: $offWhite;
+    background-color: transparent;
     height: 47px;
-    border: none;
+    border: 1px solid #979797;
+    box-shadow: none;
     transition: 0.2s;
     cursor: pointer;
 
@@ -46,7 +48,7 @@
 
     input {
       margin-left: 10px;
-      height: 10px;
+      height: 50px;
       border-radius: 30px;
     }
   }
