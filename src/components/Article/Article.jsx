@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Article.module.scss";
-import { Link } from "@reach/router";
+
 
 const Article = (props) => {
   const {Title, ReadTime, Image} = props.article;

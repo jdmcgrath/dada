@@ -1,7 +1,5 @@
 import React from 'react';
-import styles from './ArticleReader.module.scss';
-import articles from '../../data/articles';
-import { Router } from "@reach/router";
+
 
 
 const ArticleReader = (props) => {
