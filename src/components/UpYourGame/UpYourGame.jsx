@@ -2,6 +2,8 @@ import React from "react";
 import { upYourGameCardData } from "../../data/upYourGameData";
 import { mostDiscussedData } from "../../data/upYourGameData";
 import Styles from "./UpYourGame.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const UpYourGame = () => {
   return (
@@ -25,6 +27,8 @@ const UpYourGame = () => {
             <h2>{UpYourGameCardData.title}</h2>
             <h3>{UpYourGameCardData.subtitle}</h3>
             <p>{UpYourGameCardData.author} | {UpYourGameCardData.readTime}</p>
+            <p><FontAwesomeIcon icon={"comment-alt"}/> </p>
+
            </section>
               )
         })}
