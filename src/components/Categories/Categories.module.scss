@@ -14,27 +14,29 @@
             display: flex;
             background-color: #DBF1F5;
             min-height: 35vh;
-            margin-top: 20px;
+           margin-top: 20px;
             border-radius: 3px;
-            padding-bottom: 10px;
+            //padding-bottom: 10px;
 
             .imageTitleContainer{
+                
                 display: flex;
                 justify-content: center;
                 position: relative;
                 border-radius: 15px;
-                height: 70%;
+                height: 80%;
                 width: 100%;
         
                 h2{
                     position: absolute;
                     color: $black;
                     font-family: 'Nunito', sans-serif;
-                    top: 7px;
-                    left: 10px;
+                    top: -8px;
+                    left: 12px;
                 }
     
                 img {
+                    padding-top: 28px;
                     width: 50%;
                 }
             }
@@ -43,6 +45,8 @@
                 color: $black;
                 font-weight: 500;
                 padding: 10px;
+                font-size: 0.85rem;
+                line-height: 0.95rem;
 
             }
         }

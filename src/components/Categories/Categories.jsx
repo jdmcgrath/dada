@@ -4,9 +4,7 @@ import {cardsArr} from "../../data/cardData";
 import { Link } from "@reach/router";
 
 import Binoculars from "../../assets/img/Binoculars.svg";
-
 const Categories = () => {
-
     return (
         <>
         <header className={styles.lgHeader}>
