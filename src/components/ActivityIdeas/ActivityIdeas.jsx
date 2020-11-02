@@ -25,27 +25,27 @@ const ActivityIdeas = () => {
       <button className={styles.secondaryBtn} onClick={() => setToggleList(false)}>Articles</button>
     </>
 
-  const showFilterAll = filterChosen == "" ?
+  const showFilterAll = filterChosen === "" ?
     <li><span className={styles.filterOn} onClick={() => setFilterChosen("")}>ALL</span></li>
     : <li><span onClick={() => setFilterChosen("")}>ALL</span></li>
 
-  const showFilterIndoor = filterChosen == "indoor" ?
+  const showFilterIndoor = filterChosen === "indoor" ?
     <li><span className={styles.filterOn} onClick={() => setFilterChosen("indoor")}>INDOOR</span></li>
     : <li><span onClick={() => setFilterChosen("indoor")}>INDOOR</span></li>
 
-  const showFilterOutdoor = filterChosen == "outdoor" ?
+  const showFilterOutdoor = filterChosen === "outdoor" ?
     <li><span className={styles.filterOn} onClick={() => setFilterChosen("outdoor")}>OUTDOOR</span></li>
     : <li><span onClick={() => setFilterChosen("outdoor")}>OUTDOOR</span></li>
 
-  const showFilterSocialSkills = filterChosen == "social skills" ?
+  const showFilterSocialSkills = filterChosen === "social skills" ?
     <li><span className={styles.filterOn} onClick={() => setFilterChosen("social skills")}>SOCIAL SKILLS</span></li>
     : <li><span onClick={() => setFilterChosen("social skills")}>SOCIAL SKILLS</span></li>
 
-  const showFilterLanguage = filterChosen == "language" ?
+  const showFilterLanguage = filterChosen === "language" ?
     <li><span className={styles.filterOn} onClick={() => setFilterChosen("language")}>LANGUAGE</span></li>
     : <li><span onClick={() => setFilterChosen("language")}>LANGUAGE</span></li>
 
-  const showFilterStrength = filterChosen == "strength" ?
+  const showFilterStrength = filterChosen === "strength" ?
     <li><span className={styles.filterOn} onClick={() => setFilterChosen("strength")}>STRENGTH</span></li>
     : <li><span onClick={() => setFilterChosen("strength")}>STRENGTH</span></li>
 
