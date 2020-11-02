@@ -16,7 +16,7 @@ const VideoList = (props) => {
             if (video.keywords[i] === filterChosen || filterChosen === "") {
               return <Video video={video} />
             }else{
-              return
+              return null
             }
           }
         })}

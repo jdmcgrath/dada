@@ -16,7 +16,7 @@ const ArticleList = (props) => {
           if (article.keywords[i] === filterChosen || filterChosen === "") {
             return <Article article={article} />
           }else{
-            return
+            return null
           }
         }
       })}
