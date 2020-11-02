@@ -13,8 +13,10 @@ const ArticleList = (props) => {
 
       {articles.map((article) => {
         for (let i = 0; i < article.keywords.length; i++) {
-          if (article.keywords[i] === filterChosen || filterChosen == "") {
+          if (article.keywords[i] === filterChosen || filterChosen === "") {
             return <Article article={article} />
+          }else{
+            return
           }
         }
       })}
