@@ -13,13 +13,18 @@ import ArticleReader from "../../components/ArticleReader";
 import Welcome from "../../components/Welcome";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
+import PrivateRoutes from "../../containers/Routes/PrivateRoutes"
 
 const Routes = () => {  
     return(
         <Router>
             <Categories path="categories" />
             <SignUp path="sign-up" />
-            <AddChick path="add-chick" />
+
+            <PrivateRoutes path="categories">
+                <AddChick path="add-chick" />
+            </PrivateRoutes>
+
             <AddChickAge path="add-chick-age" />
             <ActivityIdeas path="categories/activity-ideas" />
             <Tantrums path="/categories/sos/tantrums" />
@@ -33,5 +38,8 @@ const Routes = () => {
         </Router>
     )
 }
+
+//create a variable function to import wherever needed:
+//give option to sign in when they try to access locked content, button in notification routed to sign up page 
 
 export default Routes;
