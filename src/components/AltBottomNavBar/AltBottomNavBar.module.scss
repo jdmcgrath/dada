@@ -21,6 +21,10 @@
         .navBarIcons {
             cursor: pointer;
             padding-top: 5px;
+
+            &:hover {
+                fill: $navyBlue;
+            }
         }
 
         .iconSubHeader {

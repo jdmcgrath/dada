@@ -11,6 +11,7 @@ import SplashScreen from "../../components/SplashScreen";
 import Tantrums from "../../components/Tantrums"
 import ArticleReader from "../../components/ArticleReader";
 import Welcome from "../../components/Welcome";
+// import SideBar from "../../components/SideBar";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
 const Routes = () => {  
