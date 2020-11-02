@@ -6,10 +6,15 @@ import articles from "../../data/articles";
 import videos from "../../data/videos";
 
 const ActivityIdeas = () => {
+
+  const [filterChosen, setFilterChosen] = useState("");
+
+ 
+
   const [toggleList, setToggleList] = useState(true);
     const showClickedList = toggleList ? 
-    <VideoList videos={videos} /> : 
-    <ArticleList articles={articles} />
+    <VideoList videos={videos} filterChosen={filterChosen} /> : 
+    <ArticleList articles={articles} filterChosen={filterChosen} />
     const showButtons = toggleList ? 
     <>
       <button className={styles.secondaryBtn} onClick={() => setToggleList(true)}>Videos</button>
@@ -31,12 +36,12 @@ const ActivityIdeas = () => {
     {/* filter headings need to go here */}
     <div className={styles.filterTagsContainer}>
        <ul className={styles.filterTags}>
-        <li><a className={styles.filterAll} href="https://github.com/nology-tech/dada">ALL</a></li>
-        <li><a href="https://github.com/nology-tech/dada">INDOOR</a></li>
-        <li><a href="https://github.com/nology-tech/dada">OUTDOOR</a></li>
-        <li><a href="https://github.com/nology-tech/dada">SOCIAL SKILLS</a></li>
-        <li><a href="https://github.com/nology-tech/dada">LANGUAGE</a></li>
-        <li><a href="https://github.com/nology-tech/dada">STRENGTH</a></li>
+        <li><span onClick={() => setFilterChosen("")}  className={styles.filterOn} >ALL</span></li>
+        <li><span onClick={() => setFilterChosen("indoor")}>INDOOR</span></li>
+        <li><span onClick={() => setFilterChosen("outdoor")}>OUTDOOR</span></li>
+        <li><span onClick={() => setFilterChosen("social skills")}>SOCIAL SKILLS</span></li>
+        <li><span onClick={() => setFilterChosen("language")}>LANGUAGE</span></li>
+        <li><span onClick={() => setFilterChosen("strength")}>STRENGTH</span></li>
        </ul>
      </div>
     <div >
