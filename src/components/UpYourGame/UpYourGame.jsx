@@ -3,6 +3,7 @@ import { upYourGameCardData } from "../../data/upYourGameData";
 import { mostDiscussedData } from "../../data/upYourGameData";
 import Styles from "./UpYourGame.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import BottomNavBar from "../BottomNavBar";
 
 
 const UpYourGame = () => {
@@ -43,6 +44,7 @@ const UpYourGame = () => {
           </section>
           )})}
         </main> 
+        <BottomNavBar />
     </>
   );
 }

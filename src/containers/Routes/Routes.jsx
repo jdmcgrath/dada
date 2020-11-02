@@ -13,7 +13,6 @@ import ArticleReader from "../../components/ArticleReader";
 import Welcome from "../../components/Welcome";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
-
 const Routes = () => {  
     return(
         <Router>

@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./BookSmarts.module.scss";
 import BookSmartCard from "./BookSmartCard";
 import cardData from "../../data/bookSmartData";
+import BottomNavBar from "../BottomNavBar";
 
 const BookSmarts = () => {
 
@@ -11,9 +12,12 @@ const BookSmarts = () => {
   )
 
   return (
+    <>
     <section className={styles.pageContainer}>
       {cardData.map(getBookInfo)}
     </section>
+    <BottomNavBar />
+    </>
   );
 };
 
