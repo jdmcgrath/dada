@@ -12,9 +12,14 @@ import CogIcon from '../../assets/img/SideBarIcons/Cog.svg';
 import InfoIcon from '../../assets/img/SideBarIcons/Info.svg';
 import QuestionIcon from '../../assets/img/SideBarIcons/Question.svg';
 
-const SideBar = () => {
+const SideBar = ({ openSideBar }) => {
+
+    const slideMenuInOut = () => {
+        `transform: ${({ openSideBar }) => openSideBar ? 'translateX(0)' : 'translateX((-100%)'};`
+    }
+
     return (
-        <section className={styles.sideBarContainer}>
+        <section className={styles.sideBarContainer} openSideBar={slideMenuInOut}>
             <header className={styles.sideBarHeader}>
                 <div className={styles.userChickImg}>
                     <img src="#" alt="user-chick-image" />
