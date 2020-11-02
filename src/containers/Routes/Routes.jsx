@@ -39,8 +39,9 @@ const Routes = () => {
         </Router>
     )
 }
+//issue left on: 
+//navigates to categories page twice, solution may be to do with paths
 
-//create a variable function to import wherever needed:
 //give option to sign in when they try to access locked content, button in notification routed to sign up page 
 
 export default Routes;
