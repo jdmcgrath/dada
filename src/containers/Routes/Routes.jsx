@@ -20,13 +20,14 @@ const Routes = () => {
         <Router>
             <Categories path="categories" />
             <SignUp path="sign-up" />
+            <AddChick path="add-chick" />
 
             <PrivateRoutes path="categories">
-                <AddChick path="add-chick" />
+                <ActivityIdeas path="categories/activity-ideas" />
             </PrivateRoutes>
 
             <AddChickAge path="add-chick-age" />
-            <ActivityIdeas path="categories/activity-ideas" />
+
             <Tantrums path="/categories/sos/tantrums" />
             <ArticleReader path="article-reader" />
             <BookSmarts path="categories/book-smarts" />

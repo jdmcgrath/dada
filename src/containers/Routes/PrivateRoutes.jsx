@@ -8,7 +8,8 @@ const PrivateRoutes = (props) => {
     firebase.auth().onAuthStateChanged((user) => {
      !user ? alert("Are you the user?"): alert("Hello User")
     }) 
-  })
+  }, [])
+  return <>{children}</>;
 };
 
 //check your identity - are they who they say they are?
