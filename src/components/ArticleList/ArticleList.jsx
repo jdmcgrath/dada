@@ -4,12 +4,25 @@ import styles from './ArticleList.module.scss';
 
 const ArticleList = (props) => {
 
+  const { filterChosen, articles } = props;
+
   return (
     <div className={styles.articleListContainer}>
-      {props.articles.map((article) => {
-        return <Article article={article} />
+
+
+
+      {articles.map((article) => {
+        for (let i = 0; i < article.keywords.length; i++) {
+          if (article.keywords[i] === filterChosen || filterChosen == "") {
+            return <Article article={article} />
+          }
+        }
       })}
+
+
+
     </div>
+
   )
 }
 
