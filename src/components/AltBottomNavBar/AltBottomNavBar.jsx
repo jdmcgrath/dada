@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "@reach/router";
 import styles from "./AltBottomNavBar.module.scss";
 import { ReactComponent as EllipsesIcon } from "../../assets/img/AltBottomNavBar/EllipsesIcon.svg";
@@ -12,21 +12,18 @@ const AltBottomNavBar = () => {
         <div className={styles.navBarContainer}>
             <Link to="../../categories">
             <div className={styles.iconContainer}>
-                {/* <img src={HomeIcon} alt="" className={styles.navBarIcons}></img>  */}
                 <HomeIcon className={styles.navBarIcons} />
                 <p className={styles.iconSubHeader}>Home</p>   
             </div>
             </Link>
             <Link to="../activity-ideas">
             <div className={styles.iconContainer}>
-                {/* <img src={FavouritesIcon} alt="" className={styles.navBarIcons}></img>  */}
                 <FavouritesIcon className={styles.navBarIcons} />
                 <p className={styles.iconSubHeader}>Favourites</p>     
             </div>
             </Link>
             <Link to="../sos">
             <div className={styles.iconContainer}>
-                {/* <img src={ProfileIcon} alt="" className={styles.navBarIcons}></img>  */}
                 <ProfileIcon className={styles.navBarIcons} />
                 <p className={styles.iconSubHeader}>Profile</p>     
             </div>
@@ -34,7 +31,6 @@ const AltBottomNavBar = () => {
     
             <Link to="../book-smarts">
             <div className={styles.iconContainer}>
-                {/* <img src={EllipsesIcon} alt="" className={styles.navBarIcons}></img>   */}
                 <EllipsesIcon className={styles.navBarIcons} />
                 <p className={styles.iconSubHeader}>More</p>    
             </div>
