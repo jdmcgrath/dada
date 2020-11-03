@@ -23,7 +23,7 @@ const Routes = () => {
             <AddChick path="add-chick" />
 
             <PrivateRoutes path="categories">
-                <ActivityIdeas path="categories/activity-ideas" />
+                <ActivityIdeas path="activity-ideas" />
             </PrivateRoutes>
 
             <AddChickAge path="add-chick-age" />
@@ -38,7 +38,7 @@ const Routes = () => {
             <UpYourGame path ="/categories/up-your-game" />
         </Router>
     )
-}
+};
 //issue left on: 
 //navigates to categories page twice, solution may be to do with paths
 
