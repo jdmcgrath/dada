@@ -4,7 +4,7 @@ import VideoList from "../VideoList";
 import ArticleList from "../ArticleList";
 import articles from "../../data/articles";
 import videos from "../../data/videos";
-
+import BottomNavBar from "../../components/BottomNavBar";
 const ActivityIdeas = () => {
 
   const [filterChosen, setFilterChosen] = useState("");
