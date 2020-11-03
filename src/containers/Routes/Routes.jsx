@@ -17,6 +17,7 @@ import UpYourGame from "../../components/UpYourGame";
 const Routes = () => {  
     return(
         <Router>
+
             <Categories path="categories" />
             <SignUp path="sign-up" />
             <AddChick path="add-chick" />
