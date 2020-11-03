@@ -14,8 +14,9 @@ const PrivateRoutes = (props) => {
     
      return  (<>
           <div className={styles.signInAlert}>
-          <h3>You Must Be Signed In to View This Content, Click the button below to sign in</h3>
-      <Link to="sign-up"><button>Sign up</button></Link>
+          <h3 className={styles.signInH3}>You Must Be Signed In to View This Content, Click the button below to sign in</h3>
+      <Link to="sign-up"><button className ={styles.signInButton}>Sign up</button></Link>
+      <Link to="sign-up"><button className={styles.signInButton}>Back to Categories</button></Link>
       </div>
       </>)
   };
