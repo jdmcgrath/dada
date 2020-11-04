@@ -1,31 +1,31 @@
 import React from "react";
 import longerContent from "../../data/articleReaderDummy";
 import styles from "./ArticleReader.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import BottomNavBar from "../BottomNavBar";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBookmark } from '@fortawesome/free-solid-svg-icons'; 
+
 
 const ArticleReader = () => {
   console.log(longerContent);
 
-  // const [bodyText,setBodyText] = useState("");
+  longerContent.body = { __html: `${longerContent.body}` };
 
-  longerContent.body = {__html: `${longerContent.body}`};
-
-  return (
+   return (
     <>
       <header className={styles.smHeader}>
         <h1>Header</h1>
       </header>
 
-  
+      
 
       <main className={styles.pageContainer}>
         <section className={styles.readerContent}>
+          <div className={styles.headingContainer}>
           <h2>{longerContent.title}</h2>
-          
-
-         
-
+          <FontAwesomeIcon icon={faBookmark} className={styles.bookmark}/>
+          </div>
           <section className={styles.authorSection}>
             <img
               className={styles.readerAuthorImage}
@@ -35,7 +35,7 @@ const ArticleReader = () => {
             <div className={styles.byLine}>
               <p className={styles.authorName}>
                 {longerContent.author} | {longerContent.readTime}
-                </p>
+              </p>
               <p className={styles.date}>
                 {longerContent.date}
               </p>
@@ -44,15 +44,19 @@ const ArticleReader = () => {
 
           <div className={styles.mainBody} dangerouslySetInnerHTML={longerContent.body} />
 
-          <p>
-            <FontAwesomeIcon icon={"comment-alt"} />{" "}
-          </p>
         </section>
-        
+
       </main>
+
+      // bottom of page
+      // favourite icon
+      // button to close article reader?
+
+
+
       <BottomNavBar />
     </>
   )
-  }
+}
 
 export default ArticleReader;
