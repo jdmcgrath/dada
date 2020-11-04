@@ -22,17 +22,24 @@ const ArticleReader = () => {
       <main className={styles.pageContainer}>
         <section className={styles.readerContent}>
           <h2>{longerContent.title}</h2>
-          <h3>Subtitle</h3>
-          <img
-            className={styles.readerAuthorImage}
-            src={longerContent.authorImage}
-            alt=""
-          />
+          
 
          
 
           <section className={styles.authorSection}>
-           <p>{longerContent.author} | {longerContent.readTime}</p>
+            <img
+              className={styles.readerAuthorImage}
+              src={longerContent.authorImage}
+              alt=""
+            />
+            <div className={styles.byLine}>
+              <p className={styles.authorName}>
+                {longerContent.author} | {longerContent.readTime}
+                </p>
+              <p className={styles.date}>
+                {longerContent.date}
+              </p>
+            </div>
           </section>
 
           <div className={styles.mainBody} dangerouslySetInnerHTML={longerContent.body} />
