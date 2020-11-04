@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useState } from 'react'
 import styles from "./Register.module.scss"
 import { navigate } from '@reach/router'
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,20 +9,24 @@ import firebase from "../../../firebase"
 
 
 export const Register = () => {
-
+ let [pass, setPass] = useState("")
+ let [em, setEm] = useState("")
+ let [un, setUn] = useState("")
 
   const handleSignUp = useCallback(async event => { 
+    console.log(em, pass, un)
     event.preventDefault();
-    const { email, password } = event.target.element; 
-    try { 
-      await firebase
-      .auth()
-      .createUserWithEmailAndPassword(email.value, password.value)
-      navigate("/")    
-    }
-    catch (error) {
-      alert(error)
-    }
+    // const { email, password } = event.target.element; 
+    
+    // try { 
+    //   await firebase
+    //   .auth()
+    //   .createUserWithEmailAndPassword(email, password)
+    //   navigate("/")    
+    // }
+    // catch (error) {
+    //   alert(error)
+    // }
   })
 
 
@@ -31,12 +35,12 @@ export const Register = () => {
       <form className={styles.formContainer} onSubmit={handleSignUp}>
         <h2>Sign Up</h2>
         <div className={styles.inputContainer}>
-          <label for="username" ></label>
-          <input type="text" id="username" placeholder="Name" name="username"/>
+          <label for="username"></label>
+          <input type="text" id="username" placeholder="Name" name="username" onInput={e => setUn(un += e.target.value)}/>
           <label for="user-email"></label>
-          <input type="email" id="user-email" placeholder="Email" name="email"/>
+          <input type="email" id="user-email" placeholder="Email" name="email" onInput={e => setEm(em += e.target.value)}/>
           <label for="user-password"></label>
-          <input type="password" id="user-password" placeholder="Password" name="password"/>
+          <input type="password" id="user-password" placeholder="Password" name="password" onInput={e => setPass(pass += e.target.value)}/>
         </div>
         <div className={styles.termsContainer}>
         <input type="checkbox" id="terms-checkbox"></input>
