@@ -39,9 +39,7 @@ const Routes = () => {
         </Router>
     )
 };
-//issue left on: 
-//navigates to categories page twice, solution may be to do with paths
-
-//give option to sign in when they try to access locked content, button in notification routed to sign up page 
-
+//using net ninja method, use the sign up for to make a firebase user 
+//wait for sam, use what he gives us to allow us to sign up with facebook 
+//check if logging in with different accounts accesses the same firebase user, if not, make in if statement to prohibiting them from accdesing the sign up page
 export default Routes;
