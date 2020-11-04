@@ -1,32 +1,42 @@
-import React from 'react';
-import longerContent from '../../data/articleReaderDummy';
-
-
+import React from "react";
+import longerContent from "../../data/articleReaderDummy";
 
 const ArticleReader = () => {
-
-console.log(longerContent);
+  console.log(longerContent);
 
   return (
     <>
-
-      <header>
+      <header className={styles.smHeader}>
+        <h1>Header</h1>
       </header>
 
-      <main className={StyleSheet.pageContainer}>
+      <main className={styles.pageContainer}>
+        <section className={styles.readerContent}>
+          <h2>{longerContent.title}</h2>
+
+          <img
+            className={styles.readerAuthorImage}
+            src={longerContent.authorImage}
+            alt=""
+          />
+
+          <h3>Subtitle</h3>
+
+          <p>
+            {longerContent.author} | {longerContent.readTime}
+          </p>
+
+          {longerContent.body}
+
+          <p>
+            <FontAwesomeIcon icon={"comment-alt"} />{" "}
+          </p>
+        </section>
+        
       </main>
-
-      <div>
-
-        <h1>{longerContent[0].Title}</h1>
-
-        <p></p>
-    
-      </div>
-
-      </>
-   
+      <BottomNavBar />
+    </>
   )
-}
+  }
 
-export default ArticleReader
+export default ArticleReader;
