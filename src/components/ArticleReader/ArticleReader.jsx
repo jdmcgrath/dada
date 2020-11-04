@@ -1,17 +1,30 @@
 import React from 'react';
+import longerContent from '../../data/articleReaderDummy';
 
 
 
-const ArticleReader = (props) => {
+const ArticleReader = () => {
 
-  const { Title, Body } = props.article
-  
+console.log(longerContent);
+
   return (
+    <>
+
+      <header>
+      </header>
+
+      <main className={StyleSheet.pageContainer}>
+      </main>
+
+      <div>
+
+        <h1>{longerContent[0].Title}</h1>
+
+        <p></p>
     
-    <div>
-      <h1>{Title}</h1>
-      <p>{Body}</p>
-    </div>
+      </div>
+
+      </>
    
   )
 }
