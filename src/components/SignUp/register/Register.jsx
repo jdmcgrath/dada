@@ -9,8 +9,8 @@ import firebase from "../../../firebase"
 
 
 export const Register = () => {
- let [pass, setPass] = useState("")
- let [em, setEm] = useState("")
+ let [password, setPass] = useState("")
+ let [email, setEm] = useState("")
  let [un, setUn] = useState("")
 
   const handleSignUp = useCallback(async event => { 
@@ -19,7 +19,7 @@ export const Register = () => {
     try { 
       await firebase
       .auth()
-      .createUserWithEmailAndPassword(em, pass)
+      .createUserWithEmailAndPassword(email, password)
       navigate("/")    
     }
     catch (error) {
@@ -36,7 +36,7 @@ export const Register = () => {
           <label for="username"></label>
           <input type="text" id="username" placeholder="Name" name="username" onInput={e => setUn(un += e.target.value)}/>
           <label for="user-email"></label>
-          <input type="email" id="user-email" placeholder="Email" name="email" onInput={e => setEm(em += e.target.value)}/>
+          <input type="email" id="user-email" placeholder="Email" name="email" onInput={e => setEm(email += e.target.value)}/>
           <label for="user-password"></label>
           <input type="password" id="user-password" placeholder="Password" name="password" onInput={e => setPass(e.target.value)}/>
         </div>

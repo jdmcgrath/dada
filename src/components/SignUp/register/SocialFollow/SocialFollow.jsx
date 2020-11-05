@@ -15,13 +15,13 @@ const SocialFollow = () => {
     firebase.auth().signInWithRedirect(provider)
   }
 
-  const goToSignInWithFacebook = () => {
-    firebase.auth().FacebookAuthProvider(provider)
-  }
-
+  // const goToSignInWithFacebook = () => {
+  //   firebase.auth().signInWithCredential(Face)
+  // }
+// onClick={goToSignInWithFacebook}
     return (
       <div className={styles.socialContainer}>
-        <a onClick={goToSignInWithFacebook}
+        <a 
         className={styles.facebookSocial}>
             <FontAwesomeIcon  icon={faFacebook} size="3x" />
         </a>

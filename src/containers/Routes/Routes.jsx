@@ -23,7 +23,7 @@ const Routes = () => {
             <AddChick path="add-chick" />
 
             <PrivateRoutes path="/">
-                <ActivityIdeas path="activity-ideas" />
+                <ActivityIdeas path="categories/activity-ideas" />
             </PrivateRoutes>
 
             <AddChickAge path="add-chick-age" />
