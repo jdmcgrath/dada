@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import styles from "./ActivityIdeas.module.scss";
 import VideoList from "../VideoList";
 import ArticleList from "../ArticleList";
-import articles from "../../data/articles";
-import videos from "../../data/videos";
+
 import BottomNavBar from "../../components/BottomNavBar";
 const ActivityIdeas = () => {
 
@@ -11,9 +10,12 @@ const ActivityIdeas = () => {
 
   const [toggleList, setToggleList] = useState(true);
 
+    
   const showClickedList = toggleList ?
-    <VideoList videos={videos} filterChosen={filterChosen} /> :
-    <ArticleList articles={articles} filterChosen={filterChosen} />
+  
+    // <VideoList videos={videos} filterChosen={filterChosen} /> :
+    <VideoList filterChosen={filterChosen} /> :
+    <ArticleList filterChosen={filterChosen} />
 
   const showButtons = toggleList ?
     <>
