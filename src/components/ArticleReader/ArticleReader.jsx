@@ -12,6 +12,7 @@ const ArticleReader = () => {
 
   longerContent.body = { __html: `${longerContent.body}` };
 
+  
    return (
     <>
       <header className={styles.smHeader}>
