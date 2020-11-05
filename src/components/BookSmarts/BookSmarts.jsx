@@ -10,8 +10,8 @@ const BookSmarts = () => {
   const [docs, setDocs] = useState([]);
   const getBookSmarts = () => {
     firestore.collection("booksmarts").get().then((response) => {
-       const documents = response.docs.map(d => d.data());
-       setDocs(documents)
+      const documents = response.docs.map(d => d.data());
+      setDocs(documents)
     })
   }
 console.log(docs);
@@ -26,7 +26,7 @@ console.log(docs);
   return (
     <>
     <section className={styles.pageContainer}>
-     {docs.map((doc) => {
+      {docs.map((doc) => {
         return <BookSmartCard doc={doc} />
       })}
     </section>
