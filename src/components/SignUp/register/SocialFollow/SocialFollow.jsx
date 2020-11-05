@@ -21,11 +21,11 @@ const SocialFollow = () => {
 // onClick={goToSignInWithFacebook}
     return (
       <div className={styles.socialContainer}>
-        <a 
+        <a href="https://github.com/nology-tech/dada"
         className={styles.facebookSocial}>
             <FontAwesomeIcon  icon={faFacebook} size="3x" />
         </a>
-        <a onClick={goToSignInWithGoogle} className={styles.twitterSocial}>
+        <a href="https://github.com/nology-tech/dada" onClick={goToSignInWithGoogle} className={styles.twitterSocial}>
             <FontAwesomeIcon icon={faGoogle} size="3x" />
         </a>
       </div>
