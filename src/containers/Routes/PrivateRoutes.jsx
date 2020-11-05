@@ -3,13 +3,14 @@ import firebase from "../../firebase";
 import { navigate } from "@reach/router";
 import { Router, Link } from "@reach/router";
 import styles from "./PrivateRoutes.module.scss"
+
 const PrivateRoutes = (props) => { 
   const { children } = props
   
   useEffect(() =>{
     console.log('started useEffect')
     firebase.auth().onAuthStateChanged((user) => {
-     !user ?  navigate("/sign-up") : alert("Hello User")
+     !user ?  navigate("/sign-up") : navigate(children)
     }) 
     console.log('finished useEffect')
   }, [])

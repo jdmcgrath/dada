@@ -14,19 +14,17 @@ export const Register = () => {
  let [un, setUn] = useState("")
 
   const handleSignUp = useCallback(async event => { 
-    console.log(em, pass, un)
     event.preventDefault();
-    // const { email, password } = event.target.element; 
     
-    // try { 
-    //   await firebase
-    //   .auth()
-    //   .createUserWithEmailAndPassword(email, password)
-    //   navigate("/")    
-    // }
-    // catch (error) {
-    //   alert(error)
-    // }
+    try { 
+      await firebase
+      .auth()
+      .createUserWithEmailAndPassword(em, pass)
+      navigate("/")    
+    }
+    catch (error) {
+      alert(error)
+    }
   })
 
 
@@ -40,7 +38,7 @@ export const Register = () => {
           <label for="user-email"></label>
           <input type="email" id="user-email" placeholder="Email" name="email" onInput={e => setEm(em += e.target.value)}/>
           <label for="user-password"></label>
-          <input type="password" id="user-password" placeholder="Password" name="password" onInput={e => setPass(pass += e.target.value)}/>
+          <input type="password" id="user-password" placeholder="Password" name="password" onInput={e => setPass(e.target.value)}/>
         </div>
         <div className={styles.termsContainer}>
         <input type="checkbox" id="terms-checkbox"></input>
@@ -57,10 +55,6 @@ export const Register = () => {
   )
 }
 
-//what we need to do: 
-//be able to access all of the input's values 
-//store them 
-//
 
 
 
