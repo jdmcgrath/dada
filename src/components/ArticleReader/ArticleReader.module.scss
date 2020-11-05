@@ -1,8 +1,6 @@
 @import "../../assets/styles/main.scss";
 
 
-
-
 .smHeader {
   background-color: $navyBlue;
   color: white;
@@ -15,9 +13,7 @@
 
 }
 
-
 .readerContent {
-
   padding-bottom: 4rem;
 
   .headingContainer {
@@ -31,7 +27,7 @@
 
     .bookmark {
       font-size: 2rem;
-      color: orange;
+      color: $orange;
     }
   
   }
@@ -47,16 +43,20 @@
     }
 
     .byLine {
-      padding: 7px 0 0 10px;
+      padding: 6px 0 0 10px;
+      margin-left: 5px; 
 
       .authorName {
         font-weight: 700;
-        color: $colourSix;
-        padding-bottom: 0.25rem;
+        color: rgba(0, 0, 0, 0.45);
+        // grey colour for by-line text
+        padding-bottom: 0.4rem;
       }
 
       .date {
-        color: $colourSix;
+        color: rgba(0, 0, 0, 0.45);
+        // grey colour for by-line text
+
         font-weight: 100;
       }
 
@@ -88,6 +88,7 @@
 
   }
 
+  
 
 
 }

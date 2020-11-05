@@ -8,7 +8,6 @@ import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 
 
 const ArticleReader = () => {
-  console.log(longerContent);
 
   longerContent.body = { __html: `${longerContent.body}` };
 
@@ -16,7 +15,7 @@ const ArticleReader = () => {
    return (
     <>
       <header className={styles.smHeader}>
-        <h1>Header</h1>
+        <h1>Article Reader</h1>
       </header>
 
       
@@ -48,12 +47,6 @@ const ArticleReader = () => {
         </section>
 
       </main>
-
-      // bottom of page
-      // favourite icon
-      // button to close article reader?
-
-
 
       <BottomNavBar />
     </>
