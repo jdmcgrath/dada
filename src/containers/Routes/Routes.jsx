@@ -11,6 +11,7 @@ import SplashScreen from "../../components/SplashScreen";
 import Tantrums from "../../components/Tantrums"
 import ArticleReader from "../../components/ArticleReader";
 import Welcome from "../../components/Welcome";
+// import SideBar from "../../components/SideBar";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
 import PrivateRoutes from "../../containers/Routes/PrivateRoutes"
@@ -18,6 +19,7 @@ import PrivateRoutes from "../../containers/Routes/PrivateRoutes"
 const Routes = () => {  
     return(
         <Router>
+
             <Categories path="categories" />
             <SignUp path="sign-up" />
             <AddChick path="add-chick" />
