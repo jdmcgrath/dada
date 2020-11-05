@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./SocialFollow.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import firebase, { provider } from '../../../../firebase'
+import firebase, { provider } from "../../../../firebase"
 import {
     faFacebook,
     faGoogle
