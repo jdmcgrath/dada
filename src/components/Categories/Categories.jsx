@@ -2,8 +2,8 @@ import React from "react";
 import styles from "./Categories.module.scss";
 import {cardsArr} from "../../data/cardData";
 import { Link } from "@reach/router";
-
 import Binoculars from "../../assets/img/Binoculars.svg";
+import AltBottomNavBar from "../AltBottomNavBar";
 const Categories = () => {
     return (
         <>
@@ -28,8 +28,10 @@ const Categories = () => {
             }
         )
         }
-            </div>
+            </div>   
     </main>
+    <AltBottomNavBar />
+    
     </>
     );
 }

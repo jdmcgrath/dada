@@ -3,15 +3,15 @@ import styles from "./Article.module.scss";
 
 
 const Article = (props) => {
-  const {Title, ReadTime, Image} = props.article;
+  const {title, readTime, image} = props.doc;
   
   return (
     
     <div className={styles.artContainer}>
       <div className={styles.artGrid}>
-        <h3 className={styles.artTitle}>{Title}</h3>
-        <p className={styles.artReadTime}>Read  Time: {ReadTime}</p>
-        <img className={styles.artImage} src= {Image} alt=""/>
+        <h3 className={styles.artTitle}>{title}</h3>
+        <p className={styles.artReadTime}>Read  Time: {readTime}</p>
+        <img className={styles.artImage} src= {image} alt=""/>
       </div>
     </div>
     

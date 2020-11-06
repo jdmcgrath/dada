@@ -6,7 +6,7 @@ import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 
 const Video = (props) => {
 
-  const { url, channel, icon, title } = props.video
+  const { url, channel, icon, title } = props.doc
 
   return (
   

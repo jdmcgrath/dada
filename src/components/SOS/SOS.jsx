@@ -5,6 +5,7 @@ import styles from "./SOS.module.scss";
 import { SOScardsArr } from "../../data/cardData";
 
 import { Link } from "@reach/router";
+import AltBottomNavBar from "../AltBottomNavBar";
 
 const SOS = () => { 
     
@@ -32,6 +33,7 @@ const SOS = () => {
             }
                 </div>
             </div>
+            <AltBottomNavBar />
             </>
         );
     }
