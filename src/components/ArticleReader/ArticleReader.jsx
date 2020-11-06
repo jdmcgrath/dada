@@ -44,7 +44,31 @@ const ArticleReader = () => {
 
           <div className={styles.mainBody} dangerouslySetInnerHTML={longerContent.body} />
 
-        </section>
+          </section>
+
+        {/* 1. related articles section - neeeds to map through rekated content and render into grid
+        2. what is related content? where are we getting it from?
+            2.a assuming it will be articles with same keyword */}
+
+          <section className={styles.relatedSection}>
+            <div className={styles.relatedHeading}>
+              <h2>
+                Related Articles
+              </h2>
+            </div>
+            <div className={styles.relatedGrid}>
+              <img className={styles.relatedImage} src="https://via.placeholder.co/140x100.png" alt=""/>
+              <h3 className={relatedArticleTitle}>
+                Article Title
+              </h3>
+              <p>
+                Short summary of article
+              </p>
+              <p>
+                Read time: 3 min
+              </p>
+            </div>
+          </section>
 
       </main>
 
