@@ -11,18 +11,21 @@ import {
 
 const SocialFollow = () => {
 
-  const goToSignInWithGoogle = () => {
-    firebase.auth().signInWithRedirect(provider)
-  }
+  const providerTwo = new firebase.auth.FacebookAuthProvider();
 
-  // const goToSignInWithFacebook = () => {
-  //   firebase.auth().signInWithCredential(Face)
-  // }
-// onClick={goToSignInWithFacebook}
+    
+  const goToSignInWithGoogle = () => {    
+    firebase.auth().signInWithRedirect(provider)    
+  }
+    
+  const goToSignInWithFacebook = () => {
+    firebase.auth().signInWithRedirect(providerTwo);
+    }
     return (
       <div className={styles.socialContainer}>
         <a href="https://github.com/nology-tech/dada"
-        className={styles.facebookSocial}>
+        className={styles.facebookSocial} onClick={goToSignInWithFacebook}
+        >
             <FontAwesomeIcon  icon={faFacebook} size="3x" />
         </a>
         <a href="https://github.com/nology-tech/dada" onClick={goToSignInWithGoogle} className={styles.twitterSocial}>
