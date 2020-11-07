@@ -41,11 +41,18 @@ const BookSmartCard = (props) => {
     }
 
     const {
+<<<<<<< HEAD
         Title, 
         Author,
         publishDate,
         BookId
     } = props.cardData;
+=======
+        title, 
+        author,
+        publishDate
+    } = props.doc;
+>>>>>>> 7f99c79afad71db66b859b0d48498f58a22a3c5f
 
 
     // const BookInfoLink = () => {
@@ -58,8 +65,8 @@ const BookSmartCard = (props) => {
         <section className={styles.cardContainer}>
             <div className={styles.bookInfoContainer}>
                 <div className={styles.bookSmartInfo}>
-                    <h2 className={styles.bookTitle}>{Title}</h2>
-                    <p className={styles.bookAuthor}>{Author}, {publishDate}</p>
+                    <h2 className={styles.bookTitle}>{title}</h2>
+                    <p className={styles.bookAuthor}>{author}, {publishDate}</p>
                 </div>
                 <div className={styles.bookSmartVotes}>
                     <span onClick={increaseCount} className={styles.voteIcon}><FontAwesomeIcon icon={faArrowCircleUp} /></span>

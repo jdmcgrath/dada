@@ -10,6 +10,8 @@
 }
 
 .pageContainer {
+
+  padding-bottom: 4rem;
   
   .btnContainer {
     display: flex;
@@ -32,18 +34,31 @@
     }
   }  
   .filterTagsContainer {
-     
+
     .filterTags {
       display: flex;
       list-style-type: none;
       white-space: nowrap;
       overflow: scroll;
-      margin-top: 10px;
+      margin-top: 10px;      
 
       li {
         display: inline-block;
         padding: 5px;
       }
+
+      .filterOn {
+        font-weight: bold;
+        border-bottom: 5px solid orange;
+  
+      }
+    }
+    .filterTags::-webkit-scrollbar {
+      display: none;
+    }
+    .filterTags {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
     }
   }
  
