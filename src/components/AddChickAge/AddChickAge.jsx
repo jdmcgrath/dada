@@ -1,6 +1,6 @@
 import React, { useState} from "react";
 import styles from "./AddChickAge.module.scss";
-import BoyChick from "../../assets/img/AddChick/BoyChick.svg";
+//import BoyChick from "../../assets/img/AddChick/BoyChick.svg";
 import GirlChick from "../../assets/img/AddChick/GirlChick.svg";
 
 
