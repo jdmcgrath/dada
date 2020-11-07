@@ -1,6 +1,5 @@
 import React from "react";
 import { Router } from "@reach/router";
-
 import Categories from "../../components/Categories";
 import SignUp from "../../components/SignUp/register";
 import ActivityIdeas from "../../components/ActivityIdeas";
@@ -12,23 +11,29 @@ import SplashScreen from "../../components/SplashScreen";
 import Tantrums from "../../components/Tantrums"
 import ArticleReader from "../../components/ArticleReader";
 import Welcome from "../../components/Welcome";
+// import SideBar from "../../components/SideBar";
+import AddChickAge from "../../components/AddChickAge";
+import UpYourGame from "../../components/UpYourGame";
+import cardData from "../../data/bookSmartData";
 
-const Routes = () => {
-    return (
-      <Router>
-        <Categories path="categories" />
-        <SignUp path="sign-up" />
-        <AddChick path="add-chick" />
-        <ActivityIdeas path="categories/activity-ideas" />
-        <BookSmarts path="book-smarts" />
-        <BookInfo path="book-smarts/book-info" />
-        <SOS path="/categories/sos" />
-        <SplashScreen path="/" />
-        <Tantrums path="/categories/sos/tantrums" />
-        <ArticleReader path="article-reader" />
-        <Welcome path="welcome" />
-      </Router>
-    );
+const Routes = (props) => {  
+    return(
+        <Router>
+            <Categories path="categories" />
+            <SignUp path="sign-up" />
+            <AddChick path="add-chick" />
+            <AddChickAge path="add-chick-age" />
+            <ActivityIdeas path="categories/activity-ideas" />
+            <Tantrums path="/categories/sos/tantrums" />
+            <ArticleReader path="article-reader" />
+            <BookSmarts path="categories/book-smarts" />
+            <BookInfo path="categories/book-smarts/book-info/:bookId" cardData={cardData} />
+            <SOS path="categories/sos"/>
+            <SplashScreen path="/" />
+            <Welcome path="welcome" />
+            <UpYourGame path ="/categories/up-your-game" />
+        </Router>
+    )
 }
 
 export default Routes;

@@ -1,9 +1,10 @@
 const cardData = [
     { 
-        id: "563",
+        BookId: "0",
         Title: "Playful Parenting" ,   
         Author: "Lawrence J.Cohen",
         AuthorBackground: "Lawrence J.Cohen Ph.D is a clinical psychologist specialising in children's play, therapy and parenting.",
+        Blurb: "Playful Parenting is a complete guide to using play to raise confident children.",
         publishDate: "2015",
         Votes: "",
         Img: "lorem source",
@@ -38,7 +39,7 @@ const cardData = [
 
     },
     { 
-        id: "123",
+        BookId: "1",
         Title: "How to Talk So Kids Will Listen" ,   
         Author: "Adele Faber",
         publishDate: "1980",
@@ -46,7 +47,7 @@ const cardData = [
         Img: "lorem source"
     },
     { 
-        id: "812",
+        BookId: "2",
         Title: "SuperBaby: 12 Ways to Give Your Child a Headstart in the First 3 Years" ,   
         Author: "Jean Mann",
         publishDate: "2010",
@@ -54,7 +55,7 @@ const cardData = [
         Img: "lorem source"
     },
     { 
-        id: "21",
+        BookId: "3",
         Title: "Bringing up Bebe" ,   
         Author: "Pamela Druckerman",
         publishDate: "2012",
@@ -62,7 +63,7 @@ const cardData = [
         Img: "lorem source"
     },
     { 
-        id: "87",
+        BookId: "4",
         Title: "The Montessori Toddler" ,   
         Author: "Simone Davies",
         publishDate: "2019",
@@ -70,7 +71,7 @@ const cardData = [
         Img: "lorem source"
     },
     { 
-        id: "412",
+        BookId: "5",
         Title: "Grit: The Power of Passion And Perseverance",   
         Author: "Angela Duckworth",
         publishDate: "2016",
