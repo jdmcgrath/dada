@@ -19,17 +19,17 @@ const BookSmartCard = (props) => {
       setCount(addCount => addCount + 1)
     }
     const {
-        Title, 
-        Author,
+        title, 
+        author,
         publishDate
-    } = props.cardData;
+    } = props.doc;
 
     return (
         <section className={styles.cardContainer}>
             <div className={styles.bookInfoContainer}>
                 <div className={styles.bookSmartInfo}>
-                    <h2 className={styles.bookTitle}>{Title}</h2>
-                    <p className={styles.bookAuthor}>{Author}, {publishDate}</p>
+                    <h2 className={styles.bookTitle}>{title}</h2>
+                    <p className={styles.bookAuthor}>{author}, {publishDate}</p>
                 </div>
                 <div className={styles.bookSmartVotes}>
                     <span onClick={increaseCount} className={styles.voteIcon}><FontAwesomeIcon icon={faArrowCircleUp} /></span>
