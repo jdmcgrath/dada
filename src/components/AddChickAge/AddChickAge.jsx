@@ -10,12 +10,12 @@ const AddChickAge = () => {
   const [ chickAge, setChickAge ] = useState(0);
 
   const increaseAge = () => {
-    setChickAge(chickAge+1);
+    setChickAge(chickAge => chickAge + 1);
   }
 
   const decreaseAge = () => {
     if(chickAge>0){
-      setChickAge(chickAge-1);
+      setChickAge(chickAge => chickAge - 1);
     } 
   }
 
