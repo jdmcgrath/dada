@@ -55,18 +55,34 @@ const ArticleReader = () => {
               <h2>
                 Related Articles
               </h2>
+              <hr/>
             </div>
             <div className={styles.relatedGrid}>
-              <img className={styles.relatedImage} src="https://via.placeholder.co/140x100.png" alt=""/>
-              <h3 className={relatedArticleTitle}>
+              <div>
+                <img className={styles.relatedImage} src="../../img/CategoryPage/ActivityIdeas/parent5.jpg" alt="https://via.placeholder.com/160x120.png"/>
+                <h3 className={styles.relatedArticleTitle}>
                 Article Title
-              </h3>
-              <p>
-                Short summary of article
-              </p>
-              <p>
-                Read time: 3 min
-              </p>
+                </h3>
+                <p>
+                  Short summary of article
+                </p>
+                <p>
+                  Read time: 3 min
+                </p>
+              </div>
+              
+              <div>
+                <img className={styles.relatedImage} src="../../img/CategoryPage/ActivityIdeas/parent1.jpg" alt=""/>
+                <h3 className={styles.relatedArticleTitle}>
+                Article Title
+                </h3>
+                <p>
+                  Short summary of article
+                </p>
+                <p>
+                  Read time: 3 min
+                </p>
+              </div>
             </div>
           </section>
 
