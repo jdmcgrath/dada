@@ -5,9 +5,8 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import styles from "./NavBar.module.scss";
 import SideBar from '../SideBar/';
 
-const NavBar = () => { 
+const NavBar = ({ openSideBar, setOpenSideBar}) => { 
 
-    const [openSideBar, setOpenSideBar] = useState(false);
     // const sideBarToggle = document.querySelector("#ellipsesContainer");
 
     // const menuToggler = () => {
@@ -26,10 +25,13 @@ const NavBar = () => {
                     <FontAwesomeIcon icon={faChevronLeft} className={styles.backButton}/>
                     </div>
                     {/* <p className={styles.pageTitle}>Page Title</p> */}
-                    <div className={styles.faContainer} id={styles.ellipsesContainer} onClick={menuToggler}>
-                        <SideBar openSideBar={openSideBar} onClick={() => setOpenSideBar(!openSideBar)}>
-                            <FontAwesomeIcon icon={faEllipsisV} className={styles.ellipses} />
-                        </SideBar>
+                    <div className={styles.faContainer} id={styles.ellipsesContainer}>
+                        <FontAwesomeIcon 
+                            icon={faEllipsisV} 
+                            className={styles.ellipses}
+                            openSideBar={openSideBar}
+                            onClick={() => setOpenSideBar(!openSideBar)}
+                        />
                     </div>
                 </nav>
             </header>

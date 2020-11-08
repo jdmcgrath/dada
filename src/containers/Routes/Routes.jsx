@@ -29,12 +29,7 @@ const Routes = () => {
             <SOS path="categories/sos"/>
             <SplashScreen path="/" />
             <Welcome path="welcome" />
-<<<<<<< HEAD
-            {/* <SideBar path="sidebar" /> */}
-            <UpYourGame path ="up-your-game" />
-=======
             <UpYourGame path ="/categories/up-your-game" />
->>>>>>> 3ae3e3816f5b37fdc476bd246228c2e1411a70e1
         </Router>
     )
 }

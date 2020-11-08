@@ -4,34 +4,42 @@
 .sideBarContainer {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     // left: 40%;
-    background-color: $turquoise;
+    background-color: #394167;
     color: $offWhite;
     width: 60%;
     height: 100vh;
     opacity: 0.9;
     padding: 20px;
     z-index: 10;
+    transform: translateX(0%);
+    transition: transform 0.3s ease;
 
-    .sideBarHeader {
+    .buttonContainer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        margin-top: 70px;
 
-        .userChickImg {
-            width: 30%;
-            background-color: $offWhite;
-            border-radius: 50%;
+        .signUpBtn,
+        .loginBtn {
+            width: 90px;
+            height: 45px;
+            border-radius: 5px;
+            font-weight: 700;
         }
 
-        .chickInfo {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 60%;
+        .signUpBtn {
+            border: 1px solid white;
+        }
+
+        .loginBtn {
+            background-color: transparent;
+            border: 1px solid $offWhite;
+            color: $offWhite;
         }
     }
 

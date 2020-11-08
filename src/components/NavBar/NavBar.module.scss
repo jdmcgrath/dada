@@ -28,10 +28,10 @@
                 font-size: 1.6rem;
                 color: grey;
                 margin-left: 30vw;
-            } 
 
-            .toggle {
-                transform: translateX(0%);
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
