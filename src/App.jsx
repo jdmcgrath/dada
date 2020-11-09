@@ -19,7 +19,7 @@ export const App = () => {
   return (
     <>
         <NavBar />
-        <Routes docs={docs} />
+        <Routes />
     </> 
   )
 }
