@@ -11,14 +11,15 @@
     font-size: 25px;
   }
   
-  button {
+  .primaryBtn {
     width: 90%;
     margin: 0 auto;
     margin-top: 20px;
     text-align: center;
-    color: $offWhite;
+    // color: $offWhite;
+    background-color: $navyBlue;
     height: 47px;
-    border: none;
+    box-shadow: none;
     transition: 0.2s;
     cursor: pointer;
 
@@ -42,12 +43,12 @@
     align-items: center;
     margin: 0 auto;
     width: 90%;
-    height: 50px;
+    height: 70px;
 
     input {
-      margin-right: 5px;
-      height: 10px;
+      height: 70px;
       border-radius: 30px;
+      margin-right: 10px;
     }
   }
 

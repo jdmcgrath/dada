@@ -10,7 +10,7 @@ export const App = () => {
   return (
     <>
         <NavBar openSideBar={openSideBar} setOpenSideBar={setOpenSideBar} />
-        <SideBar openSideBar={openSideBar} setOpenSideBar={setOpenSideBar} />
+        {/* <SideBar openSideBar={openSideBar} setOpenSideBar={setOpenSideBar} /> */}
         <Routes />
     </> 
   )

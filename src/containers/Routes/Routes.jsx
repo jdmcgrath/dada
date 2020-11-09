@@ -11,10 +11,10 @@ import SplashScreen from "../../components/SplashScreen";
 import Tantrums from "../../components/Tantrums"
 import ArticleReader from "../../components/ArticleReader";
 import Welcome from "../../components/Welcome";
-// import SideBar from "../../components/SideBar";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
-import PrivateRoutes from "../../containers/Routes/PrivateRoutes"
+import PrivateRoutes from "../../containers/Routes/PrivateRoutes";
+import ProfileSignIn from "../../components/ProfileSignIn";
 
 const Routes = () => {  
     return(
@@ -23,13 +23,10 @@ const Routes = () => {
             <Categories path="categories" />
             <SignUp path="sign-up" />
             <AddChick path="add-chick" />
-
             <PrivateRoutes path="/">
                 <ActivityIdeas path="categories/activity-ideas" />
             </PrivateRoutes>
-
             <AddChickAge path="add-chick-age" />
-
             <Tantrums path="/categories/sos/tantrums" />
             <ArticleReader path="article-reader" />
             <BookSmarts path="categories/book-smarts" />
@@ -38,6 +35,7 @@ const Routes = () => {
             <SplashScreen path="/" />
             <Welcome path="welcome" />
             <UpYourGame path ="/categories/up-your-game" />
+            <ProfileSignIn path="/profile-sign-in" />
         </Router>
     )
 };

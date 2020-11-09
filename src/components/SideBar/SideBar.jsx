@@ -22,13 +22,13 @@ const SideBar = (props) => {
             </div>
             <main className={styles.appPathLinks}>
                 <div className={styles.appPathItems}>
-                    <Link to="/splash">
+                    <Link to="/profile-sign-in">
                     <div className={styles.pathItems}>
                         <img src={BookmarkIcon} alt="sidebar-icons"/>
                         <p>Favourites</p>
                     </div>
                     </Link>
-                    <Link to="/categories/sos">
+                    <Link to="/profile-sign-in">
                     <div className={styles.pathItems}>
                         <img src={ProfileIcon} alt="sidebar-icons"/>
                         <p>Profile</p>

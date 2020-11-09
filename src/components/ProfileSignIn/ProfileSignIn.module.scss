@@ -1,0 +1,48 @@
+@import '../../assets/styles/abstracts/variables';
+@import '../../assets/styles/main.scss';
+.smHeader {
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+.pageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+
+    .imgContainer {
+        height: 145px;
+        width: 120px;
+        margin-bottom: 30px;
+
+        img {
+            width: 100%;
+        }
+    }
+    .pageCTA {
+        color: $navyBlue;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 60px;
+    }
+    .btnContainer {
+        display: flex;
+        justify-content: space-evenly;
+        width: 70%;
+        .primaryBtn, 
+        .secondaryBtn {
+            width: 92px;
+            height: 45px;
+            font-size: 1rem;
+            font-weight: 700;   
+        }
+
+        .secondaryBtn {
+            background-color: transparent;
+            border: 2px solid $navyBlue;
+            box-shadow: none;
+        }
+    }
+
+}

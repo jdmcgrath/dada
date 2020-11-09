@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import styles from "./NavBar.module.scss";
-import SideBar from '../SideBar/';
 
 const NavBar = ({ openSideBar, setOpenSideBar}) => { 
 
