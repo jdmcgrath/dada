@@ -13,6 +13,8 @@ import BookInfo from "../../BookInfo";
 const BookSmartCard = (props) => {
     const [count, setCount] = useState(0);
 
+    const { BookId } = props.doc;
+
     const [displayBookInfo, setDisplayBookInfo] = useState(false);
 
     // const updateBookInfo = (cardData) => {
@@ -24,8 +26,6 @@ const BookSmartCard = (props) => {
     //         return;
     //     }
     // }
-
-
     {/* I click on the link tag and want:
                 - onClick to set state to be the contents of the article i click on
                 - that new state is passed to BookInfo
@@ -40,19 +40,12 @@ const BookSmartCard = (props) => {
       setCount(addCount => addCount + 1)
     }
 
-    const {
-<<<<<<< HEAD
-        Title, 
-        Author,
-        publishDate,
-        BookId
-    } = props.cardData;
-=======
-        title, 
-        author,
-        publishDate
-    } = props.doc;
->>>>>>> 7f99c79afad71db66b859b0d48498f58a22a3c5f
+    // const {
+    //     Title, 
+    //     Author,
+    //     publishDate,
+    //     BookId
+    // } = props.docs;
 
 
     // const BookInfoLink = () => {
@@ -65,8 +58,8 @@ const BookSmartCard = (props) => {
         <section className={styles.cardContainer}>
             <div className={styles.bookInfoContainer}>
                 <div className={styles.bookSmartInfo}>
-                    <h2 className={styles.bookTitle}>{title}</h2>
-                    <p className={styles.bookAuthor}>{author}, {publishDate}</p>
+                    <h2 className={styles.bookTitle}>{props.doc.Title}</h2>
+                    <p className={styles.bookAuthor}>{props.doc.Author}, {props.doc.publishDate}</p>
                 </div>
                 <div className={styles.bookSmartVotes}>
                     <span onClick={increaseCount} className={styles.voteIcon}><FontAwesomeIcon icon={faArrowCircleUp} /></span>
@@ -79,11 +72,9 @@ const BookSmartCard = (props) => {
                 - that new state is passed to BookInfo
                 - BookInfo renders
             */}
-            <Link to={`book-info/${BookId}`} cardData={props.cardData} >
+            <Link to={`book-info/${BookId}`} docs={props.docs} >
             <div className={styles.bookSmartImage}>
-                {/* <img src={Img} alt="book-cover-image"></img> */}
-                <span class={styles.imagePlaceholder}><FontAwesomeIcon icon={faImage} />
-                </span>
+                <img src={props.doc.Img} alt="book-cover-image" />
             </div>  
             </Link>
         </section>

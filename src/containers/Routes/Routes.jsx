@@ -14,10 +14,9 @@ import Welcome from "../../components/Welcome";
 // import SideBar from "../../components/SideBar";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
-<<<<<<< HEAD
-import cardData from "../../data/bookSmartData";
 
 const Routes = (props) => {  
+
     return(
         <Router>
             <Categories path="categories" />
@@ -28,36 +27,7 @@ const Routes = (props) => {
             <Tantrums path="/categories/sos/tantrums" />
             <ArticleReader path="article-reader" />
             <BookSmarts path="categories/book-smarts" />
-            <BookInfo path="categories/book-smarts/book-info/:bookId" cardData={cardData} />
-            <SOS path="categories/sos"/>
-            <SplashScreen path="/" />
-            <Welcome path="welcome" />
-            <UpYourGame path ="/categories/up-your-game" />
-        </Router>
-    )
-}
-=======
-import PrivateRoutes from "../../containers/Routes/PrivateRoutes"
-
-const Routes = () => {  
-    return(
-        <Router>
-
-            <Categories path="categories" />
-            <SignUp path="sign-up" />
-            <AddChick path="add-chick" />
-
-            <PrivateRoutes path="/">
-                <ActivityIdeas path="categories/activity-ideas" />
-            </PrivateRoutes>
-
-            <AddChickAge path="add-chick-age" />
->>>>>>> 7f99c79afad71db66b859b0d48498f58a22a3c5f
-
-            <Tantrums path="/categories/sos/tantrums" />
-            <ArticleReader path="article-reader" />
-            <BookSmarts path="categories/book-smarts" />
-            <BookInfo path="categories/book-smarts/book-info" />
+            <BookInfo path="categories/book-smarts/book-info/:bookId" doc={doc} />
             <SOS path="categories/sos"/>
             <SplashScreen path="/" />
             <Welcome path="welcome" />
