@@ -1,25 +1,21 @@
 import React, {useState, useEffect} from 'react';
 import styles from './BookInfo.module.scss';
-import BookInsightCard from './BookInsightCard';
+// import BookInsightCard from './BookInsightCard';
 // import cardData from "../../data/bookSmartData";
 
 const BookInfo = (props) => {
-    console.log(props.bookId);
+    console.log(props.BookId);
     const [currentBook, setCurrentBook] = useState(0);
 
 
     useEffect(() => {
-        setCurrentBook(props.bookId);
+        setCurrentBook(props.BookId);
     }, [])
 
     // const getBookInsight = (cardData) => {
     //     return(
     //         <BookInsightCard cardData={props.cardData[currentBook]} />
     //     )
-    // }
-
-    // for (let i = 0; i > props.cardData.length; i++) {
-        
     // }
 
     // useEffect to run on load
@@ -29,7 +25,7 @@ const BookInfo = (props) => {
     // }, [])
  
     const { Title, Author, publishDate } = props;
-
+    console.log(props);
     return (
         <div className={styles.pageContainer}>
             <section className={styles.bookOverview}>

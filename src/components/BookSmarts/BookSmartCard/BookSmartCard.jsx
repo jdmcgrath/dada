@@ -39,20 +39,13 @@ const BookSmartCard = (props) => {
     const increaseCount = () => {
       setCount(addCount => addCount + 1)
     }
-
+    
     const {
-<<<<<<< HEAD
-        Title, 
-        Author,
-        publishDate,
-        BookId
-    } = props.cardData;
-=======
         title, 
         author,
-        publishDate
+        publishDate,
+        BookId
     } = props.doc;
->>>>>>> 7f99c79afad71db66b859b0d48498f58a22a3c5f
 
 
     // const BookInfoLink = () => {
@@ -79,7 +72,7 @@ const BookSmartCard = (props) => {
                 - that new state is passed to BookInfo
                 - BookInfo renders
             */}
-            <Link to={`book-info/${BookId}`} cardData={props.cardData} >
+            <Link to={`book-info/${BookId}`}  >
             <div className={styles.bookSmartImage}>
                 {/* <img src={Img} alt="book-cover-image"></img> */}
                 <span class={styles.imagePlaceholder}><FontAwesomeIcon icon={faImage} />

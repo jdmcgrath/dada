@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./BookSmarts.module.scss";
 import BookSmartCard from "./BookSmartCard";
 import BottomNavBar from "../BottomNavBar";
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import { firestore } from "../../firebase";
 
 
@@ -14,7 +14,7 @@ const BookSmarts = () => {
       setDocs(documents)
     })
   }
-console.log(docs);
+
 
 
 
@@ -27,7 +27,7 @@ console.log(docs);
     <>
     <section className={styles.pageContainer}>
       {docs.map((doc) => {
-        return <BookSmartCard doc={doc} />
+        return <BookSmartCard doc={docs} />
       })}
     </section>
     <BottomNavBar />
