@@ -15,10 +15,6 @@ const BookSmarts = () => {
     })
   }
 
-
-
-
-  
   useEffect (() => {
     getBookSmarts();
   }, [])

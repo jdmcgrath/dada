@@ -23,6 +23,8 @@ const BookInfo = (props) => {
     // useEffect(() => {
     //     // firestore.collection.doc....
     // }, [])
+
+    // rops.doc[currentBook].Img
  
     const { Title, Author, publishDate } = props;
     console.log(props);
@@ -31,7 +33,7 @@ const BookInfo = (props) => {
             <section className={styles.bookOverview}>
                 <div className={styles.aboutBook}>
                     <div className={styles.bookCover}>
-                        <img src={props.cardData[currentBook].Img} alt="book-cover"/>
+                        <img src="" alt="book-cover"/>
                     </div>
                     <div className={styles.bookContentOverview}>
                         <h2>{props.cardData[currentBook].Title}</h2>

@@ -24,10 +24,11 @@ const Routes = (props) => {
             <SignUp path="sign-up" />
             <AddChick path="add-chick" />
             <AddChickAge path="add-chick-age" />
+            <ActivityIdeas path="categories/activity-ideas" />
             <Tantrums path="/categories/sos/tantrums" />
             <ArticleReader path="article-reader" />
             <BookSmarts path="categories/book-smarts" />
-            <BookInfo path="categories/book-smarts/book-info/:BookId" cardData={cardData} />
+            <BookInfo path="categories/book-smarts/book-info/:bookId" doc={doc} />
             <SOS path="categories/sos"/>
             <SplashScreen path="/" />
             <Welcome path="welcome" />
