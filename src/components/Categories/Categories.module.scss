@@ -1,84 +1,67 @@
 @import "../../assets/styles/abstracts/variables";
 @import "../../assets/styles/main.scss";
 
-.lgHeader {
-    background-color: $lightBlue; 
-    overflow: hidden;
+.smHeader {
+  // background-color: $lightBlue;
+  color: $deepPurple;
+  overflow: hidden;
 }
 
 .pageContainer {
+  .gridContainer {
+    .card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 14vh;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      margin-bottom: 20px;
 
-
-    .gridContainer {
-
-       :nth-child(1) {
+      &:nth-child(1) {
         background-color: $paleYellow;
+        margin-top: 20px;
       }
-      :nth-child(2) {
+      &:nth-child(2) {
         background-color: $palePurple;
       }
-      :nth-child(3) {
+      &:nth-child(3) {
         background-color: $paleGreen;
-      } 
-      :nth-child(4) {
+      }
+      &:nth-child(4) {
         background-color: $paleBlue;
       }
 
-   
-        .card {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            // background-color: #DBF1F5;
-            margin-top: 20px;
-            height: 13vh;
-            border-top-right-radius: 5px;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-           
-            
+      .titleSubheaderContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        border-radius: 20px;
+        padding-left: 20px;
+        color: $deepPurple;
 
-
-
-            //padding-bottom: 10px;
-
-            .titleSubheaderContainer{
-                
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                position: relative;
-                border-radius: 15px;
-                padding-left: 20px;
-                // height: 80%;
-                // width: 100%;
-        
-                h2 {
-                    color: $black;
-                    font-family: 'Nunito', sans-serif;
-                    font-weight: 700;
-                    padding: 0;
-                    padding-bottom: 10px;
-                }
-    
-                .cardSubHeader {
-                    color: $black;
-                    font-weight: 500;
-                    font-size: 0.85rem;
-                    font-weight: 200;
-                    line-height: 1.2rem;
-    
-                }
-            }
-            .image {
-              display: flex;
-              justify-content: flex-end;
-              img {
-                width: 50px;
-              }
-              
-
-            }
-            
+        h2 {
+          font-family: "Nunito", sans-serif;
+          font-weight: 700;
+          padding: 0;
+          padding-bottom: 10px;
         }
+
+        .cardSubHeader {
+          font-weight: 500;
+          font-size: 0.85rem;
+          font-weight: 200;
+          line-height: 1.2rem;
+        }
+      }
+      .image {
+        display: flex;
+        justify-content: flex-end;
+        img {
+          width: 110px;
+        }
+      }
     }
+  }
 }
