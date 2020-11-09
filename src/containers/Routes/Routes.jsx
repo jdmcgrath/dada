@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Router } from "@reach/router";
 import Categories from "../../components/Categories";
 import SignUp from "../../components/SignUp/register";
@@ -16,7 +16,7 @@ import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
 
 const Routes = (props) => {  
-
+    
     return(
         <Router>
             <Categories path="categories" />
@@ -27,7 +27,7 @@ const Routes = (props) => {
             <Tantrums path="/categories/sos/tantrums" />
             <ArticleReader path="article-reader" />
             <BookSmarts path="categories/book-smarts" />
-            <BookInfo path="categories/book-smarts/book-info/:bookId" doc={doc} />
+            <BookInfo path="categories/book-smarts/book-info/:bookId" />
             <SOS path="categories/sos"/>
             <SplashScreen path="/" />
             <Welcome path="welcome" />

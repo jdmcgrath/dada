@@ -9,17 +9,13 @@ const BookInfo = (props) => {
 
 
     useEffect(() => {
-        setCurrentBook(props.bookId);
+        setCurrentBook(props.BookId);
     }, [])
 
     // const getBookInsight = (cardData) => {
     //     return(
     //         <BookInsightCard cardData={props.cardData[currentBook]} />
     //     )
-    // }
-
-    // for (let i = 0; i > props.cardData.length; i++) {
-        
     // }
 
     // useEffect to run on load
@@ -40,9 +36,9 @@ const BookInfo = (props) => {
                         <img src="" alt="book-cover"/>
                     </div>
                     <div className={styles.bookContentOverview}>
-                        <h2>{props.cardData[currentBook].Title}</h2>
-                        <p className={styles.bookAuthor}>{props.cardData[currentBook].Author}, {props.cardData[currentBook].publishDate}.</p>
-                        <p className={styles.bookBlurb}>{props.cardData[currentBook].Blurb}</p>
+                        <h2>{props.doc[currentBook].Title}</h2>
+                        <p className={styles.bookAuthor}>{props.doc[currentBook].Author}, {props.cardData[currentBook].publishDate}.</p>
+                        <p className={styles.bookBlurb}>{props.doc[currentBook].Blurb}</p>
                     </div>    
                 </div>
                 <div className={styles.overviewFooter}>
@@ -66,41 +62,3 @@ const BookInfo = (props) => {
 }
 
 export default BookInfo;
-
-
-// { 
-//     BookId: "0",
-//     Title: "Playful Parenting" ,   
-//     Author: "Lawrence J.Cohen",
-//     AuthorBackground: "Lawrence J.Cohen Ph.D is a clinical psychologist specialising in children's play, therapy and parenting.",
-//     publishDate: "2015",
-//     Votes: "",
-//     Img: "lorem source",
-//     ReadTime: "10 mins",
-//     KeyInsights: [
-//         {
-//             insightNumber: "1",
-//             insightTitle: "The Value of Being a Playful Parent",
-//             insightRead: ""
-//         },
-//         {
-//             insightNumber: "2",
-//             insightTitle: "Why Children Play",
-//             insightRead: ""
-//         },
-//         {
-//             insightNumber: "3",
-//             insightTitle: "Play to Build Confidence",
-//             insightRead: ""
-//         },
-//         {
-//             insightNumber: "4",
-//             insightTitle: "What If I'm Not a Playful Parent",
-//             insightRead: ""
-//         },
-//         {
-//             insightNumber: "5",
-//             insightTitle: "The Value of Being a Playful Parent",
-//             insightRead: ""
-//         },
-//     ]
