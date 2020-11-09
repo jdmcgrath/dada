@@ -12,17 +12,23 @@ const Categories = () => {
         <img src={Binoculars} alt="binoculars-img"></img>
       </header>
       <main className={styles.pageContainer}>
+
         <div className={styles.gridContainer}>
+
           {cardsArr.map((card) => {
+            
             return (
               <Link to={card.path} className={styles.card}>
+                
                 <div className={styles.titleSubheaderContainer}>
                   <h2>{card.title}</h2>
                   <p className={styles.cardSubHeader}>{card.info}</p>
                 </div>
+               
                 <div className={styles.image}>
                   <img src={card.image} alt="penguin-illustration" />
                 </div>
+
               </Link>
             );
           })}
