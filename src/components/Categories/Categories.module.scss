@@ -7,47 +7,55 @@
 }
 
 .pageContainer {
+ 
 
     .gridContainer {
-
+   
         .card {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             background-color: #DBF1F5;
             margin-top: 20px;
-            max-height: 14vh;
+            height: 13vh;
             border-radius: 3px;
             //padding-bottom: 10px;
 
             .titleSubheaderContainer{
                 
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 position: relative;
                 border-radius: 15px;
-                height: 80%;
-                width: 100%;
+                padding-left: 20px;
+                // height: 80%;
+                // width: 100%;
         
-                h2{
-                    position: absolute;
+                h2 {
                     color: $black;
                     font-family: 'Nunito', sans-serif;
-                    top: -8px;
-                    left: 12px;
+                    font-weight: 700;
+                    padding: 0;
+                    padding-bottom: 10px;
                 }
     
                 .cardSubHeader {
                     color: $black;
                     font-weight: 500;
-                    padding: 10px;
                     font-size: 0.85rem;
-                    line-height: 0.95rem;
+                    font-weight: 200;
+                    line-height: 1.2rem;
     
                 }
             }
-            img {
-                padding-top: 28px;
-                width: 50%;
-                justify-content: flex-end;
+            .image {
+              display: flex;
+              justify-content: flex-end;
+              img {
+                width: 50px;
+              }
+              
+
             }
             
         }

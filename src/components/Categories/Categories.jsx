@@ -15,15 +15,15 @@ const Categories = () => {
         <div className={styles.gridContainer}>
           {cardsArr.map((card) => {
             return (
-              <section className={styles.card}>
-                <Link to={card.path}>
-                  <div className={styles.titleSubheaderContainer}>
-                    <h2>{card.title}</h2>
-                    <p className={styles.cardSubHeader}>{card.info}</p>
-                  </div>
+              <Link to={card.path} className={styles.card}>
+                <div className={styles.titleSubheaderContainer}>
+                  <h2>{card.title}</h2>
+                  <p className={styles.cardSubHeader}>{card.info}</p>
+                </div>
+                <div className={styles.image}>
                   <img src={card.image} alt="penguin-illustration" />
-                </Link>
-              </section>
+                </div>
+              </Link>
             );
           })}
         </div>
