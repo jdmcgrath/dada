@@ -1,0 +1,19 @@
+*{ 
+    margin: 0;
+    box-sizing: border-box;
+}
+.splash { 
+    height: 300px;
+    background-color: blueviolet;
+    img {
+        height: inherit;
+        width: 300px;
+        z-index: 0;
+    }
+}
+.textUnderSplash { 
+    margin: 10px;
+}
+.textBeforeTrailing { 
+    height: 80px;
+}

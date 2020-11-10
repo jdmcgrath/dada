@@ -15,6 +15,7 @@ import Welcome from "../../components/Welcome";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
 import PrivateRoutes from "../../containers/Routes/PrivateRoutes"
+import LandingPage from "../../components/LandingPage/LandingPage";
 
 const Routes = () => {  
     return(
@@ -35,6 +36,7 @@ const Routes = () => {
             <BookSmarts path="categories/book-smarts" />
             <BookInfo path="categories/book-smarts/book-info" />
             <SOS path="categories/sos"/>
+            <LandingPage path="landing"/>
             <SplashScreen path="/" />
             <Welcome path="welcome" />
             <UpYourGame path ="/categories/up-your-game" />
