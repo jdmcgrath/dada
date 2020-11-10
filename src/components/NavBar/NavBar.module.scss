@@ -5,7 +5,7 @@
     width: 100%;
     position: absolute;
     background-color: transparent;
-    top: 5%;
+    top: 1.5%;
 
     .globalNav{ 
         display: flex;
@@ -17,12 +17,12 @@
     
     .backButton{ 
         font-size: 1.6rem;
-        color: grey;
+        color: $deepPurple;
     }
     
     .ellipses{ 
         font-size: 1.6rem;
-        color: grey;
+        color: $deepPurple;
         margin-left: 30vw;
     } 
     
