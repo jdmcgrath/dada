@@ -1,0 +1,25 @@
+@import "../../../assets/styles/main.scss";
+
+.smHeader {
+  background-color: $navyBlue;
+  color: #fff;
+}
+
+.btnContainer {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  button {
+    color: white;
+  }
+}
+.selectedBtn{ 
+    color: green;
+}
+//need it to be:
+//lighter when not selected
+//darker when selected
+
+

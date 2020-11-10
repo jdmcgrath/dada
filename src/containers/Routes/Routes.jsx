@@ -9,6 +9,10 @@ import AddChick from "../../components/AddChick";
 import SOS from "../../components/SOS";
 import SplashScreen from "../../components/SplashScreen";
 import Tantrums from "../../components/Tantrums"
+import Agression from "../../components/Agression/AgressionMain";
+import Screaming from "../../components/Screaming/ScreamingMain";
+import Whining from "../../components/Whining/WhiningMain";
+import SleepIssues from "../../components/Sleep/SleepMain";
 import ArticleReader from "../../components/ArticleReader";
 import Welcome from "../../components/Welcome";
 // import SideBar from "../../components/SideBar";
@@ -35,6 +39,15 @@ const Routes = () => {
 
 
             <Tantrums path="/categories/sos/tantrums" />
+            <Agression path="/categories/sos/agression" />
+            <Screaming path="/categories/sos/screaming" />
+            <Whining path="/categories/sos/whining" />
+            <SleepIssues path="/categories/sos/sleep" />
+
+
+
+
+
             <ArticleReader path="article-reader" />
             <BookSmarts path="categories/book-smarts" />
             <BookInfo path="categories/book-smarts/book-info" />
