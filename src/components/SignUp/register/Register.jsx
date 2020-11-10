@@ -9,8 +9,8 @@ import firebase from "../../../firebase"
 
 
 export const Register = () => {
- let [password, setPass] = useState("")
- let [email, setEm] = useState("")
+ let [password, setPass] = useState()
+ let [email, setEm] = useState()
  let [un, setUn] = useState("")
 
   const handleSignUp = useCallback(async event => { 
