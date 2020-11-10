@@ -20,7 +20,7 @@ export const Register = () => {
       await firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
-      navigate("/")    
+      navigate("/welcome")    
     }
     catch (error) {
       alert(error)

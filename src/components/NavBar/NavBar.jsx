@@ -4,6 +4,7 @@ import { faEllipsisV } from '@fortawesome/free-solid-svg-icons'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { navigate } from '@reach/router'
 import styles from "./NavBar.module.scss"
+import firebase from "../../firebase"
 
 const NavBar = () => { 
     const handleBackButton = () => {
@@ -17,6 +18,7 @@ const NavBar = () => {
 
     const handlesSignOut = () => {
         firebase.auth().signOut().then(function() {
+            navigate("/sign-up")
             alert("You SIGNED OUT!!!")
           }).catch(function(error) {
               alert("error")
