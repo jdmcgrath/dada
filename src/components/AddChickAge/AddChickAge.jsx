@@ -1,11 +1,18 @@
-import React, { useState} from "react";
+import React, { useState, useEffect} from "react";
 import styles from "./AddChickAge.module.scss";
-//import BoyChick from "../../assets/img/AddChick/BoyChick.svg";
 import GirlChick from "../../assets/img/AddChick/GirlChick.svg";
 
 
 
-const AddChickAge = () => {
+const AddChickAge = (props) => {
+  const [currentName, setCurrentName] = useState("");
+  // const [gender, setGender] = useState(false);
+  useEffect(() => {
+    setCurrentName(props.chickName);
+}, [])
+// useEffect(()=> {
+//   setGender(props.toggleGender)
+// })
 
   const [ chickAge, setChickAge ] = useState(0);
 
@@ -26,10 +33,10 @@ const AddChickAge = () => {
         {/* girl or boy passed as prop from AddChick */}
         <img src={GirlChick} alt="Penguin-placeholder-img"/> 
 
-       </header>
-               
+      </header>
+
        {/* name of Chick as prop from AddChick */}
-       <h2>How old is ChickName?</h2>
+       <h2>How old is {currentName}?</h2>
 
       <div className={styles.ageClicker}>
         <button className={styles.minusButton} onClick={decreaseAge}>-</button>
@@ -40,7 +47,9 @@ const AddChickAge = () => {
       {/* <Link to="./AddChickEnd"> */}
       <button type="submit" className={styles.primaryBtn}>Next</button>
       {/* </Link> */}
-
+      {/* <AddChickAge
+      
+      />  */}
     </div>
   );
 };
@@ -48,3 +57,4 @@ const AddChickAge = () => {
 // chekcing - and +
 
 export default AddChickAge;
+
