@@ -14,8 +14,21 @@ import Welcome from "../../components/Welcome";
 // import SideBar from "../../components/SideBar";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
+import { firestore } from "../../firebase";
 
 const Routes = (props) => {  
+
+    const [docs, setDocs] = useState([]);
+    const getBookSmarts = () => {
+        firestore.collection("booksmarts").get().then((response) => {
+        const documents = response.docs.map(d => d.data());
+        setDocs(documents)
+        })
+    }
+  
+    useEffect (async () => {
+        await getBookSmarts();
+    }, [])
     
     return(
         <Router>
@@ -26,8 +39,8 @@ const Routes = (props) => {
             <ActivityIdeas path="categories/activity-ideas" />
             <Tantrums path="/categories/sos/tantrums" />
             <ArticleReader path="article-reader" />
-            <BookSmarts path="categories/book-smarts" />
-            <BookInfo path="categories/book-smarts/book-info/:bookId" />
+            <BookSmarts path="categories/book-smarts" docs={docs} />
+            <BookInfo path="categories/book-smarts/book-info/:BookId" docs={docs} />
             <SOS path="categories/sos"/>
             <SplashScreen path="/" />
             <Welcome path="welcome" />

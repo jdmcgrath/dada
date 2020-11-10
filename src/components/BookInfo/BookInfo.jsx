@@ -1,53 +1,46 @@
 import React, {useState, useEffect} from 'react';
 import styles from './BookInfo.module.scss';
 import BookInsightCard from './BookInsightCard';
-// import cardData from "../../data/bookSmartData";
 
 const BookInfo = (props) => {
-    console.log(props.bookId);
+    
     const [currentBook, setCurrentBook] = useState(0);
 
 
     useEffect(() => {
-        setCurrentBook(props.BookId);
+        console.log(props.BookId);
+        setCurrentBook(props.BookId)
     }, [])
 
+    console.log(props.docs[currentBook].Title);
+    
     // const getBookInsight = (cardData) => {
     //     return(
     //         <BookInsightCard cardData={props.cardData[currentBook]} />
     //     )
     // }
-
-    // useEffect to run on load
-    // go to firebase and grab that book ()
-    // useEffect(() => {
-    //     // firestore.collection.doc....
-    // }, [])
-
-    // rops.doc[currentBook].Img
  
-    const { Title, Author, publishDate } = props;
+    // const { Title, Author, publishDate, Img } = props.docs[currentBook];
 
     return (
         <div className={styles.pageContainer}>
             <section className={styles.bookOverview}>
                 <div className={styles.aboutBook}>
                     <div className={styles.bookCover}>
-                        <img src="" alt="book-cover"/>
+                        <img src={props.docs[currentBook].Img} alt="book-cover"/>
                     </div>
                     <div className={styles.bookContentOverview}>
-                        <h2>{props.doc[currentBook].Title}</h2>
-                        <p className={styles.bookAuthor}>{props.doc[currentBook].Author}, {props.cardData[currentBook].publishDate}.</p>
-                        <p className={styles.bookBlurb}>{props.doc[currentBook].Blurb}</p>
+                        <h2>{props.docs[currentBook].Title}</h2>
+                        <p className={styles.bookAuthor}>{props.docs[currentBook].Author}, {props.docs[currentBook].publishDate}</p>
+                        <p className={styles.bookBlurb}>{props.docs[currentBook].Blurb}</p>
                     </div>    
                 </div>
                 <div className={styles.overviewFooter}>
-                    <p className={styles.readTime}>Read Time: {props.cardData[currentBook].ReadTime}</p>
-                    <p>Insights: 5</p>
+                    <p className={styles.readTime}>Read Time: {props.docs[currentBook].ReadTime}</p>
                 </div>
                 <div className={styles.aboutAuthor}>
                     <h3>About Author</h3>
-                    <p>{props.cardData[currentBook].AuthorBackground}
+                    <p>{props.docs[currentBook].AuthorBackground}
                     </p>
                 </div>
             </section>
