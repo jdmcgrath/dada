@@ -5,17 +5,7 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import styles from "./NavBar.module.scss";
 
 const NavBar = ({ openSideBar, setOpenSideBar}) => { 
-
-    // const sideBarToggle = document.querySelector("#ellipsesContainer");
-
-    // const menuToggler = () => {
-    //     if (!openSideBar) {
-    //         setOpenSideBar(true);
-    //     } else {
-    //         setOpenSideBar(false);
-    //     }
-    // }
-
+    
     return ( 
         <>
             <header className={styles.navWrapper}>

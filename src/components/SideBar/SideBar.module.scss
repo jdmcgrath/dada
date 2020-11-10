@@ -1,6 +1,11 @@
 @import "../../assets/styles/abstracts/variables";
 @import "../../assets/styles/main.scss";
 
+.sideBarContainer 
+.active {
+    transform: translateX(0%);
+}
+
 .sideBarContainer {
     display: flex;
     flex-direction: column;
@@ -15,7 +20,7 @@
     opacity: 0.9;
     padding: 20px;
     z-index: 10;
-    transform: translateX(0%);
+    transform: translateX(100%);
     transition: transform 0.3s ease;
 
     .buttonContainer {
