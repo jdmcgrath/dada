@@ -29,15 +29,18 @@ const Video = (props) => {
   }
 
 
-  const toggleFav = async () => {
-
+  const toggleFav = async (e) => {
+    e.stopPropagation();
+   
     if(isFavourited){
       // remove from users favourites by deleting the document
       const unFavouritedDocRef = await firestore.collection(collectionName).doc(`${user.uid}${vidID}`);
       unFavouritedDocRef.get().then((uFDoc) => {
         if (uFDoc.exists) {
           // delete doc from collection
-          firestore.collection(collectionName).doc(`${user.uid}${vidID}`).delete();
+          firestore.collection(collectionName).doc(`${user.uid}${vidID}`).delete().then(()=>{
+            setIsFavourited(!isFavourited);
+          });
         }
       });
       
@@ -47,7 +50,6 @@ const Video = (props) => {
       const favouritedDocRef = await firestore.collection(collectionName).doc(`${vidID}`);
       favouritedDocRef.get().then((fDoc) => {
         if (fDoc.exists) {
-
           firestore.collection(collectionName).doc(`${user.uid}${vidID}`).set({
             channel,
             icon,
@@ -58,19 +60,18 @@ const Video = (props) => {
             vidID,
             uID: user.uid     
           })
-          
+          setIsFavourited(!isFavourited);
         }
       });
       
     }
 
     // set the state so that the bookmark icon updates
-    setIsFavourited(!isFavourited);
+    // setIsFavourited(!isFavourited);
   }
 
   const checkFavourites = async () => { 
     if (user) {
-      // "video1" needs to be document name passed in as prop
       const docRef = await firestore.collection(collectionName).doc(`${user.uid}${vidID}`);
       docRef.get().then((doc) => {
         if (doc.exists) {

@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./ActivityIdeas.module.scss";
 import VideoList from "../VideoList";
 import ArticleList from "../ArticleList";
@@ -50,6 +50,10 @@ const ActivityIdeas = () => {
   const showFilterStrength = filterChosen === "strength" ?
     <li><span className={styles.filterOn} onClick={() => setFilterChosen("strength")}>STRENGTH</span></li>
     : <li><span onClick={() => setFilterChosen("strength")}>STRENGTH</span></li>
+
+    useEffect(() => {
+
+    }, [filterChosen]);
 
   return (
     <>
