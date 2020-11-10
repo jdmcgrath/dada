@@ -40,6 +40,7 @@ const Video = (props) => {
           firestore.collection(collectionName).doc(`${user.uid}${vidID}`).delete();
         }
       });
+      
 
     }else{
       //add to users favourites by creating copy of the document
@@ -60,7 +61,7 @@ const Video = (props) => {
           
         }
       });
-
+      
     }
 
     // set the state so that the bookmark icon updates
