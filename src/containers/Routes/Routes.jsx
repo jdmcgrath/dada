@@ -2,7 +2,7 @@ import React from "react";
 import { Router } from "@reach/router";
 import Categories from "../../components/Categories";
 import SignUp from "../../components/SignUp/register";
-import ActivityIdeas from "../../components/ActivityIdeas";
+// import ActivityIdeas from "../../components/ActivityIdeas";
 import BookSmarts from "../../components/BookSmarts/BookSmarts";
 import BookInfo from "../../components/BookInfo";
 import AddChick from "../../components/AddChick";
@@ -14,15 +14,14 @@ import Screaming from "../../components/Screaming/ScreamingMain";
 import Whining from "../../components/Whining/WhiningMain";
 import SleepIssues from "../../components/Sleep/SleepMain";
 import Rejection from "../../components/Rejection/RejectionMain";
-
 import ArticleReader from "../../components/ArticleReader";
 import Welcome from "../../components/Welcome";
 // import SideBar from "../../components/SideBar";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
-import PrivateRoutes from "../../containers/Routes/PrivateRoutes"; 
+// import PrivateRoutes from "../../containers/Routes/PrivateRoutes"; 
 import LogIn from "../../components/LogIn";
-  
+
 const Routes = () => {   
     return(
         <Router>

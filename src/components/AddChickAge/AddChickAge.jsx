@@ -6,10 +6,11 @@ import GirlChick from "../../assets/img/AddChick/GirlChick.svg";
 
 const AddChickAge = (props) => {
   const [currentName, setCurrentName] = useState("");
+  const {chickName} = props;
   // const [gender, setGender] = useState(false);
   useEffect(() => {
-    setCurrentName(props.chickName);
-}, [])
+    setCurrentName(chickName);
+}, [chickName])
 // useEffect(()=> {
 //   setGender(props.toggleGender)
 // })

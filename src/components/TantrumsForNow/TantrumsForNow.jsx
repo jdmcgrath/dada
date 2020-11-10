@@ -9,6 +9,9 @@ const TantrumsForNow = (props) => {
       <div className={styles.whatNotToDo}>
         <h3>What NOT to do:</h3>
         <ul className={styles.whatNotToDoUl}>
+          {/* {lists.map(item => {
+            return <li>item.list</li>
+          })} */}
           <li>Yell or spank</li>
           <li>Give in just because they are crying</li>
           <li>Mock or threaten</li>
