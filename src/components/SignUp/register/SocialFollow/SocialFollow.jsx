@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./SocialFollow.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import firebase, { provider } from "../../../../firebase"
+import firebase, { provider, providerTwo } from "../../../../firebase"
 import {
     faFacebook,
     faGoogle
@@ -11,7 +11,6 @@ import {
 
 const SocialFollow = () => {
 
-  const providerTwo = new firebase.auth.FacebookAuthProvider();
 
     
   const goToSignInWithGoogle = () => {    
