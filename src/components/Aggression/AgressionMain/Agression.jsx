@@ -44,7 +44,7 @@ const Agression = () => {
   return (
     <>
       <header className={styles.smHeader}>
-        <h1>Agression</h1>
+        <h1>Aggression</h1>
       </header>
       <div className={styles.pageContainer}>
         {/* Buttons to select whether you wish to info for now or later */}
