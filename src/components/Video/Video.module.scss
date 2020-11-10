@@ -15,13 +15,14 @@
 
     .vidChanIcon {
       border-radius: 50%;
-      width: 15%;
+      width: 40px;
+      height: 40px;
       padding: 5px;
     }
     .vidChanText {
       font-family: 'Nunito', sans-serif;
       align-self: center;
-      font-size: 1.3rem;
+      font-size: 16px;
       font-weight: bold;
       padding-left: 3%;
     }
@@ -45,14 +46,15 @@
 
     .vidTitle {
       font-family: 'Nunito', sans-serif;
+      font-size: 14px;
       font-weight: bold;
       width: 80%;
     } 
 
     .vidBookmark {
       color: orange;
-      font-size: 2rem;
-  
+      height: 24px;
+      transform: scale(1,1.3);
     }
   }
   

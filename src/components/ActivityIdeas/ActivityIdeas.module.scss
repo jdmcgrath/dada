@@ -2,11 +2,9 @@
 @import "../../assets/styles/abstracts/variables";
 
 .smHeader {
-  box-sizing: content-box;
+  height: 8.25vh;
   background-color: white;
   border-bottom: 10px solid $sunnyYellow;
-  box-shadow: 0px 2px 2.62px rgba(0, 0, 0, 0.23);
-
 }
 
 .pageContainer {

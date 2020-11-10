@@ -1,31 +1,36 @@
 @import "../../assets/styles/main.scss";
 
 .artContainer {
-  border-bottom: 1px solid darkslategrey;
-  padding: 3% 0;
+  border-bottom: 1px solid #979797;
   .artGrid {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr 3fr;
     grid-template-rows: 50px 50px;
     .artTitle {
-    text-align: left;
-    grid-column-start: 1;
-    grid-row-start: 1;
+      display: flex;
+      grid-column-start: 2;
+      grid-row-start: 1;
+      align-items: flex-end;
+      font-size: 14px;
     }
     .artReadTime {
-        grid-column-start: 1;
+        grid-column-start: 2;
         grid-row-start: 2;
         display: flex;
-        align-items: flex-end;
-        justify-content: flex-start;
+        align-items: flex-start;
+        font-size: 12px;
+        padding-top: 12px;
     }
     .artImage {
-        grid-column-start: 2;
+        display: flex;
+        grid-column-start: 1;
         grid-row-start: span 2;
-        border-radius: 5%;
-        width: 100px;
-        height: 100px;
+        border-radius: 15%;
+        width: 63px;
+        height: 63px;
         border: 1px solid grey;
+        justify-self: left;
+        align-self: center;
     }
   }
 }

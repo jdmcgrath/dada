@@ -10,18 +10,17 @@
     .globalNav{ 
         display: flex;
         justify-content: space-between;
-        // gap: 70vw;
         width: 90%;
         margin: 0 auto;
     }
     
     .backButton{ 
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         color: $deepPurple;
     }
     
     .ellipses{ 
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         color: $deepPurple;
         margin-left: 30vw;
     } 
