@@ -8,7 +8,13 @@ import { firestore } from "../../firebase";
 
 const Video = (props) => {
 
-  const { url, channel, icon, title } = props.doc
+  
+
+  const { channel, icon, keywords, source, title, url, vidID } = props.doc;
+
+  //console.log(channel);
+
+  const collectionName = "activityIdeasVideos";
 
   const [isFavourited, setIsFavourited] = useState(false);
 
@@ -17,21 +23,56 @@ const Video = (props) => {
   },[isFavourited])
 
 
-  //const { user } = props;
-  // const {firestore document name } = props;
-
+  ////////////// dummy data ////////
   const user = {
-    name: "Mark",
     uid: "bO8zip06hJM05u5JUe2j98bbs3b2"
   }
 
 
+  const toggleFav = async () => {
+
+    if(isFavourited){
+      // remove from users favourites by deleting the document
+      const unFavouritedDocRef = await firestore.collection(collectionName).doc(`${user.uid}${vidID}`);
+      unFavouritedDocRef.get().then((uFDoc) => {
+        if (uFDoc.exists) {
+          // delete doc from collection
+          firestore.collection(collectionName).doc(`${user.uid}${vidID}`).delete();
+        }
+      });
+
+    }else{
+      //add to users favourites by creating copy of the document
+      const favouritedDocRef = await firestore.collection(collectionName).doc(`${vidID}`);
+      favouritedDocRef.get().then((fDoc) => {
+        if (fDoc.exists) {
+
+          firestore.collection(collectionName).doc(`${user.uid}${vidID}`).set({
+            channel,
+            icon,
+            keywords,
+            source,
+            title,
+            url,
+            vidID,
+            uID: user.uid     
+          })
+          
+        }
+      });
+
+    }
+
+    // set the state so that the bookmark icon updates
+    setIsFavourited(!isFavourited);
+  }
+
   const checkFavourites = async () => { 
     if (user) {
-      const docRef = await firestore.collection("activityIdeasVideos").doc(`${user.uid}video1`);
+      // "video1" needs to be document name passed in as prop
+      const docRef = await firestore.collection(collectionName).doc(`${user.uid}${vidID}`);
       docRef.get().then((doc) => {
         if (doc.exists) {
-          console.log("doc:" + doc);
           setIsFavourited(true);
         }
       });
@@ -55,7 +96,6 @@ const Video = (props) => {
 
         <p className={styles.vidChanText}>
           {channel}
-          {/* replace with channel name pulled from YouTube api */}
         </p>
       </div>
 
@@ -76,9 +116,8 @@ const Video = (props) => {
         <p className={styles.vidTitle}>
           {title}
         </p>
-        {/* check if this article is currently favourited by this user (or if user doesn't exist) */}
 
-       <span>{displayBookmarkJSX()}</span>
+       <span onClick={toggleFav}>{displayBookmarkJSX()}</span>
 
       </div>
     </div>
