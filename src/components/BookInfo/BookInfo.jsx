@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './BookInfo.module.scss';
-// import BookInsightCard from './BookInsightCard';
-// import cardData from "../../data/bookSmartData";
+import BookInsightCard from './BookInsightCard';
 
 const BookInfo = (props) => {
     
@@ -9,41 +8,35 @@ const BookInfo = (props) => {
     
 
     useEffect(() => {
-        setCurrentBook(props.docs.BookId);
+        console.log(props.BookId);
+        setCurrentBook(props.BookId)
     }, [])
-    console.log(currentBook)
+
+    console.log(props.docs[currentBook].Title);
+    
     // const getBookInsight = (cardData) => {
     //     return(
     //         <BookInsightCard cardData={props.cardData[currentBook]} />
     //     )
     // }
-
-    // useEffect to run on load
-    // go to firebase and grab that book ()
-    // useEffect(() => {
-    //     // firestore.collection.doc....
-    // }, [])
-
-    // rops.doc[currentBook].Img
  
-    // const { Title, Author, publishDate } = props;
-    console.log(props);
+    // const { Title, Author, publishDate, Img } = props.docs[currentBook];
+
     return (
         <div className={styles.pageContainer}>
             <section className={styles.bookOverview}>
                 <div className={styles.aboutBook}>
                     <div className={styles.bookCover}>
-                        <img src="" alt="book-cover"/>
+                        <img src={props.docs[currentBook].Img} alt="book-cover"/>
                     </div>
                     <div className={styles.bookContentOverview}>
                         <h2>{props.docs[currentBook].Title}</h2>
-                        <p className={styles.bookAuthor}>{props.docs[currentBook].Author}, {props.docs[currentBook].publishDate}.</p>
+                        <p className={styles.bookAuthor}>{props.docs[currentBook].Author}, {props.docs[currentBook].publishDate}</p>
                         <p className={styles.bookBlurb}>{props.docs[currentBook].Blurb}</p>
                     </div>    
                 </div>
                 <div className={styles.overviewFooter}>
                     <p className={styles.readTime}>Read Time: {props.docs[currentBook].ReadTime}</p>
-                    <p>Insights: 5</p>
                 </div>
                 <div className={styles.aboutAuthor}>
                     <h3>About Author</h3>
@@ -62,4 +55,3 @@ const BookInfo = (props) => {
 }
 
 export default BookInfo;
-
