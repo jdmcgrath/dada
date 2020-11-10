@@ -14,12 +14,11 @@ import Welcome from "../../components/Welcome";
 // import SideBar from "../../components/SideBar";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
-import PrivateRoutes from "../../containers/Routes/PrivateRoutes"
+import PrivateRoutes from "../../containers/Routes/PrivateRoutes";
 
 const Routes = () => {  
     return(
         <Router>
-
             <Categories path="categories" />
             <SignUp path="sign-up" />
             <AddChick path="add-chick" />
@@ -29,7 +28,6 @@ const Routes = () => {
             </PrivateRoutes>
 
             <AddChickAge path="add-chick-age" />
-
             <Tantrums path="/categories/sos/tantrums" />
             <ArticleReader path="article-reader" />
             <BookSmarts path="categories/book-smarts" />

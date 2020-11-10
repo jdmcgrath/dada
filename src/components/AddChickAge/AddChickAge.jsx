@@ -20,7 +20,7 @@ const AddChickAge = () => {
     } 
   }
  const handleNextPageSplash = () => {
-   navigate("/")
+   navigate("/categories")
  }
   return (
     <div className={styles.pageContainer}>
