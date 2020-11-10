@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import { firestore } from "../../firebase";
 
 
-const BookSmarts = () => {
+const BookSmarts = (props) => {
   const [docs, setDocs] = useState([]);
   const getBookSmarts = () => {
     firestore.collection("booksmarts").get().then((response) => {
@@ -18,12 +18,13 @@ const BookSmarts = () => {
   useEffect (() => {
     getBookSmarts();
   }, [])
-
+  
+console.log(props.doc);
   return (
     <>
     <section className={styles.pageContainer}>
       {docs.map((doc) => {
-        return <BookSmartCard doc={docs} />
+        return <BookSmartCard doc={doc} />
       })}
     </section>
     <BottomNavBar />
