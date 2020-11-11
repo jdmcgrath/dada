@@ -32,29 +32,54 @@ export const Register = () => {
 
 
   return (
-      <form className={styles.formContainer} onSubmit={handleSignUp}>
-        <h2>Sign Up</h2>
-        <div className={styles.inputContainer}>
-          <label for="username"></label>
-          <input type="text" id="username" placeholder="Name" name="username" onInput={e => setUn(un += e.target.value)}/>
-          <label for="user-email"></label>
-          <input type="email" id="user-email" placeholder="Email" name="email" onInput={e => setEm(email += e.target.value)}/>
-          <label for="user-password"></label>
-          <input type="password" id="user-password" placeholder="Password" name="password" onInput={e => setPass(e.target.value)}/>
-        </div>
-        <div className={styles.termsContainer}>
+    <form className={styles.formContainer} onSubmit={handleSignUp}>
+      <h2>Sign Up</h2>
+      <div className={styles.inputContainer}>
+        <label for="username"></label>
+        <input
+          type="text"
+          id="username"
+          placeholder="Name"
+          name="username"
+          onInput={(e) => setUn((un += e.target.value))}
+        />
+        <label for="user-email"></label>
+        <input
+          type="email"
+          id="user-email"
+          placeholder="Email"
+          name="email"
+          onInput={(e) => setEm((email += e.target.value))}
+        />
+        <label for="user-password"></label>
+        <input
+          type="password"
+          id="user-password"
+          placeholder="Password"
+          name="password"
+          onInput={(e) => setPass(e.target.value)}
+        />
+      </div>
+      <div className={styles.termsContainer}>
         <input type="checkbox" id="terms-checkbox"></input>
 
-          <p className={styles.terms}>I read and agree to <span>Terms and Conditions</span></p>
-        </div>
-        <button type="submit" className={styles.primaryBtn}>
-          Sign Up
-        </button>
-        <p className={styles.logIn}>Already have an account? <span><a href="https://github.com/nology-tech/dada">Login</a></span></p>
-        <p className={styles.orSignIn}>or sign in with</p>
-        < SocialFollow />
-      </form>
-  )
+        <p className={styles.terms}>
+          I read and agree to <span>Terms and Conditions</span>
+        </p>
+      </div>
+      <button type="submit" className={styles.signUpBtn}>
+        Sign Up
+      </button>
+      <p className={styles.logIn}>
+        Already have an account?{" "}
+        <span>
+          <a href="https://github.com/nology-tech/dada">Login</a>
+        </span>
+      </p>
+      <p className={styles.orSignIn}>or sign in with</p>
+      <SocialFollow />
+    </form>
+  );
 }
 
 
