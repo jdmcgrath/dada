@@ -21,7 +21,6 @@ const VideoList = (props) => {
   }
 
   useEffect(() => {
-
     getVideos();
   },[filterChosen])
 
@@ -30,20 +29,20 @@ const VideoList = (props) => {
 
     // MB - added filter to remove any copies made when favouriting (where uID exists)
     let filteredVideos = docs.filter(v => v.uID == null);
-
+    console.log(filteredVideos);
     // first check if there are no filter categories selected... because we don't want to filter when there aren't
     if (filterChosen) {
       // take the videos and filter them if they match the fitlers we have     
-      filteredVideos = docs.filter(v => v.keywords.indexOf(filterChosen) > -1 );
+      filteredVideos = filteredVideos.filter(v => v.keywords.indexOf(filterChosen) > -1 );
     }
 
-    // we have our filtered videos... lets map these into JSX elements so they print something on the page
+    // map filtered videos and render video component, passing doc, key and user
     const videoElements = filteredVideos.map(doc => <Video key={doc.vidID} doc={doc} user={user} />);
 
-    // Update the videos in our state so that the page re-renders....
+    // Update the videos in state so the page re-renders
     setFilteredVideos(videoElements);
 
-  }, [filterChosen,docs]);
+  }, [filterChosen,docs,user]);
 
 
 
