@@ -3,7 +3,7 @@ import {Link} from "@reach/router";
 import styles from "./AddChick.module.scss";
 import BoyChick from "../../assets/img/AddChick/BoyChick.svg";
 import GirlChick from "../../assets/img/AddChick/GirlChick.svg";
-import { navigate } from '@reach/router';
+// import { navigate } from '@reach/router';
 
 
 
