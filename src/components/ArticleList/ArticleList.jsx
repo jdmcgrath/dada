@@ -2,48 +2,52 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import Article from '../Article/Article';
 import styles from './ArticleList.module.scss';
-import {firestore} from "../../firebase";
+import { firestore } from "../../firebase";
 
 const ArticleList = (props) => {
+
   const [docs, setDocs] = useState([]);
 
-  const getArticles = () => {
-    firestore.collection("activityIdeas").get().then((response) => {
-       const documents = response.docs.map(d => d.data());
-       setDocs(documents) 
-    })
-  } 
-  useEffect (() => {
-    getArticles();
-  }, [])
-  const { filterChosen} = props;
+  const { filterChosen, user } = props;
 
   // state
   const [filteredArticles, setFilteredArticles] = useState([]);
 
-  // lifecycle/hooks
+  const getArticles = async () => {
+    await firestore.collection("activityIdeas").get().then((response) => {
+      const documents = response.docs.map(d => d.data());
+      setDocs(documents)
+    })
+  }
+
   useEffect(() => {
-    let filteredArticles = docs;
+    getArticles();
+  }, [])
+
+
+ 
+  useEffect(() => {
+    let filteredArticles = docs.filter(a => a.uID == null);
 
     // first check if there are no filters... because we don't want to filter when there aren't
     if (filterChosen) {
       // take the Articles and filter them if they match the fitlers we have
-      filteredArticles = docs.filter(a => a.keywords.indexOf(filterChosen) > -1);
+      filteredArticles = filteredArticles.filter(a => a.keywords.indexOf(filterChosen) > -1);
     }
 
-    // we have our filtered Articles we love it... lets map these into JSX elements so they print something on the page puuuleaseee.
-    const articleElements = filteredArticles.map(doc => <Article doc={doc} />);
+    // map filtered articles and render article component, passing doc, key and user
+    const articleElements = filteredArticles.map(doc => <Article key={doc.artID} doc={doc} user={user} />);
 
     // Update the Articles in our state so that the page re-renders....
     setFilteredArticles(articleElements);
 
-  }, [filterChosen, docs]);
+  }, [filterChosen, docs,user]);
 
   // return
   return (
-      <div className={styles.articleListContainer}>
-        {filteredArticles}
-      </div>
+    <div className={styles.articleListContainer}>
+      {filteredArticles}
+    </div>
   )
 }
 

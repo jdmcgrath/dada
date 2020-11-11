@@ -23,13 +23,18 @@ const Routes = (props) => {
 
     const [docs, setDocs] = useState([]);
   
+
+
+
     useEffect ( () => {
+
         const getBookSmarts = () => {
             firestore.collection("booksmarts").get().then((response) => {
             const documents = response.docs.map(d => d.data());
             setDocs(documents)
             })
         };
+        
         getBookSmarts();
     }, []);
 
@@ -42,8 +47,8 @@ const Routes = (props) => {
             <ActivityIdeas path="categories/activity-ideas" user={user} />
             <Tantrums path="/categories/sos/tantrums" user={user} />
             <ArticleReader path="article-reader" user={user} />
-            <BookSmarts path="categories/book-smarts" user={user} />
-            <BookInfo path="categories/book-smarts/book-info" user={user} />
+            <BookSmarts path="categories/book-smarts" user={user} docs={docs}/>
+            <BookInfo path="categories/book-smarts/book-info/:BookId" docs={docs} />
             <SOS path="categories/sos" user={user} />
             <SplashScreen path="/" user={user}/>
             <Welcome path="welcome" user={user} />

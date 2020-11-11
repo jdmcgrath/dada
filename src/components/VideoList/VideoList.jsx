@@ -29,7 +29,7 @@ const VideoList = (props) => {
 
     // MB - added filter to remove any copies made when favouriting (where uID exists)
     let filteredVideos = docs.filter(v => v.uID == null);
-    console.log(filteredVideos);
+   
     // first check if there are no filter categories selected... because we don't want to filter when there aren't
     if (filterChosen) {
       // take the videos and filter them if they match the fitlers we have     

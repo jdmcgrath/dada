@@ -1,10 +1,93 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Article.module.scss";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBookmark as faSolidBookmark } from '@fortawesome/free-solid-svg-icons';
+import { faBookmark as faOpenBookmark } from '@fortawesome/free-regular-svg-icons';
+import { firestore } from "../../firebase";
+import { navigate } from '@reach/router';
 
 const Article = (props) => {
-  const {title, readTime, image} = props.doc;
-  
+ 
+  const {title, body, readTime, image, artID, keywords } = props.doc;
+  const user = props.user;
+
+  const collectionName = "activityIdeas";
+
+  const [isFavourited, setIsFavourited] = useState(false);
+
+  useEffect(() => {
+    checkFavourites();
+  }, [isFavourited])
+
+  const toggleFav = async (e) => {
+    e.stopPropagation();
+
+    if (isFavourited) {
+      // remove from users favourites by deleting the document
+      const unFavouritedDocRef = await firestore.collection(collectionName).doc(`${user.uid}${artID}`);
+      unFavouritedDocRef.get().then((uFDoc) => {
+        if (uFDoc.exists) {
+          // delete doc from collection
+          firestore.collection(collectionName).doc(`${user.uid}${artID}`).delete().then(() => {
+            setIsFavourited(!isFavourited);
+          });
+        }
+      });
+
+    } else {
+      // check if user is logged in - if not, take them to sign-up
+      if (!user) {
+        navigate("/sign-up");
+      } else {
+
+        //add to users favourites by creating copy of the document
+        const favouritedDocRef = await firestore.collection(collectionName).doc(`${artID}`);
+        favouritedDocRef.get().then((fDoc) => {
+          if (fDoc.exists) {
+            firestore.collection(collectionName).doc(`${user.uid}${artID}`).set({
+              artID,
+              body,
+              image,
+              keywords,
+              readTime,
+              title,
+              uID: user.uid
+            })
+            setIsFavourited(!isFavourited);
+          }
+
+        });
+      }
+
+    }
+  }
+
+
+
+
+
+  const checkFavourites = async () => {
+    if (user) {
+      const docRef = await firestore.collection(collectionName).doc(`${user.uid}${artID}`);
+      docRef.get().then((doc) => {
+        if (doc.exists) {
+          setIsFavourited(true);
+        }
+      });
+    }
+  }
+
+
+  const displayBookmarkJSX = () => {
+    if (isFavourited) {
+      return <FontAwesomeIcon icon={faSolidBookmark} className={styles.artBookmark} />
+    } else {
+      return <FontAwesomeIcon icon={faOpenBookmark} className={styles.artBookmark} />
+    }
+  }
+
+
+
   return (
     
     <div className={styles.artContainer}>
@@ -13,7 +96,9 @@ const Article = (props) => {
         <img className={styles.artImage} src= {image} alt=""/>
         <h3 className={styles.artTitle}>{title}</h3>
         <p className={styles.artReadTime}>Read  Time: {readTime}</p>
+        
       </div>
+      <span onClick={toggleFav}>{displayBookmarkJSX()}</span>
     </div>
     
   );

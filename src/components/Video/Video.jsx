@@ -42,7 +42,6 @@ const Video = (props) => {
       // check if user is logged in - if not, take them to sign-up
       if (!user) {
         navigate("/sign-up");
-
       } else {
 
         //add to users favourites by creating copy of the document
