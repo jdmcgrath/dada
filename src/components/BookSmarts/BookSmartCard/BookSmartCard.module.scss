@@ -69,10 +69,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 50px; 
+        height: 50px;
+        background-color: coral;
+        margin-top: 15px;
 
-        .imagePlaceholder {
-            font-size: 4rem;
-            color: lightgrey;
+        img {
+            width: 100%;
         }
     }
 }

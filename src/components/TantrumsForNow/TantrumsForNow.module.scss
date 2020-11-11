@@ -8,7 +8,7 @@
 .whatNotToDoUl {
   list-style-type: none;
   li {
-    background: url("../../assets/img/XBulletPoint.svg") no-repeat left top;
+    background: url("../../assets/img/XBulletPoint.svg") no-repeat left top  ;
     margin: 20px 0 20px 0;
     padding-left: 40px;
   }
@@ -32,10 +32,10 @@
 .bottomBtn {
   color: white;
   height: 36px;
-  width: 50%;
+  width: 100%;
   border-radius: 5px;
   border: none;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
-  background-color: $lightBlue;
+  background-color: #394167;
   margin-bottom: 30px;
 }

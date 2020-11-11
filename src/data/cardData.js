@@ -53,10 +53,10 @@ export const SOScardsArr = [
     path: "whining",
   },
   {
-    title: "Sleep Issues",
+    title: "Sleep",
     image: "../../img/SOS/SleepIssues.svg",
     info: "",
-    path: "sleep Issues",
+    path: "sleep",
   },
   {
     title: "Rejection",
