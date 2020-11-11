@@ -8,10 +8,11 @@ const Article = (props) => {
   return (
     
     <div className={styles.artContainer}>
-      <div className={styles.artGrid}>
+    
+      <div className={styles.artGrid}>  
+        <img className={styles.artImage} src= {image} alt=""/>
         <h3 className={styles.artTitle}>{title}</h3>
         <p className={styles.artReadTime}>Read  Time: {readTime}</p>
-        <img className={styles.artImage} src= {image} alt=""/>
       </div>
     </div>
     

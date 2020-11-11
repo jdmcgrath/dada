@@ -5,26 +5,31 @@
   height: 100vh;
   
   h2 {
-    font-weight: 200;
+    font-weight: 700;
     text-align: center;
     padding-top: 13vh;
     font-size: 25px;
   }
   
-  .primaryBtn {
+  .signUpBtn {
     width: 90%;
     margin: 0 auto;
     margin-top: 20px;
     text-align: center;
-    // color: $offWhite;
-    background-color: $navyBlue;
+    color: white;
+    background-color: $deepPurple;
     height: 47px;
     box-shadow: none;
     transition: 0.2s;
     cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    font-family: 'IBM Plex Sans', sans-serif;
 
     &:hover{
-      background: $turquoise;
+      background: $lightBlue;
       color: $offWhite;
     }
   }
@@ -46,7 +51,8 @@
     height: 70px;
 
     input {
-      height: 70px;
+      margin-right: 5px;
+      height: 10px;
       border-radius: 30px;
       margin-right: 10px;
     }

@@ -7,7 +7,7 @@ export const App = () => {
   return (
     <>
         <NavBar />
-        <Routes />
+        <Routes  />
     </> 
   )
 }

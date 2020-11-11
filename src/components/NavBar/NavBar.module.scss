@@ -10,7 +10,6 @@
     .globalNav{ 
         display: flex;
         justify-content: space-between;
-        // gap: 70vw;
         width: 90%;
         margin: 0 auto;
         padding-top: 30px;
@@ -19,29 +18,38 @@
             display: flex;
             justify-content: space-between;
 
-            .backButton{ 
-                font-size: 1.6rem;
-                color: grey;
+            .backButton { 
+                font-size: 1.4rem;
+                color: $deepPurple;
             }
 
-            .ellipses{ 
-                font-size: 1.6rem;
-                color: grey;
-                margin-left: 30vw;
+            .search {
+                font-size: 1.4rem;
+                color: $deepPurple;
+                // margin-right: 1vw;
+            }
 
+            .ellipses { 
+                font-size: 1.4rem;
+                color: $deepPurple;
+                margin-left: 5vw;
+                // margin-left: 30vw;
+        
                 &:hover {
                     cursor: pointer;
                 }
             }
         }
     }
-
-    // .pageTitle {
-    //     display: flex;
-    //     align-items: center;
-    //     font-size: 1.4rem;
-    //     color: black;
-    // } 
 }
+    
+    
+// .pageTitle {
+//     display: flex;
+//     align-items: center;
+//     font-size: 1.4rem;
+//     color: black;
+ // } 
+
 
 //add padding to navbar
