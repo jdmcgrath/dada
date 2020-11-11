@@ -31,12 +31,6 @@ const Routes = () => {
             <AddChick path="sign-up/add-chick" />
             <AddChickAge path="/add-chick-age/:chickName" />
 
- 
-
-            {/* <PrivateRoutes path="/">
-                <ActivityIdeas path="categories/activity-ideas" />
-            </PrivateRoutes> */}
-
 
             <Tantrums path="/categories/sos/tantrums" />
             <Aggression path="/categories/sos/aggression" />

@@ -1,8 +1,8 @@
 @import "../../assets/styles/main.scss";
 
 .smHeader {
-  background-color: $navyBlue;
-  color: #fff;
+  background-color: white;
+  border-bottom: 10px solid $icyPurple;
 }
 
 .btnContainer {
@@ -13,7 +13,6 @@
   margin-bottom: 20px;
   button {
     margin-top: 0;
-    color: white;
   }
 }
 .selectedBtn{ 
