@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useState} from 'react';
 import styles from './BookSmartCard.module.scss';
 import { Link } from '@reach/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,7 +18,6 @@ const BookSmartCard = (props) => {
             publishDate,
             Img } = props.doc;
 
-    const refContainer = useRef(count);
     const increaseCount = () => {
       setCount(addCount => addCount + 1)
     }
