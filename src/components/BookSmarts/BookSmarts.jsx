@@ -25,6 +25,9 @@ const BookSmarts = (props) => {
 
   return (
     <>
+    <header className={styles.smHeader}>
+      <h1>Book Smarts</h1>
+    </header>
     <section className={styles.pageContainer}>
       {props.docs.map((doc) => {
         return <BookSmartCard doc={doc} />

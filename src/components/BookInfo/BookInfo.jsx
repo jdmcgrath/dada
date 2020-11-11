@@ -23,12 +23,18 @@ const BookInfo = (props) => {
     // const { Title, Author, publishDate, Img } = props.docs[currentBook];
 
     return (
+        <>
+        <header className={styles.smHeader}>
+            <h1>{props.docs[currentBook].Title}</h1>
+        </header>
         <div className={styles.pageContainer}>
             <section className={styles.bookOverview}>
                 <div className={styles.aboutBook}>
+
                     <div className={styles.bookCover}>
                         <img src={props.docs[currentBook].Img} alt="book-cover"/>
                     </div>
+                    
                     <div className={styles.bookContentOverview}>
                         <h2>{props.docs[currentBook].Title}</h2>
                         <p className={styles.bookAuthor}>{props.docs[currentBook].Author}, {props.docs[currentBook].publishDate}</p>
@@ -51,6 +57,7 @@ const BookInfo = (props) => {
                 </div> */}
             </section>
         </div>
+        </>
     )
 }
 

@@ -32,6 +32,7 @@ const BookSmartCard = (props) => {
     }
   
     return (
+        
         <section className={styles.cardContainer}>
             <div className={styles.bookInfoContainer}>
                 <div className={styles.bookSmartInfo}>
@@ -55,6 +56,7 @@ const BookSmartCard = (props) => {
             </div>  
             </Link>
         </section>
+    
     )
 } 
 

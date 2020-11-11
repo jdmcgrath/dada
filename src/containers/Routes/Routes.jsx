@@ -17,19 +17,6 @@ import UpYourGame from "../../components/UpYourGame";
 import { firestore } from "../../firebase";
 
 const Routes = (props) => {  
-    
-
-    const [docs, setDocs] = useState([]);
-    const getBookSmarts = () => {
-      firestore.collection("booksmarts").get().then((response) => {
-        const documents = response.docs.map(d => d.data());
-        setDocs(documents)
-      })
-    }
-  
-    useEffect (() => {
-      getBookSmarts();
-    }, [])
 
     const [docs, setDocs] = useState([]);
     const getBookSmarts = () => {
@@ -58,9 +45,8 @@ const Routes = (props) => {
             <SplashScreen path="/" />
             <Welcome path="welcome" />
             <UpYourGame path ="/categories/up-your-game" />
-            <PrivateRoutes path="/">
-                <ActivityIdeas path="categories/activity-ideas" />
-            </PrivateRoutes>
+            <ActivityIdeas path="categories/activity-ideas" />
+            
         </Router>
     )
     }
