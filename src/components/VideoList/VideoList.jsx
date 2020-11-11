@@ -14,10 +14,8 @@ const VideoList = (props) => {
   const [filteredVideos, setFilteredVideos] = useState([]);
 
   const getVideos = async () => {
-    console.log("getting videos");
     await firestore.collection("activityIdeasVideos").get().then((response) => {
        const documents = response.docs.map(d => d.data());
-       //console.log(response.docs.data);
        setDocs(documents);
     })
   }
@@ -30,12 +28,10 @@ const VideoList = (props) => {
   
   useEffect(() => {
 
-       
-    console.log("filtering");
     // MB - added filter to remove any copies made when favouriting (where uID exists)
     let filteredVideos = docs.filter(v => v.uID == null);
 
-    // first check if thre are no filter categories selected... because we don't want to filter when there aren't
+    // first check if there are no filter categories selected... because we don't want to filter when there aren't
     if (filterChosen) {
       // take the videos and filter them if they match the fitlers we have     
       filteredVideos = docs.filter(v => v.keywords.indexOf(filterChosen) > -1 );
@@ -46,9 +42,6 @@ const VideoList = (props) => {
 
     // Update the videos in our state so that the page re-renders....
     setFilteredVideos(videoElements);
-
-    console.log("Hello from VIDEO LIST component....")
-    console.log(docs)
 
   }, [filterChosen,docs]);
 

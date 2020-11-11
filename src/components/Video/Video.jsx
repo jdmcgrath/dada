@@ -12,8 +12,6 @@ const Video = (props) => {
 
   const { channel, icon, keywords, source, title, url, vidID } = props.doc;
 
-  //console.log(channel);
-
   const collectionName = "activityIdeasVideos";
 
   const [isFavourited, setIsFavourited] = useState(false);
