@@ -2,8 +2,9 @@
 @import "../../assets/styles/main.scss";
 
 .smHeader {
-    background-color: $black;
-    color: #FFF;
+    height: 8.25vh;
+    background-color: white;
+    border-bottom: 10px solid $icyPurple;
 }
 
 .pageContainer {
@@ -20,12 +21,12 @@
                 display: flex;
                 position: relative;
                 justify-content: center;
-                background-color: $lightBlue;
+                background-color: #edebf8;
                 border-radius: 10px;
                 min-height: 25vh;
 
                 h2{
-                    color: $offWhite;
+                    color: $deepPurple;
                     position: absolute;
                     top: 7px;
                     left: 10px;
@@ -40,7 +41,6 @@
             }
 
             p {
-            // color: $tertiaryColor;
                 font-size: 13px;
                 font-weight: bold;
                 line-height: 1.6em;

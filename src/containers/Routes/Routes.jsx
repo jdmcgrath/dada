@@ -20,7 +20,7 @@ import LogIn from "../../components/LogIn";
 // import SideBar from "../../components/SideBar";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
-import PrivateRoutes from "../../containers/Routes/PrivateRoutes";
+// import PrivateRoutes from "../../containers/Routes/PrivateRoutes";
 
 const Routes = () => {   
     return(
@@ -60,8 +60,8 @@ const Routes = () => {
         </Router>
     )
 };
-//using net ninja method, use the sign up for to make a firebase user 
-//wait for sam, use what he gives us to allow us to sign up with facebook 
+//using net ninja method, use the sign up for to make a firebase user
+//wait for sam, use what he gives us to allow us to sign up with facebook
 //check if logging in with different accounts accesses the same firebase user, if not, make in if statement to prohibiting them from accdesing the sign up page
 export default Routes;
 
