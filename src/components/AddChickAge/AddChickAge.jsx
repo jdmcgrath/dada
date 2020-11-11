@@ -2,6 +2,7 @@ import React, { useState} from "react";
 import styles from "./AddChickAge.module.scss";
 //import BoyChick from "../../assets/img/AddChick/BoyChick.svg";
 import GirlChick from "../../assets/img/AddChick/GirlChick.svg";
+import { navigate } from "@reach/router";
 
 
 
@@ -18,7 +19,9 @@ const AddChickAge = () => {
       setChickAge(chickAge => chickAge - 1);
     } 
   }
-
+ const handleNextPageSplash = () => {
+   navigate("/categories")
+ }
   return (
     <div className={styles.pageContainer}>
        <header className={styles.header}>
@@ -38,7 +41,7 @@ const AddChickAge = () => {
       </div>
 
       {/* <Link to="./AddChickEnd"> */}
-      <button type="submit" className={styles.primaryBtn}>Next</button>
+      <button onClick={handleNextPageSplash}type="submit" className={styles.primaryBtn}>Next</button>
       {/* </Link> */}
 
     </div>
