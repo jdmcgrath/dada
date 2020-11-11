@@ -1,14 +1,15 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import ReactPlayer from 'react-player';
 import styles from './Video.module.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark as faSolidBookmark } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark as faOpenBookmark } from '@fortawesome/free-regular-svg-icons';
 import { firestore } from "../../firebase";
+import { navigate } from '@reach/router';
 
 const Video = (props) => {
 
-  
+
 
   const { channel, icon, keywords, source, title, url, vidID } = props.doc;
   const user = props.user;
@@ -18,52 +19,56 @@ const Video = (props) => {
   const [isFavourited, setIsFavourited] = useState(false);
 
   useEffect(() => {
-     checkFavourites();
-  },[isFavourited])
+    checkFavourites();
+  }, [isFavourited])
 
- 
+
   const toggleFav = async (e) => {
     e.stopPropagation();
-   
-    if(isFavourited){
+
+    if (isFavourited) {
       // remove from users favourites by deleting the document
       const unFavouritedDocRef = await firestore.collection(collectionName).doc(`${user.uid}${vidID}`);
       unFavouritedDocRef.get().then((uFDoc) => {
         if (uFDoc.exists) {
           // delete doc from collection
-          firestore.collection(collectionName).doc(`${user.uid}${vidID}`).delete().then(()=>{
+          firestore.collection(collectionName).doc(`${user.uid}${vidID}`).delete().then(() => {
             setIsFavourited(!isFavourited);
           });
         }
       });
-      
 
-    }else{
+    } else {
       // check if user is logged in - if not, take them to sign-up
+      if (!user) {
+        navigate("/sign-up");
 
+      } else {
 
-      //add to users favourites by creating copy of the document
-      const favouritedDocRef = await firestore.collection(collectionName).doc(`${vidID}`);
-      favouritedDocRef.get().then((fDoc) => {
-        if (fDoc.exists) {
-          firestore.collection(collectionName).doc(`${user.uid}${vidID}`).set({
-            channel,
-            icon,
-            keywords,
-            source,
-            title,
-            url,
-            vidID,
-            uID: user.uid     
-          })
-          setIsFavourited(!isFavourited);
-        }
-      });
-      
+        //add to users favourites by creating copy of the document
+        const favouritedDocRef = await firestore.collection(collectionName).doc(`${vidID}`);
+        favouritedDocRef.get().then((fDoc) => {
+          if (fDoc.exists) {
+            firestore.collection(collectionName).doc(`${user.uid}${vidID}`).set({
+              channel,
+              icon,
+              keywords,
+              source,
+              title,
+              url,
+              vidID,
+              uID: user.uid
+            })
+            setIsFavourited(!isFavourited);
+          }
+
+        });
+      }
+
     }
   }
 
-  const checkFavourites = async () => { 
+  const checkFavourites = async () => {
     if (user) {
       const docRef = await firestore.collection(collectionName).doc(`${user.uid}${vidID}`);
       docRef.get().then((doc) => {
@@ -112,7 +117,7 @@ const Video = (props) => {
           {title}
         </p>
 
-       <span onClick={toggleFav}>{displayBookmarkJSX()}</span>
+        <span onClick={toggleFav}>{displayBookmarkJSX()}</span>
 
       </div>
     </div>
