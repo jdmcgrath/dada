@@ -6,7 +6,7 @@ import { faArrowCircleUp } from "@fortawesome/free-solid-svg-icons";
 
 
 
-         
+
 const BookSmartCard = (props) => {
     const [count, setCount] = useState(0);
 
@@ -18,7 +18,6 @@ const BookSmartCard = (props) => {
             publishDate,
             Img } = props.doc;
 
-   
     const increaseCount = () => {
       setCount(addCount => addCount + 1)
     }
