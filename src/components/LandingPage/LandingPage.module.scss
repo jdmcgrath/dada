@@ -65,6 +65,7 @@
 }
 .svgTextLi{ 
     width: 90%;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -72,6 +73,7 @@
     img{ 
         display: inline-block;
         height: inherit;
+        margin: 10px 10px;
     }
 }
 
