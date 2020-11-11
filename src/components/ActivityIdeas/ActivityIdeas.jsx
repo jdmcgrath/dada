@@ -58,12 +58,10 @@ const ActivityIdeas = () => {
   return (
     <>
       <div className={styles.smHeader}>
-        <h2>Activity Ideas</h2>
+        <h1>Activity Ideas</h1>
       </div>
       <div className={styles.pageContainer}>
-        <div className={styles.btnContainer}>
-          {showButtons}
-        </div>
+        <div className={styles.btnContainer}>{showButtons}</div>
         <div className={styles.filterTagsContainer}>
           <ul className={styles.filterTags}>
             {showFilterAll}
@@ -71,13 +69,10 @@ const ActivityIdeas = () => {
             {showFilterOutdoor}
             {showFilterSocialSkills}
             {showFilterLanguage}
-            {showFilterStrength}           
+            {showFilterStrength}
           </ul>
         </div>
-        <div >
-          {showClickedList}
-        </div>
-
+        <div>{showClickedList}</div>
       </div>
       <BottomNavBar />
     </>

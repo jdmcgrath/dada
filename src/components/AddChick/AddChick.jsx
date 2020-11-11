@@ -4,12 +4,16 @@ import Input from "../Input";
 import InputData from "../../data/Input";
 import BoyChick from "../../assets/img/AddChick/BoyChick.svg";
 import GirlChick from "../../assets/img/AddChick/GirlChick.svg";
+import { navigate } from '@reach/router';
 
 
 
 
 
 const AddChick = () => {
+    const handleNextPage = () => {
+        navigate("/add-chick-age")
+    }
     return (
         <div className={styles.pageContainer}>
             <header className={styles.header}>
@@ -34,7 +38,7 @@ const AddChick = () => {
                     </div>
             </form>
             {/* <Link to="./AddChickAge"> */}
-            <button type="submit" className={styles.primaryBtn}>
+            <button onClick={handleNextPage} type="submit" className={styles.primaryBtn}>
                 Next
                 </button>
             {/* </Link> */}
