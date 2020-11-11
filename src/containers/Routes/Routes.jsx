@@ -25,11 +25,11 @@ const Routes = (props) => {
         const documents = response.docs.map(d => d.data());
         setDocs(documents)
         })
-    }
+    };
   
-    useEffect (async () => {
-        await getBookSmarts();
-    }, [])
+    useEffect ( () => {
+         getBookSmarts();
+    }, []);
     
     return(
         <Router>
