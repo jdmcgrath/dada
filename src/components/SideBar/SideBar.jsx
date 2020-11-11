@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './SideBar.module.scss';
+import styles from "./SideBar.module.scss";
 
 import { Link } from '@reach/router';
 
@@ -10,14 +10,14 @@ import CogIcon from '../../assets/img/SideBarIcons/Cog.svg';
 import InfoIcon from '../../assets/img/SideBarIcons/Info.svg';
 import QuestionIcon from '../../assets/img/SideBarIcons/Question.svg';
 
-import styled from 'styled-components';
-
 const SideBar = (props) => {
+
+    const toggleSideBar = props.openSideBar ? styles.popOut : "";
 
     // const slideMenuInOut = (props) => `transform: ${({ openSideBar }) => openSideBar ? 'translateX(0)' : 'translateX((-100%)'};`   
     return (
-        <section className={openSideBar ? "sideBarContainer active" : "sideBarContainer"}>
-        {/* // <section className={styles.sideBarContainer} openSideBar={`transform: ${({ openSideBar }) => openSideBar ? 'translateX(0)' : 'translateX((-100%)'}`}> */}
+        // <section className={openSideBar ? "sideBarContainer active" : "sideBarContainer"}>
+        <section className={`${styles.sideBarContainer} ${toggleSideBar}`}>
             <div className={styles.buttonContainer}>
                 <button className={styles.signUpBtn}>Sign Up</button>
                 <button className={styles.loginBtn}>Login</button>
