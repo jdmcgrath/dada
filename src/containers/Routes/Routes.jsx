@@ -16,28 +16,26 @@ import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
 import PrivateRoutes from "../../containers/Routes/PrivateRoutes";
 
-const Routes = () => {
-  return (
-    <Router>
-      <Categories path="categories" />
-      <SignUp path="sign-up" />
-      <AddChick path="add-chick" />
-
-      <PrivateRoutes path="/"></PrivateRoutes>
+const Routes = () => {  
+    return(
+        <Router>
+            <Categories path="categories" />
+            <SignUp path="sign-up" />
+            <AddChick path="add-chick" />
 
       <AddChickAge path="add-chick-age" />
 
-      <ActivityIdeas path="categories/activity-ideas" />
-      <Tantrums path="/categories/sos/tantrums" />
-      <ArticleReader path="article-reader" />
-      <BookSmarts path="categories/book-smarts" />
-      <BookInfo path="categories/book-smarts/book-info" />
-      <SOS path="categories/sos" />
-      <SplashScreen path="/" />
-      <Welcome path="welcome" />
-      <UpYourGame path="/categories/up-your-game" />
-    </Router>
-  );
+            <AddChickAge path="add-chick-age" />
+            <Tantrums path="/categories/sos/tantrums" />
+            <ArticleReader path="article-reader" />
+            <BookSmarts path="categories/book-smarts" />
+            <BookInfo path="categories/book-smarts/book-info" />
+            <SOS path="categories/sos"/>
+            <SplashScreen path="/" />
+            <Welcome path="welcome" />
+            <UpYourGame path ="/categories/up-your-game" />
+        </Router>
+    )
 };
 //using net ninja method, use the sign up for to make a firebase user
 //wait for sam, use what he gives us to allow us to sign up with facebook
