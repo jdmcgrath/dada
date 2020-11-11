@@ -4,18 +4,17 @@ import VideoList from "../VideoList";
 import ArticleList from "../ArticleList";
 
 import BottomNavBar from "../../components/BottomNavBar";
-const ActivityIdeas = () => {
+const ActivityIdeas = (props) => {
 
   const [filterChosen, setFilterChosen] = useState("");
-
-  const [toggleList, setToggleList] = useState(true);
-
-    
-  const showClickedList = toggleList ?
+  const [toggleList, setToggleList] = useState(true);   
   
-    // <VideoList videos={videos} filterChosen={filterChosen} /> :
-    <VideoList filterChosen={filterChosen} /> :
-    <ArticleList filterChosen={filterChosen} />
+  const user = props.user;
+  
+  
+  const showClickedList = toggleList ?
+    <VideoList filterChosen={filterChosen} user={user} /> :
+    <ArticleList filterChosen={filterChosen} user={user} />
 
   const showButtons = toggleList ?
     <>

@@ -11,22 +11,17 @@ const Video = (props) => {
   
 
   const { channel, icon, keywords, source, title, url, vidID } = props.doc;
+  const user = props.user;
 
   const collectionName = "activityIdeasVideos";
 
   const [isFavourited, setIsFavourited] = useState(false);
 
   useEffect(() => {
-    checkFavourites();
+     checkFavourites();
   },[isFavourited])
 
-
-  ////////////// dummy data ////////
-  const user = {
-    uid: "bO8zip06hJM05u5JUe2j98bbs3b2"
-  }
-
-
+ 
   const toggleFav = async (e) => {
     e.stopPropagation();
    
@@ -45,7 +40,7 @@ const Video = (props) => {
 
     }else{
       // check if user is logged in - if not, take them to sign-up
-      
+
 
       //add to users favourites by creating copy of the document
       const favouritedDocRef = await firestore.collection(collectionName).doc(`${vidID}`);

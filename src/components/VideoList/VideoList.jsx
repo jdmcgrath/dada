@@ -9,7 +9,7 @@ const VideoList = (props) => {
 
   const [docs, setDocs] = useState([]);
 
-  const { filterChosen} = props;
+  const { filterChosen, user} = props;
 
   const [filteredVideos, setFilteredVideos] = useState([]);
 
@@ -38,7 +38,7 @@ const VideoList = (props) => {
     }
 
     // we have our filtered videos... lets map these into JSX elements so they print something on the page
-    const videoElements = filteredVideos.map(doc => <Video key={doc.vidID} doc={doc} />);
+    const videoElements = filteredVideos.map(doc => <Video key={doc.vidID} doc={doc} user={user} />);
 
     // Update the videos in our state so that the page re-renders....
     setFilteredVideos(videoElements);

@@ -16,24 +16,25 @@ import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
 // import PrivateRoutes from "../../containers/Routes/PrivateRoutes";
 
-const Routes = () => {  
+const Routes = (props) => {  
+
+    const user = props.user;
+
     return(
         <Router>
-            <Categories path="categories" />
-            <SignUp path="sign-up" />
-            <AddChick path="add-chick" />
-
-            <AddChickAge path="add-chick-age" />
-            <ActivityIdeas path="categories/activity-ideas" />
-            <AddChickAge path="add-chick-age" />
-            <Tantrums path="/categories/sos/tantrums" />
-            <ArticleReader path="article-reader" />
-            <BookSmarts path="categories/book-smarts" />
-            <BookInfo path="categories/book-smarts/book-info" />
-            <SOS path="categories/sos"/>
-            <SplashScreen path="/" />
-            <Welcome path="welcome" />
-            <UpYourGame path ="/categories/up-your-game" />
+            <Categories path="categories" user={user} />
+            <SignUp path="sign-up" user={user} />
+            <AddChick path="add-chick" user={user} />
+            <AddChickAge path="add-chick-age" user={user} />
+            <ActivityIdeas path="categories/activity-ideas" user={user} />
+            <Tantrums path="/categories/sos/tantrums" user={user} />
+            <ArticleReader path="article-reader" user={user} />
+            <BookSmarts path="categories/book-smarts" user={user} />
+            <BookInfo path="categories/book-smarts/book-info" user={user} />
+            <SOS path="categories/sos" user={user} />
+            <SplashScreen path="/" user={user}/>
+            <Welcome path="welcome" user={user} />
+            <UpYourGame path ="/categories/up-your-game" user={user} />
         </Router>
     )
 };
