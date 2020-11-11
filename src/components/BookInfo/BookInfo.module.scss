@@ -20,8 +20,8 @@
 
         .aboutBook {
             display: flex; 
-            flex-direction: column;
-            padding-bottom: 40px;
+            flex-direction: row;
+            padding-bottom: 15px;
 
 
             .bookCover {
@@ -41,6 +41,7 @@
                 h2 {
                     font-size: 16px;
                     font-weight: 700;
+                    padding:0px;
                 }
 
                 .bookAuthor {
@@ -48,13 +49,11 @@
                     font-weight: 500;
                     padding-top: 5px;
                 }
-
-                .bookBlurb {
-                    padding-top: 20px;
-                }
             }
         }
-
+        .bookBlurb {
+            padding: 20px 0px 20px 0px;
+        }
         .overviewFooter {
             display: flex;
             flex-direction: row;

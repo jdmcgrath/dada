@@ -32,8 +32,8 @@ const BookInfo = (props) => {
                         <h2>{props.docs[currentBook].Title}</h2>
                         <p className={styles.bookAuthor}>{props.docs[currentBook].Author}, {props.docs[currentBook].publishDate}</p>
                     </div>   
-                    <p className={styles.bookBlurb}>{props.docs[currentBook].Blurb}</p> 
                 </div>
+                <p className={styles.bookBlurb}>{props.docs[currentBook].Blurb}</p>
                 <div className={styles.overviewFooter}>
                     <p className={styles.readTime}>Read Time: {props.docs[currentBook].ReadTime}</p>
                     <img src={BookmarkIcon} alt="Bookmark Icon"/>
