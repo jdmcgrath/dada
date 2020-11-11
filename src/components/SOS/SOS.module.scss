@@ -2,50 +2,48 @@
 @import "../../assets/styles/main.scss";
 
 .smHeader {
-    background-color: $black;
-    color: #FFF;
+  height: 8.25vh;
+  background-color: white;
+  border-bottom: 10px solid $icyPurple;
 }
 
 .pageContainer {
-    // width: 100%;
+  margin-top: 20px;
+  .gridContainer {
+    grid-gap: 15px;
+    margin: 0;
 
-    .gridContainer{
-        margin-top: 40px;
-        grid-gap: 0.5rem;
+    .card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 93px;
+      background-color: #edebf8;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px; 
+      
 
-        .card {
-            // height: 100%;
+      .titleWrapper {
+        display: flex;
+        position: relative;
+        border-radius: 10px;
 
-            .imageWrapper {
-                display: flex;
-                position: relative;
-                justify-content: center;
-                background-color: $lightBlue;
-                border-radius: 10px;
-                min-height: 25vh;
-
-                h2{
-                    color: $offWhite;
-                    position: absolute;
-                    top: 7px;
-                    left: 10px;
-                    z-index: 1;
-                    padding: 0;
-                }
-
-                img {
-                    width: 50%;
-                    border-radius: 12px;
-                }
-            }
-
-            p {
-            // color: $tertiaryColor;
-                font-size: 13px;
-                font-weight: bold;
-                line-height: 1.6em;
-                height:20px;
-            }    
+        h2 {
+          font-family: "Nunito";
+          display: flex;
+          color: $deepPurple;
+          align-items: center;
+          padding: 0 0 0 30px;
         }
+      }
+
+      .imageWrapper {
+        display: flex;
+        justify-content: flex-end;
+        img {
+          width: 140px;
+         
+        }
+      }
     }
-};
+  }
+}

@@ -6,14 +6,14 @@ import {firestore} from "../../firebase";
 
 const ArticleList = (props) => {
   const [docs, setDocs] = useState([]);
-  const getVideos = () => {
-    firestore.collection("activityIdeasVideos").get().then((response) => {
+  const getArticles = () => {
+    firestore.collection("activityIdeas").get().then((response) => {
        const documents = response.docs.map(d => d.data());
        setDocs(documents) 
     })
   } 
   useEffect (() => {
-    getVideos();
+    getArticles();
   }, [])
   const { filterChosen} = props;
 
