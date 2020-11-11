@@ -5,7 +5,7 @@ import { Link } from '@reach/router';
 
 import BookmarkIcon from '../../assets/img/SideBarIcons/Bookmark.svg';
 import ProfileIcon from '../../assets/img/SideBarIcons/Profile.svg';
-
+import DoorIcon from '../../assets/img/SideBarIcons/DoorIcon.svg';
 import CogIcon from '../../assets/img/SideBarIcons/Cog.svg';
 import InfoIcon from '../../assets/img/SideBarIcons/Info.svg';
 import QuestionIcon from '../../assets/img/SideBarIcons/Question.svg';
@@ -17,7 +17,9 @@ const SideBar = (props) => {
     return (
         <section className={`${styles.sideBarContainer} ${toggleSideBar}`}>
             <div className={styles.buttonContainer}>
+                <Link to="/sign-up">
                 <button className={styles.signUpBtn}>Sign Up</button>
+                </Link>
                 <button className={styles.loginBtn}>Login</button>
             </div>
             <main className={styles.appPathLinks}>
@@ -51,6 +53,7 @@ const SideBar = (props) => {
                 </div>
             </main>
             <footer className={styles.sideBarFooter}>
+                <img src={DoorIcon} alt="logout-icon" />
                 <p>Logout</p>
             </footer>
         </section>

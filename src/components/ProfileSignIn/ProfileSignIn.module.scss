@@ -1,6 +1,8 @@
 @import '../../assets/styles/abstracts/variables';
 @import '../../assets/styles/main.scss';
 .smHeader {
+    box-shadow: none;
+
     h2 {
         font-size: 1.5rem;
     }
@@ -9,7 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 100vh;
 
     .imgContainer {
         height: 145px;
@@ -24,24 +26,35 @@
         color: $navyBlue;
         font-size: 1.2rem;
         font-weight: 500;
-        margin-bottom: 60px;
     }
     .btnContainer {
         display: flex;
+        flex-direction: row;
         justify-content: space-evenly;
         width: 70%;
+
         .primaryBtn, 
         .secondaryBtn {
             width: 92px;
             height: 45px;
             font-size: 1rem;
             font-weight: 700;   
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .primaryBtn {
+            background-color: $navyBlue;
+            color: $offWhite;
         }
 
         .secondaryBtn {
             background-color: transparent;
             border: 2px solid $navyBlue;
             box-shadow: none;
+            color: $navyBlue;
         }
     }
 
