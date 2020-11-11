@@ -14,13 +14,6 @@ const BookInfo = (props) => {
 
     console.log(props.docs[currentBook].Title);
     
-    // const getBookInsight = (cardData) => {
-    //     return(
-    //         <BookInsightCard cardData={props.cardData[currentBook]} />
-    //     )
-    // }
- 
-    // const { Title, Author, publishDate, Img } = props.docs[currentBook];
 
     return (
         <>

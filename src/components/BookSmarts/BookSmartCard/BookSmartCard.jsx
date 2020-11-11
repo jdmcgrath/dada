@@ -3,7 +3,7 @@ import styles from './BookSmartCard.module.scss';
 import { Link } from '@reach/router';
 import BookInfo from "../../BookInfo";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowCircleUp, faArrowCircleDown, faImage } from "@fortawesome/free-solid-svg-icons";
+import { faArrowCircleUp } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -19,7 +19,7 @@ const BookSmartCard = (props) => {
             publishDate,
             Img } = props.doc;
 
-    // const [displayBookInfo, setDisplayBookInfo] = useState(false);
+    
 
     {/* I click on the link tag and want:
                 - onClick to set state to be the contents of the article i click on
@@ -45,14 +45,9 @@ const BookSmartCard = (props) => {
                     {/* <span onClick={reduceCount} className={styles.voteIcon}><FontAwesomeIcon icon={faArrowCircleDown} /></span> */}
                 </div> 
             </div> 
-            {/* I click on the link tag and want:
-                - onClick to set state to be the contents of the article i click on
-                - that new state is passed to BookInfo
-                - BookInfo renders
-            */}
             <Link to={`book-info/${BookId}`} doc={props.doc}>
             <div className={styles.bookSmartImage}>
-                <img src={props.doc.Img} alt="book-cover-image" />
+                <img src={Img} alt="book-cover" />
             </div>  
             </Link>
         </section>
