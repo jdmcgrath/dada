@@ -46,19 +46,26 @@ const Routes = (props) => {
 
     return(
         <Router>
-            <Categories path="categories" user={user} />
-            <SignUp path="sign-up" user={user} />
+
+            <ActivityIdeas path="categories/activity-ideas" user={user} />
             <AddChick path="add-chick" user={user} />
             <AddChickAge path="add-chick-age" user={user} />
-            <ActivityIdeas path="categories/activity-ideas" user={user} />
-            <Tantrums path="/categories/sos/tantrums" user={user} />
+            <Aggression path="/categories/sos/aggression" user={user} />
             <ArticleReader path="article-reader" user={user} />
-            <BookSmarts path="categories/book-smarts" user={user} docs={docs}/>
-            <BookInfo path="categories/book-smarts/book-info/:BookId" user={user} docs={docs} />
+            <BookInfo path="categories/book-smarts/book-info/:BookId" docs={docs} user={user} />
+            <BookSmarts path="categories/book-smarts" docs={docs} user={user}/>
+            <Categories path="categories" user={user} />
+            <Rejection path="/categories/sos/rejection" user={user} />
+            <Screaming path="/categories/sos/screaming" user={user} />
+            <SignUp path="sign-up" user={user} />
+            <SleepIssues path="/categories/sos/sleep" user={user} />
             <SOS path="categories/sos" user={user} />
             <SplashScreen path="/" user={user}/>
+            <Tantrums path="/categories/sos/tantrums" user={user} />
             <Welcome path="welcome" user={user} />
+            <Whining path="/categories/sos/whining" user={user} />
             <UpYourGame path ="/categories/up-your-game" user={user} />
+
         </Router>
     )
 };
