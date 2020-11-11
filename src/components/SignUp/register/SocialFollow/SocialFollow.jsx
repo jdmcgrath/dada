@@ -11,8 +11,8 @@ import {
 
 const SocialFollow = () => {
 
-  const goToSignInWithGoogle = () => {
-    firebase.auth().signInWithRedirect(provider)
+  const goToSignInWithGoogle = () => {    
+    firebase.auth().signInWithRedirect(provider)    
   }
 
   const goToSignInWithFacebook = () => {

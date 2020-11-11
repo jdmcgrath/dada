@@ -24,8 +24,6 @@ const Routes = () => {
             <AddChick path="add-chick" />
 
             <AddChickAge path="add-chick-age" />
-            <ActivityIdeas path="categories/activity-ideas" />
-            <AddChickAge path="add-chick-age" />
             <Tantrums path="/categories/sos/tantrums" />
             <ArticleReader path="article-reader" />
             <BookSmarts path="categories/book-smarts" />
