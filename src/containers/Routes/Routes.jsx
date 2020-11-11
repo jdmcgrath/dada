@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Router } from "@reach/router";
 import Categories from "../../components/Categories";
 import SignUp from "../../components/SignUp/register";
@@ -16,22 +16,40 @@ import SleepIssues from "../../components/Sleep/SleepMain";
 import Rejection from "../../components/Rejection/RejectionMain";
 import ArticleReader from "../../components/ArticleReader";
 import Welcome from "../../components/Welcome";
-import LogIn from "../../components/LogIn";
+// import LogIn from "../../components/LogIn";
 // import SideBar from "../../components/SideBar";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
+import { firestore } from "../../firebase";
 // import PrivateRoutes from "../../containers/Routes/PrivateRoutes";
 
-const Routes = () => {   
+const Routes = (props) => {  
+
+    const [docs, setDocs] = useState([]);
+    // const getBookSmarts = () => {
+    //     firestore.collection("booksmarts").get().then((response) => {
+    //     const documents = response.docs.map(d => d.data());
+    //     setDocs(documents)
+    //     })
+    // };
+  
+    useEffect ( () => {
+        const getBookSmarts = () => {
+            firestore.collection("booksmarts").get().then((response) => {
+            const documents = response.docs.map(d => d.data());
+            setDocs(documents)
+            })
+        };
+        getBookSmarts();
+    }, []);
+    
     return(
         <Router>
             <Categories path="categories" />
             <SignUp path="sign-up" />
-            <LogIn path ="log-in" />
-            <AddChick path="sign-up/add-chick" />
-            <AddChickAge path="/add-chick-age/:chickName" />
-
-
+            <AddChick path="add-chick" />
+            <AddChickAge path="add-chick-age/:chickName" />
+            <ActivityIdeas path="categories/activity-ideas" />
             <Tantrums path="/categories/sos/tantrums" />
             <Aggression path="/categories/sos/aggression" />
             <Screaming path="/categories/sos/screaming" />
@@ -39,18 +57,15 @@ const Routes = () => {
             <SleepIssues path="/categories/sos/sleep" />
             <Rejection path="/categories/sos/rejection" />
 
-
-
-
-
             <ActivityIdeas path="categories/activity-ideas" />
             <ArticleReader path="article-reader" />
-            <BookSmarts path="categories/book-smarts" />
-            <BookInfo path="categories/book-smarts/book-info" />
+            <BookSmarts path="categories/book-smarts" docs={docs} />
+            <BookInfo path="categories/book-smarts/book-info/:BookId" docs={docs} />
             <SOS path="categories/sos"/>
             <SplashScreen path="/" />
             <Welcome path="welcome" />
             <UpYourGame path ="/categories/up-your-game" />
+            <ActivityIdeas path="categories/activity-ideas" />
         </Router>
     )
 };

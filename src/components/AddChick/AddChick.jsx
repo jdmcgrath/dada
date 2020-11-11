@@ -19,11 +19,6 @@ console.log(chickName);
 console.log(toggleGender);
 
 
-
-
-    // const handleNextPage = () => {
-    //     navigate("/add-chick-age")
-    // }
     return (
 
         <div className={styles.pageContainer}>
@@ -53,13 +48,6 @@ console.log(toggleGender);
                     Next
                 </Link>
             </button>
-            {/* </form> */}
-            {/* <Link to="./AddChickAge"> */}
-            {/* <button onClick={handleNextPage} type="submit" className={styles.primaryBtn}>
-                Next
-                </button> */}
-            {/* </Link> */}
-
         </div>
     
     ); 
