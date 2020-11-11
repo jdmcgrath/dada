@@ -44,6 +44,9 @@ const Video = (props) => {
       
 
     }else{
+      // check if user is logged in - if not, take them to sign-up
+      
+
       //add to users favourites by creating copy of the document
       const favouritedDocRef = await firestore.collection(collectionName).doc(`${vidID}`);
       favouritedDocRef.get().then((fDoc) => {
@@ -63,9 +66,6 @@ const Video = (props) => {
       });
       
     }
-
-    // set the state so that the bookmark icon updates
-    // setIsFavourited(!isFavourited);
   }
 
   const checkFavourites = async () => { 
