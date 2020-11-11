@@ -1,0 +1,219 @@
+/* =========================================================================================================
+                                              COLOUR PALETTES
+/* =======================================================================================================*/
+/* =========================================================================================================
+                                              TYPOGRAPHY
+/* =======================================================================================================*/
+/* =========================================================================================================
+                                              COLOUR PALETTES
+/* =======================================================================================================*/
+/* =========================================================================================================
+                                              TYPOGRAPHY
+/* =======================================================================================================*/
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Nunito:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFFDF8;
+}
+
+a {
+  text-decoration: none;
+  color: #042621;
+}
+
+/* =========================================================================================================
+                                              COLOUR PALETTES
+/* =======================================================================================================*/
+/* =========================================================================================================
+                                              TYPOGRAPHY
+/* =======================================================================================================*/
+/* Nunito 
+    font-weights: 400 (regular), 700 (regular)
+*/
+/* IBM Plex Sans 
+    font-weights: 400 (regular), 500 (medium),  700 (regular)
+*/
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* =========================================================================================================
+                                              COLOUR PALETTES
+/* =======================================================================================================*/
+/* =========================================================================================================
+                                              TYPOGRAPHY
+/* =======================================================================================================*/
+.primaryBtn,
+.secondaryBtn {
+  height: 36px;
+  width: 141px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.primaryBtn {
+  color: #FFFDF8;
+  background-color: #394167;
+}
+
+.secondaryBtn {
+  background-color: #189FB6;
+}
+
+.circularImg {
+  margin: 3vh;
+  border: 1px solid gray;
+  border-radius: 50%;
+  height: 130px;
+  width: 130px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+.formContainer .inputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.formContainer .inputContainer input {
+  border-radius: 5px;
+  padding-left: 10px;
+  width: 90%;
+  height: 47px;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: transparent;
+  border: 1px solid #979797;
+  outline: none;
+}
+.formContainer .inputContainer input::placeholder {
+  transition: 0.2s;
+}
+.formContainer .inputContainer input:focus::placeholder {
+  transform: translate(0px, -15px);
+  font-size: 0.5rem;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  margin: 0 auto;
+}
+
+.lgHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFF;
+  height: 20vh;
+  width: 100%;
+  padding: 0 15%;
+}
+
+.smHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  height: 12vh;
+  width: 100%;
+  padding: 0 15%;
+  padding-bottom: 12px;
+}
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.formContainer {
+  height: 100vh;
+}
+.formContainer h2 {
+  font-weight: 200;
+  text-align: center;
+  padding-top: 13vh;
+  font-size: 25px;
+}
+.formContainer button {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+  color: #FFFDF8;
+  height: 47px;
+  border: none;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.formContainer button:hover {
+  background: #4DC6B8;
+  color: #FFFDF8;
+}
+.formContainer p {
+  font-size: 12px;
+}
+.formContainer p span {
+  font-weight: 700;
+}
+.formContainer .termsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+  height: 50px;
+}
+.formContainer .termsContainer input {
+  margin-right: 5px;
+  height: 10px;
+  border-radius: 30px;
+}
+.formContainer .logIn {
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.formContainer .logIn:hover {
+  cursor: pointer;
+}
+.formContainer .orSignIn {
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #074B77;
+}
