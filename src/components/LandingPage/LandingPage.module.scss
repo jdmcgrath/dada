@@ -1,19 +1,78 @@
+@import "../../assets/styles/main.scss";
+
 *{ 
     margin: 0;
     box-sizing: border-box;
 }
 .splash { 
-    height: 300px;
+    margin-top: 80px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+    align-content: center;
     background-color: blueviolet;
     img {
+        position: absolute;
+        left: 10%;
         height: inherit;
-        width: 300px;
+        width: 50%;
         z-index: 0;
     }
+    button { 
+        position: absolute;
+        right: 10%;
+        width: 20%;
+        height: 80%;
+    }
 }
-.textUnderSplash { 
-    margin: 10px;
+.pageCont{ 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
 }
-.textBeforeTrailing { 
-    height: 80px;
+.sloganCont{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8%;
 }
+.slogan{ 
+    color: #1bb9f1;
+}
+.textUndePhoneCont{ 
+    margin: 8%;
+}
+.textUnderPhone{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    color: rgb(88, 85, 85);
+}
+.forDad{ 
+    margin: 20px;
+    color:  #1bb9f1;
+    font-weight: 500;
+}
+.textFathers{ 
+    width: 82%;
+}
+.primaryBtn { 
+    margin: 40px;
+}
+.svgTextLi{ 
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img{ 
+        display: inline-block;
+        height: inherit;
+    }
+}
+
+//when styling more or less there, slack steve telling him I am ready for him and jdog to have a look
