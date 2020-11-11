@@ -2,47 +2,48 @@
 @import "../../assets/styles/main.scss";
 
 .smHeader {
-    height: 8.25vh;
-    background-color: white;
-    border-bottom: 10px solid $icyPurple;
+  height: 8.25vh;
+  background-color: white;
+  border-bottom: 10px solid $icyPurple;
 }
 
 .pageContainer {
-    .gridContainer{
-        margin-top: 40px;
-        grid-gap: 0.5rem;
-        margin: 0;
+  margin-top: 20px;
+  .gridContainer {
+    grid-gap: 15px;
+    margin: 0;
 
-        .card {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          height: 12vh;
-          background-color: #edebf8;
-            // height: 100%;
+    .card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 93px;
+      background-color: #edebf8;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px; 
+      
 
-            .titleWrapper {
-                display: flex;
-                position: relative;
-                justify-content: center;
-                border-radius: 10px;
+      .titleWrapper {
+        display: flex;
+        position: relative;
+        border-radius: 10px;
 
-                h2{
-                    color: $deepPurple;
-                    position: absolute;
-                    top: 7px;
-                    left: 10px;
-                    padding: 0;
-                }
-            }
-            
-            .imageWrapper{
-              display: flex;
-              justify-content: flex-end;
-              img {
-                width: 130px;
-                border-radius: 12px;
-            }
-            }
+        h2 {
+          font-family: "Nunito";
+          display: flex;
+          color: $deepPurple;
+          align-items: center;
+          padding: 0 0 0 30px;
         }
+      }
+
+      .imageWrapper {
+        display: flex;
+        justify-content: flex-end;
+        img {
+          width: 140px;
+         
+        }
+      }
     }
-};
+  }
+}
