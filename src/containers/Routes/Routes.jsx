@@ -44,28 +44,6 @@ const Routes = (props) => {
     
     return(
         <Router>
-<<<<<<< HEAD
-            <Categories path="categories" />
-            <SignUp path="sign-up" />
-            <AddChick path="add-chick" />
-            <AddChickAge path="add-chick-age/:chickName" />
-            <ActivityIdeas path="categories/activity-ideas" />
-            <Tantrums path="/categories/sos/tantrums" />
-            <Aggression path="/categories/sos/aggression" />
-            <Screaming path="/categories/sos/screaming" />
-            <Whining path="/categories/sos/whining" />
-            <SleepIssues path="/categories/sos/sleep" />
-            <Rejection path="/categories/sos/rejection" />
-            <ActivityIdeas path="categories/activity-ideas" />
-            <ArticleReader path="article-reader" />
-            <BookSmarts path="categories/book-smarts" docs={docs} />
-            <BookInfo path="categories/book-smarts/book-info/:BookId" docs={docs} />
-            <SOS path="categories/sos"/>
-            <SplashScreen path="/" />
-            <Welcome path="welcome" />
-            <UpYourGame path ="/categories/up-your-game" />
-            <ActivityIdeas path="categories/activity-ideas" />
-=======
 
             <ActivityIdeas path="categories/activity-ideas" user={user} />
             <AddChick path="add-chick" user={user} />
@@ -86,7 +64,6 @@ const Routes = (props) => {
             <Whining path="/categories/sos/whining" user={user} />
             <UpYourGame path ="/categories/up-your-game" user={user} />
 
->>>>>>> c22aa25fc0438b966f0dceff823902db761a8cd3
         </Router>
     )
 };
