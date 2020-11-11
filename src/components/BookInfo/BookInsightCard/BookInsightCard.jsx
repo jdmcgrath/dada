@@ -8,7 +8,7 @@ const BookInsightCard = (props) => {
                 <p>1</p>
             </div>
             <div className={styles.insightTitle}>
-            <p>{props.doc.title}</p>
+                <p>The Value of Being a Playful Parent</p>
             </div>        
         </div>
     )

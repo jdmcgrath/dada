@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import styles from './BookSmartCard.module.scss';
 import { Link } from '@reach/router';
-import BookInfo from "../../BookInfo";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleUp } from "@fortawesome/free-solid-svg-icons";
 
@@ -19,13 +18,6 @@ const BookSmartCard = (props) => {
             publishDate,
             Img } = props.doc;
 
-    
-
-    {/* I click on the link tag and want:
-                - onClick to set state to be the contents of the article i click on
-                - that new state is passed to BookInfo
-                - BookInfo renders
-    */}
    
     const increaseCount = () => {
       setCount(addCount => addCount + 1)
