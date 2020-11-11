@@ -4,6 +4,7 @@ import { navigate } from '@reach/router'
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SocialFollow from './SocialFollow';
 import firebase from "../../../firebase"
+import { useEffect } from 'react';
 
 
 
@@ -29,7 +30,12 @@ export const Register = () => {
     
   }, [email, password])
 
-
+// useEffect(() => {
+//    firebase.auth().onAuthStateChanged((user) => {
+//      user ? navigate("/welcome")
+//    })
+//  }
+//  )
 
   return (
     <form className={styles.formContainer} onSubmit={handleSignUp}>

@@ -7,12 +7,14 @@ import {
     faGoogle
   } 
   from "@fortawesome/free-brands-svg-icons";
+import { navigate } from '@reach/router';
 
 
 const SocialFollow = () => {
 
-  const goToSignInWithGoogle = () => {
-    firebase.auth().signInWithRedirect(provider)
+  const goToSignInWithGoogle = async() => {
+   await firebase.auth().signInWithRedirect(provider)
+    navigate("/welcome")
   }
 
   // const goToSignInWithFacebook = () => {
