@@ -2,7 +2,7 @@ import React from "react";
 import { Router } from "@reach/router";
 import Categories from "../../components/Categories";
 import SignUp from "../../components/SignUp/register";
-// import ActivityIdeas from "../../components/ActivityIdeas";
+import ActivityIdeas from "../../components/ActivityIdeas";
 import BookSmarts from "../../components/BookSmarts/BookSmarts";
 import BookInfo from "../../components/BookInfo";
 import AddChick from "../../components/AddChick";
@@ -23,8 +23,8 @@ const Routes = () => {
             <SignUp path="sign-up" />
             <AddChick path="add-chick" />
 
-      <AddChickAge path="add-chick-age" />
-
+            <AddChickAge path="add-chick-age" />
+            <ActivityIdeas path="categories/activity-ideas" />
             <AddChickAge path="add-chick-age" />
             <Tantrums path="/categories/sos/tantrums" />
             <ArticleReader path="article-reader" />
