@@ -5,7 +5,7 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import styles from "./NavBar.module.scss";
 import SideBar from "../SideBar";
 
-const NavBar = () => { 
+const NavBar = () => {
 
     const [ openSideBar, setOpenSideBar ] = useState(false);
     const showSideBar = openSideBar ? <SideBar /> : null;
