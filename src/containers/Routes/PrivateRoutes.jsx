@@ -6,11 +6,11 @@ const PrivateRoutes = (props) => {
   const { children } = props
   
   useEffect(() =>{
-    console.log('started useEffect')
+   // console.log('started useEffect')
     firebase.auth().onAuthStateChanged((user) => {
      !user ?  navigate("/sign-up") : navigate()
     }) 
-    console.log('finished useEffect')
+   // console.log('finished useEffect')
   }, [])
 
 
