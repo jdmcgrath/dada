@@ -8,9 +8,15 @@ import BookInfo from "../../components/BookInfo";
 import AddChick from "../../components/AddChick";
 import SOS from "../../components/SOS";
 import SplashScreen from "../../components/SplashScreen";
-import Tantrums from "../../components/Tantrums";
+import Tantrums from "../../components/Tantrums"
+import Aggression from "../../components/Aggression/AgressionMain";
+import Screaming from "../../components/Screaming/ScreamingMain";
+import Whining from "../../components/Whining/WhiningMain";
+import SleepIssues from "../../components/Sleep/SleepMain";
+import Rejection from "../../components/Rejection/RejectionMain";
 import ArticleReader from "../../components/ArticleReader";
 import Welcome from "../../components/Welcome";
+// import LogIn from "../../components/LogIn";
 // import SideBar from "../../components/SideBar";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
@@ -48,7 +54,7 @@ const Routes = (props) => {
             <Tantrums path="/categories/sos/tantrums" user={user} />
             <ArticleReader path="article-reader" user={user} />
             <BookSmarts path="categories/book-smarts" user={user} docs={docs}/>
-            <BookInfo path="categories/book-smarts/book-info/:BookId" docs={docs} />
+            <BookInfo path="categories/book-smarts/book-info/:BookId" user={user} docs={docs} />
             <SOS path="categories/sos" user={user} />
             <SplashScreen path="/" user={user}/>
             <Welcome path="welcome" user={user} />
@@ -60,3 +66,5 @@ const Routes = (props) => {
 //wait for sam, use what he gives us to allow us to sign up with facebook
 //check if logging in with different accounts accesses the same firebase user, if not, make in if statement to prohibiting them from accdesing the sign up page
 export default Routes;
+
+
