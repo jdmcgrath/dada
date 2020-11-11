@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Router } from "@reach/router";
 import Categories from "../../components/Categories";
 import SignUp from "../../components/SignUp/register";
@@ -14,10 +14,12 @@ import Welcome from "../../components/Welcome";
 // import SideBar from "../../components/SideBar";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
+import { firestore } from "../../firebase";
 // import PrivateRoutes from "../../containers/Routes/PrivateRoutes";
 
 const Routes = (props) => {  
 
+<<<<<<< HEAD
     const user = props.user;
 
     return(
@@ -35,6 +37,43 @@ const Routes = (props) => {
             <SplashScreen path="/" user={user}/>
             <Welcome path="welcome" user={user} />
             <UpYourGame path ="/categories/up-your-game" user={user} />
+=======
+    const [docs, setDocs] = useState([]);
+    // const getBookSmarts = () => {
+    //     firestore.collection("booksmarts").get().then((response) => {
+    //     const documents = response.docs.map(d => d.data());
+    //     setDocs(documents)
+    //     })
+    // };
+  
+    useEffect ( () => {
+        const getBookSmarts = () => {
+            firestore.collection("booksmarts").get().then((response) => {
+            const documents = response.docs.map(d => d.data());
+            setDocs(documents)
+            })
+        };
+        getBookSmarts();
+    }, []);
+    
+    return(
+        <Router>
+            <Categories path="categories" />
+            <SignUp path="sign-up" />
+            <AddChick path="add-chick" />
+            <AddChickAge path="add-chick-age" />
+            <ActivityIdeas path="categories/activity-ideas" />
+            <AddChickAge path="add-chick-age" />
+            <Tantrums path="/categories/sos/tantrums" />
+            <ArticleReader path="article-reader" />
+            <BookSmarts path="categories/book-smarts" docs={docs} />
+            <BookInfo path="categories/book-smarts/book-info/:BookId" docs={docs} />
+            <SOS path="categories/sos"/>
+            <SplashScreen path="/" />
+            <Welcome path="welcome" />
+            <UpYourGame path ="/categories/up-your-game" />
+            <ActivityIdeas path="categories/activity-ideas" />
+>>>>>>> de18628280ae3ff7ce3394ccb813e85e75ba874e
         </Router>
     )
 };

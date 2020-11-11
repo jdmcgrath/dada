@@ -3,7 +3,6 @@ import Routes from "./containers/Routes/Routes";
 import NavBar from "./components/NavBar";
 import firebase from "./firebase";
 
-
 export const App = () => {
 
   // user state to be passed through Routes
@@ -29,7 +28,11 @@ export const App = () => {
   return (
     <>
         <NavBar />
+<<<<<<< HEAD
         <Routes user={user}/>
+=======
+        <Routes  />
+>>>>>>> de18628280ae3ff7ce3394ccb813e85e75ba874e
     </> 
   )
 }
