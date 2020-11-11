@@ -1,11 +1,7 @@
 @import "../../assets/styles/abstracts/variables";
 @import "../../assets/styles/main.scss";
 
-// .sideBarContainer .popIn {
-//     transform: translateX(-100%);
-// }
-
-.sideBarContainer .popOut {
+.sideBarContainer.popOut {
     transform: translateX(0%);
 }
 
@@ -22,9 +18,9 @@
     height: 100vh;
     opacity: 0.9;
     padding: 20px;
-    transform: translateX(-100%);
     z-index: 10;
-    transition: transform 0.3s ease;
+    transition: transform 0.8s ease;
+    transform: translateX(100%);
 
     .buttonContainer {
         display: flex;
@@ -49,6 +45,11 @@
             background-color: transparent;
             border: 1px solid $offWhite;
             color: $offWhite;
+
+            &:hover {
+                background-color: white;
+                color: black;
+            }
         }
     }
 

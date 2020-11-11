@@ -13,10 +13,8 @@ import QuestionIcon from '../../assets/img/SideBarIcons/Question.svg';
 const SideBar = (props) => {
 
     const toggleSideBar = props.openSideBar ? styles.popOut : "";
-
-    // const slideMenuInOut = (props) => `transform: ${({ openSideBar }) => openSideBar ? 'translateX(0)' : 'translateX((-100%)'};`   
+   
     return (
-        // <section className={openSideBar ? "sideBarContainer active" : "sideBarContainer"}>
         <section className={`${styles.sideBarContainer} ${toggleSideBar}`}>
             <div className={styles.buttonContainer}>
                 <button className={styles.signUpBtn}>Sign Up</button>

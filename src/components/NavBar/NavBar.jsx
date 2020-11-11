@@ -8,7 +8,7 @@ import SideBar from "../SideBar";
 const NavBar = () => {
 
     const [ openSideBar, setOpenSideBar ] = useState(false);
-    const showSideBar = openSideBar ? <SideBar /> : null;
+    
     return ( 
         <>
             <header className={styles.navWrapper}>
@@ -24,8 +24,7 @@ const NavBar = () => {
                             className={styles.ellipses}
                             
                         />
-                        {/* <SideBar openSideBar={openSideBar}/> */}
-                        {showSideBar}
+                        <SideBar openSideBar={openSideBar}/>
                     </div>
                 </nav>
             </header>
