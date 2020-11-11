@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./Screaming.module.scss";
 import ScreamingForNow from "../ScreamingForNow";
 import ScreamingForNextTime from "../ScreamingForNextTime";
+import BottomNavBar from "../../BottomNavBar";
 
 const Agression = () => {
   const [toggleList, setToggleList] = useState(true);
@@ -53,6 +54,7 @@ const Agression = () => {
 
         <div>{showClickedList}</div>
       </div>
+      <BottomNavBar />
     </>
   );
 };

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./Agression.module.scss";
 import AgressionForNow from "../AgressionForNow";
 import AgressionForNextTime from "../AgressionForNextTime";
+import BottomNavBar from "../../BottomNavBar";
 
 const Agression = () => {
   const [toggleList, setToggleList] = useState(true);
@@ -53,6 +54,7 @@ const Agression = () => {
 
         <div>{showClickedList}</div>
       </div>
+      <BottomNavBar />
     </>
   );
 };
