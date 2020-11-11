@@ -3,6 +3,7 @@ import {Link} from "@reach/router";
 import styles from "./AddChick.module.scss";
 import BoyChick from "../../assets/img/AddChick/BoyChick.svg";
 import GirlChick from "../../assets/img/AddChick/GirlChick.svg";
+import { navigate } from '@reach/router';
 
 
 
@@ -20,6 +21,9 @@ console.log(toggleGender);
 
 
 
+    // const handleNextPage = () => {
+    //     navigate("/add-chick-age")
+    // }
     return (
 
         <div className={styles.pageContainer}>
@@ -45,10 +49,16 @@ console.log(toggleGender);
                 </form>
                
             <button type="submit" className={styles.primaryBtn}>
-            <Link to={`age/${chickName}`} >   
+            <Link to={`/add-chick-age/${chickName}`} >   
                     Next
                 </Link>
             </button>
+            {/* </form> */}
+            {/* <Link to="./AddChickAge"> */}
+            {/* <button onClick={handleNextPage} type="submit" className={styles.primaryBtn}>
+                Next
+                </button> */}
+            {/* </Link> */}
 
         </div>
     

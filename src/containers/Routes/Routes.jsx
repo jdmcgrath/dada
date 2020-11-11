@@ -2,7 +2,7 @@ import React from "react";
 import { Router } from "@reach/router";
 import Categories from "../../components/Categories";
 import SignUp from "../../components/SignUp/register";
-// import ActivityIdeas from "../../components/ActivityIdeas";
+import ActivityIdeas from "../../components/ActivityIdeas";
 import BookSmarts from "../../components/BookSmarts/BookSmarts";
 import BookInfo from "../../components/BookInfo";
 import AddChick from "../../components/AddChick";
@@ -16,23 +16,22 @@ import SleepIssues from "../../components/Sleep/SleepMain";
 import Rejection from "../../components/Rejection/RejectionMain";
 import ArticleReader from "../../components/ArticleReader";
 import Welcome from "../../components/Welcome";
+import LogIn from "../../components/LogIn";
 // import SideBar from "../../components/SideBar";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
-// import PrivateRoutes from "../../containers/Routes/PrivateRoutes"; 
-import LogIn from "../../components/LogIn";
+import PrivateRoutes from "../../containers/Routes/PrivateRoutes";
 
 const Routes = () => {   
     return(
         <Router>
-
             <Categories path="categories" />
             <SignUp path="sign-up" />
             <LogIn path ="log-in" />
             <AddChick path="sign-up/add-chick" />
-            <AddChickAge path="sign-up/add-chick/age/:chickName" />
+            <AddChickAge path="/add-chick-age/:chickName" />
 
-
+ 
 
             {/* <PrivateRoutes path="/">
                 <ActivityIdeas path="categories/activity-ideas" />
@@ -50,7 +49,7 @@ const Routes = () => {
 
 
 
-
+            <ActivityIdeas path="categories/activity-ideas" />
             <ArticleReader path="article-reader" />
             <BookSmarts path="categories/book-smarts" />
             <BookInfo path="categories/book-smarts/book-info" />
