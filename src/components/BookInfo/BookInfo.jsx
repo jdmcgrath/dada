@@ -6,7 +6,7 @@ const BookInfo = (props) => {
     
     const [currentBook, setCurrentBook] = useState(0);
     
-    
+
     useEffect(() => {
         console.log(props.BookId);
         setCurrentBook(props.BookId)

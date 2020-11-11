@@ -56,7 +56,6 @@ const Routes = (props) => {
             <Whining path="/categories/sos/whining" />
             <SleepIssues path="/categories/sos/sleep" />
             <Rejection path="/categories/sos/rejection" />
-
             <ActivityIdeas path="categories/activity-ideas" />
             <ArticleReader path="article-reader" />
             <BookSmarts path="categories/book-smarts" docs={docs} />
