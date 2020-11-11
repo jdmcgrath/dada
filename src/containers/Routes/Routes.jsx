@@ -48,7 +48,6 @@ const Routes = (props) => {
             <Welcome path="welcome" />
             <UpYourGame path ="/categories/up-your-game" />
             <ActivityIdeas path="categories/activity-ideas" />
-            
         </Router>
     )
 };

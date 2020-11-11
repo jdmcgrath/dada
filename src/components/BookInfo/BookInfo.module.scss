@@ -20,8 +20,9 @@
 
         .aboutBook {
             display: flex; 
-            flex-direction: row;
+            flex-direction: column;
             padding-bottom: 40px;
+
 
             .bookCover {
                 background-color: grey;
@@ -61,6 +62,7 @@
             border-top: 1px solid #979797;
             border-bottom: 1px solid #979797;
             padding: 15px 0;
+            justify-content: space-between;
 
             .readTime {
                 padding-right: 20px;
