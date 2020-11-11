@@ -18,7 +18,6 @@ const BookSmartCard = (props) => {
             publishDate,
             Img } = props.doc;
 
-   
     const increaseCount = () => {
       setCount(addCount => addCount + 1)
     }
