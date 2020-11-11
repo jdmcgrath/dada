@@ -28,11 +28,7 @@ export const App = () => {
   return (
     <>
         <NavBar />
-<<<<<<< HEAD
         <Routes user={user}/>
-=======
-        <Routes  />
->>>>>>> de18628280ae3ff7ce3394ccb813e85e75ba874e
     </> 
   )
 }
