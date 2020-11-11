@@ -15,8 +15,20 @@ const Article = (props) => {
 
   const [isFavourited, setIsFavourited] = useState(false);
 
+  const checkFavourites = async () => {
+    if (user) {
+      const docRef = await firestore.collection(collectionName).doc(`${user.uid}${artID}`);
+      docRef.get().then((doc) => {
+        if (doc.exists) {
+          setIsFavourited(true);
+        }
+      });
+    }
+  }
+
   useEffect(() => {
     checkFavourites();
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isFavourited])
 
   const toggleFav = async (e) => {
@@ -66,16 +78,7 @@ const Article = (props) => {
 
 
 
-  const checkFavourites = async () => {
-    if (user) {
-      const docRef = await firestore.collection(collectionName).doc(`${user.uid}${artID}`);
-      docRef.get().then((doc) => {
-        if (doc.exists) {
-          setIsFavourited(true);
-        }
-      });
-    }
-  }
+
 
 
   const displayBookmarkJSX = () => {

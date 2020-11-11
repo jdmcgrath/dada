@@ -17,10 +17,24 @@ const Video = (props) => {
   const collectionName = "activityIdeasVideos";
 
   const [isFavourited, setIsFavourited] = useState(false);
+ 
+  const checkFavourites = async () => {
+    if (user) {
+      const docRef = await firestore.collection(collectionName).doc(`${user.uid}${vidID}`);
+      docRef.get().then((doc) => {
+        if (doc.exists) {
+          setIsFavourited(true);
+        }
+      });
+    }
+  }
+
 
   useEffect(() => {
     checkFavourites();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isFavourited])
+
 
 
   const toggleFav = async (e) => {
@@ -67,16 +81,7 @@ const Video = (props) => {
     }
   }
 
-  const checkFavourites = async () => {
-    if (user) {
-      const docRef = await firestore.collection(collectionName).doc(`${user.uid}${vidID}`);
-      docRef.get().then((doc) => {
-        if (doc.exists) {
-          setIsFavourited(true);
-        }
-      });
-    }
-  }
+  
 
   const displayBookmarkJSX = () => {
     if (isFavourited) {
