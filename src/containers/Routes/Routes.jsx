@@ -20,15 +20,21 @@ import { firestore } from "../../firebase";
 const Routes = (props) => {  
 
     const [docs, setDocs] = useState([]);
-    const getBookSmarts = () => {
-        firestore.collection("booksmarts").get().then((response) => {
-        const documents = response.docs.map(d => d.data());
-        setDocs(documents)
-        })
-    };
+    // const getBookSmarts = () => {
+    //     firestore.collection("booksmarts").get().then((response) => {
+    //     const documents = response.docs.map(d => d.data());
+    //     setDocs(documents)
+    //     })
+    // };
   
     useEffect ( () => {
-         getBookSmarts();
+        const getBookSmarts = () => {
+            firestore.collection("booksmarts").get().then((response) => {
+            const documents = response.docs.map(d => d.data());
+            setDocs(documents)
+            })
+        };
+        getBookSmarts();
     }, []);
     
     return(
