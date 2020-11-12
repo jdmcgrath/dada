@@ -3,6 +3,7 @@ import { Link } from "@reach/router";
 import styles from "./AddChick.module.scss";
 import BoyChick from "../../assets/img/AddChick/BoyChick.svg";
 import GirlChick from "../../assets/img/AddChick/GirlChick.svg";
+import BottomNavBar from '../BottomNavBar/BottomNavBar';
 // import { navigate } from '@reach/router';
 
 const AddChick = () => {
@@ -48,6 +49,7 @@ const AddChick = () => {
           Next
         </button>
       </Link>
+      <BottomNavBar />
     </div>
   );
 };
