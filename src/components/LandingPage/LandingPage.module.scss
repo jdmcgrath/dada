@@ -1,0 +1,139 @@
+@import "../../assets/styles/abstracts/variables";
+@import "../../assets/styles/main.scss";
+
+.noNav {
+  z-index: 101;
+  background-color: $offWhite;
+}
+
+.splash {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+  align-content: center;
+  background-color: $offWhite;
+  width: 90%;
+  margin: auto;
+  img {
+    width: 166px;
+  }
+  .primaryBtn {
+    height: 50px;
+    width: 95px;
+    margin: 0;
+    font-size: 16px;
+    color: $deepPurple;
+    font-weight: bold;
+  }
+}
+.pageCont {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.sloganCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.slogan {
+  color: #1bb9f1;
+  font-family: Nunito;
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.textUndePhoneCont {
+  margin: 5%;
+  margin-top: 10%;
+}
+
+.textUnderPhone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+  font-size: 21px;
+  color: $deepPurple;
+}
+.forDad {
+  margin: 5%;
+  font-size: 18px;
+  color: #1bb9f1;
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 500;
+}
+.italics {
+  font-weight: 300;
+  font-style: italic;
+}
+.textFathers {
+  width: 82%;
+  text-align: center;
+  margin: 5%;
+}
+.secondaryBtn {
+  margin: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 50vw;
+  padding: 16pt 16pt 16pt 16pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listTitle {
+  font-size: 21px;
+  font-family: IBM Plex, Nunito;
+}
+
+.svgTextLi {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    display: inline-block;
+    height: inherit;
+    margin: 10px 10px;
+  }
+}
+
+p {
+  color: $deepPurple;
+  font-weight: 400;
+}
+
+h2 {
+  color: $deepPurple;
+  font-size: 21px;
+}
+.bottomTextCont {
+  background-color: #fffcdc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bottomCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+.bottomText {
+  color: #394167;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 12px;
+}

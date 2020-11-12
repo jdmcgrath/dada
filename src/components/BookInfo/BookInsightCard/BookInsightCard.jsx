@@ -5,10 +5,10 @@ const BookInsightCard = (props) => {
     return (
         <div className={styles.cardContainer}>
             <div className={styles.insightNumber}>
-                <p>1</p>
+                <p>{props.doc.insightNumber}</p>
             </div>
             <div className={styles.insightTitle}>
-                <p>The Value of Being a Playful Parent</p>
+                <p>{props.doc.insightTitle}</p>
             </div>        
         </div>
     )

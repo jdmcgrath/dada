@@ -1,12 +1,16 @@
-import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEllipsisV } from '@fortawesome/free-solid-svg-icons'
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
-import { navigate } from '@reach/router'
-import styles from "./NavBar.module.scss"
-import firebase from "../../firebase"
+import React, { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import styles from "./NavBar.module.scss";
+import SideBar from "../SideBar";
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { navigate } from '@reach/router';
+import firebase from "../../firebase";
 
 const NavBar = () => { 
+    const [ openSideBar, setOpenSideBar ] = useState(false);
+
     const handleBackButton = () => {
         if (window.location.pathname === "/categories") {
             return
@@ -15,7 +19,9 @@ const NavBar = () => {
         }
 
     }
-
+    const searchAlert = () => {
+        alert('Still in progress')
+    }
     const handlesSignOut = () => {
         firebase.auth().signOut().then(function() {
             navigate("/sign-up")
@@ -28,10 +34,21 @@ const NavBar = () => {
         <>
             <header className={styles.navWrapper}>
                 <nav className={styles.globalNav}>
-                    <FontAwesomeIcon icon={faChevronLeft} onClick={handleBackButton} className={styles.backButton}/>
+                    <div className={styles.faContainer}>
+                        <FontAwesomeIcon icon={faChevronLeft} onClick={handleBackButton} className={styles.backButton}/> 
+                    </div>
                     <FontAwesomeIcon icon={faChevronLeft} onClick={handlesSignOut} className={styles.backButton}/>
                     {/* <p className={styles.pageTitle}>Page Title</p> */}
-                    <FontAwesomeIcon icon={faEllipsisV} className={styles.ellipses}/>
+                    <div className={styles.faContainer} id={styles.ellipsesContainer} openSideBar={openSideBar}
+                    onClick={() => setOpenSideBar(!openSideBar)}>
+                        <FontAwesomeIcon onClick={searchAlert} icon={faSearch} className={styles.ellipses}/>
+                        <FontAwesomeIcon 
+                            icon={faEllipsisV} 
+                            className={styles.ellipses}
+                            
+                        />
+                        <SideBar openSideBar={openSideBar}/>
+                    </div>
                 </nav>
             </header>
         </>

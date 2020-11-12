@@ -1,21 +1,20 @@
-import React, { useState} from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./ActivityIdeas.module.scss";
 import VideoList from "../VideoList";
 import ArticleList from "../ArticleList";
 
 import BottomNavBar from "../../components/BottomNavBar";
-const ActivityIdeas = () => {
+const ActivityIdeas = (props) => {
 
   const [filterChosen, setFilterChosen] = useState("");
-
-  const [toggleList, setToggleList] = useState(true);
-
-    
-  const showClickedList = toggleList ?
+  const [toggleList, setToggleList] = useState(true);   
   
-    // <VideoList videos={videos} filterChosen={filterChosen} /> :
-    <VideoList filterChosen={filterChosen} /> :
-    <ArticleList filterChosen={filterChosen} />
+  const user = props.user;
+  
+  
+  const showClickedList = toggleList ?
+    <VideoList filterChosen={filterChosen} user={user} /> :
+    <ArticleList filterChosen={filterChosen} user={user} />
 
   const showButtons = toggleList ?
     <>
@@ -50,6 +49,10 @@ const ActivityIdeas = () => {
   const showFilterStrength = filterChosen === "strength" ?
     <li><span className={styles.filterOn} onClick={() => setFilterChosen("strength")}>STRENGTH</span></li>
     : <li><span onClick={() => setFilterChosen("strength")}>STRENGTH</span></li>
+
+    useEffect(() => {
+
+    }, [filterChosen]);
 
   return (
     <>

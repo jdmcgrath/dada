@@ -59,7 +59,7 @@ export const Register = () => {
         <input type="checkbox" id="terms-checkbox"></input>
 
         <p className={styles.terms}>
-          I read and agree to <span>Terms and Conditions</span>
+          I have read and agree to the <span>Terms and Conditions</span>
         </p>
       </div>
       <button type="submit" className={styles.signUpBtn}>
