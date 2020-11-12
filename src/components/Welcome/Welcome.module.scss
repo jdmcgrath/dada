@@ -34,3 +34,38 @@
         font-size: 16px;
     }
 }
+
+@media only screen and (min-width: 426px) {
+    .pageContainer {
+      width: 75vw;
+    
+        .chickCard {
+            height:65vh;
+        }
+
+        .imageContainer {
+            
+            img {
+                height: 200px;
+                width: auto;
+            }
+        }
+    }
+    
+  }
+
+ 
+  @media only screen and (min-width: 616px) {
+    .pageContainer {
+      width: 60vw;
+      
+    }
+    
+  }
+  
+  @media only screen and (min-width: 780px) {
+    .pageContainer {
+    width: 500px;
+  }
+  
+  }
