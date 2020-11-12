@@ -20,7 +20,7 @@ const SocialFollow = () => {
   const goToSignInWithFacebook = () => {
     firebase.auth().signInWithRedirect(providertwo)
   }
-// onClick={goToSignInWithFacebook}
+  
     return (
       <div className={styles.socialContainer}>
         <span onClick={goToSignInWithFacebook} className={styles.facebookSocial}>

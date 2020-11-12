@@ -19,10 +19,6 @@ const LoginSocialFollow = () => {
   })
   }
 
-  // const goToSignInWithFacebook = () => {
-  //   firebase.auth().signInWithCredential(Face)
-  // }
-// onClick={goToSignInWithFacebook}
     return (
       <div className={styles.socialContainer}>
         <span

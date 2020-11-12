@@ -6,7 +6,6 @@ import styles from "./NavBar.module.scss";
 import SideBar from "../SideBar";
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { navigate } from '@reach/router';
-import firebase from "../../firebase";
 
 const NavBar = () => {
     const [openSideBar, setOpenSideBar] = useState(false);
