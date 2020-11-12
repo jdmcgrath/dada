@@ -8,11 +8,11 @@ import BottomNavBar from "../../components/BottomNavBar";
 const Favorites = (props) => {
 
   const [filterChosen, setFilterChosen] = useState("");
-  const [toggleList, setToggleList] = useState(true);   
-  
+  const [toggleList, setToggleList] = useState(true);
+
   const user = props.user;
-  
-  
+
+
   const showClickedList = toggleList ?
     <FavoritesVideoList filterChosen={filterChosen} user={user} /> :
     <FavoritesArticleList filterChosen={filterChosen} user={user} />
@@ -51,9 +51,18 @@ const Favorites = (props) => {
     <li><span className={styles.filterOn} onClick={() => setFilterChosen("strength")}>STRENGTH</span></li>
     : <li><span onClick={() => setFilterChosen("strength")}>STRENGTH</span></li>
 
-    useEffect(() => {
+  const showFilterCreativity = filterChosen === "creativity" ?
+    <li><span className={styles.filterOn} onClick={() => setFilterChosen("creativity")}>CREATIVITY</span></li>
+    : <li><span onClick={() => setFilterChosen("creativity")}>CREATIVITY</span></li>
 
-    }, [filterChosen]);
+  const showFilterLogic = filterChosen === "logic" ?
+    <li><span className={styles.filterOn} onClick={() => setFilterChosen("logic")}>LOGIC</span></li>
+    : <li><span onClick={() => setFilterChosen("logic")}>LOGIC</span></li>
+
+
+  useEffect(() => {
+
+  }, [filterChosen]);
 
   return (
     <>
@@ -70,6 +79,8 @@ const Favorites = (props) => {
             {showFilterSocialSkills}
             {showFilterLanguage}
             {showFilterStrength}
+            {showFilterCreativity}
+            {showFilterLogic}
           </ul>
         </div>
         <div>{showClickedList}</div>
