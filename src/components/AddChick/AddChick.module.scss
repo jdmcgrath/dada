@@ -47,14 +47,14 @@
       padding: 20px 0 20px 0;
     }
   }
+  .secondaryBtn {
+    width: 186px;
+    height: 45px;
+    outline: none;
+    background-color: $deepPurple;
+    margin-top: 7.3vh;
+    color: white;
+    font-size: 16px;
+  }
 }
 
-.secondaryBtn {
-  width: 186px;
-  height: 45px;
-  outline: none;
-  background-color: $deepPurple;
-  margin-top: 7.3vh;
-  color: white;
-  font-size: 16px;
-}
