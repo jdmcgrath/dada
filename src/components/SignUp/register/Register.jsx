@@ -5,7 +5,6 @@ import SocialFollow from './SocialFollow';
 import firebase from "../../../firebase"
 
 export const Register = (props) => {
-  const { user } = props
   const passwordRef = useRef()
   const emailRef = useRef()
 
