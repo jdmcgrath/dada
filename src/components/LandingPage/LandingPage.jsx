@@ -10,10 +10,10 @@ import LiftingPenguin from "../../assets/img/Landing/LiftingPenguin.svg";
 
 const LandingPage = () => {
   return (
-    <div>
+    <div className={styles.noNav}>
       <div className={styles.splash}>
         <img src={splash} alt="splash" />
-        <button>Login</button>
+        <button className={styles.primaryBtn}>Login</button>
       </div>
 
       <div className={styles.pageCont}>
@@ -72,15 +72,16 @@ const LandingPage = () => {
           </li>
         </ul>
       </div>
-      <div className={styles.pageCont}><button className={styles.secondaryBtn}>Sign Up</button></div>
+      <div className={styles.pageCont}>
+        <button className={styles.secondaryBtn}>Sign Up</button>
+      </div>
       <div className={styles.bottomTextCont}>
         <div className={styles.bottomCont}>
-        <h2 className={styles.bottomText}>Contact Us</h2>
-        <h2 className={styles.bottomText}>Privacy</h2>
-        <h2 className={styles.bottomText}>Terms</h2>
+          <h2 className={styles.bottomText}>Contact Us</h2>
+          <h2 className={styles.bottomText}>Privacy</h2>
+          <h2 className={styles.bottomText}>Terms</h2>
         </div>
       </div>
-      
     </div>
   );
 };

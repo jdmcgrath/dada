@@ -1,26 +1,29 @@
 @import "../../assets/styles/abstracts/variables";
 @import "../../assets/styles/main.scss";
 
+.noNav {
+  z-index: 101;
+  background-color: $offWhite;
+}
+
 .splash {
-  margin-top: 80px;
-  position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   height: 100px;
   align-items: center;
   align-content: center;
+  background-color: $offWhite;
+  width: 90%;
+  margin: auto;
   img {
-    position: absolute;
-    left: 10%;
-    height: inherit;
-    width: 50%;
-    z-index: 0;
+    width: 166px;
   }
-  button {
-    position: absolute;
-    right: 10%;
-    width: 20%;
-    height: 80%;
+  .primaryBtn {
+    width: 95px;
+    margin: 0;
+    font-size: 16px;
+    color: $deepPurple;
+    font-weight: bold;
   }
 }
 .pageCont {
@@ -33,17 +36,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 8%;
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
+
 .slogan {
   color: #1bb9f1;
   font-family: Nunito;
   font-weight: 800;
   font-size: 25px;
 }
+
 .textUndePhoneCont {
-  margin: 8%;
+  margin: 5%;
+  margin-top: 10%;
 }
+
 .textUnderPhone {
   display: flex;
   flex-direction: column;
@@ -53,7 +61,7 @@
   color: $deepPurple;
 }
 .forDad {
-  margin: 20px;
+  margin: 5%;
   font-size: 18px;
   color: #1bb9f1;
   font-weight: 600;
@@ -69,9 +77,10 @@
 .textFathers {
   width: 82%;
   text-align: center;
+  margin: 5%;
 }
 .secondaryBtn {
-  margin: 40px;
+  margin: 25px;
   font-size: 16px;
   font-weight: bold;
   width: 50vw;
@@ -109,23 +118,22 @@ h2 {
   color: $deepPurple;
   font-size: 21px;
 }
-.bottomTextCont{ 
-    background-color: #fffcdc;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+.bottomTextCont {
+  background-color: #fffcdc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.bottomCont{ 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
+.bottomCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
 }
-.bottomText{ 
-    color: #394167;
-    font-weight: 500;
-    font-size: 18px;
-    padding:12px;
+.bottomText {
+  color: #394167;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 12px;
 }
 //when styling more or less there, slack steve telling him I am ready for him and jdog to have a look
