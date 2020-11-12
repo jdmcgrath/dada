@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./Whining.module.scss";
 import WhiningForNow from "../WhiningForNow";
 import WhiningForNextTime from "../WhiningForNextTime";
+import BottomNavBar from "../../BottomNavBar";
 
 const Whining = () => {
   const [toggleList, setToggleList] = useState(true);
@@ -53,6 +54,7 @@ const Whining = () => {
 
         <div>{showClickedList}</div>
       </div>
+      <BottomNavBar />
     </>
   );
 };

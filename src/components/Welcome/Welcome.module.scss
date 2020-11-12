@@ -9,7 +9,7 @@
         display: flex;
         flex-direction: column;
         background-color: rgba(75, 191, 232, 0.2);
-        border-radius: 10px;
+        border-radius: 6px;
         width: 80%;
         height: 50vh;
         align-items: center;
@@ -22,12 +22,15 @@
         }
 
         p {
-            font-weight: 400;
+            font-weight: 500;
+            font-size: 18px;
         }
     }
 
-    .primaryBtn {
-        margin-top: 70px;
+    .secondaryBtn {
+        margin-top: 12.5vh;
         width: 186px;
+        height: 45px;
+        font-size: 16px;
     }
 }

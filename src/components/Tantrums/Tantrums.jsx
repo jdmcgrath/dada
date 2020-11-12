@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./Tantrums.module.scss";
 import TantrumsForNow from "../TantrumsForNow";
 import TantrumsForNextTime from "../TantrumsForNextTime";
+import BottomNavBar from "../BottomNavBar";
 
 const Tantrums = () => {
   const [toggleList, setToggleList] = useState(true);
@@ -53,6 +54,7 @@ const Tantrums = () => {
 
         <div>{showClickedList}</div>
       </div>
+      <BottomNavBar />
     </>
   );
 };
