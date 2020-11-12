@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styles from "./Rejection.module.scss";
 import RejectionForNow from "../RejectionForNow";
 import RejectionForNextTime from "../RejectionForNextTime";
+import BottomNavBar from "../../BottomNavBar";
+
 
 const Rejection = () => {
   const [toggleList, setToggleList] = useState(true);
@@ -53,6 +55,7 @@ const Rejection = () => {
 
         <div>{showClickedList}</div>
       </div>
+      <BottomNavBar />
     </>
   );
 };

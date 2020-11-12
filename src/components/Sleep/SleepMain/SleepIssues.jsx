@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styles from "./Sleep.module.scss";
 import SleepForNow from "../SleepForNow";
 import SleepForNextTime from "../SleepForNextTime";
+import BottomNavBar from "../../BottomNavBar";
+
 
 const Sleep = () => {
   const [toggleList, setToggleList] = useState(true);
@@ -53,6 +55,7 @@ const Sleep = () => {
 
         <div>{showClickedList}</div>
       </div>
+      <BottomNavBar />
     </>
   );
 };

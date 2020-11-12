@@ -9,7 +9,7 @@ import AddChick from "../../components/AddChick";
 import SOS from "../../components/SOS";
 import SplashScreen from "../../components/SplashScreen";
 import Tantrums from "../../components/Tantrums";
-import Aggression from "../../components/Aggression/AgressionMain";
+import Aggression from "../../components/Aggression/AggressionMain";
 import Screaming from "../../components/Screaming/ScreamingMain";
 import Whining from "../../components/Whining/WhiningMain";
 import SleepIssues from "../../components/Sleep/SleepMain";
@@ -24,13 +24,7 @@ import Favorites from "../../components/Favorites";
 import { firestore } from "../../firebase";
 
 const Routes = (props) => {
-  // const [docs, setDocs] = useState([]);
-  // const getBookSmarts = () => {
-  //     firestore.collection("booksmarts").get().then((response) => {
-  //     const documents = response.docs.map(d => d.data());
-  //     setDocs(documents)
-  //     })
-  // };
+
 
   const user = props.user;
 
@@ -47,7 +41,7 @@ const Routes = (props) => {
         });
     };
 
-    getBookSmarts();
+    getBookSmarts();      
   }, []);
 
   return (
