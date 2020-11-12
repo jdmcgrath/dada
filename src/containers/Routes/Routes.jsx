@@ -21,6 +21,7 @@ import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
 import ProfileSignIn from "../../components/ProfileSignIn";
 import BookInsights from "../../components/BookInfo/BookInsights";
+import Favourites from "../../components/Favorites";
 import { firestore } from "../../firebase";
 
 const Routes = (props) => {
@@ -67,6 +68,7 @@ const Routes = (props) => {
             <Whining path="/categories/sos/whining" user={user} />
             <UpYourGame path ="/categories/up-your-game" user={user} />
             <ProfileSignIn path="/profile-sign-in" />
+            <Favourites path="favourites" user={user} />
         </Router>
     )
 };

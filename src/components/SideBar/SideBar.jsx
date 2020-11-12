@@ -12,35 +12,96 @@ import QuestionIcon from '../../assets/img/SideBarIcons/Question.svg';
 
 const SideBar = (props) => {
 
-    const toggleSideBar = props.openSideBar ? styles.popOut : "";
+    const { user, openSideBar } = props;
 
-    const checkUserSignedIn = (props) => {
-        (user) ? null : 
+    console.log(user);
+
+    const toggleSideBar = openSideBar ? styles.popOut : "";
+
+    const displaySignInLogIn = user ? (null)
+        : 
         (<div className={styles.buttonContainer}>
             <Link to="/sign-up">
             <button className={styles.signUpBtn}>Sign Up</button>
             </Link>
             <button className={styles.loginBtn}>Login</button>
-        </div>)
-    }
+        </div>
+    );
+
+    const displayLogOut = user ? 
+    (
+        <footer className={styles.sideBarFooter}>
+            <img src={DoorIcon} alt="logout-icon" />
+            <p>Logout</p>
+        </footer>
+    ) : (
+        (null)
+    );
+
+    const favouritesRedirect = user ? 
+    (
+        <Link to="/favourites">
+            <div className={styles.pathItems}>
+                <img src={BookmarkIcon} alt="sidebar-icons"/>
+                <p>Favourites</p>
+            </div>
+        </Link>
+    ) : (
+        <Link to="/profile-sign-in">
+            <div className={styles.pathItems}>
+                <img src={BookmarkIcon} alt="sidebar-icons"/>
+                <p>Favourites</p>
+            </div>
+        </Link>
+    );
+
+    const profileRedirect = user ?
+    (
+        <Link to="/registereduserprofile">
+            <div className={styles.pathItems}>
+                <img src={ProfileIcon} alt="sidebar-icons"/>
+                <p>Profile</p>
+            </div>
+        </Link>
+    ) : (
+        <Link to="/profile-sign-in">
+            <div className={styles.pathItems}>
+                <img src={ProfileIcon} alt="sidebar-icons"/>
+                <p>Profile</p>
+            </div>
+        </Link>
+    );
+
+    // const displaySignInLogIn = (user) => {
+    //     if (user === null) {
+    //         return (<div className={styles.buttonContainer}>
+    //                     <Link to="/sign-up">
+    //                     <button className={styles.signUpBtn}>Sign Up</button>
+    //                     </Link>
+    //                      <button className={styles.loginBtn}>Login</button>
+    //                 </div>)
+    //     } else {
+    //         return null;
+    //     }
+    // }
+
+    // const checkUserSignedIn = (props) => {
+    //     (user) ? null : 
+    //     (<div className={styles.buttonContainer}>
+    //         <Link to="/sign-up">
+    //         <button className={styles.signUpBtn}>Sign Up</button>
+    //         </Link>
+    //         <button className={styles.loginBtn}>Login</button>
+    //     </div>)
+    // }
    
     return (
         <section className={`${styles.sideBarContainer} ${toggleSideBar}`}>
-            {checkUserSignedIn}
+            {displaySignInLogIn}
             <main className={styles.appPathLinks}>
                 <div className={styles.appPathItems}>
-                    <Link to="/profile-sign-in">
-                    <div className={styles.pathItems}>
-                        <img src={BookmarkIcon} alt="sidebar-icons"/>
-                        <p>Favourites</p>
-                    </div>
-                    </Link>
-                    <Link to="/profile-sign-in">
-                    <div className={styles.pathItems}>
-                        <img src={ProfileIcon} alt="sidebar-icons"/>
-                        <p>Profile</p>
-                    </div>
-                    </Link>
+                    {favouritesRedirect}
+                    {profileRedirect}
                 </div>
                 <div className={styles.appInfoItems}>
                     <div className={styles.infoItems}>
@@ -57,10 +118,7 @@ const SideBar = (props) => {
                     </div>
                 </div>
             </main>
-            <footer className={styles.sideBarFooter}>
-                <img src={DoorIcon} alt="logout-icon" />
-                <p>Logout</p>
-            </footer>
+            {displayLogOut}
         </section>
     )
 }
