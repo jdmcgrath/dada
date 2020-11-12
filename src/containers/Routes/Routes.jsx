@@ -41,7 +41,7 @@ const Routes = (props) => {
         });
     };
 
-    getBookSmarts();
+    getBookSmarts();      
   }, []);
 
   return (
