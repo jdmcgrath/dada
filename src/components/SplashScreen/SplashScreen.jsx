@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./SplashScreen.module.scss";
 import splash from "../../assets/img/DadaLogoBlue.svg";
 import DeviceMockup from "../../assets/img/DeviceMockup.svg";
@@ -9,6 +9,17 @@ import ReadingPenguin from "../../assets/img/Landing/ReadingPenguin.svg";
 import LiftingPenguin from "../../assets/img/Landing/LiftingPenguin.svg";
 
 const LandingPage = () => {
+
+  // const getClassNames = () => { 
+  //   const classes = {[ styles.needsReversing, styles.svgTextLi ]}.join('')
+  //   return classes
+  // }
+  useEffect(() => {
+    getClassNames()
+  }, [])
+
+
+
   return (
     <div className={styles.noNav}>
       <div className={styles.splash}>
@@ -56,7 +67,7 @@ const LandingPage = () => {
               most common parenting challenges
             </p>
           </li>
-          <li className={styles.svgTextLi}>
+          <li className={getClassNames}>
             <p>
               <span className={styles.bold}>Cliff-notes</span> from top-rated
               parenting books{" "}

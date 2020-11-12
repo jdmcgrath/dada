@@ -162,5 +162,22 @@ h2 {
 
   .textFathers{
     font-size: 18px;
+    width: 65%;
+  }
+
+  .secondaryBtn {
+    width: 186px;
+    height: 45px;
+  }
+  .svgTextLi {
+    flex-direction: column-reverse;
+  }
+  ul{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .needsReversing{ 
+    flex-direction: column;
+    color: pink;
   }
 }
