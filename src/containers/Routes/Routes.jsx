@@ -19,6 +19,7 @@ import Welcome from "../../components/Welcome";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
 import ProfileSignIn from "../../components/ProfileSignIn";
+import Favorites from "../../components/Favorites";
 // import LogIn from "../../components/LogIn";
 import { firestore } from "../../firebase";
 
@@ -51,6 +52,7 @@ const Routes = (props) => {
             <BookInfo path="categories/book-smarts/book-info/:BookId" docs={docs} user={user} />
             <BookSmarts path="categories/book-smarts" docs={docs} user={user}/>
             <Categories path="categories" user={user} />
+            <Favorites path="favorites" user={user} />
             <Rejection path="/categories/sos/rejection" user={user} />
             <Screaming path="/categories/sos/screaming" user={user} />
             <SignUp path="sign-up" user={user} />
