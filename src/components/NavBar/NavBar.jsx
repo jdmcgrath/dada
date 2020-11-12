@@ -22,14 +22,14 @@ const NavBar = () => {
     const searchAlert = () => {
         alert('Still in progress')
     }
-    const handlesSignOut = () => {
-        firebase.auth().signOut().then(function() {
-            navigate("/sign-up")
-            alert("You SIGNED OUT!!!")
-          }).catch(function(error) {
-              alert("error")
-          });
-    }
+    // const handlesSignOut = () => {
+    //     firebase.auth().signOut().then(function() {
+    //         navigate("/sign-up")
+    //         alert("You SIGNED OUT!!!")
+    //       }).catch(function(error) {
+    //           alert("error")
+    //       });
+    // }
     return ( 
         <>
             <header className={styles.navWrapper}>
@@ -37,8 +37,6 @@ const NavBar = () => {
                     <div className={styles.faContainer}>
                         <FontAwesomeIcon icon={faChevronLeft} onClick={handleBackButton} className={styles.backButton}/> 
                     </div>
-                    <FontAwesomeIcon icon={faChevronLeft} onClick={handlesSignOut} className={styles.backButton}/>
-                    {/* <p className={styles.pageTitle}>Page Title</p> */}
                     <div className={styles.faContainer} id={styles.ellipsesContainer} openSideBar={openSideBar}
                     onClick={() => setOpenSideBar(!openSideBar)}>
                         <FontAwesomeIcon onClick={searchAlert} icon={faSearch} className={styles.ellipses}/>
