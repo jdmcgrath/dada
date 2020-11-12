@@ -2,6 +2,7 @@ import React from 'react';
 import styles from "./SideBar.module.scss";
 
 import { Link } from '@reach/router';
+import firebase from '../../firebase';
 
 import BookmarkIcon from '../../assets/img/SideBarIcons/Bookmark.svg';
 import ProfileIcon from '../../assets/img/SideBarIcons/Profile.svg';
@@ -9,6 +10,8 @@ import DoorIcon from '../../assets/img/SideBarIcons/DoorIcon.svg';
 import CogIcon from '../../assets/img/SideBarIcons/Cog.svg';
 import InfoIcon from '../../assets/img/SideBarIcons/Info.svg';
 import QuestionIcon from '../../assets/img/SideBarIcons/Question.svg';
+
+
 
 const SideBar = (props) => {
 
@@ -18,9 +21,13 @@ const SideBar = (props) => {
 
     const toggleSideBar = openSideBar ? styles.popOut : "";
 
-    const displaySignInLogIn = user ? (null)
-        : 
-        (<div className={styles.buttonContainer}>
+    // firebase.auth().signOut()
+
+    const signOutUser = firebase.auth().signOut();
+
+    const displaySignInLogIn = user ? (null) : 
+    (
+        <div className={styles.buttonContainer}>
             <Link to="/sign-up">
             <button className={styles.signUpBtn}>Sign Up</button>
             </Link>
@@ -30,7 +37,7 @@ const SideBar = (props) => {
 
     const displayLogOut = user ? 
     (
-        <footer className={styles.sideBarFooter}>
+        <footer className={styles.sideBarFooter} onClick={signOutUser}>
             <img src={DoorIcon} alt="logout-icon" />
             <p>Logout</p>
         </footer>
