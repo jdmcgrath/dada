@@ -16,12 +16,11 @@ import SleepIssues from "../../components/Sleep/SleepMain";
 import Rejection from "../../components/Rejection/RejectionMain";
 import ArticleReader from "../../components/ArticleReader";
 import Welcome from "../../components/Welcome";
-// import LogIn from "../../components/LogIn";
-// import SideBar from "../../components/SideBar";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
+import ProfileSignIn from "../../components/ProfileSignIn";
+// import LogIn from "../../components/LogIn";
 import { firestore } from "../../firebase";
-// import PrivateRoutes from "../../containers/Routes/PrivateRoutes";
 
 const Routes = (props) => {  
 
@@ -44,7 +43,6 @@ const Routes = (props) => {
     
     return(
         <Router>
-
             <ActivityIdeas path="categories/activity-ideas" user={user} />
             <AddChick path="add-chick" user={user} />
             <AddChickAge path="add-chick-age/:chickName" user={user} />
@@ -63,7 +61,7 @@ const Routes = (props) => {
             <Welcome path="welcome" user={user} />
             <Whining path="/categories/sos/whining" user={user} />
             <UpYourGame path ="/categories/up-your-game" user={user} />
-
+            <ProfileSignIn path="/profile-sign-in" />
         </Router>
     )
 };

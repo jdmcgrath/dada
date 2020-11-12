@@ -19,7 +19,6 @@
     color: white;
     background-color: $deepPurple;
     height: 47px;
-    border: 1px solid #979797;
     box-shadow: none;
     transition: 0.2s;
     cursor: pointer;
@@ -49,12 +48,13 @@
     align-items: center;
     margin: 0 auto;
     width: 90%;
-    height: 50px;
+    height: 70px;
 
     input {
       margin-right: 5px;
       height: 10px;
       border-radius: 30px;
+      margin-right: 10px;
     }
   }
 
