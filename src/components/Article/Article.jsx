@@ -3,6 +3,7 @@ import styles from "./Article.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark as faSolidBookmark } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark as faOpenBookmark } from '@fortawesome/free-regular-svg-icons';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { firestore } from "../../firebase";
 import { navigate } from '@reach/router';
 
@@ -102,6 +103,7 @@ const Article = (props) => {
         
       </div>
       <span onClick={toggleFav}>{displayBookmarkJSX()}</span>
+      <span><FontAwesomeIcon icon={faChevronRight} className={styles.rightChevron}/></span>
     </div>
     
   );
