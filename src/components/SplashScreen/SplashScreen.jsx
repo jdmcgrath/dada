@@ -45,11 +45,11 @@ const LandingPage = () => {
             />
           </div>
           <div className={styles.leftGridForDesktop}>
-            <div className={styles.textUndePhoneCont}>
+            <div className={styles.textUnderPhoneCont}>
               <h3 className={styles.textUnderPhone}>
                 Most parenting resources are built with moms in mind.
               </h3>
-            </div>
+            
             <h3 className={styles.forDad}>We've created one for you, Dad!</h3>
             <p className={styles.textFathers}>
               We want to empower fathers to parent with confidence and enjoy
@@ -58,6 +58,7 @@ const LandingPage = () => {
             <Link to="/categories">
               <button className={styles.secondaryBtn}>Get Dadvice</button>
             </Link>
+            </div>
           </div>
         </div>
         <h2 className={styles.listTitle}>Here you will find:</h2>
