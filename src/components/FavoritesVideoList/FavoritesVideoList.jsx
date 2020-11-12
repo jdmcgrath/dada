@@ -28,7 +28,7 @@ const FavoritesVideoList = (props) => {
   useEffect(() => {
 
     // MB - added filter to remove any copies made when favouriting (where uID exists)
-    let filteredVideos = docs.filter(v => v.uID == user.uid);
+    let filteredVideos = docs.filter(v => v.uID === user.uid);
    
     // first check if there are no filter categories selected... because we don't want to filter when there aren't
     if (filterChosen) {

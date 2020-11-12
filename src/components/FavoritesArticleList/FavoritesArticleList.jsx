@@ -27,7 +27,7 @@ const FavoritesArticleList = (props) => {
 
  
   useEffect(() => {
-    let filteredArticles = docs.filter(a => a.uID == user.uid);
+    let filteredArticles = docs.filter(a => a.uID === user.uid);
 
     // first check if there are no filters... because we don't want to filter when there aren't
     if (filterChosen) {
