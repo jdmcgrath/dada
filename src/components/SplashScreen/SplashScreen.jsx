@@ -9,16 +9,13 @@ import ReadingPenguin from "../../assets/img/Landing/ReadingPenguin.svg";
 import LiftingPenguin from "../../assets/img/Landing/LiftingPenguin.svg";
 
 const LandingPage = () => {
-
-  // const getClassNames = () => { 
+  // const getClassNames = () => {
   //   const classes = {[ styles.needsReversing, styles.svgTextLi ]}.join('')
   //   return classes
-  // }
-  useEffect(() => {
-    getClassNames()
-  }, [])
-
-
+  // // }
+  // useEffect(() => {
+  //   getClassNames()
+  // }, [])
 
   return (
     <div className={styles.noNav}>
@@ -37,9 +34,7 @@ const LandingPage = () => {
 
         <div className={styles.textUndePhoneCont}>
           <h3 className={styles.textUnderPhone}>
-            Most parenting resources are built with moms in mind.
-          
-          </h3>
+            Most parenting resources are built with moms in mind.</h3>
         </div>
         <h3 className={styles.forDad}>We've created one for you, Dad!</h3>
         <p className={styles.textFathers}>
@@ -67,7 +62,7 @@ const LandingPage = () => {
               most common parenting challenges
             </p>
           </li>
-          <li className={getClassNames}>
+          <li className={styles.svgTextLi}>
             <p>
               <span className={styles.bold}>Cliff-notes</span> from top-rated
               parenting books{" "}

@@ -169,12 +169,28 @@ h2 {
     width: 186px;
     height: 45px;
   }
-  .svgTextLi {
-    flex-direction: column-reverse;
-  }
   ul{ 
     display: grid;
     grid-template-columns: 1fr 1fr;
+    
+    .svgTextLi{
+      display: grid;
+      grid-template-rows: 3fr 1fr;
+      
+      img{
+        grid-row-start: 1;
+        display: flex;
+        align-self: flex-end;
+        justify-self: center;
+        width: 200px;
+
+      }
+      p {
+        align-self: flex-start;
+        grid-row-start: 2;
+        text-align: center;
+      }
+    }
   }
   .needsReversing{ 
     flex-direction: column;
