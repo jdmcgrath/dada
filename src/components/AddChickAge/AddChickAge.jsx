@@ -2,7 +2,7 @@ import React, { useState, useEffect} from "react";
 import styles from "./AddChickAge.module.scss";
 import GirlChick from "../../assets/img/AddChick/GirlChick.svg";
 import { navigate } from "@reach/router";
-
+import BottomNavBar from '../BottomNavBar/BottomNavBar';
 
 
 const AddChickAge = (props) => {
@@ -49,11 +49,12 @@ const AddChickAge = (props) => {
       </div>
 
       {/* <Link to="./AddChickEnd"> */}
-      <button onClick={handleNextPageSplash}type="submit" className={styles.primaryBtn}>Next</button>
+      <button onClick={handleNextPageSplash}type="submit" className={styles.secondaryBtn}>Next</button>
       {/* </Link> */}
       {/* <AddChickAge
       
       />  */}
+      <BottomNavBar />
     </div>
   );
 };
