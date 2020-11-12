@@ -17,11 +17,7 @@ const SideBar = (props) => {
 
     const { user, openSideBar } = props;
 
-    console.log(user);
-
     const toggleSideBar = openSideBar ? styles.popOut : "";
-
-    // firebase.auth().signOut()
 
     const signOutUser = firebase.auth().signOut();
 
@@ -78,29 +74,6 @@ const SideBar = (props) => {
             </div>
         </Link>
     );
-
-    // const displaySignInLogIn = (user) => {
-    //     if (user === null) {
-    //         return (<div className={styles.buttonContainer}>
-    //                     <Link to="/sign-up">
-    //                     <button className={styles.signUpBtn}>Sign Up</button>
-    //                     </Link>
-    //                      <button className={styles.loginBtn}>Login</button>
-    //                 </div>)
-    //     } else {
-    //         return null;
-    //     }
-    // }
-
-    // const checkUserSignedIn = (props) => {
-    //     (user) ? null : 
-    //     (<div className={styles.buttonContainer}>
-    //         <Link to="/sign-up">
-    //         <button className={styles.signUpBtn}>Sign Up</button>
-    //         </Link>
-    //         <button className={styles.loginBtn}>Login</button>
-    //     </div>)
-    // }
    
     return (
         <section className={`${styles.sideBarContainer} ${toggleSideBar}`}>
