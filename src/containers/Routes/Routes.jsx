@@ -18,7 +18,6 @@ import ArticleReader from "../../components/ArticleReader";
 import Welcome from "../../components/Welcome";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
-import LandingPage from "../../components/LandingPage/LandingPage";
 import ProfileSignIn from "../../components/ProfileSignIn";
 import Favorites from "../../components/Favorites";
 // import LogIn from "../../components/LogIn";
