@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import styles from "./SplashScreen.module.scss";
 import splash from "../../assets/img/DadaLogoBlue.svg";
 import DeviceMockup from "../../assets/img/DeviceMockup.svg";
+import AllDevices from "../../assets/img/Landing/AllDevices.svg";
 import { Link } from "@reach/router";
 import IdeaPenguin from "../../assets/img/Landing/IdeaPenguin.svg";
 import AngryPenguin from "../../assets/img/Landing/AngryPenguin.svg";
@@ -30,11 +31,24 @@ const LandingPage = () => {
         <div className={styles.sloganCont}>
           <h1 className={styles.slogan}>A parenting coach in your pocket</h1>
         </div>
-        <img src={DeviceMockup} alt="device"></img>
-
+        <img
+          src={DeviceMockup}
+          className={styles.phoneForMobile}
+          alt="device"
+        ></img>
+        <img
+         
+          src={AllDevices}
+        
+           className={styles.phoneForTablet}
+        
+           alt="device showing app"
+       
+        />
         <div className={styles.textUndePhoneCont}>
           <h3 className={styles.textUnderPhone}>
-            Most parenting resources are built with moms in mind.</h3>
+            Most parenting resources are built with moms in mind.
+          </h3>
         </div>
         <h3 className={styles.forDad}>We've created one for you, Dad!</h3>
         <p className={styles.textFathers}>
