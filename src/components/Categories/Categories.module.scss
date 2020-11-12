@@ -5,7 +5,6 @@
   box-shadow: none;
   padding-bottom: 21px;
 }
-
 .pageContainer {
   .gridContainer {
     .card {
@@ -65,6 +64,9 @@
   }
 }
 @media only screen and (min-width: 768px) {
+  h1{
+    margin-bottom: 3vh !important;
+  }
   .pageContainer {
     .gridContainer {
       display: grid;

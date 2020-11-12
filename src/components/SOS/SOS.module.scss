@@ -5,7 +5,9 @@
   height: 8.25vh;
   background-color: white;
   border-bottom: 10px solid $icyPurple;
+
 }
+
 
 .pageContainer {
   margin-top: 20px;
@@ -48,6 +50,9 @@
   }
 }
 @media only screen and (min-width: 768px) {
+  h1{
+    margin-bottom: 3vh !important;
+  }
   .pageContainer {
     margin-top: 20px;
     .gridContainer {

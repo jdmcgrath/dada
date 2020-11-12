@@ -8,16 +8,13 @@ const BookInsights = (props) => {
     
 
     useEffect(() => {
-        console.log(props.BookId);
         setCurrentBook(props.BookId)
     }, [props.BookId])
 
     useEffect(() => {
-        console.log(props.insightID);
         setCurrentInsight(props.insightID);
     }, [props.insightID]);
 
-console.log(currentBook)
 console.log(props.docs[currentBook].KeyInsights[currentInsight].insightTitle);
 
     return (

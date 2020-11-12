@@ -10,16 +10,14 @@ import { faArrowCircleUp } from "@fortawesome/free-solid-svg-icons";
 const BookSmartCard = (props) => {
     const [count, setCount] = useState(0);
 
-    console.log(props)
-
     const { BookId,
             Title, 
             Author,
             publishDate,
             Img } = props.doc;
 
-    const increaseCount = () => {
-        setCount(addCount => addCount + 1)
+    const changeCount = () => {
+        count === 0 ? setCount(addCount => addCount + 1) : setCount(addCount => addCount - 1);
     }
 
     return (
@@ -31,7 +29,7 @@ const BookSmartCard = (props) => {
                     <p className={styles.bookAuthor}>{Author}, {publishDate}</p>
                 </div>
                 <div className={styles.bookSmartVotes}>
-                    <span onClick={increaseCount} className={styles.voteIcon}><FontAwesomeIcon icon={faArrowCircleUp} /></span>
+                    <span onClick={changeCount} className={styles.voteIcon}><FontAwesomeIcon icon={faArrowCircleUp} /></span>
                     <h5 className={styles.voteCounter}>{count}</h5>
                     {/* <span onClick={reduceCount} className={styles.voteIcon}><FontAwesomeIcon icon={faArrowCircleDown} /></span> */}
                 </div> 

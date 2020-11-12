@@ -1,22 +1,29 @@
 import React, { useState, useEffect} from "react";
 import styles from "./AddChickAge.module.scss";
 import GirlChick from "../../assets/img/AddChick/GirlChick.svg";
+import BoyChick from "../../assets/img/AddChick/BoyChick.svg";
 import { navigate } from "@reach/router";
 import BottomNavBar from '../BottomNavBar/BottomNavBar';
 
 
+
 const AddChickAge = (props) => {
   const [currentName, setCurrentName] = useState("");
-  const {chickName} = props;
+  const [ chickAge, setChickAge ] = useState(0);
+  const [gender, setGender] = useState();
+  
+  const {chickName, toggleGender} = props;
+  console.log(toggleGender);
+
   // const [gender, setGender] = useState(false);
   useEffect(() => {
     setCurrentName(chickName);
-}, [chickName])
-// useEffect(()=> {
-//   setGender(props.toggleGender)
-// })
+    setGender(toggleGender);
+}, [chickName, toggleGender])
 
-  const [ chickAge, setChickAge ] = useState(0);
+ 
+
+
 
   const increaseAge = () => {
     setChickAge(chickAge => chickAge + 1);
@@ -30,12 +37,15 @@ const AddChickAge = (props) => {
  const handleNextPageSplash = () => {
    navigate("/categories")
  }
+//  const chickGender = toggleGender === true ? BoyChick : GirlChick;
+//  console.log(chickGender);
+ 
   return (
     <div className={styles.pageContainer}>
        <header className={styles.header}>
 
         {/* girl or boy passed as prop from AddChick */}
-        <img src={GirlChick} alt="Penguin-placeholder-img"/> 
+        <img src={gender ? BoyChick : GirlChick} alt="Penguin-placeholder-img"/> 
 
       </header>
 

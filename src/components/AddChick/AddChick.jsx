@@ -11,8 +11,8 @@ const AddChick = () => {
   const [chickName, setChickName] = useState("");
   const nameInput = (e) => setChickName(e.target.value);
 
-  console.log(chickName);
-  console.log(toggleGender);
+  // console.log(chickName);
+  // console.log(toggleGender);
 
   return (
     <div className={styles.pageContainer}>
@@ -44,7 +44,7 @@ const AddChick = () => {
         </div>
       </form>
 
-      <Link to={`/add-chick-age/${chickName}`}>
+      <Link to={`/add-chick-age/${chickName}/${toggleGender}`}>
         <button type="submit" className={styles.secondaryBtn}>
           Next
         </button>

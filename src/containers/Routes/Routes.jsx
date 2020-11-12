@@ -49,7 +49,7 @@ const Routes = (props) => {
         <Router>
             <ActivityIdeas path="categories/activity-ideas" user={user} />
             <AddChick path="add-chick" user={user} />
-            <AddChickAge path="add-chick-age/:chickName" user={user} />
+            <AddChickAge path="add-chick-age/:chickName/:toggleGender" user={user} />
             <Aggression path="/categories/sos/aggression" user={user} />
             <ArticleReader path="article-reader" user={user} />
             <BookInfo path="categories/book-smarts/book-info/:BookId"  docs={docs} user={user} />

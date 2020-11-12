@@ -11,7 +11,7 @@ const SOS = () => {
   return (
     <>
       <header className={styles.smHeader}>
-        <h1>SOS!</h1>
+        {/* <h1>SOS!</h1> */}
       </header>
       <div className={styles.pageContainer}>
         <div className={styles.gridContainer}>
