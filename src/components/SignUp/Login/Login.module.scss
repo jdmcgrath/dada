@@ -75,7 +75,26 @@
     color: #074B77;
   }
 }
+@media only screen and (min-width: 426px) {
+  .formContainer {
+    width: 65vw;
+  }
   
+}
+
+@media only screen and (min-width: 720px) {
+  .formContainer {
+    width: 55vw;
+  }
+  
+}
+
+@media only screen and (min-width: 780px) {
+  .formContainer {
+  width: 500px;
+}
+
+}
 //     .content {
 //       display: flex;
 //       flex-direction: column;

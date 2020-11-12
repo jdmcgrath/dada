@@ -58,3 +58,23 @@
   color: white;
   font-size: 16px;
 }
+
+@media only screen and (min-width: 400px) {
+  .pageContainer {
+    width: 70vw;
+    
+  }
+  
+}
+
+@media only screen and (min-width: 600px) {
+.pageContainer {
+  width: 60vw;
+}
+}
+
+@media only screen and (min-width: 769px) {
+  .pageContainer {
+    width: 455px;
+  }
+}
