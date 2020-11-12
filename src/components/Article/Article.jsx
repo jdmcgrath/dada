@@ -5,12 +5,14 @@ import { faBookmark as faSolidBookmark } from '@fortawesome/free-solid-svg-icons
 import { faBookmark as faOpenBookmark } from '@fortawesome/free-regular-svg-icons';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { firestore } from "../../firebase";
-import { navigate } from '@reach/router';
+import { navigate, Link } from '@reach/router';
 
 const Article = (props) => {
  
-  const {title, body, readTime, image, artID, keywords } = props.doc;
+  const {title, body, readTime, image, artID, keywords, authorName, authorImage, publishDate } = props.doc;
   const user = props.user;
+
+  console.log(props.doc);
 
   const collectionName = "activityIdeas";
 
@@ -59,9 +61,12 @@ const Article = (props) => {
           if (fDoc.exists) {
             firestore.collection(collectionName).doc(`${user.uid}${artID}`).set({
               artID,
+              authorImage,
+              authorName,
               body,
               image,
               keywords,
+              publishDate,
               readTime,
               title,
               uID: user.uid
@@ -98,12 +103,17 @@ const Article = (props) => {
     
       <div className={styles.artGrid}>  
         <img className={styles.artImage} src= {image} alt=""/>
+        <Link to={`article-reader/${artID}`} doc={props.doc}>
         <h3 className={styles.artTitle}>{title}</h3>
+        </Link>
         <p className={styles.artReadTime}>Read  Time: {readTime}</p>
         
       </div>
       <span onClick={toggleFav}>{displayBookmarkJSX()}</span>
+      <Link to={`article-reader/${artID}`} doc={props.doc}>
       <span><FontAwesomeIcon icon={faChevronRight} className={styles.rightChevron}/></span>
+      </Link>
+
     </div>
     
   );
