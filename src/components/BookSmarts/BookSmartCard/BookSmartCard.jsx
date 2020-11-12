@@ -17,13 +17,11 @@ const BookSmartCard = (props) => {
             Author,
             publishDate,
             Img } = props.doc;
-    const disableCount = () => {
-        
-    }    
+
     const increaseCount = () => {
-      setCount(addCount => addCount + 1)
+        setCount(addCount => addCount + 1)
     }
-  
+
     return (
         
         <section className={styles.cardContainer}>
