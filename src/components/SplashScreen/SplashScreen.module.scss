@@ -4,7 +4,7 @@
 .noNav {
   z-index: 101;
   background-color: $offWhite;
-}
+
 
 .splash {
   display: flex;
@@ -231,9 +231,11 @@ h2 {
     margin-top: 5%;
   }
 }
+}
 
 
 @media screen and (min-width: 1080px) {
+  .noNav {
   .gridForDesktop{
     display: grid;
     grid-template-columns: 2fr 3fr;
@@ -263,4 +265,5 @@ h2 {
       }
     }
   }
+}
 }
