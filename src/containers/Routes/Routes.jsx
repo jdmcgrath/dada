@@ -16,11 +16,10 @@ import SleepIssues from "../../components/Sleep/SleepMain";
 import Rejection from "../../components/Rejection/RejectionMain";
 import ArticleReader from "../../components/ArticleReader";
 import Welcome from "../../components/Welcome";
+import Login from "../../components/SignUp/Login"
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
 import ProfileSignIn from "../../components/ProfileSignIn";
-// import Favorites from "../../components/Favorites";
-// import LogIn from "../../components/LogIn";
 import BookInsights from "../../components/BookInfo/BookInsights";
 import { firestore } from "../../firebase";
 
@@ -56,6 +55,7 @@ const Routes = (props) => {
             <BookSmarts path="categories/book-smarts" docs={docs} user={user}/>
             <BookInsights path="categories/book-smarts/book-info/:BookId/book-insight/:insightID" docs={docs} user={user} />
             <Categories path="categories" user={user} />
+            <Login path="login-page" user={user} />
             <Rejection path="/categories/sos/rejection" user={user} />
             <Screaming path="/categories/sos/screaming" user={user} />
             <SignUp path="sign-up" user={user} />
@@ -71,8 +71,4 @@ const Routes = (props) => {
     )
 };
 
-
-//using net ninja method, use the sign up for to make a firebase user
-//wait for sam, use what he gives us to allow us to sign up with facebook
-//check if logging in with different accounts accesses the same firebase user, if not, make in if statement to prohibiting them from accdesing the sign up page
 export default Routes;
