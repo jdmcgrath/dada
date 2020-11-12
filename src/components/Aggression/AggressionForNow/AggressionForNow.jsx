@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./AgressionForNow.module.scss";
+import styles from "./AggressionForNow.module.scss";
 
-const AgressionForNow = (props) => {
+const AggressionForNow = (props) => {
   const { setToggleList } = props
 
   return (
@@ -40,5 +40,5 @@ const AgressionForNow = (props) => {
 //it needs to influence the state, the same way as the next time button 
 
 
-export default AgressionForNow;
+export default AggressionForNow;
 

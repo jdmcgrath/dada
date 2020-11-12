@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "./AgressionForNextTime.module.scss";
+import styles from "./AggressionForNextTime.module.scss";
 import Binoculars from "../../../assets/img/Binoculars.svg";
 
-const AgressionForNextTime = () => {
+const AggressionForNextTime = () => {
   return (
     <>
       <p>Read time: 3 min</p>
@@ -68,4 +68,4 @@ const AgressionForNextTime = () => {
   );
 };
 
-export default AgressionForNextTime;
+export default AggressionForNextTime;
