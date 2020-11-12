@@ -18,7 +18,6 @@ import ArticleReader from "../../components/ArticleReader";
 import Welcome from "../../components/Welcome";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
-import PrivateRoutes from "../../containers/Routes/PrivateRoutes";
 import LandingPage from "../../components/LandingPage/LandingPage";
 import ProfileSignIn from "../../components/ProfileSignIn";
 import Favorites from "../../components/Favorites";
@@ -49,6 +48,8 @@ const Routes = (props) => {
         });
     };
 
+    getBookSmarts();
+  }, []);
     
     return(
         <Router>
@@ -72,9 +73,9 @@ const Routes = (props) => {
             <Whining path="/categories/sos/whining" user={user} />
             <UpYourGame path ="/categories/up-your-game" user={user} />
             <ProfileSignIn path="/profile-sign-in" />
+            <LandingPage path="landing" />
         </Router>
     )
-})
 };
 
 //using net ninja method, use the sign up for to make a firebase user
