@@ -2,12 +2,13 @@
 @import "../../assets/styles/main.scss";
 
 .noNav {
-  z-index: 101;
   background-color: $offWhite;
-}
+
 
 .splash {
+  z-index: 101;
   display: flex;
+  position: relative;
   justify-content: space-between;
   height: 100px;
   align-items: center;
@@ -26,6 +27,11 @@
     color: $deepPurple;
     font-weight: bold;
   }
+}
+
+.leftGridForDesktop{
+  display: flex;
+  flex-direction: column;
 }
 .pageCont {
   display: flex;
@@ -50,7 +56,7 @@
   text-align: center;
 }
 
-.textUndePhoneCont {
+.textUnderPhoneCont {
   margin: 5%;
   margin-top: 10%;
 }
@@ -67,10 +73,11 @@
   margin: auto;
 }
 .forDad {
-  margin: 0;
+  margin: 25px auto;
   font-size: 18px;
   color: #1bb9f1;
   font-weight: 600;
+  text-align: center;
 }
 
 .phoneForTablet {
@@ -87,11 +94,11 @@
 .textFathers {
   width: 82%;
   text-align: center;
-  margin: 5%;
+  margin: 5% auto;
   font-size: 14px;
 }
 .secondaryBtn {
-  margin: 25px;
+  margin: 25px auto;
   font-size: 16px;
   font-weight: bold;
   width: 50vw;
@@ -119,6 +126,12 @@
     margin: 10px 10px;
   }
 }
+.rightGridForDesktop{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
 
 p {
   color: $deepPurple;
@@ -230,4 +243,79 @@ h2 {
     margin: 5%;
     margin-top: 5%;
   }
+}
+}
+
+
+@media screen and (min-width: 1080px) {
+  .noNav {
+    
+    .splash{
+      .primaryBtn {
+        height: 33.75px;
+        width: 162px;
+      }
+    }
+
+  .gridForDesktop{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .rightGridForDesktop{
+      grid-column-start: 2;
+      grid-row-start: 1;
+      
+      .phoneForTablet{
+        height: 80%;
+      }
+    }
+    .leftGridForDesktop{
+      grid-column-start: 1;
+      grid-row-start: 1;
+
+      .secondaryBtn{
+        align-self: flex-start;
+        margin-top: 40px;
+        margin-left: 10%;
+      }
+    }
+  }
+  
+  .textUnderPhone{
+    text-align: left;
+    font-size: 27px;
+    width: 80%;
+  }
+
+  .forDad{
+    text-align: left;
+    margin: 35px auto;
+    width: 80%;
+    font-size: 22.5px;
+  }
+
+  .textFathers {
+    font-size: 18px;
+    text-align: left;
+    margin: auto;
+    width: 80%;
+  }
+
+  .listTitle {
+    display: none;
+  }
+
+  ul{ 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+      .svgTextLi{
+        grid-template-rows: 2fr 1fr;
+      img{
+        width: 170px;
+      }
+      p {
+        height: 100px;
+      }
+    }
+  }
+}
 }
