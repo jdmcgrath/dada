@@ -9,7 +9,6 @@
   height: 100px;
   align-items: center;
   align-content: center;
-  background-color: blueviolet;
   img {
     position: absolute;
     left: 10%;
@@ -109,5 +108,24 @@ p {
 h2 {
   color: $deepPurple;
   font-size: 21px;
+}
+.bottomTextCont{ 
+    background-color: #fffcdc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.bottomCont{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.bottomText{ 
+    color: #394167;
+    font-weight: 500;
+    font-size: 18px;
+    padding:12px;
 }
 //when styling more or less there, slack steve telling him I am ready for him and jdog to have a look

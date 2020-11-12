@@ -73,9 +73,20 @@ const LandingPage = () => {
         </ul>
       </div>
       <div className={styles.pageCont}><button className={styles.secondaryBtn}>Sign Up</button></div>
+      <div className={styles.bottomTextCont}>
+        <div className={styles.bottomCont}>
+        <h2 className={styles.bottomText}>Contact Us</h2>
+        <h2 className={styles.bottomText}>Privacy</h2>
+        <h2 className={styles.bottomText}>Terms</h2>
+        </div>
+      </div>
       
     </div>
   );
 };
 
 export default LandingPage;
+
+//landing page always loaded with navbar 
+//this is because routes are rendered with it 
+//solution?
