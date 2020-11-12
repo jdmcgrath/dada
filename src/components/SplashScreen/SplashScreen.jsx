@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./SplashScreen.module.scss";
 import splash from "../../assets/img/DadaLogoBlue.svg";
 import DeviceMockup from "../../assets/img/DeviceMockup.svg";
