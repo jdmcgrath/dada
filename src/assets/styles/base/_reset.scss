@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100vh;
+}
+
 body {
     background-color: $offWhite;
+    height: 100vh;
 }
 
 a {

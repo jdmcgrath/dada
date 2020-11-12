@@ -9,7 +9,7 @@ import AddChick from "../../components/AddChick";
 import SOS from "../../components/SOS";
 import SplashScreen from "../../components/SplashScreen";
 import Tantrums from "../../components/Tantrums";
-import Aggression from "../../components/Aggression/AgressionMain";
+import Aggression from "../../components/Aggression/AggressionMain";
 import Screaming from "../../components/Screaming/ScreamingMain";
 import Whining from "../../components/Whining/WhiningMain";
 import SleepIssues from "../../components/Sleep/SleepMain";
@@ -20,20 +20,14 @@ import Login from "../../components/SignUp/Login"
 // import SideBar from "../../components/SideBar";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
-import LandingPage from "../../components/LandingPage/LandingPage";
 import ProfileSignIn from "../../components/ProfileSignIn";
-import Favorites from "../../components/Favorites";
-
+// import Favorites from "../../components/Favorites";
+// import LogIn from "../../components/LogIn";
+import BookInsights from "../../components/BookInfo/BookInsights";
 import { firestore } from "../../firebase";
 
 const Routes = (props) => {
-  // const [docs, setDocs] = useState([]);
-  // const getBookSmarts = () => {
-  //     firestore.collection("booksmarts").get().then((response) => {
-  //     const documents = response.docs.map(d => d.data());
-  //     setDocs(documents)
-  //     })
-  // };
+
 
   const user = props.user;
 
@@ -50,7 +44,7 @@ const Routes = (props) => {
         });
     };
 
-    getBookSmarts();
+    getBookSmarts();      
   }, []);
     
     return(
@@ -60,10 +54,10 @@ const Routes = (props) => {
             <AddChickAge path="add-chick-age/:chickName" user={user} />
             <Aggression path="/categories/sos/aggression" user={user} />
             <ArticleReader path="article-reader" user={user} />
-            <BookInfo path="categories/book-smarts/book-info/:BookId" docs={docs} user={user} />
+            <BookInfo path="categories/book-smarts/book-info/:BookId"  docs={docs} user={user} />
             <BookSmarts path="categories/book-smarts" docs={docs} user={user}/>
+            <BookInsights path="categories/book-smarts/book-info/:BookId/book-insight/:insightID" docs={docs} user={user} />
             <Categories path="categories" user={user} />
-            <Favorites path="favorites" user={user} />
             <Login path="login-page" user={user} />
             <Rejection path="/categories/sos/rejection" user={user} />
             <Screaming path="/categories/sos/screaming" user={user} />
@@ -76,10 +70,10 @@ const Routes = (props) => {
             <Whining path="/categories/sos/whining" user={user} />
             <UpYourGame path ="/categories/up-your-game" user={user} />
             <ProfileSignIn path="/profile-sign-in" />
-            <LandingPage path="landing" />
         </Router>
     )
 };
+
 
 //using net ninja method, use the sign up for to make a firebase user
 //wait for sam, use what he gives us to allow us to sign up with facebook
