@@ -12,8 +12,6 @@ const Article = (props) => {
   const {title, body, readTime, image, artID, keywords, authorName, authorImage, publishDate } = props.doc;
   const user = props.user;
 
-  console.log(props.doc);
-
   const collectionName = "activityIdeas";
 
   const [isFavourited, setIsFavourited] = useState(false);
