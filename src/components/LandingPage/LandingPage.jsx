@@ -14,7 +14,7 @@ const LandingPage = () => {
       <div className={styles.splash}>
         <img src={splash} alt="splash" />
         <Link to="login">
-        <button className={styles.primaryBtn}>Login</button>
+          <button className={styles.primaryBtn}>Login</button>
         </Link>
       </div>
 
@@ -36,8 +36,8 @@ const LandingPage = () => {
           We want to empower fathers to parent with confidence and enjoy more
           quality time with their kids.
         </p>
-        <Link to = "/categories">
-        <button className={styles.secondaryBtn}>Get Dadvice</button>
+        <Link to="/categories">
+          <button className={styles.secondaryBtn}>Get Dadvice</button>
         </Link>
         <h2 className={styles.listTitle}>Here you will find:</h2>
       </div>
@@ -77,8 +77,8 @@ const LandingPage = () => {
         </ul>
       </div>
       <div className={styles.pageCont}>
-        <Link to ="/sign-up">
-        <button className={styles.secondaryBtn}>Sign Up</button>
+        <Link to="/sign-up">
+          <button className={styles.secondaryBtn}>Sign Up</button>
         </Link>
       </div>
       <div className={styles.bottomTextCont}>
