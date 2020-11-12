@@ -29,57 +29,51 @@ const LandingPage = () => {
           </h3>
           <h3 className={styles.textUnderPhone}>built with moms in mind.</h3>
         </div>
-        <h3 className={styles.forDad}>We've created one for you , Dad!</h3>
+        <h3 className={styles.forDad}>We've created one for you, Dad!</h3>
         <p className={styles.textFathers}>
           We want to empower fathers to parent with confidence and enjoy more
-          quality time with
+          quality time with their kids.
         </p>
-        <p>their kids.</p>
-        <button className={styles.primaryBtn}>Get Dadvice</button>
+        <button className={styles.secondaryBtn}>Get Dadvice</button>
         <h2 className={styles.listTitle}>Here you will find:</h2>
       </div>
       <div className={styles.svgTextList}>
         <ul>
           <li className={styles.svgTextLi}>
-            <p>Low-effort activity ideas to suit your mood and budget</p>
-            <img
-              src={IdeaPenguin}
-              alt="idea penguin"
-            />
+            <p>
+              <span className={styles.bold}>Low-effort activity ideas</span> to
+              suit your mood and budget
+            </p>
+            <img src={IdeaPenguin} alt="idea penguin" />
           </li>
           <li className={styles.svgTextLi}>
-            <img
-              src={AngryPenguin}
-              alt="angry penguin"
-            />
-            <p>Fast and clear answers to most common parenting challenges</p>
+            <img src={AngryPenguin} alt="angry penguin" />
+            <p>
+              <span className={styles.bold}>Fast and clear answers</span> to
+              most common parenting challenges
+            </p>
           </li>
           <li className={styles.svgTextLi}>
             <p>
-              Cliff-notes from top-rated parenting books (because who has the
-              time to read the whole thing?)
+              <span className={styles.bold}>Cliff-notes</span> from top-rated
+              parenting books{" "}
+              <span className={styles.italics}>
+                (because who has the time to read the whole thing?)
+              </span>
             </p>
-            <img
-              src={ReadingPenguin}
-              alt="reading penguin"
-            />
+            <img src={ReadingPenguin} alt="reading penguin" />
           </li>
           <li className={styles.svgTextLi}>
-            <img
-              src={LiftingPenguin}
-              alt="weight-lifting penguin"
-            />
-            <p>Longer reads for the SuperDads out there</p>
+            <img src={LiftingPenguin} alt="weight-lifting penguin" />
+            <p>
+              <span className={styles.bold}>Longer reads</span> for the
+              SuperDads out there
+            </p>
           </li>
         </ul>
       </div>
-      <div className={styles.endOfPage}>
-        <button className={styles.primaryBtn}>Sign Up</button>
-        <h2 className={styles.endOfPageText}>Contact Us</h2>
-        <h2 className={styles.endOfPageText}>Privacy</h2>
-        <h2 className={styles.endOfPageText}>Terms</h2>
-      </div>
-
+      <div className={styles.pageCont}><button className={styles.secondaryBtn}>Sign Up</button></div>
+      
     </div>
   );
 };
