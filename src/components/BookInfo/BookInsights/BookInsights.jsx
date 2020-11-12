@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './BookInsights.module.scss';
+import BottomNavBar from "../../BottomNavBar";
 const BookInsights = (props) => {
 
     const [currentBook, setCurrentBook] = useState(0);
@@ -32,7 +33,7 @@ console.log(props.docs[currentBook].KeyInsights[currentInsight].insightTitle);
                 <button className={styles.secondaryBtn}>Next Highlight</button>
             </div>
         </div>
-        
+        <BottomNavBar />
         </>
     )
 }

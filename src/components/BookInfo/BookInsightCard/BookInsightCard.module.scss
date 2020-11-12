@@ -1,23 +1,35 @@
-@import '../../../assets/styles/main.scss';
-@import '../../../assets/styles/abstracts/variables';
+@import "../../../assets/styles/main.scss";
+@import "../../../assets/styles/abstracts/variables";
 
 .cardContainer {
-    display: flex;
-    border-bottom: 1px solid #979797;
-    margin: 10px 0;
-    padding: 12px 0;
-    font-family: 'Nunito', sans-serif;
-    font-size: 14px;
+  display: flex;
+  border-bottom: 1px solid #979797;
+  margin: 10px 0;
+  padding: 12px 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
 
-    .insightNumber {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #3F3F3F;
-        color: #FFF;
-        height: 20px;
-        width: 20px;
-        border-radius: 50%;
-        margin-right: 20px;
+  .insightNumber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3f3f3f;
+    color: #fff;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-right: 20px;
+    p {
+      color: white !important;
     }
+  }
 }
+
+@media only screen and (min-width: 768px) {
+  .cardContainer {
+    .insightTitle {
+      font-size: 20px;
+    }
+  }
+}
+
