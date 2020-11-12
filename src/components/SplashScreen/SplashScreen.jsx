@@ -10,19 +10,12 @@ import ReadingPenguin from "../../assets/img/Landing/ReadingPenguin.svg";
 import LiftingPenguin from "../../assets/img/Landing/LiftingPenguin.svg";
 
 const LandingPage = () => {
-  // const getClassNames = () => {
-  //   const classes = {[ styles.needsReversing, styles.svgTextLi ]}.join('')
-  //   return classes
-  // // }
-  // useEffect(() => {
-  //   getClassNames()
-  // }, [])
 
   return (
     <div className={styles.noNav}>
       <div className={styles.splash}>
         <img src={splash} alt="splash" />
-        <Link to="login">
+        <Link to="login-page">
           <button className={styles.primaryBtn}>Login</button>
         </Link>
       </div>
@@ -31,29 +24,36 @@ const LandingPage = () => {
         <div className={styles.sloganCont}>
           <h1 className={styles.slogan}>A parenting coach in your pocket</h1>
         </div>
-        <img
-          src={DeviceMockup}
-          className={styles.phoneForMobile}
-          alt="device"
-        ></img>
-        <img
-          src={AllDevices}
-          className={styles.phoneForTablet}
-          alt="device showing app"
-        />
-        <div className={styles.textUndePhoneCont}>
-          <h3 className={styles.textUnderPhone}>
-            Most parenting resources are built with moms in mind.
-          </h3>
+        <div className={styles.gridForDesktop}>
+          <div className={styles.rightGridForDesktop}>
+            <img
+              src={DeviceMockup}
+              className={styles.phoneForMobile}
+              alt="device"
+            ></img>
+            <img
+              src={AllDevices}
+              className={styles.phoneForTablet}
+              alt="device showing app"
+            />
+          </div>
+          <div className={styles.leftGridForDesktop}>
+            <div className={styles.textUnderPhoneCont}>
+              <h3 className={styles.textUnderPhone}>
+                Most parenting resources are built with moms in mind.
+              </h3>
+
+              <h3 className={styles.forDad}>We've created one for you, Dad!</h3>
+              <p className={styles.textFathers}>
+                We want to empower fathers to parent with confidence and enjoy
+                more quality time with their kids.
+              </p>
+              <Link to="/categories">
+                <button className={styles.secondaryBtn}>Get Dadvice</button>
+              </Link>
+            </div>
+          </div>
         </div>
-        <h3 className={styles.forDad}>We've created one for you, Dad!</h3>
-        <p className={styles.textFathers}>
-          We want to empower fathers to parent with confidence and enjoy more
-          quality time with their kids.
-        </p>
-        <Link to="/categories">
-          <button className={styles.secondaryBtn}>Get Dadvice</button>
-        </Link>
         <h2 className={styles.listTitle}>Here you will find:</h2>
       </div>
       <div className={styles.svgTextList}>
@@ -87,11 +87,6 @@ const LandingPage = () => {
             <img src={LiftingPenguin} alt="weight-lifting penguin" />
             <p>
               <span className={styles.bold}>Longer reads</span> for the
-             
-             
-             
-             
-             
               SuperDads out there
             </p>
           </li>
