@@ -6,7 +6,7 @@ const BookInsights = (props) => {
     const [currentBook, setCurrentBook] = useState(0);
 
     const [currentInsight, setCurrentInsight] = useState(0);
-    const [count, setCount] = useState(1);
+    const [count, setCount] = useState(0);
 
     useEffect(() => {
         setCurrentBook(props.BookId)
@@ -15,7 +15,7 @@ const BookInsights = (props) => {
     useEffect(() => {
         setCurrentInsight(props.insightID);
     }, [props.insightID]);
-
+    
     const nextInsight = () =>{ 
         
         if ( count < props.docs[currentBook].KeyInsights.length -1 ){
@@ -24,6 +24,9 @@ const BookInsights = (props) => {
             return (count)
         }
     }
+    useEffect(()=>{
+        nextInsight();
+    },[])
 
     return (
         <>

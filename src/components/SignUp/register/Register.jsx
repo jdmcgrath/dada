@@ -1,36 +1,45 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useRef, useEffect } from 'react'
 import styles from "./Register.module.scss"
 import { navigate } from '@reach/router'
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SocialFollow from './SocialFollow';
 import firebase from "../../../firebase"
 
+export const Register = (props) => {
+  const passwordRef = useRef()
+  const emailRef = useRef()
 
-
-
-export const Register = () => {
- let [password, setPass] = useState()
- let [email, setEm] = useState()
- let [un, setUn] = useState("")
-
-  const handleSignUp = useCallback(async event => { 
+  const handleSignUp = useCallback(async event => {
     event.preventDefault();
-    
-    try { 
+
+    try {
       await firebase
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      navigate("/welcome")    
+        .auth()
+        .createUserWithEmailAndPassword(emailRef.current.value, passwordRef.current.value)
     }
     catch (error) {
       alert(error)
     }
+  }, [emailRef, passwordRef])
 
-    
-  }, [email, password])
+  const handleLoginPage = (e) => {
+    e.preventDefault();
+    navigate("/login-page")
+  }
+  
+  const getUser = () => {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        navigate("/welcome");
+      } else {
+        return
+      }
+    });
+  };
 
-
-
+  useEffect(() => {
+    getUser();
+  })
+  
   return (
     <form className={styles.formContainer} onSubmit={handleSignUp}>
       <h2>Sign Up</h2>
@@ -41,7 +50,6 @@ export const Register = () => {
           id="username"
           placeholder="Name"
           name="username"
-          onInput={(e) => setUn((un += e.target.value))}
         />
         <label for="user-email"></label>
         <input
@@ -49,7 +57,7 @@ export const Register = () => {
           id="user-email"
           placeholder="Email"
           name="email"
-          onInput={(e) => setEm((email += e.target.value))}
+          ref={emailRef}
         />
         <label for="user-password"></label>
         <input
@@ -57,7 +65,7 @@ export const Register = () => {
           id="user-password"
           placeholder="Password"
           name="password"
-          onInput={(e) => setPass(e.target.value)}
+          ref={passwordRef}
         />
       </div>
       <div className={styles.termsContainer}>
@@ -73,7 +81,7 @@ export const Register = () => {
       <p className={styles.logIn}>
         Already have an account?{" "}
         <span>
-          <a href="https://github.com/nology-tech/dada">Login</a>
+          <a href="https://github.com/nology-tech/dada" onClick={handleLoginPage}>Login</a>
         </span>
       </p>
       <p className={styles.orSignIn}>or sign in with</p>
@@ -81,9 +89,5 @@ export const Register = () => {
     </form>
   );
 }
-
-
-
-
 
 export default Register;
