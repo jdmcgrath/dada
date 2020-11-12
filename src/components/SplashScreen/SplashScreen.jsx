@@ -22,7 +22,7 @@ const LandingPage = () => {
     <div className={styles.noNav}>
       <div className={styles.splash}>
         <img src={splash} alt="splash" />
-        <Link to="login">
+        <Link to="login-page">
           <button className={styles.primaryBtn}>Login</button>
         </Link>
       </div>
@@ -49,15 +49,15 @@ const LandingPage = () => {
               <h3 className={styles.textUnderPhone}>
                 Most parenting resources are built with moms in mind.
               </h3>
-            
-            <h3 className={styles.forDad}>We've created one for you, Dad!</h3>
-            <p className={styles.textFathers}>
-              We want to empower fathers to parent with confidence and enjoy
-              more quality time with their kids.
-            </p>
-            <Link to="/categories">
-              <button className={styles.secondaryBtn}>Get Dadvice</button>
-            </Link>
+
+              <h3 className={styles.forDad}>We've created one for you, Dad!</h3>
+              <p className={styles.textFathers}>
+                We want to empower fathers to parent with confidence and enjoy
+                more quality time with their kids.
+              </p>
+              <Link to="/categories">
+                <button className={styles.secondaryBtn}>Get Dadvice</button>
+              </Link>
             </div>
           </div>
         </div>
