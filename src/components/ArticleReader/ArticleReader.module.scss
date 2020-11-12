@@ -14,8 +14,7 @@
 }
 
 .readerContent {
-  padding-bottom: 4rem;
-
+  
   .headingContainer {
     display: flex;
     justify-content: space-between;
@@ -88,7 +87,36 @@
 
   }
 
-  
 
 
+}
+
+
+.relatedSection {
+  padding-bottom: 4.5rem;
+  .relatedHeading {
+    padding-bottom: 20px;
+    hr {
+      border-top: 3px solid rgba(0, 0, 0, 0.3);
+    }
+  }
+  .relatedGrid {
+    display: grid;
+    grid-template-columns: repeat( 2, minmax(160px, 1fr) );  
+    grid-gap: 20px; 
+    .relatedImage {
+      height: 120px;
+      width: 160px;
+      object-fit: cover;
+      border-radius: 1rem;
+      padding-bottom: 10px;
+    }
+    .relatedArticleTitle {
+      font-weight: 600;
+      padding-bottom: 6px;
+    }
+    p {
+      padding-bottom: 6px;
+    }
+  }
 }
