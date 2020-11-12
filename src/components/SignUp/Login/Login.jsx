@@ -1,43 +1,35 @@
-import React, { useCallback, useRef } from 'react'
-import styles from "./Register.module.scss"
+import React, { useRef } from 'react'
+import styles from "./Login.module.scss"
 import { navigate } from '@reach/router'
-import SocialFollow from './SocialFollow';
+import LoginSocialFollow from './LoginSocialFollow';
 import firebase from "../../../firebase"
 
-export const Register = () => {
+export const Login = () => {
   const passwordRef = useRef()
   const emailRef = useRef()
 
-  const handleSignUp = useCallback(async event => {
-    event.preventDefault();
+  const handleLogin = async (e) => {
+    e.preventDefault();
 
     try {
       await firebase
         .auth()
-        .createUserWithEmailAndPassword(emailRef.current.value, passwordRef.current.value)
-      navigate("/welcome")
+        .signInWithEmailAndPassword(emailRef.current.value, passwordRef.current.value)
+      navigate("/categories")
     }
     catch (error) {
       alert(error)
     }
-  }, [emailRef, passwordRef])
-
-  const handleLoginPage = (e) => {
+  }
+  const handleSignUpPage = (e) => {
     e.preventDefault();
-    navigate("/login-page")
+    navigate('/sign-up')
   }
 
   return (
-    <form className={styles.formContainer} onSubmit={handleSignUp}>
-      <h2>Sign Up</h2>
+    <form className={styles.formContainer} onSubmit={handleLogin}>
+      <h2>Login</h2>
       <div className={styles.inputContainer}>
-        <label for="username"></label>
-        <input
-          type="text"
-          id="username"
-          placeholder="Name"
-          name="username"
-        />
         <label for="user-email"></label>
         <input
           type="email"
@@ -63,18 +55,18 @@ export const Register = () => {
         </p>
       </div>
       <button type="submit" className={styles.signUpBtn}>
-        Sign Up
+        Login
       </button>
       <p className={styles.logIn}>
-        Already have an account?{" "}
+        Need an account?{" "}
         <span>
-          <a href="https://github.com/nology-tech/dada" onClick={handleLoginPage}>Login</a>
+          <a href="https://github.com/nology-tech/dada" onClick={handleSignUpPage}>Sign up</a>
         </span>
       </p>
-      <p className={styles.orSignIn}>or sign in with</p>
-      <SocialFollow />
+      <p className={styles.orSignIn}>or login in with</p>
+      <LoginSocialFollow />
     </form>
   );
 }
 
-export default Register;
+export default Login;

@@ -11,6 +11,7 @@ import SplashScreen from "../../components/SplashScreen";
 import Tantrums from "../../components/Tantrums";
 import ArticleReader from "../../components/ArticleReader";
 import Welcome from "../../components/Welcome";
+import Login from "../../components/SignUp/Login"
 // import SideBar from "../../components/SideBar";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
@@ -21,6 +22,7 @@ const Routes = () => {
         <Router>
             <Categories path="categories" />
             <SignUp path="sign-up" />
+            <Login path="login-page" />
             <AddChick path="add-chick" />
 
             <AddChickAge path="add-chick-age" />
