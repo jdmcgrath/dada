@@ -1,45 +1,57 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './BookInfo.module.scss';
 import BookInsightCard from './BookInsightCard';
-import cardData from '../../data/bookSmartData';
+import BookmarkIcon from "../../assets/img/BookSmarts/Bookmark.svg";
+const BookInfo = (props) => {
+    
+    const [currentBook, setCurrentBook] = useState(0);
+    
 
-const BookInfo = () => {
+    useEffect(() => {
+        console.log(props.BookId);
+        setCurrentBook(props.BookId)
+    }, [props.BookId])
 
-    const getBookInsight = (cardData) => (
-        <BookInsightCard cardData={cardData} />
-    )
 
     return (
+        <>
+        <header className={styles.smHeader}>
+            <h1>{props.docs[currentBook].Title}</h1>
+        </header>
         <div className={styles.pageContainer}>
             <section className={styles.bookOverview}>
                 <div className={styles.aboutBook}>
+
                     <div className={styles.bookCover}>
-                        <img src="" alt="book-cover"/>
+                        <img src={props.docs[currentBook].Img} alt="book-cover"/>
                     </div>
+
                     <div className={styles.bookContentOverview}>
-                        <h2>Playful Parenting</h2>
-                        <p className={styles.bookAuthor}>Lawrence J.Cohen, 2015.</p>
-                        <p className={styles.bookBlurb}>Playful Parenting is a complete guide to using play to raise confident children.</p>
-                    </div>    
+                        <h2>{props.docs[currentBook].Title}</h2>
+                        <p className={styles.bookAuthor}>{props.docs[currentBook].Author}, {props.docs[currentBook].publishDate}</p>
+                    </div>   
                 </div>
+                <p className={styles.bookBlurb}>{props.docs[currentBook].Blurb}</p>
                 <div className={styles.overviewFooter}>
-                    <p className={styles.readTime}>Read time: 10 min</p>
-                    <p>Insights: 5</p>
+                    <p className={styles.readTime}>Read Time: {props.docs[currentBook].ReadTime}</p>
+                    <img src={BookmarkIcon} alt="Bookmark Icon"/>
                 </div>
                 <div className={styles.aboutAuthor}>
-                    <h3>About the Author</h3>
-                    <p>Lawrence J. Cohen Ph.D. is a clinical psychologist specialising in children's play,
-                        play therapy and parenting.
+                    <h3>About Author</h3>
+                    <p>{props.docs[currentBook].AuthorBackground}
                     </p>
                 </div>
             </section>
             <section className={styles.keyInsights}>
                 <h3>Key Insights</h3>
                 <div className={styles.keyInsightCard}>
-                    {cardData.map(getBookInsight)}
-                </div>
+                    {props.docs[currentBook].KeyInsights.map((doc)=>{
+                        return <BookInsightCard  doc={doc} currentBook={currentBook}/>
+                    })}
+                </div> 
             </section>
         </div>
+        </>
     )
 }
 

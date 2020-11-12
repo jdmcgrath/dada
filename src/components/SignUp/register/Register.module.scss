@@ -5,25 +5,32 @@
   height: 100vh;
   
   h2 {
-    font-weight: 200;
+    font-weight: 700;
     text-align: center;
     padding-top: 13vh;
     font-size: 25px;
   }
   
-  button {
+  .signUpBtn {
     width: 90%;
     margin: 0 auto;
     margin-top: 20px;
     text-align: center;
-    color: $offWhite;
+    color: white;
+    background-color: $deepPurple;
     height: 47px;
-    border: none;
+    border: 1px solid #979797;
+    box-shadow: none;
     transition: 0.2s;
     cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    font-family: 'IBM Plex Sans', sans-serif;
 
     &:hover{
-      background: $turquoise;
+      background: $lightBlue;
       color: $offWhite;
     }
   }

@@ -1,5 +1,15 @@
 @import '../../assets/styles/abstracts/variables';
 @import '../../assets/styles/main.scss';
+@import "../../assets//styles/layout/header";
+.smHeader{
+    box-shadow:0px 2px 2.62px rgba(0, 0, 0, 0.23);
+    border-bottom: 10px solid #A0EBE7;
+    h1{
+        color:#394167;
+        font-size:1.0em;
+        
+    }
+}
 
 .pageContainer {
     display: flex;
@@ -12,12 +22,19 @@
         .aboutBook {
             display: flex; 
             flex-direction: row;
-            padding-bottom: 40px;
+            padding-bottom: 15px;
+
 
             .bookCover {
                 background-color: grey;
-                padding: 20px;
                 margin-right: 30px;
+                height:170px;
+                width:120px;
+                
+                img{
+                    width:120px;
+                    height:100%;
+                }
             }
 
             .bookContentOverview {
@@ -25,6 +42,7 @@
                 h2 {
                     font-size: 16px;
                     font-weight: 700;
+                    padding:0px;
                 }
 
                 .bookAuthor {
@@ -32,13 +50,11 @@
                     font-weight: 500;
                     padding-top: 5px;
                 }
-
-                .bookBlurb {
-                    padding-top: 20px;
-                }
             }
         }
-
+        .bookBlurb {
+            padding: 15px 0px 15px 0px;
+        }
         .overviewFooter {
             display: flex;
             flex-direction: row;
@@ -46,6 +62,7 @@
             border-top: 1px solid #979797;
             border-bottom: 1px solid #979797;
             padding: 15px 0;
+            justify-content: space-between;
 
             .readTime {
                 padding-right: 20px;
@@ -77,3 +94,5 @@
         }
     }
 }
+
+
