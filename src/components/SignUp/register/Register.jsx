@@ -1,10 +1,10 @@
-import React, { useCallback, useRef } from 'react'
+import React, { useCallback, useRef, useEffect } from 'react'
 import styles from "./Register.module.scss"
 import { navigate } from '@reach/router'
 import SocialFollow from './SocialFollow';
 import firebase from "../../../firebase"
 
-export const Register = () => {
+export const Register = (props) => {
   const passwordRef = useRef()
   const emailRef = useRef()
 
@@ -15,7 +15,6 @@ export const Register = () => {
       await firebase
         .auth()
         .createUserWithEmailAndPassword(emailRef.current.value, passwordRef.current.value)
-      navigate("/welcome")
     }
     catch (error) {
       alert(error)
@@ -26,7 +25,21 @@ export const Register = () => {
     e.preventDefault();
     navigate("/login-page")
   }
+  
+  const getUser = () => {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        navigate("/welcome");
+      } else {
+        return
+      }
+    });
+  };
 
+  useEffect(() => {
+    getUser();
+  })
+  
   return (
     <form className={styles.formContainer} onSubmit={handleSignUp}>
       <h2>Sign Up</h2>
