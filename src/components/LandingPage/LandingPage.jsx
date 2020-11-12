@@ -13,7 +13,9 @@ const LandingPage = () => {
     <div className={styles.noNav}>
       <div className={styles.splash}>
         <img src={splash} alt="splash" />
+        <Link to="login">
         <button className={styles.primaryBtn}>Login</button>
+        </Link>
       </div>
 
       <div className={styles.pageCont}>
@@ -34,7 +36,9 @@ const LandingPage = () => {
           We want to empower fathers to parent with confidence and enjoy more
           quality time with their kids.
         </p>
+        <Link to = "/categories">
         <button className={styles.secondaryBtn}>Get Dadvice</button>
+        </Link>
         <h2 className={styles.listTitle}>Here you will find:</h2>
       </div>
       <div className={styles.svgTextList}>
@@ -73,7 +77,9 @@ const LandingPage = () => {
         </ul>
       </div>
       <div className={styles.pageCont}>
+        <Link to ="/sign-up">
         <button className={styles.secondaryBtn}>Sign Up</button>
+        </Link>
       </div>
       <div className={styles.bottomTextCont}>
         <div className={styles.bottomCont}>
@@ -87,7 +93,3 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
-
-//landing page always loaded with navbar 
-//this is because routes are rendered with it 
-//solution?
