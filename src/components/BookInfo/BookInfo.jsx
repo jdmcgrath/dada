@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import styles from './BookInfo.module.scss';
 import BookInsightCard from './BookInsightCard';
-import BookmarkIcon from "../../assets/img/BookSmarts/Bookmark.svg";
 const BookInfo = (props) => {
     
     const [currentBook, setCurrentBook] = useState(0);
-    
+
 
     useEffect(() => {
         console.log(props.BookId);
@@ -34,7 +33,7 @@ const BookInfo = (props) => {
                 <p className={styles.bookBlurb}>{props.docs[currentBook].Blurb}</p>
                 <div className={styles.overviewFooter}>
                     <p className={styles.readTime}>Read Time: {props.docs[currentBook].ReadTime}</p>
-                    <img src={BookmarkIcon} alt="Bookmark Icon"/>
+                    <p>Insights: {props.docs[currentBook].KeyInsights.length} </p>
                 </div>
                 <div className={styles.aboutAuthor}>
                     <h3>About Author</h3>
@@ -46,7 +45,8 @@ const BookInfo = (props) => {
                 <h3>Key Insights</h3>
                 <div className={styles.keyInsightCard}>
                     {props.docs[currentBook].KeyInsights.map((doc)=>{
-                        return <BookInsightCard  doc={doc} currentBook={currentBook}/>
+                        return  <BookInsightCard  doc={doc} currentBook={currentBook}/>
+                        
                     })}
                 </div> 
             </section>
