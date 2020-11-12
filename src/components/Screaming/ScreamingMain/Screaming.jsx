@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import styles from "./Screaming.module.scss";
 import ScreamingForNow from "../ScreamingForNow";
 import ScreamingForNextTime from "../ScreamingForNextTime";
+import BottomNavBar from "../../BottomNavBar";
 
-const Agression = () => {
+const Screaming = () => {
   const [toggleList, setToggleList] = useState(true);
 
   const showClickedList = toggleList ? (
@@ -53,6 +54,7 @@ const Agression = () => {
 
         <div>{showClickedList}</div>
       </div>
+      <BottomNavBar />
     </>
   );
 };
@@ -64,4 +66,4 @@ const Agression = () => {
 //how to format: 
 // enclose each button in a js {}
 
-export default Agression;
+export default Screaming;

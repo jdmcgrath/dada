@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import styles from "./ActivityIdeas.module.scss";
-import VideoList from "../VideoList";
-import ArticleList from "../ArticleList";
+import styles from "./Favorites.module.scss";
+import FavoritesVideoList from "../FavoritesVideoList";
+import FavoritesArticleList from "../FavoritesArticleList";
 
 import BottomNavBar from "../../components/BottomNavBar";
-const ActivityIdeas = (props) => {
+
+const Favorites = (props) => {
 
   const [filterChosen, setFilterChosen] = useState("");
   const [toggleList, setToggleList] = useState(true);
@@ -13,8 +14,8 @@ const ActivityIdeas = (props) => {
 
 
   const showClickedList = toggleList ?
-    <VideoList filterChosen={filterChosen} user={user} /> :
-    <ArticleList filterChosen={filterChosen} user={user} />
+    <FavoritesVideoList filterChosen={filterChosen} user={user} /> :
+    <FavoritesArticleList filterChosen={filterChosen} user={user} />
 
   const showButtons = toggleList ?
     <>
@@ -66,7 +67,7 @@ const ActivityIdeas = (props) => {
   return (
     <>
       <div className={styles.smHeader}>
-        <h1>Activity Ideas</h1>
+        <h1>Favorites</h1>
       </div>
       <div className={styles.pageContainer}>
         <div className={styles.btnContainer}>{showButtons}</div>
@@ -88,4 +89,4 @@ const ActivityIdeas = (props) => {
     </>
   );
 };
-export default ActivityIdeas;
+export default Favorites;
