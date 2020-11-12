@@ -25,13 +25,13 @@ const LoginSocialFollow = () => {
 // onClick={goToSignInWithFacebook}
     return (
       <div className={styles.socialContainer}>
-        <a href="https://github.com/nology-tech/dada"
+        <span
         className={styles.facebookSocial}>
             <FontAwesomeIcon  icon={faFacebook} size="3x" />
-        </a>
-        <a href="https://github.com/nology-tech/dada" onClick={goToSignInWithGoogle} className={styles.twitterSocial}>
+        </span>
+        <span onClick={goToSignInWithGoogle} className={styles.twitterSocial}>
             <FontAwesomeIcon icon={faGoogle} size="3x" />
-        </a>
+        </span>
       </div>
     );
   }
