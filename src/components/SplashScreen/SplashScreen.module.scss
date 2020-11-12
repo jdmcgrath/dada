@@ -173,6 +173,7 @@ h2 {
     width: 186px;
     height: 45px;
   }
+  
   ul{ 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -182,6 +183,7 @@ h2 {
     .svgTextLi{
       display: grid;
       grid-template-rows: 3fr 1fr;
+      justify-content: center;
       
       img{
         grid-row-start: 1;

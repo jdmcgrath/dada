@@ -37,13 +37,9 @@ const LandingPage = () => {
           alt="device"
         ></img>
         <img
-         
           src={AllDevices}
-        
-           className={styles.phoneForTablet}
-        
-           alt="device showing app"
-       
+          className={styles.phoneForTablet}
+          alt="device showing app"
         />
         <div className={styles.textUndePhoneCont}>
           <h3 className={styles.textUnderPhone}>
@@ -86,10 +82,16 @@ const LandingPage = () => {
             </p>
             <img src={ReadingPenguin} alt="reading penguin" />
           </li>
+
           <li className={styles.svgTextLi}>
             <img src={LiftingPenguin} alt="weight-lifting penguin" />
             <p>
               <span className={styles.bold}>Longer reads</span> for the
+             
+             
+             
+             
+             
               SuperDads out there
             </p>
           </li>
