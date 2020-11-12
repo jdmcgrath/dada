@@ -10,13 +10,6 @@ import ReadingPenguin from "../../assets/img/Landing/ReadingPenguin.svg";
 import LiftingPenguin from "../../assets/img/Landing/LiftingPenguin.svg";
 
 const LandingPage = () => {
-  // const getClassNames = () => {
-  //   const classes = {[ styles.needsReversing, styles.svgTextLi ]}.join('')
-  //   return classes
-  // // }
-  // useEffect(() => {
-  //   getClassNames()
-  // }, [])
 
   return (
     <div className={styles.noNav}>
