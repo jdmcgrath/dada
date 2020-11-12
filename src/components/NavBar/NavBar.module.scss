@@ -4,15 +4,22 @@
 .navWrapper {
     width: 100%;
     position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
     background-color: transparent;
+    height: 10vh;
     z-index: 100;
 
     .globalNav{ 
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         width: 90%;
+        height: 10vh;
         margin: 0 auto;
-        padding-top: 30px;
 
         .faContainer {
             display: flex;

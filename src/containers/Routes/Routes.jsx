@@ -20,6 +20,7 @@ import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
 import ProfileSignIn from "../../components/ProfileSignIn";
 // import LogIn from "../../components/LogIn";
+import BookInsights from "../../components/BookInfo/BookInsights";
 import { firestore } from "../../firebase";
 
 const Routes = (props) => {  
@@ -48,8 +49,9 @@ const Routes = (props) => {
             <AddChickAge path="add-chick-age/:chickName" user={user} />
             <Aggression path="/categories/sos/aggression" user={user} />
             <ArticleReader path="article-reader" user={user} />
-            <BookInfo path="categories/book-smarts/book-info/:BookId" docs={docs} user={user} />
+            <BookInfo path="categories/book-smarts/book-info/:BookId"  docs={docs} user={user} />
             <BookSmarts path="categories/book-smarts" docs={docs} user={user}/>
+            <BookInsights path="categories/book-smarts/book-info/:BookId/book-insight/:insightID" docs={docs} user={user} />
             <Categories path="categories" user={user} />
             <Rejection path="/categories/sos/rejection" user={user} />
             <Screaming path="/categories/sos/screaming" user={user} />
