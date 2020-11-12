@@ -46,6 +46,8 @@
   font-family: Nunito;
   font-weight: 800;
   font-size: 25px;
+  width: 70%;
+  text-align: center;
 }
 
 .textUndePhoneCont {
@@ -59,7 +61,10 @@
   align-items: center;
   font-weight: 600;
   font-size: 21px;
+  width: 90%;
+  text-align: center;
   color: $deepPurple;
+  margin: auto;
 }
 .forDad {
   margin: 5%;
@@ -79,6 +84,7 @@
   width: 82%;
   text-align: center;
   margin: 5%;
+  font-size: 14px;
 }
 .secondaryBtn {
   margin: 25px;
@@ -136,4 +142,25 @@ h2 {
   font-weight: 500;
   font-size: 18px;
   padding: 12px;
+}
+
+
+@media screen and (min-width: 768px) {
+  .slogan {
+    font-size: 30px;
+    width: 100%;
+  }
+
+  .textUnderPhone {
+    font-size: 23px;
+    width: 70%;
+  }
+
+  .forDad {
+    font-size: 20px;
+  }
+
+  .textFathers{
+    font-size: 18px;
+  }
 }

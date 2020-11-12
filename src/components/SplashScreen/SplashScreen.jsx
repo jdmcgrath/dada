@@ -20,16 +20,15 @@ const LandingPage = () => {
 
       <div className={styles.pageCont}>
         <div className={styles.sloganCont}>
-          <h1 className={styles.slogan}>A parenting coach in</h1>
-          <h1 className={styles.slogan}>your pocket</h1>
+          <h1 className={styles.slogan}>A parenting coach in your pocket</h1>
         </div>
         <img src={DeviceMockup} alt="device"></img>
 
         <div className={styles.textUndePhoneCont}>
           <h3 className={styles.textUnderPhone}>
-            Most parenting resources are
+            Most parenting resources are built with moms in mind.
+          
           </h3>
-          <h3 className={styles.textUnderPhone}>built with moms in mind.</h3>
         </div>
         <h3 className={styles.forDad}>We've created one for you, Dad!</h3>
         <p className={styles.textFathers}>
