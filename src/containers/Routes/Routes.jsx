@@ -19,7 +19,7 @@ import Welcome from "../../components/Welcome";
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
 import ProfileSignIn from "../../components/ProfileSignIn";
-import Favorites from "../../components/Favorites";
+// import Favorites from "../../components/Favorites";
 // import LogIn from "../../components/LogIn";
 import BookInsights from "../../components/BookInfo/BookInsights";
 import { firestore } from "../../firebase";
