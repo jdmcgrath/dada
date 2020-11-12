@@ -6,14 +6,12 @@ const BookInfo = (props) => {
     
     const [currentBook, setCurrentBook] = useState(0);
     
-    
+
     useEffect(() => {
         console.log(props.BookId);
         setCurrentBook(props.BookId)
     }, [props.BookId])
 
-    console.log(props.docs[currentBook].Title);
-    
 
     return (
         <>
@@ -46,8 +44,8 @@ const BookInfo = (props) => {
             </section>
             <section className={styles.keyInsights}>
                 <h3>Key Insights</h3>
-                 <div className={styles.keyInsightCard}>
-                    {props.docs.map((doc)=>{
+                <div className={styles.keyInsightCard}>
+                    {props.docs[currentBook].KeyInsights.map((doc)=>{
                         return <BookInsightCard  doc={doc} currentBook={currentBook}/>
                     })}
                 </div> 

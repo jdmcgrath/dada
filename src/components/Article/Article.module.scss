@@ -2,10 +2,15 @@
 
 .artContainer {
   border-bottom: 1px solid #979797;
+  
+  display: flex;
+  justify-content: space-between;
+
   .artGrid {
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 50px 50px;
+
     .artTitle {
       display: flex;
       grid-column-start: 2;
@@ -31,6 +36,17 @@
         justify-self: left;
         align-self: center;
     }
+
+    
+  }
+
+  .artBookmark {
+    color: orange;
+    height: 24px;
+    transform: scale(1,1.3);
+    justify-self: end;
+    margin-top: 64px;
+
   }
 }
 
