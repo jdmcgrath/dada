@@ -3,6 +3,7 @@ import styles from './BookSmartCard.module.scss';
 import { Link } from '@reach/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleUp } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -36,11 +37,13 @@ const BookSmartCard = (props) => {
                     {/* <span onClick={reduceCount} className={styles.voteIcon}><FontAwesomeIcon icon={faArrowCircleDown} /></span> */}
                 </div> 
             </div> 
-            <Link to={`book-info/${BookId}`} doc={props.doc}>
+
+            <Link to={`book-info/${BookId}`} doc={props.doc} className={styles.bookSmartImageContainer}>
             <div className={styles.bookSmartImage}>
                 <img src={Img} alt="book-cover" />
             </div>  
             </Link>
+            <span className={styles.rightChevron}><FontAwesomeIcon icon={faChevronRight} /></span>
         </section>
     
     )
