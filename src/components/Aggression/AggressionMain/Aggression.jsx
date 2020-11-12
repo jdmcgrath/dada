@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import styles from "./Agression.module.scss";
-import AgressionForNow from "../AgressionForNow";
-import AgressionForNextTime from "../AgressionForNextTime";
+import styles from "./Aggression.module.scss";
+import AggressionForNow from "../AggressionForNow";
+import AggressionForNextTime from "../AggressionForNextTime";
 import BottomNavBar from "../../BottomNavBar";
 
-const Agression = () => {
+const Aggression = () => {
   const [toggleList, setToggleList] = useState(true);
 
   const showClickedList = toggleList ? (
-    <AgressionForNow setToggleList={setToggleList} />
+    <AggressionForNow setToggleList={setToggleList} />
   ) : (
-    <AgressionForNextTime />
+    <AggressionForNextTime />
   );
-
+ 
   const showButtons = toggleList ? (
     <>
       <button
@@ -66,4 +66,5 @@ const Agression = () => {
 //how to format: 
 // enclose each button in a js {}
 
-export default Agression;
+export default Aggression;
+

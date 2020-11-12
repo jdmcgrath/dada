@@ -9,7 +9,7 @@ import AddChick from "../../components/AddChick";
 import SOS from "../../components/SOS";
 import SplashScreen from "../../components/SplashScreen";
 import Tantrums from "../../components/Tantrums";
-import Aggression from "../../components/Aggression/AgressionMain";
+import Aggression from "../../components/Aggression/AggressionMain";
 import Screaming from "../../components/Screaming/ScreamingMain";
 import Whining from "../../components/Whining/WhiningMain";
 import SleepIssues from "../../components/Sleep/SleepMain";
