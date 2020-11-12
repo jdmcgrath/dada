@@ -13,15 +13,20 @@ import QuestionIcon from '../../assets/img/SideBarIcons/Question.svg';
 const SideBar = (props) => {
 
     const toggleSideBar = props.openSideBar ? styles.popOut : "";
+
+    const checkUserSignedIn = (props) => {
+        (user) ? null : 
+        (<div className={styles.buttonContainer}>
+            <Link to="/sign-up">
+            <button className={styles.signUpBtn}>Sign Up</button>
+            </Link>
+            <button className={styles.loginBtn}>Login</button>
+        </div>)
+    }
    
     return (
         <section className={`${styles.sideBarContainer} ${toggleSideBar}`}>
-            <div className={styles.buttonContainer}>
-                <Link to="/sign-up">
-                <button className={styles.signUpBtn}>Sign Up</button>
-                </Link>
-                <button className={styles.loginBtn}>Login</button>
-            </div>
+            {checkUserSignedIn}
             <main className={styles.appPathLinks}>
                 <div className={styles.appPathItems}>
                     <Link to="/profile-sign-in">
