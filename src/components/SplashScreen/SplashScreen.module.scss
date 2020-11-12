@@ -231,3 +231,36 @@ h2 {
     margin-top: 5%;
   }
 }
+
+
+@media screen and (min-width: 1080px) {
+  .gridForDesktop{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+
+    .rightGridForDesktop{
+      grid-column-start: 2;
+      grid-row-start: 1;
+      
+      .phoneForTablet{
+        width: 520px;
+      }
+    }
+    .leftGridForDesktop{
+      grid-column-start: 1;
+      grid-row-start: 1
+    }
+  }
+
+  ul{ 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    .svgTextLi{ 
+      img{
+        width: 170px;
+      }
+      p {
+        height: 100px;
+      }
+    }
+  }
+}
