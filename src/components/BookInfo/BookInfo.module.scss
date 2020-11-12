@@ -7,14 +7,17 @@
     h1{
         color:#394167;
         font-size:1.0em;
-        
+        width:95%;
+        height:70%;
     }
 }
 
 .pageContainer {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     width: 90%;
+    height: 100vh;
     margin-top: 40px;
 
     .bookOverview {

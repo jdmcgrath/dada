@@ -47,6 +47,15 @@
       padding: 20px 0 20px 0;
     }
   }
+  .secondaryBtn {
+    width: 186px;
+    height: 45px;
+    outline: none;
+    background-color: $deepPurple;
+    margin-top: 7.3vh;
+    color: white;
+    font-size: 16px;
+  }
 }
 
 .secondaryBtn {
@@ -57,4 +66,24 @@
   margin-top: 7.3vh;
   color: white;
   font-size: 16px;
+}
+
+@media only screen and (min-width: 400px) {
+  .pageContainer {
+    width: 70vw;
+    
+  }
+  
+}
+
+@media only screen and (min-width: 600px) {
+.pageContainer {
+  width: 60vw;
+}
+}
+
+@media only screen and (min-width: 769px) {
+  .pageContainer {
+    width: 455px;
+  }
 }
