@@ -8,7 +8,6 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 const BookSmartCard = (props) => {
   const [count, setCount] = useState(0);
 
-  console.log(props);
 
   const { BookId, Title, Author, publishDate, Img } = props.doc;
 
@@ -30,7 +29,6 @@ const BookSmartCard = (props) => {
             <FontAwesomeIcon icon={faArrowCircleUp} />
           </span>
           <h5 className={styles.voteCounter}>{count}</h5>
-          {/* <span onClick={reduceCount} className={styles.voteIcon}><FontAwesomeIcon icon={faArrowCircleDown} /></span> */}
         </div>
       </div>
 
