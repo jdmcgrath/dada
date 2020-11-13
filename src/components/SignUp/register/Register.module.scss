@@ -91,9 +91,10 @@
   
 }
 
-@media only screen and (min-width: 780px) {
+@media only screen and (min-width: 768px) {
   .formContainer {
   width: 500px;
+  padding-top: 15vh;
 }
 
 }

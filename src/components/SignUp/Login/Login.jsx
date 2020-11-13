@@ -1,10 +1,10 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import styles from "./Login.module.scss"
 import { navigate } from '@reach/router'
 import LoginSocialFollow from './LoginSocialFollow';
 import firebase from "../../../firebase"
 
-export const Login = () => {
+export const Login = (props) => {
   const passwordRef = useRef()
   const emailRef = useRef()
 
@@ -15,16 +15,32 @@ export const Login = () => {
       await firebase
         .auth()
         .signInWithEmailAndPassword(emailRef.current.value, passwordRef.current.value)
-      navigate("/categories")
     }
     catch (error) {
       alert(error)
     }
   }
+
+  const getUser = () => {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        navigate("/categories");
+      } else {
+        console.log('else')
+        return
+      }
+    });
+  };
+
   const handleSignUpPage = (e) => {
     e.preventDefault();
     navigate('/sign-up')
   }
+
+  useEffect(() => {
+    console.log("user running")
+    getUser();   
+  }, [])
 
   return (
     <form className={styles.formContainer} onSubmit={handleLogin}>
