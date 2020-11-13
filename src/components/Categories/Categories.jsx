@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Categories.module.scss";
 import { cardsArr } from "../../data/cardData";
 import { Link } from "@reach/router";
-import AltBottomNavBar from "../AltBottomNavBar";
+import BottomNavBar from "../BottomNavBar";
 const Categories = () => {
   return (
     <>
@@ -28,7 +28,7 @@ const Categories = () => {
           })}
         </div>
       </main>
-      <AltBottomNavBar />
+      <BottomNavBar />
     </>
   );
 };
