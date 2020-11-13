@@ -16,7 +16,8 @@
     .primaryBtn,
     .secondaryBtn {
       margin-top: 0;
-      width: 164px;
+      width: 45vw;
+      margin: 0 5px;
       height: 45px;
       font-size: 16px;
       font-weight: 700;
@@ -59,7 +60,8 @@
     .btnContainer {
       .primaryBtn,
       .secondaryBtn {
-        width: 335px;
+        width: 45vw;
+        margin: 0 5px;
       }
     }
     .filterTagsContainer{
@@ -76,7 +78,8 @@
     .btnContainer {
       .primaryBtn,
       .secondaryBtn {
-        width: 450px;
+        width: 45vw;
+        margin: 0 5px;
       }
     }
   }
