@@ -7,7 +7,7 @@ import SideBar from "../SideBar";
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { navigate } from '@reach/router';
 
-const NavBar = () => {
+const NavBar = (props) => {
     const [openSideBar, setOpenSideBar] = useState(false);
 
     const handleBackButton = () => {
@@ -19,7 +19,7 @@ const NavBar = () => {
 
     }
     const searchAlert = () => {
-        alert('Still in progress')
+        alert('Searchbar functionality to be added in a future update')
     }
     return (
         <>
@@ -36,7 +36,7 @@ const NavBar = () => {
                             className={styles.ellipses}
 
                         />
-                        <SideBar openSideBar={openSideBar} />
+                        <SideBar openSideBar={openSideBar} user={props.user} />
                     </div>
                 </nav>
             </header>
