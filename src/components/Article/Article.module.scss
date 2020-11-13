@@ -7,7 +7,7 @@
 
   .artGrid {
     display: grid;
-    grid-template-columns: 80px 240px;
+    grid-template-columns: 70px 68vw;
     grid-template-rows: 50px 50px;
     
 
@@ -57,7 +57,7 @@
 @media only screen and (min-width: 768px) {
   .artContainer {
     .artGrid {
-      grid-template-columns: 100px 480px;
+      grid-template-columns: 100px 70vw;
 
       .artImage {
         width: 76px;
@@ -80,7 +80,7 @@
 
     .artContainer {
       .artGrid {
-        grid-template-columns: 100px 700px;
+        grid-template-columns: 100px 70vw;
 
       }
     }
