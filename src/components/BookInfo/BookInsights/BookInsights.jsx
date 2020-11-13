@@ -28,24 +28,30 @@ console.log(props.docs[currentBook].KeyInsights[currentInsight].insightTitle);
     }
   
     return (
-        <>
+      <>
         <header className={styles.smHeader}>
-            <h1>{props.docs[currentBook].KeyInsights[currentInsight].insightTitle}</h1>
+          <h1>
+            {props.docs[currentBook].KeyInsights[currentInsight].insightTitle}
+          </h1>
         </header>
         <div className={styles.pageContainer}>
-            <p>{props.docs[currentBook].KeyInsights[currentInsight].insightRead}</p>
-            <div className={styles.btnContainer}>
+          <p className={styles.paragraph}>
+            {props.docs[currentBook].KeyInsights[currentInsight].insightRead}
+          </p>
+          <div className={styles.btnContainer}>
             <Link to={`../../book-insight/${count}`}>
-                <button className={styles.secondaryBtn} onClick={nextInsight}>Next Highlight</button>
-                </Link>
-                <Link to={`../../../${currentBook}`}>
-                <button className={styles.secondaryBtn} >Book Info</button>
-                </Link>
-            </div>
-            <BottomNavBar />
+              <button className={styles.secondaryBtn} onClick={nextInsight}>
+                Next Highlight
+              </button>
+            </Link>
+            <Link to={`../../../${currentBook}`}>
+              <button className={styles.secondaryBtn}>Book Info</button>
+            </Link>
+          </div>
+          <BottomNavBar />
         </div>
-        </>
-    )
+      </>
+    );
 }
 
 export default BookInsights;

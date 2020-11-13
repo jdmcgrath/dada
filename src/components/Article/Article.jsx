@@ -101,14 +101,14 @@ const Article = (props) => {
     
       <div className={styles.artGrid}>  
         <img className={styles.artImage} src= {image} alt=""/>
-        <Link to={`article-reader/${artID}`} doc={props.doc}>
+        <Link to={`../../categories/activity-ideas/article-reader/${artID}`} doc={props.doc}>
         <h3 className={styles.artTitle}>{title}</h3>
         </Link>
         <p className={styles.artReadTime}>Read  Time: {readTime}</p>
         
       </div>
       <span onClick={toggleFav}>{displayBookmarkJSX()}</span>
-      <Link to={`article-reader/${artID}`} doc={props.doc}>
+      <Link to={`../../categories/activity-ideas/article-reader/${artID}`} doc={props.doc}>
       <span><FontAwesomeIcon icon={faChevronRight} className={styles.rightChevron}/></span>
       </Link>
 
