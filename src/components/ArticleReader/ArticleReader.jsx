@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import styles from "./ArticleReader.module.scss";
 import BottomNavBar from "../BottomNavBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookmark } from '@fortawesome/free-solid-svg-icons';
+import { faBookmark as faSolidBookmark } from '@fortawesome/free-solid-svg-icons';
+import { faBookmark as faOpenBookmark } from '@fortawesome/free-regular-svg-icons';
 import { firestore } from "../../firebase";
+import { navigate } from '@reach/router';
 
 
 const ArticleReader = (props) => {
@@ -11,9 +13,25 @@ const ArticleReader = (props) => {
   const [longerContent, setLongerContent] = useState([]);
   const [docs, setDocs] = useState([]);
   const [article, setArticle] = useState({});
+  const [isFavourited, setIsFavourited] = useState(false);
+  
+  const artID = props.artID;
+  const user = props.user;
+  const collectionName = "activityIdeas";
+
+  const checkFavourites = async () => {
+    if (user) {
+      const docRef = await firestore.collection(collectionName).doc(`${user.uid}${artID}`);
+      docRef.get().then((doc) => {
+        if (doc.exists) {
+          setIsFavourited(true);
+        }
+      });
+    }
+  }
 
   const getArticle = async () => {
-    await firestore.collection("activityIdeas").get().then((response) => {
+    await firestore.collection(collectionName).get().then((response) => {
       const documents = response.docs.map(d => d.data())
       setDocs(documents)
 
@@ -23,6 +41,8 @@ const ArticleReader = (props) => {
   useEffect(() => {
     getArticle();
   }, [])
+
+
 
   useEffect(() => {
     let filteredArticles = docs.filter(a => a.uID == null);
@@ -37,6 +57,70 @@ const ArticleReader = (props) => {
     }
   },[article,longerContent])
 
+  useEffect(() => {
+    checkFavourites();
+     // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isFavourited])
+
+  const toggleFav = async (e) => {
+    e.stopPropagation();
+
+    if (isFavourited) {
+      // remove from users favourites by deleting the document
+      const unFavouritedDocRef = await firestore.collection(collectionName).doc(`${user.uid}${artID}`);
+      unFavouritedDocRef.get().then((uFDoc) => {
+        if (uFDoc.exists) {
+          // delete doc from collection
+          firestore.collection(collectionName).doc(`${user.uid}${artID}`).delete().then(() => {
+            setIsFavourited(!isFavourited);
+          });
+        }
+      });
+
+    } else {
+      // check if user is logged in - if not, take them to sign-up
+      if (!user) {
+        navigate("/sign-up");
+      } else {
+
+        const {authorImage,authorName,body,image,keywords,publishDate,readTime,title} = longerContent;
+
+        //add to users favourites by creating copy of the document
+        const favouritedDocRef = await firestore.collection(collectionName).doc(`${artID}`);
+        favouritedDocRef.get().then((fDoc) => {
+          if (fDoc.exists) {
+            firestore.collection(collectionName).doc(`${user.uid}${artID}`).set({
+              artID,
+              authorImage,
+              authorName,
+              body,
+              image,
+              keywords,
+              publishDate,
+              readTime,
+              title,
+              uID: user.uid
+            })
+            setIsFavourited(!isFavourited);
+          }
+
+        });
+      }
+
+    }
+  }
+
+
+
+  const displayBookmarkJSX = () => {
+    if (isFavourited) {
+      return <FontAwesomeIcon icon={faSolidBookmark} className={styles.artBookmark} />
+    } else {
+      return <FontAwesomeIcon icon={faOpenBookmark} className={styles.artBookmark} />
+    }
+  }
+
+
 
   return (
     <>
@@ -50,7 +134,7 @@ const ArticleReader = (props) => {
         <section className={styles.readerContent}>
           <div className={styles.headingContainer}>
             <h2>{longerContent.title}</h2>
-            <FontAwesomeIcon icon={faBookmark} className={styles.bookmark} />
+            <span onClick={toggleFav}>{displayBookmarkJSX()}</span>
           </div>
           <section className={styles.authorSection}>
             <img
@@ -60,7 +144,7 @@ const ArticleReader = (props) => {
             />
             <div className={styles.byLine}>
               <p className={styles.authorName}>
-                {longerContent.authorName} | {longerContent.readTime}
+                {longerContent.authorName} | {longerContent.publishDate}
               </p>
               <p className={styles.date}>
                 {longerContent.date}
