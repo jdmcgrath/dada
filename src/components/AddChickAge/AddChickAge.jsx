@@ -9,19 +9,20 @@ import BottomNavBar from '../BottomNavBar/BottomNavBar';
 
 const AddChickAge = (props) => {
   const [currentName, setCurrentName] = useState("");
-  const [ chickAge, setChickAge ] = useState(0);
+  const [chickAge, setChickAge ] = useState(0);
   const [gender, setGender] = useState();
   
   const {chickName, toggleGender} = props;
-  console.log(toggleGender);
 
-  // const [gender, setGender] = useState(false);
   useEffect(() => {
     setCurrentName(chickName);
-    setGender(toggleGender);
-}, [chickName, toggleGender])
+}, [chickName])
 
- 
+useEffect(() => {
+  if(gender !==null || undefined){
+    setGender(toggleGender);
+  }
+},[gender, toggleGender ])
 
 
 
@@ -34,23 +35,20 @@ const AddChickAge = (props) => {
       setChickAge(chickAge => chickAge - 1);
     } 
   }
- const handleNextPageSplash = () => {
-   navigate("/categories")
- }
-//  const chickGender = toggleGender === true ? BoyChick : GirlChick;
-//  console.log(chickGender);
- 
+const handleNextPageSplash = () => {
+  navigate("/categories")
+}
+
+
   return (
     <div className={styles.pageContainer}>
-       <header className={styles.header}>
+      <header className={styles.header}>
 
-        {/* girl or boy passed as prop from AddChick */}
         <img src={gender ? BoyChick : GirlChick} alt="Penguin-placeholder-img"/> 
 
       </header>
 
-       {/* name of Chick as prop from AddChick */}
-       <h2>How old is {currentName}?</h2>
+      <h2>How old is {currentName}?</h2>
 
       <div className={styles.ageClicker}>
         <button className={styles.minusButton} onClick={decreaseAge}>-</button>
@@ -58,18 +56,13 @@ const AddChickAge = (props) => {
         <button className={styles.plusButton} onClick={increaseAge}>+</button>
       </div>
 
-      {/* <Link to="./AddChickEnd"> */}
       <button onClick={handleNextPageSplash}type="submit" className={styles.secondaryBtn}>Next</button>
-      {/* </Link> */}
-      {/* <AddChickAge
+
       
-      />  */}
       <BottomNavBar />
     </div>
   );
 };
-
-// chekcing - and +
 
 export default AddChickAge;
 

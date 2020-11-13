@@ -9,14 +9,14 @@ export const RegisteredUserProfile = (props) => {
     const [profileUser, setProfileUser] = useState("");
     const {user} = props;
     console.log(profileUser.displayName);
+    // useEffect(() => {
+    //     setProfileUser(user);
+    // }, []);
     useEffect(() => {
-        setProfileUser(user);
-    }, []);
-    useEffect(() => {
-        if(user !==undefined){
+        if(user !==null || undefined){
             setProfileUser(user);
         }
-      },[user,profileUser])
+    },[user,profileUser])
 
 
 
@@ -34,7 +34,7 @@ return (
                 </div>   
                 
         </section>
-  
+
     </div>
 );
 }
