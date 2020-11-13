@@ -92,10 +92,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .smHeader h1 {
-    margin: 0 0 15px 0;
-    font-size: 23px;
-  }
 
   .pageContainer {
     .bookOverview {
@@ -137,12 +133,5 @@
         font-size: 20px;
       }
     }
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .smHeader h1 {
-    margin: 0 0 2px 0;
-    font-size: 23px;
   }
 }
