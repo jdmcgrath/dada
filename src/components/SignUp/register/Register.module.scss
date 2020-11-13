@@ -2,7 +2,7 @@
 @import '../../../assets/styles/main.scss';
 
 .formContainer {
-  height: 115vh;
+  height: 100vh;
   
   h2 {
     font-weight: 700;
@@ -94,7 +94,6 @@
 @media only screen and (min-width: 768px) {
   .formContainer {
   width: 500px;
-  padding-top: 15vh;
 }
 
 }

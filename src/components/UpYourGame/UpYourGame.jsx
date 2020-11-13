@@ -10,8 +10,8 @@ const UpYourGame = () => {
   const [subDocs, setSubDocs] = useState([]);
   const getUpYourGameMainPage = () => {
     firestore.collection("upYourGameMainPage").get().then((response) => {
-       const documents = response.docs.map(d => d.data());
-       setDocs(documents) 
+      const documents = response.docs.map(d => d.data());
+      setDocs(documents) 
     })
   } 
   useEffect (() => {
@@ -19,8 +19,8 @@ const UpYourGame = () => {
   }, [])
   const getUpYourGameMostDiscussed = () => {
     firestore.collection("upYourGameMostDiscussed").get().then((response) => {
-       const documents = response.docs.map(d => d.data());
-       setSubDocs(documents) 
+      const documents = response.docs.map(d => d.data());
+      setSubDocs(documents) 
     })
   } 
   useEffect (() => {

@@ -3,7 +3,7 @@ import styles from "./BookInsights.module.scss";
 import BottomNavBar from "../../BottomNavBar";
 import { Link } from "@reach/router";
 const BookInsights = (props) => {
-  const [currentBook, setCurrentBook] = useState(0);
+const [currentBook, setCurrentBook] = useState(0);
 
 
     const [currentInsight, setCurrentInsight] = useState(0);

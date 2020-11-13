@@ -4,7 +4,9 @@
 .smHeader {
   background-color: white;
   border-bottom: 10px solid $icyPurple;
+
 }
+
 
 .pageContainer {
   margin-top: 20px;
@@ -47,6 +49,7 @@
   }
 }
 @media only screen and (min-width: 768px) {
+
   .pageContainer {
     margin-top: 20px;
     .gridContainer {
