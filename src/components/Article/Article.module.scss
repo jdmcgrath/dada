@@ -7,15 +7,18 @@
 
   .artGrid {
     display: grid;
-    grid-template-columns: 80px 240px;
+    grid-template-columns: 70px 68vw;
     grid-template-rows: 50px 50px;
+    
 
     .artTitle {
       display: flex;
       grid-column-start: 2;
       grid-row-start: 1;
-      align-items: flex-end;
+      align-self: center;
+      padding-top: 20px;
       font-size: 14px;
+
     }
     .artReadTime {
       grid-column-start: 2;
@@ -54,13 +57,17 @@
 @media only screen and (min-width: 768px) {
   .artContainer {
     .artGrid {
-      grid-template-columns: 100px 480px;
+      grid-template-columns: 100px 70vw;
 
       .artImage {
         width: 76px;
         height: 76px;
       }
+      .artTitle {
+        font-size: 16px;
+      }
     }
+
   }
   .rightChevron {
     visibility: visible !important;
@@ -73,7 +80,7 @@
 
     .artContainer {
       .artGrid {
-        grid-template-columns: 100px 700px;
+        grid-template-columns: 100px 70vw;
 
       }
     }

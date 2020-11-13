@@ -82,8 +82,9 @@
 }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 768px) {
   .pageContainer {
     width: 455px;
+    padding-top: 5vh;
   }
 }
