@@ -2,6 +2,7 @@ import React from 'react';
 import styles from "./SideBar.module.scss";
 
 import { Link } from '@reach/router';
+import firebase from '../../firebase';
 
 import BookmarkIcon from '../../assets/img/SideBarIcons/Bookmark.svg';
 import ProfileIcon from '../../assets/img/SideBarIcons/Profile.svg';
@@ -10,32 +11,77 @@ import CogIcon from '../../assets/img/SideBarIcons/Cog.svg';
 import InfoIcon from '../../assets/img/SideBarIcons/Info.svg';
 import QuestionIcon from '../../assets/img/SideBarIcons/Question.svg';
 
+
+
 const SideBar = (props) => {
 
-    const toggleSideBar = props.openSideBar ? styles.popOut : "";
+    const { user, openSideBar } = props;
+
+    const toggleSideBar = openSideBar ? styles.popOut : "";
+
+    const signOutUser = firebase.auth().signOut();
+
+    const displaySignInLogIn = user ? (null) : 
+    (
+        <div className={styles.buttonContainer}>
+            <Link to="/sign-up">
+            <button className={styles.signUpBtn}>Sign Up</button>
+            </Link>
+            <button className={styles.loginBtn}>Login</button>
+        </div>
+    );
+
+    const displayLogOut = user ? 
+    (
+        <footer className={styles.sideBarFooter} onClick={signOutUser}>
+            <img src={DoorIcon} alt="logout-icon" />
+            <p>Logout</p>
+        </footer>
+    ) : (
+        (null)
+    );
+
+    const favouritesRedirect = user ? 
+    (
+        <Link to="/favourites">
+            <div className={styles.pathItems}>
+                <img src={BookmarkIcon} alt="sidebar-icons"/>
+                <p>Favourites</p>
+            </div>
+        </Link>
+    ) : (
+        <Link to="/profile-sign-in">
+            <div className={styles.pathItems}>
+                <img src={BookmarkIcon} alt="sidebar-icons"/>
+                <p>Favourites</p>
+            </div>
+        </Link>
+    );
+
+    const profileRedirect = user ?
+    (
+        <Link to="/registereduserprofile">
+            <div className={styles.pathItems}>
+                <img src={ProfileIcon} alt="sidebar-icons"/>
+                <p>Profile</p>
+            </div>
+        </Link>
+    ) : (
+        <Link to="/profile-sign-in">
+            <div className={styles.pathItems}>
+                <img src={ProfileIcon} alt="sidebar-icons"/>
+                <p>Profile</p>
+            </div>
+        </Link>
+    );
    
     return (
         <section className={`${styles.sideBarContainer} ${toggleSideBar}`}>
-            <div className={styles.buttonContainer}>
-                <Link to="/sign-up">
-                <button className={styles.signUpBtn}>Sign Up</button>
-                </Link>
-                <button className={styles.loginBtn}>Login</button>
-            </div>
+            {displaySignInLogIn}
             <main className={styles.appPathLinks}>
                 <div className={styles.appPathItems}>
-                    <Link to="/profile-sign-in">
-                    <div className={styles.pathItems}>
-                        <img src={BookmarkIcon} alt="sidebar-icons"/>
-                        <p>Favourites</p>
-                    </div>
-                    </Link>
-                    <Link to="/profile-sign-in">
-                    <div className={styles.pathItems}>
-                        <img src={ProfileIcon} alt="sidebar-icons"/>
-                        <p>Profile</p>
-                    </div>
-                    </Link>
+                    {favouritesRedirect}
+                    {profileRedirect}
                 </div>
                 <div className={styles.appInfoItems}>
                     <div className={styles.infoItems}>
@@ -52,10 +98,7 @@ const SideBar = (props) => {
                     </div>
                 </div>
             </main>
-            <footer className={styles.sideBarFooter}>
-                <img src={DoorIcon} alt="logout-icon" />
-                <p>Logout</p>
-            </footer>
+            {displayLogOut}
         </section>
     )
 }
