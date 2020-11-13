@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./ProfileSignIn.module.scss";
 import PenguinIcon from "../../assets/img/ProfileSignIn/Penguin.svg";
 import BottomNavBar from "../BottomNavBar";
+import { Link } from "@reach/router";
 
 const ProfileSignIn = () => {
   return (
@@ -15,8 +16,12 @@ const ProfileSignIn = () => {
         </div>
         <p className={styles.pageCTA}>Let's sign you up!</p>
         <div className={styles.btnContainer}>
+          <Link to="/sign-up">
           <button className={styles.primaryBtn}>Sign Up</button>
+          </Link>
+          <Link to="/login-page">
           <button className={styles.secondaryBtn}>Login</button>
+          </Link>
         </div>
         <BottomNavBar />
       </div>

@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./Categories.module.scss";
 import { cardsArr } from "../../data/cardData";
 import { Link } from "@reach/router";
-import AltBottomNavBar from "../AltBottomNavBar";
-const Categories = (props) => {
+import BottomNavBar from "../BottomNavBar";
 
+const Categories = () => {
   return (
     <>
       <header className={styles.smHeader}>
@@ -28,7 +28,7 @@ const Categories = (props) => {
           })}
         </div>
       </main>
-      <AltBottomNavBar />
+      <BottomNavBar />
     </>
   );
 };

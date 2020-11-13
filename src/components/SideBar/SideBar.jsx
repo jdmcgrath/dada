@@ -32,7 +32,9 @@ const SideBar = (props) => {
             <Link to="/sign-up">
             <button className={styles.signUpBtn}>Sign Up</button>
             </Link>
+            <Link to="/login-page">
             <button className={styles.loginBtn}>Login</button>
+            </Link>
         </div>
     );
 
