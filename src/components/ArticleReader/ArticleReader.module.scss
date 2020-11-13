@@ -4,13 +4,6 @@
 .smHeader {
   background-color: $lightBlue;
   color: white;
-
-  h1 {
-    font-family: IBM Plex, Nunito;
-    justify-content: center;
-    align-items: center;
-  }
-
 }
 
 .readerContent {
@@ -24,7 +17,7 @@
       padding-bottom: 1rem;
     }
 
-    .bookmark {
+    .artBookmark {
       font-size: 2rem;
       color: $orange;
     }

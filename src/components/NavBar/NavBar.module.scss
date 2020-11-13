@@ -2,61 +2,48 @@
 @import "../../assets/styles/main.scss";
 
 .navWrapper {
-    width: 100%;
-    position: absolute;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  background-color: transparent;
+  height: 10vh;
+  z-index: 100;
+
+  .globalNav {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    top: 0;
-    background-color: transparent;
+    width: 90%;
     height: 10vh;
-    z-index: 100;
+    margin: 0 auto;
 
-    .globalNav{ 
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 90%;
-        height: 10vh;
-        margin: 0 auto;
+    .faContainer {
+      display: flex;
+      justify-content: space-between;
 
-        .faContainer {
-            display: flex;
-            justify-content: space-between;
+      .backButton {
+        font-size: 1.4rem;
+        color: $deepPurple;
+      }
 
-            .backButton { 
-                font-size: 1.4rem;
-                color: $deepPurple;
-            }
+      .search {
+        font-size: 1.4rem;
+        color: $deepPurple;
+      }
 
-            .search {
-                font-size: 1.4rem;
-                color: $deepPurple;
-                // margin-right: 1vw;
-            }
+      .ellipses {
+        font-size: 1.4rem;
+        color: $deepPurple;
+        margin-left: 5vw;
 
-            .ellipses { 
-                font-size: 1.4rem;
-                color: $deepPurple;
-                margin-left: 5vw;
-                // margin-left: 30vw;
-        
-                &:hover {
-                    cursor: pointer;
-                }
-            }
+        &:hover {
+          cursor: pointer;
         }
+      }
     }
+  }
 }
-    
-    
-// .pageTitle {
-//     display: flex;
-//     align-items: center;
-//     font-size: 1.4rem;
-//     color: black;
- // } 
-
-
-//add padding to navbar
