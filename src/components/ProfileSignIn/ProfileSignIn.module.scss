@@ -2,10 +2,6 @@
 @import "../../assets/styles/main.scss";
 .smHeader {
   box-shadow: none;
-
-  h2 {
-    font-size: 1.4rem;
-  }
 }
 .pageContainer {
   display: flex;
@@ -62,12 +58,12 @@
 @media screen and (min-width: 768px) {
   .pageContainer {
     .imgContainer {
-        width: 190px
+      width: 190px;
     }
     .pageCTA {
-        font-size: 22px;
-      }
-    
+      font-size: 22px;
+    }
+
     .btnContainer {
       .primaryBtn,
       .secondaryBtn {

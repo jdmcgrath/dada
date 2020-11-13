@@ -2,16 +2,21 @@
 @import "../../../assets/styles/main.scss";
 
 .smHeader {
-    box-shadow:0px 2px 2.62px rgba(0, 0, 0, 0.23);
-    border-bottom: 10px solid #A0EBE7;
+  box-shadow: 0px 2px 2.62px rgba(0, 0, 0, 0.23);
+  border-bottom: 10px solid #a0ebe7;
 }
 
 .pageContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
-    margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 85vh;
+  margin: 20px auto 0 auto;
+  padding-bottom: 0px;
+  
+  .paragraph {
+    font-size: 14px;
+  }
 
     .btnContainer {
         .secondaryBtn {
@@ -20,4 +25,40 @@
             margin-bottom: 10px;
         }
     }
+}
+
+@media only screen and (min-width: 768px) {
+  
+  .pageContainer {
+    height: 85vh;
+    margin: 20px auto 0 auto;
+    padding-bottom: 0px;
+
+    .paragraph {
+      font-size: 28px;
+    }
+  }
+  
+  .btnContainer {
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    .secondaryBtn {
+      font-size: 18px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .pageContainer {
+    margin: 20px auto 0 auto;
+    padding-bottom: 0px;
+  }
+
+  .btnContainer {
+    padding-bottom: 10px;
+    .secondaryBtn {
+      font-size: 18px;
+    }
+  }
 }
