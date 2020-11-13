@@ -23,6 +23,7 @@ import ProfileSignIn from "../../components/ProfileSignIn";
 import BookInsights from "../../components/BookInfo/BookInsights";
 import Favorites from "../../components/Favorites";
 import { firestore } from "../../firebase";
+import RegisteredUserProfile from "../../components/RegisteredUserProfile";
 
 const Routes = (props) => {
 
