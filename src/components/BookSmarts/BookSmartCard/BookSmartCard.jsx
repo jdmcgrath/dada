@@ -31,7 +31,6 @@ const BookSmartCard = (props) => {
                 <div className={styles.bookSmartVotes}>
                     <span onClick={changeCount} className={styles.voteIcon}><FontAwesomeIcon icon={faArrowCircleUp} /></span>
                     <h5 className={styles.voteCounter}>{count}</h5>
-                    {/* <span onClick={reduceCount} className={styles.voteIcon}><FontAwesomeIcon icon={faArrowCircleDown} /></span> */}
                 </div> 
             </div> 
             <Link to={`book-info/${BookId}`} doc={props.doc}>
