@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './BookInsights.module.scss';
-import { Link, navigate } from "@reach/router";
+import { Link } from "@reach/router";
 const BookInsights = (props) => {
 
     const [currentBook, setCurrentBook] = useState(0);
@@ -17,7 +17,6 @@ const BookInsights = (props) => {
     }, [props.insightID]);
 
     const nextInsight = () =>{ 
-        
         if ( count < props.docs[currentBook].KeyInsights.length -1 ){
             return setCount(count + 1);
         } else {
@@ -37,10 +36,10 @@ const BookInsights = (props) => {
             {/* <h2>{props.docs[currentBook].KeyInsights[currentInsight].insightTitle}</h2> */}
             <p>{props.docs[currentBook].KeyInsights[currentInsight].insightRead}</p>
             <div className={styles.btnContainer}>
-            <Link to={"../../" + `book-insight/${count}`}>
+            <Link to={`../../book-insight/${count}`}>
                 <button className={styles.secondaryBtn} onClick={nextInsight}>Next Highlight</button>
                 </Link>
-                <Link to={"../../../"+`${currentBook}`}>
+                <Link to={`../../../${currentBook}`}>
                 <button className={styles.secondaryBtn} >Book Info</button>
                 </Link>
             </div>
