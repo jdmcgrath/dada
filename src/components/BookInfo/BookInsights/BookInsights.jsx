@@ -23,9 +23,6 @@ const BookInsights = (props) => {
             return (count)
         }
     }
-    useEffect(()=>{
-        nextInsight();
-    },[])
   
     return (
         <>
