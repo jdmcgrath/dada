@@ -4,34 +4,59 @@
 .navWrapper {
     width: 100%;
     position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
     background-color: transparent;
-    top: 5%;
+    height: 10vh;
+    z-index: 100;
 
     .globalNav{ 
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
-        // gap: 70vw;
-        width: 90%;
-        margin: 0 auto;
-    }
-    
-    .backButton{ 
-        font-size: 1.6rem;
-        color: grey;
-    }
-    
-    .ellipses{ 
-        font-size: 1.6rem;
-        color: grey;
-        margin-left: 30vw;
-    } 
-    
-    .pageTitle {
-        display: flex;
         align-items: center;
-        font-size: 1.4rem;
-        color: black;
-    } 
+        width: 90%;
+        height: 10vh;
+        margin: 0 auto;
+
+        .faContainer {
+            display: flex;
+            justify-content: space-between;
+
+            .backButton { 
+                font-size: 1.4rem;
+                color: $deepPurple;
+            }
+
+            .search {
+                font-size: 1.4rem;
+                color: $deepPurple;
+                // margin-right: 1vw;
+            }
+
+            .ellipses { 
+                font-size: 1.4rem;
+                color: $deepPurple;
+                margin-left: 5vw;
+                // margin-left: 30vw;
+        
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }
+    
+    
+// .pageTitle {
+//     display: flex;
+//     align-items: center;
+//     font-size: 1.4rem;
+//     color: black;
+ // } 
+
 
 //add padding to navbar

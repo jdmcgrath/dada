@@ -1,63 +1,89 @@
 @import "../../assets/styles/main.scss";
-
+@import "../../assets/styles/components/buttons";
 
 .pageContainer {
+  align-items: center;
+  height: 100vh;
+  .header {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
-    .header {
+    justify-content: center;
+    padding-top: 15vh;
+    font-size: 21px;
+    font-weight: 700;
+  }
+  .inputContainer {
+    justify-content: center;
+    padding-bottom: 7vh;
+  }
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    .girlChickBtn,
+    .boyChickBtn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: rgba(75, 191, 232, 0.2);
+      margin: 18px;
+      padding: 20px 20px 0px 20px;
+      border: none;
+      border-radius: 6px;
+      color: $black;
+      outline-color: #4bbfe8;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      span {
+        margin: auto;
         justify-content: center;
-        padding-top: 15vh;
-    
+        font-size: 15px;
+        padding: 0 0 10px 0;
+      }
     }
-    .inputContainer{
-        justify-content: center;
-        padding-bottom: 10vh;
+    .girlChickBtn img {
+      padding-bottom: 20px;
     }
-    .imageContainer{
-        display: flex;
-        justify-content: center;
-       
-
-        .girlImageContainer{
-            border-radius: 5px;
-
-            position: relative;
-            padding: 5% 5% 10% 5%;
-            background-color: rgba(75, 191, 232, 0.2);
-            margin: 4vw 4vw 0vw 4vw;
-        }
-        .boyImageContainer{
-            border-radius: 5px;
-
-            position: relative;
-            padding: 10% 5% 10% 5%;
-            background-color: rgba(75, 191, 232, 0.2);
-            margin: 4vw 4vw 0vw 4vw;
-        }
-        p{
-            position: absolute;
-            bottom: 0;
-            margin-top: 5vh;
-            margin-left: 6.5vw;
-            padding-top: 5vh;
-            padding-bottom: 0.5vh;
-
-            font-size: 15px;
-            color: $black;
-
-        }
-        
+    .boyChickBtn img {
+      padding: 20px 0 20px 0;
     }
-    button{
-        margin-top: 15vh;
-        width: 50%;
-        color: $offWhite;
-    }
+  }
+  .secondaryBtn {
+    width: 186px;
+    height: 45px;
+    outline: none;
+    background-color: $deepPurple;
+    margin-top: 7.3vh;
+    color: white;
+    font-size: 16px;
+  }
 }
 
+.secondaryBtn {
+  width: 186px;
+  height: 45px;
+  outline: none;
+  background-color: $deepPurple;
+  margin-top: 7.3vh;
+  color: white;
+  font-size: 16px;
+}
 
+@media only screen and (min-width: 400px) {
+  .pageContainer {
+    width: 70vw;
+    
+  }
+  
+}
 
+@media only screen and (min-width: 600px) {
+.pageContainer {
+  width: 60vw;
+}
+}
+
+@media only screen and (min-width: 769px) {
+  .pageContainer {
+    width: 455px;
+  }
+}

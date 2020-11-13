@@ -1,33 +1,34 @@
 import React from 'react'
 import styles from "./SocialFollow.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import firebase, { provider } from "../../../../firebase"
+import firebase, { provider, providertwo } from "../../../../firebase"
 import {
     faFacebook,
     faGoogle
   } 
   from "@fortawesome/free-brands-svg-icons";
+import { navigate } from '@reach/router';
 
 
 const SocialFollow = () => {
 
-  const goToSignInWithGoogle = () => {
-    firebase.auth().signInWithRedirect(provider)
+  const goToSignInWithGoogle = async() => {
+   await firebase.auth().signInWithRedirect(provider)
+    navigate("/welcome")
   }
 
-  // const goToSignInWithFacebook = () => {
-  //   firebase.auth().signInWithCredential(Face)
-  // }
-// onClick={goToSignInWithFacebook}
+  const goToSignInWithFacebook = () => {
+    firebase.auth().signInWithRedirect(providertwo)
+  }
+  
     return (
       <div className={styles.socialContainer}>
-        <a href="https://github.com/nology-tech/dada"
-        className={styles.facebookSocial}>
+        <span onClick={goToSignInWithFacebook} className={styles.facebookSocial}>
             <FontAwesomeIcon  icon={faFacebook} size="3x" />
-        </a>
-        <a href="https://github.com/nology-tech/dada" onClick={goToSignInWithGoogle} className={styles.twitterSocial}>
+        </span>
+        <span onClick={goToSignInWithGoogle} className={styles.twitterSocial}>
             <FontAwesomeIcon icon={faGoogle} size="3x" />
-        </a>
+        </span>
       </div>
     );
   }

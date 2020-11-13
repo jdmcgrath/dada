@@ -2,28 +2,34 @@
 @import '../../../assets/styles/main.scss';
 
 .formContainer {
-  height: 100vh;
+  height: 115vh;
   
   h2 {
-    font-weight: 200;
+    font-weight: 700;
     text-align: center;
     padding-top: 13vh;
     font-size: 25px;
   }
   
-  button {
+  .signUpBtn {
     width: 90%;
     margin: 0 auto;
     margin-top: 20px;
     text-align: center;
-    color: $offWhite;
+    color: white;
+    background-color: $deepPurple;
     height: 47px;
-    border: none;
+    box-shadow: none;
     transition: 0.2s;
     cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    font-family: 'IBM Plex Sans', sans-serif;
 
     &:hover{
-      background: $turquoise;
+      background: $lightBlue;
       color: $offWhite;
     }
   }
@@ -42,12 +48,13 @@
     align-items: center;
     margin: 0 auto;
     width: 90%;
-    height: 50px;
+    height: 70px;
 
     input {
       margin-right: 5px;
       height: 10px;
       border-radius: 30px;
+      margin-right: 10px;
     }
   }
 
@@ -70,6 +77,28 @@
   }
 }
   
+@media only screen and (min-width: 426px) {
+  .formContainer {
+    width: 65vw;
+  }
+  
+}
+
+@media only screen and (min-width: 720px) {
+  .formContainer {
+    width: 55vw;
+  }
+  
+}
+
+@media only screen and (min-width: 780px) {
+  .formContainer {
+  width: 500px;
+}
+
+}
+
+
 //     .content {
 //       display: flex;
 //       flex-direction: column;

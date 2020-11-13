@@ -1,21 +1,20 @@
-import React, { useState} from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./ActivityIdeas.module.scss";
 import VideoList from "../VideoList";
 import ArticleList from "../ArticleList";
 
 import BottomNavBar from "../../components/BottomNavBar";
-const ActivityIdeas = () => {
+const ActivityIdeas = (props) => {
 
   const [filterChosen, setFilterChosen] = useState("");
-
   const [toggleList, setToggleList] = useState(true);
 
-    
+  const user = props.user;
+
+
   const showClickedList = toggleList ?
-  
-    // <VideoList videos={videos} filterChosen={filterChosen} /> :
-    <VideoList filterChosen={filterChosen} /> :
-    <ArticleList filterChosen={filterChosen} />
+    <VideoList filterChosen={filterChosen} user={user} /> :
+    <ArticleList filterChosen={filterChosen} user={user} />
 
   const showButtons = toggleList ?
     <>
@@ -51,15 +50,26 @@ const ActivityIdeas = () => {
     <li><span className={styles.filterOn} onClick={() => setFilterChosen("strength")}>STRENGTH</span></li>
     : <li><span onClick={() => setFilterChosen("strength")}>STRENGTH</span></li>
 
+  const showFilterCreativity = filterChosen === "creativity" ?
+    <li><span className={styles.filterOn} onClick={() => setFilterChosen("creativity")}>CREATIVITY</span></li>
+    : <li><span onClick={() => setFilterChosen("creativity")}>CREATIVITY</span></li>
+
+  const showFilterLogic = filterChosen === "logic" ?
+    <li><span className={styles.filterOn} onClick={() => setFilterChosen("logic")}>LOGIC</span></li>
+    : <li><span onClick={() => setFilterChosen("logic")}>LOGIC</span></li>
+
+
+  useEffect(() => {
+
+  }, [filterChosen]);
+
   return (
     <>
       <div className={styles.smHeader}>
-        <h2>Activity Ideas</h2>
+        <h1>Activity Ideas</h1>
       </div>
       <div className={styles.pageContainer}>
-        <div className={styles.btnContainer}>
-          {showButtons}
-        </div>
+        <div className={styles.btnContainer}>{showButtons}</div>
         <div className={styles.filterTagsContainer}>
           <ul className={styles.filterTags}>
             {showFilterAll}
@@ -67,13 +77,12 @@ const ActivityIdeas = () => {
             {showFilterOutdoor}
             {showFilterSocialSkills}
             {showFilterLanguage}
-            {showFilterStrength}           
+            {showFilterStrength}
+            {showFilterCreativity}
+            {showFilterLogic}
           </ul>
         </div>
-        <div >
-          {showClickedList}
-        </div>
-
+        <div>{showClickedList}</div>
       </div>
       <BottomNavBar />
     </>

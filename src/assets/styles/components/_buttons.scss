@@ -6,14 +6,17 @@
     width: 141px;
     border-radius: 5px;
     border: none;
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 .primaryBtn {
-    color: $offWhite;
-    background-color: #394167;
+    color: $deepPurple;
+    background-color: transparent;
+    border: 1.5px solid $deepPurple;
+    outline: none;
 }
 
 .secondaryBtn {
-    background-color: #189FB6;
+    color: white;
+    outline: none;
+    background-color: $deepPurple;
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Router } from "@reach/router";
 import Categories from "../../components/Categories";
 import SignUp from "../../components/SignUp/register";
@@ -8,40 +8,69 @@ import BookInfo from "../../components/BookInfo";
 import AddChick from "../../components/AddChick";
 import SOS from "../../components/SOS";
 import SplashScreen from "../../components/SplashScreen";
-import Tantrums from "../../components/Tantrums"
+import Tantrums from "../../components/Tantrums";
+import Aggression from "../../components/Aggression/AggressionMain";
+import Screaming from "../../components/Screaming/ScreamingMain";
+import Whining from "../../components/Whining/WhiningMain";
+import SleepIssues from "../../components/Sleep/SleepMain";
+import Rejection from "../../components/Rejection/RejectionMain";
 import ArticleReader from "../../components/ArticleReader";
 import Welcome from "../../components/Welcome";
-// import SideBar from "../../components/SideBar";
+import Login from "../../components/SignUp/Login"
 import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
-import PrivateRoutes from "../../containers/Routes/PrivateRoutes"
+import ProfileSignIn from "../../components/ProfileSignIn";
+import BookInsights from "../../components/BookInfo/BookInsights";
+import Favorites from "../../components/Favorites";
+import { firestore } from "../../firebase";
 
-const Routes = () => {  
-    return(
+const Routes = (props) => {
+
+    const user = props.user;
+
+    const [docs, setDocs] = useState([]);
+
+    useEffect(() => {
+        const getBookSmarts = () => {
+            firestore
+                .collection("booksmarts")
+                .get()
+                .then((response) => {
+                    const documents = response.docs.map((d) => d.data());
+                    setDocs(documents);
+                });
+        };
+
+        getBookSmarts();
+    }, []);
+
+    return (
         <Router>
-
-            <Categories path="categories" />
-            <SignUp path="sign-up" />
-            <AddChick path="add-chick" />
-
-            <PrivateRoutes path="/">
-                <ActivityIdeas path="categories/activity-ideas" />
-            </PrivateRoutes>
-
-            <AddChickAge path="add-chick-age" />
-
-            <Tantrums path="/categories/sos/tantrums" />
-            <ArticleReader path="article-reader" />
-            <BookSmarts path="categories/book-smarts" />
-            <BookInfo path="categories/book-smarts/book-info" />
-            <SOS path="categories/sos"/>
-            <SplashScreen path="/" />
-            <Welcome path="welcome" />
-            <UpYourGame path ="/categories/up-your-game" />
+            <ActivityIdeas path="categories/activity-ideas" user={user} />
+            <AddChick path="add-chick" user={user} />
+            <AddChickAge path="add-chick-age/:chickName" user={user} />
+            <Aggression path="/categories/sos/aggression" user={user} />
+            <ArticleReader path="categories/activity-ideas/article-reader/:artID" user={user} />
+            <BookInfo path="categories/book-smarts/book-info/:BookId" docs={docs} user={user} />
+            <BookInsights path="categories/book-smarts/book-info/:BookId/book-insight/:insightID" docs={docs} user={user} />
+            <BookSmarts path="categories/book-smarts" docs={docs} user={user} />
+            <Categories path="categories" user={user} />
+            <Favorites path="favorites" user={user} />
+            <Login path="login-page" user={user} />
+            <Rejection path="/categories/sos/rejection" user={user} />
+            <Screaming path="/categories/sos/screaming" user={user} />
+            <SignUp path="sign-up" user={user} />
+            <SleepIssues path="/categories/sos/sleep" user={user} />
+            <SOS path="categories/sos" user={user} />
+            <SplashScreen path="/" user={user} />
+            <Tantrums path="/categories/sos/tantrums" user={user} />
+            <Welcome path="welcome" user={user} />
+            <Whining path="/categories/sos/whining" user={user} />
+            <UpYourGame path="/categories/up-your-game" user={user} />
+            <ProfileSignIn path="/profile-sign-in" />
+            <Favorites path="favourites" user={user} />
         </Router>
     )
 };
-//using net ninja method, use the sign up for to make a firebase user 
-//wait for sam, use what he gives us to allow us to sign up with facebook 
-//check if logging in with different accounts accesses the same firebase user, if not, make in if statement to prohibiting them from accdesing the sign up page
+
 export default Routes;
