@@ -1,32 +1,18 @@
-.lgHeader {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    color: #FFF;
-    height: 20vh;
-    width: 100%;  
-    padding: 0 15%;
-    h1{
-        position: absolute;
-        top: 5%;
-
-    }
-    box-shadow: 0px 2px 2.62px rgba(0, 0, 0, 0.23);
-}
-
 .smHeader {
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
     height: 10vh;
     width: 100%;
     padding: 0 15%;
     padding-bottom: 12px;
+    z-index: 2000;
     h1{
-        position: absolute;
-        top: 5%;
+        margin: auto 0;
+        padding: 0;
+        display: flex;
+        height: 10vh;
+        align-items: center;
         font-size: 18px;
+        z-index: 1000;
     }
     box-shadow: 0px 2px 2.62px rgba(0, 0, 0, 0.23);
 }
