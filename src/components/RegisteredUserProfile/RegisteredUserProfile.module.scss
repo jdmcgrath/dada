@@ -1,19 +1,18 @@
-// @import '../../assets/styles/abstracts/variables';
-// @import '../../assets/styles/main.scss';
+
 
 
 .formContainer {
 margin-top: 10vh;
 height: 40vh;
 
-h2 {
+    h2 {
     font-weight: 700;
     text-align: center;
     font-size: 25px;
     margin-bottom: 5vh;
-}
+    }
 
-div{
+    div{
     padding: none;
     display: flex;
     flex-direction: row;
@@ -43,22 +42,22 @@ div{
 }
 
 @media only screen and (min-width: 426px) {
-.formContainer {
+    .formContainer {
     width: 65vw;
 }
 
 }
 
 @media only screen and (min-width: 720px) {
-.formContainer {
+    .formContainer {
     width: 55vw;
 }
 
 }
 
 @media only screen and (min-width: 780px) {
-.formContainer {
-width: 500px;
+    .formContainer {
+    width: 500px;
 }
 
 }

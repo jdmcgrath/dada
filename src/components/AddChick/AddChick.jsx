@@ -11,8 +11,6 @@ const AddChick = () => {
   const [chickName, setChickName] = useState("");
   const nameInput = (e) => setChickName(e.target.value);
 
-  // console.log(chickName);
-  // console.log(toggleGender);
 
   return (
     <div className={styles.pageContainer}>
