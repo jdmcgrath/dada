@@ -108,7 +108,7 @@ const Article = (props) => {
         
       </div>
       <span onClick={toggleFav}>{displayBookmarkJSX()}</span>
-      <Link to={`../../categories/article-reader/${artID}`} doc={props.doc}>
+      <Link to={`../../categories/activity-ideas/article-reader/${artID}`} doc={props.doc}>
       <span><FontAwesomeIcon icon={faChevronRight} className={styles.rightChevron}/></span>
       </Link>
 
