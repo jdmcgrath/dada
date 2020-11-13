@@ -4,7 +4,6 @@ import { cardsArr } from "../../data/cardData";
 import { Link } from "@reach/router";
 import AltBottomNavBar from "../AltBottomNavBar";
 const Categories = (props) => {
-  const {user} = props
 
   return (
     <>

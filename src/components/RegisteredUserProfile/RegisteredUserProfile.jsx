@@ -1,17 +1,13 @@
 import React, {useEffect, useState} from 'react'
 import styles from "./RegisteredUserProfile.module.scss";
 import pen from "../../assets/img/pen.svg";
-import BoyChick from "../../assets/img/AddChick/BoyChick.svg"
 
 
 
 export const RegisteredUserProfile = (props) => {
     const [profileUser, setProfileUser] = useState("");
     const {user} = props;
-    console.log(profileUser.displayName);
-    // useEffect(() => {
-    //     setProfileUser(user);
-    // }, []);
+
     useEffect(() => {
         if(user !==null || undefined){
             setProfileUser(user);
