@@ -40,6 +40,7 @@ const BookInsights = (props) => {
                 <button className={styles.secondaryBtn} >Book Info</button>
                 </Link>
             </div>
+            <BottomNavBar />
         </div>
         </>
     )
