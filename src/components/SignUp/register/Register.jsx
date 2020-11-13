@@ -4,7 +4,7 @@ import { navigate } from '@reach/router'
 import SocialFollow from './SocialFollow';
 import firebase from "../../../firebase"
 
-export const Register = (props) => {
+export const Register = () => {
   const passwordRef = useRef()
   const emailRef = useRef()
 
@@ -29,6 +29,7 @@ export const Register = (props) => {
   const getUser = () => {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
+        console.log(user)
         navigate("/welcome");
       } else {
         return
@@ -38,7 +39,7 @@ export const Register = (props) => {
 
   useEffect(() => {
     getUser();
-  })
+  }, [])
   
   return (
     <form className={styles.formContainer} onSubmit={handleSignUp}>
