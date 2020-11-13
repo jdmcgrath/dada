@@ -23,6 +23,7 @@ import ProfileSignIn from "../../components/ProfileSignIn";
 import BookInsights from "../../components/BookInfo/BookInsights";
 import Favorites from "../../components/Favorites";
 import { firestore } from "../../firebase";
+import RegisteredUserProfile from "../../components/RegisteredUserProfile";
 
 const Routes = (props) => {
 
@@ -48,7 +49,7 @@ const Routes = (props) => {
         <Router>
             <ActivityIdeas path="categories/activity-ideas" user={user} />
             <AddChick path="add-chick" user={user} />
-            <AddChickAge path="add-chick-age/:chickName" user={user} />
+            <AddChickAge path="add-chick-age/:chickName/:toggleGender" user={user} />
             <Aggression path="/categories/sos/aggression" user={user} />
             <ArticleReader path="categories/activity-ideas/article-reader/:artID" user={user} />
             <BookInfo path="categories/book-smarts/book-info/:BookId" docs={docs} user={user} />
@@ -58,6 +59,7 @@ const Routes = (props) => {
             <Favorites path="favorites" user={user} />
             <Login path="login-page" user={user} handleUser={props.handleUser}/>
             <Rejection path="/categories/sos/rejection" user={user} />
+            <RegisteredUserProfile path ="/registereduserprofile" user={user} />
             <Screaming path="/categories/sos/screaming" user={user} />
             <SignUp path="sign-up" user={user} />
             <SleepIssues path="/categories/sos/sleep" user={user} />

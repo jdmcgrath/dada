@@ -3,12 +3,12 @@ import styles from "./Categories.module.scss";
 import { cardsArr } from "../../data/cardData";
 import { Link } from "@reach/router";
 import AltBottomNavBar from "../AltBottomNavBar";
-const Categories = () => {
+const Categories = (props) => {
+
   return (
     <>
       <header className={styles.smHeader}>
         <h1>What are you looking for?</h1>
-        {/* <img src={Binoculars} alt="binoculars-img"></img> */}
       </header>
       <main className={styles.pageContainer}>
         <div className={styles.gridContainer}>

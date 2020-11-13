@@ -4,7 +4,6 @@
 .smHeader {
   box-shadow: none;
 }
-
 .pageContainer {
   .gridContainer {
     .card {
@@ -64,6 +63,7 @@
   }
 }
 @media only screen and (min-width: 768px) {
+
   .pageContainer {
     .gridContainer {
       display: grid;

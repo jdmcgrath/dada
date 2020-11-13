@@ -3,7 +3,7 @@ import styles from "./BookInsights.module.scss";
 import BottomNavBar from "../../BottomNavBar";
 import { Link } from "@reach/router";
 const BookInsights = (props) => {
-  const [currentBook, setCurrentBook] = useState(0);
+const [currentBook, setCurrentBook] = useState(0);
 
 
     const [currentInsight, setCurrentInsight] = useState(0);
@@ -16,6 +16,8 @@ const BookInsights = (props) => {
     useEffect(() => {
         setCurrentInsight(props.insightID);
     }, [props.insightID]);
+
+console.log(props.docs[currentBook].KeyInsights[currentInsight].insightTitle);
 
     const nextInsight = () =>{ 
         if ( count < props.docs[currentBook].KeyInsights.length -1 ){
