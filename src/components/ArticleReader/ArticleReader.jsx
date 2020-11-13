@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark as faSolidBookmark } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark as faOpenBookmark } from '@fortawesome/free-regular-svg-icons';
 import { firestore } from "../../firebase";
-import { navigate, Link } from '@reach/router';
+import { navigate } from '@reach/router';
 
 
 const ArticleReader = (props) => {
