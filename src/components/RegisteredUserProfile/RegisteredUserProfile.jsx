@@ -12,6 +12,11 @@ export const RegisteredUserProfile = (props) => {
     useEffect(() => {
         setProfileUser(user);
     }, []);
+    useEffect(() => {
+        if(user !==undefined){
+            setProfileUser(user);
+        }
+      },[user,profileUser])
 
 
 

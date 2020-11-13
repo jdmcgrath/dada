@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import styles from './BookInsights.module.scss';
+import React, { useState, useEffect } from "react";
+import styles from "./BookInsights.module.scss";
+import BottomNavBar from "../../BottomNavBar";
 import { Link } from "@reach/router";
 const BookInsights = (props) => {
+const [currentBook, setCurrentBook] = useState(0);
 
-    const [currentBook, setCurrentBook] = useState(0);
 
     const [currentInsight, setCurrentInsight] = useState(0);
     const [count, setCount] = useState(0);
@@ -32,7 +33,6 @@ console.log(props.docs[currentBook].KeyInsights[currentInsight].insightTitle);
             <h1>{props.docs[currentBook].KeyInsights[currentInsight].insightTitle}</h1>
         </header>
         <div className={styles.pageContainer}>
-            {/* <h2>{props.docs[currentBook].KeyInsights[currentInsight].insightTitle}</h2> */}
             <p>{props.docs[currentBook].KeyInsights[currentInsight].insightRead}</p>
             <div className={styles.btnContainer}>
             <Link to={`../../book-insight/${count}`}>
@@ -42,6 +42,7 @@ console.log(props.docs[currentBook].KeyInsights[currentInsight].insightTitle);
                 <button className={styles.secondaryBtn} >Book Info</button>
                 </Link>
             </div>
+            <BottomNavBar />
         </div>
         </>
     )
