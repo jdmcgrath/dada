@@ -9,11 +9,26 @@
 }
 
 .pageContainer {
-    height: 90vh;
     width: 100%;
     margin: auto;
     padding-top: 0px;
     margin-bottom: 120px;
 }
 
+@media only screen and (width: 768px) {
 
+  .smHeader h1 {
+    margin-bottom: 15px;
+    margin-left: 0px;
+    font-size: 23px;
+  }
+}
+
+@media only screen and (width: 1024px) {
+
+  .smHeader h1 {
+    margin-bottom: 3px;
+    margin-left: 0px;
+    font-size: 23px;
+  }
+}

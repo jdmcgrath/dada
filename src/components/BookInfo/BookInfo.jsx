@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styles from './BookInfo.module.scss';
 import BookInsightCard from './BookInsightCard';
+import BottomNavBar from "../BottomNavBar";
+
 const BookInfo = (props) => {
     
     const [currentBook, setCurrentBook] = useState(0);
@@ -49,6 +51,7 @@ const BookInfo = (props) => {
                 </div> 
             </section>
         </div>
+        <BottomNavBar />
         </>
     )
 }
