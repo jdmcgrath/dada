@@ -3,7 +3,10 @@ import styles from "./Categories.module.scss";
 import { cardsArr } from "../../data/cardData";
 import { Link } from "@reach/router";
 import AltBottomNavBar from "../AltBottomNavBar";
-const Categories = () => {
+const Categories = (props) => {
+  const {user} = props
+console.log(user);
+
   return (
     <>
       <header className={styles.smHeader}>

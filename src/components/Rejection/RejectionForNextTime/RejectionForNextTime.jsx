@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./RejectionForNextTime.module.scss";
-import Binoculars from "../../../assets/img/Binoculars.svg";
+import TacklingTransition from "../../../assets/img/TacklingTransition.svg";
+import IWantMom from "../../../assets/img/IWantMom.svg";
 
 const RejectionForNextTime = () => {
   return (
@@ -48,7 +49,7 @@ const RejectionForNextTime = () => {
       <h3 className={styles.upYourGameTitle}>Up Your Game</h3>
       <div className={styles.flexContainer}>
         <div className={styles.flexItem}>
-          <img src={Binoculars} alt="NOT FINAL" />
+          <img src={TacklingTransition} alt="NOT FINAL" />
           <span className={styles.bold}>Tackling Transitions</span>
           <p className={styles.smallText}>Read time: 3 min</p>
           <p className={styles.smallText}>
@@ -58,7 +59,7 @@ const RejectionForNextTime = () => {
           </p>
         </div>
         <div className={styles.flexItem}>
-          <img src={Binoculars} alt="NOT FINAL" />
+          <img src={IWantMom} alt="NOT FINAL" />
           <span className={styles.bold}>"I Want Mom!"</span>
           <p className={styles.smallText}>Read time: 4 min</p>
           <p className={styles.smallText}>Don't worry, it's not personal</p>
