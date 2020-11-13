@@ -54,14 +54,6 @@
 
 // tablet view
 @media only screen and (min-width: 768px) {
-  .smHeader {
-    border-bottom: 15px solid $sunnyYellow; 
-    padding-left: 75px;
-    h1 {
-      padding-bottom: 25px;
-     
-    }
-  }
 
   .pageContainer {
     .btnContainer {
@@ -70,20 +62,16 @@
         width: 335px;
       }
     }
+    .filterTagsContainer{
+      .filterTags{
+               justify-content: space-evenly;
+      }
+    }
   }
 }
 
 // landscape tablet view
 @media only screen and (min-width: 1024px) {
-  .smHeader {
-    padding-left: 100px;
-    padding-top: 75px;
-    h1 {
-      padding-bottom: 25px;
-     
-    }
-  }
-
   .pageContainer {
     .btnContainer {
       .primaryBtn,
