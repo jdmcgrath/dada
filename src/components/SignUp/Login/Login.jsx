@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import styles from "./Login.module.scss"
 import { navigate } from '@reach/router'
 import LoginSocialFollow from './LoginSocialFollow';
@@ -25,6 +25,19 @@ export const Login = () => {
     e.preventDefault();
     navigate('/sign-up')
   }
+  const getUser = () => {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        navigate("/categories");
+      } else {
+        return
+      }
+    });
+  };
+
+  useEffect(() => {
+    getUser();
+  })
 
   return (
     <form className={styles.formContainer} onSubmit={handleLogin}>
