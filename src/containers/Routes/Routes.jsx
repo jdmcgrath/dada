@@ -21,52 +21,54 @@ import AddChickAge from "../../components/AddChickAge";
 import UpYourGame from "../../components/UpYourGame";
 import ProfileSignIn from "../../components/ProfileSignIn";
 import BookInsights from "../../components/BookInfo/BookInsights";
+import Favorites from "../../components/Favorites";
 import { firestore } from "../../firebase";
 
 const Routes = (props) => {
 
+    const user = props.user;
 
-  const user = props.user;
+    const [docs, setDocs] = useState([]);
 
-  const [docs, setDocs] = useState([]);
+    useEffect(() => {
+        const getBookSmarts = () => {
+            firestore
+                .collection("booksmarts")
+                .get()
+                .then((response) => {
+                    const documents = response.docs.map((d) => d.data());
+                    setDocs(documents);
+                });
+        };
 
-  useEffect(() => {
-    const getBookSmarts = () => {
-      firestore
-        .collection("booksmarts")
-        .get()
-        .then((response) => {
-          const documents = response.docs.map((d) => d.data());
-          setDocs(documents);
-        });
-    };
+        getBookSmarts();
+    }, []);
 
-    getBookSmarts();      
-  }, []);
-    
-    return(
+    return (
         <Router>
             <ActivityIdeas path="categories/activity-ideas" user={user} />
             <AddChick path="add-chick" user={user} />
             <AddChickAge path="add-chick-age/:chickName" user={user} />
             <Aggression path="/categories/sos/aggression" user={user} />
-            <ArticleReader path="article-reader" user={user} />
-            <BookInfo path="categories/book-smarts/book-info/:BookId"  docs={docs} user={user} />
-            <BookSmarts path="categories/book-smarts" docs={docs} user={user}/>
+            <ArticleReader path="categories/activity-ideas/article-reader/:artID" user={user} />
+            <BookInfo path="categories/book-smarts/book-info/:BookId" docs={docs} user={user} />
             <BookInsights path="categories/book-smarts/book-info/:BookId/book-insight/:insightID" docs={docs} user={user} />
+            <BookSmarts path="categories/book-smarts" docs={docs} user={user} />
             <Categories path="categories" user={user} />
+            <Favorites path="favorites" user={user} />
             <Login path="login-page" user={user} />
             <Rejection path="/categories/sos/rejection" user={user} />
             <Screaming path="/categories/sos/screaming" user={user} />
             <SignUp path="sign-up" user={user} />
             <SleepIssues path="/categories/sos/sleep" user={user} />
             <SOS path="categories/sos" user={user} />
-            <SplashScreen path="/" user={user}/>
+            <SplashScreen path="/" user={user} />
             <Tantrums path="/categories/sos/tantrums" user={user} />
             <Welcome path="welcome" user={user} />
             <Whining path="/categories/sos/whining" user={user} />
-            <UpYourGame path ="/categories/up-your-game" user={user} />
+            <UpYourGame path="/categories/up-your-game" user={user} />
             <ProfileSignIn path="/profile-sign-in" />
+            <Favorites path="favourites" user={user} />
         </Router>
     )
 };
