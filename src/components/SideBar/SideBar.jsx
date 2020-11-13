@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./SideBar.module.scss";
 
-import { Link } from '@reach/router';
+import { Link, navigate } from '@reach/router';
 import firebase from '../../firebase';
 
 import BookmarkIcon from '../../assets/img/SideBarIcons/Bookmark.svg';
@@ -19,8 +19,13 @@ const SideBar = (props) => {
 
     const toggleSideBar = openSideBar ? styles.popOut : "";
 
-    const signOutUser = firebase.auth().signOut();
-
+    const signOutUser = () => {
+        firebase.auth().signOut().then(function () {
+          navigate('../../login-page')
+        }).catch(function (error) {
+          alert("Unfortunaly we were unable to sign you out please try again")
+        });
+      }
     const displaySignInLogIn = user ? (null) : 
     (
         <div className={styles.buttonContainer}>
@@ -34,6 +39,7 @@ const SideBar = (props) => {
     const displayLogOut = user ? 
     (
         <footer className={styles.sideBarFooter} onClick={signOutUser}>
+        
             <img src={DoorIcon} alt="logout-icon" />
             <p>Logout</p>
         </footer>
@@ -43,10 +49,10 @@ const SideBar = (props) => {
 
     const favouritesRedirect = user ? 
     (
-        <Link to="/favourites">
+        <Link to="/favorites">
             <div className={styles.pathItems}>
                 <img src={BookmarkIcon} alt="sidebar-icons"/>
-                <p>Favourites</p>
+                <p>Favorites</p>
             </div>
         </Link>
     ) : (

@@ -21,26 +21,26 @@ export const Login = (props) => {
     }
   }
 
-  const getUser = () => {
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        navigate("/categories");
-      } else {
-        console.log('else')
-        return
-      }
-    });
-  };
 
   const handleSignUpPage = (e) => {
     e.preventDefault();
     navigate('/sign-up')
   }
 
+
+const getUser = () => {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        navigate("/categories");
+      } else {
+        return
+      }
+    });
+  };
+
   useEffect(() => {
-    console.log("user running")
-    getUser();   
-  }, [])
+    getUser();
+  })
 
   return (
     <form className={styles.formContainer} onSubmit={handleLogin}>

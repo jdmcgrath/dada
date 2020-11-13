@@ -70,7 +70,6 @@ const Routes = (props) => {
             <Whining path="/categories/sos/whining" user={user} />
             <UpYourGame path="/categories/up-your-game" user={user} />
             <ProfileSignIn path="/profile-sign-in" />
-            <Favorites path="favourites" user={user} />
         </Router>
     )
 };
