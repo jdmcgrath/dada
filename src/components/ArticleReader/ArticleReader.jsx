@@ -1,30 +1,56 @@
-import React from "react";
-import longerContent from "../../data/articleReaderDummy";
+import React, { useState, useEffect } from 'react';
 import styles from "./ArticleReader.module.scss";
 import BottomNavBar from "../BottomNavBar";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookmark } from '@fortawesome/free-solid-svg-icons'; 
+import { faBookmark } from '@fortawesome/free-solid-svg-icons';
+import { firestore } from "../../firebase";
 
 
-const ArticleReader = () => {
+const ArticleReader = (props) => {
 
-  longerContent.body = { __html: `${longerContent.body}` };
+  const [longerContent, setLongerContent] = useState([]);
+  const [docs, setDocs] = useState([]);
+  const [article, setArticle] = useState({});
 
-  
-   return (
+  const getArticle = async () => {
+    await firestore.collection("activityIdeas").get().then((response) => {
+      const documents = response.docs.map(d => d.data())
+      setDocs(documents)
+
+    })
+  }
+
+  useEffect(() => {
+    getArticle();
+  }, [])
+
+  useEffect(() => {
+    let filteredArticles = docs.filter(a => a.uID == null);
+    filteredArticles = filteredArticles.filter(a => a.artID === props.artID);   
+    setArticle(filteredArticles);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [docs])
+
+  useEffect(() => {
+    if(article[0]!==undefined){
+      setLongerContent(article[0]);
+    }
+  },[article,longerContent])
+
+
+  return (
     <>
       <header className={styles.smHeader}>
         <h1>Article Reader</h1>
       </header>
 
-      
+
 
       <main className={styles.pageContainer}>
         <section className={styles.readerContent}>
           <div className={styles.headingContainer}>
-          <h2>{longerContent.title}</h2>
-          <FontAwesomeIcon icon={faBookmark} className={styles.bookmark}/>
+            <h2>{longerContent.title}</h2>
+            <FontAwesomeIcon icon={faBookmark} className={styles.bookmark} />
           </div>
           <section className={styles.authorSection}>
             <img
@@ -34,7 +60,7 @@ const ArticleReader = () => {
             />
             <div className={styles.byLine}>
               <p className={styles.authorName}>
-                {longerContent.author} | {longerContent.readTime}
+                {longerContent.authorName} | {longerContent.readTime}
               </p>
               <p className={styles.date}>
                 {longerContent.date}
@@ -42,15 +68,13 @@ const ArticleReader = () => {
             </div>
           </section>
 
-          <div className={styles.mainBody} dangerouslySetInnerHTML={longerContent.body} />
+        <div className={styles.mainBody}>
+         <div dangerouslySetInnerHTML={{__html: longerContent.body}}/>
+         </div>
 
-          </section>
+        </section>
 
-        {/* 1. related articles section - neeeds to map through rekated content and render into grid
-        2. what is related content? where are we getting it from?
-            2.a assuming it will be articles with same keyword */}
-
-          <section className={styles.relatedSection}>
+        {/* <section className={styles.relatedSection}>
             <div className={styles.relatedHeading}>
               <h2>
                 Related Articles
@@ -84,13 +108,16 @@ const ArticleReader = () => {
                 </p>
               </div>
             </div>
-          </section>
+          </section> */}
 
       </main>
 
       <BottomNavBar />
     </>
   )
+
+
+
 }
 
 export default ArticleReader;
