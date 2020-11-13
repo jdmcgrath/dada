@@ -16,7 +16,8 @@
     .primaryBtn,
     .secondaryBtn {
       margin-top: 0;
-      width: 164px;
+      width: 45vw;
+      margin: 0 5px;
       height: 45px;
       font-size: 16px;
       font-weight: 700;
@@ -54,20 +55,18 @@
 
 // tablet view
 @media only screen and (min-width: 768px) {
-  .smHeader {
-    border-bottom: 15px solid $sunnyYellow; 
-    padding-left: 75px;
-    h1 {
-      padding-bottom: 25px;
-     
-    }
-  }
 
   .pageContainer {
     .btnContainer {
       .primaryBtn,
       .secondaryBtn {
-        width: 335px;
+        width: 45vw;
+        margin: 0 5px;
+      }
+    }
+    .filterTagsContainer{
+      .filterTags{
+               justify-content: space-evenly;
       }
     }
   }
@@ -75,20 +74,12 @@
 
 // landscape tablet view
 @media only screen and (min-width: 1024px) {
-  .smHeader {
-    padding-left: 100px;
-    padding-top: 75px;
-    h1 {
-      padding-bottom: 25px;
-     
-    }
-  }
-
   .pageContainer {
     .btnContainer {
       .primaryBtn,
       .secondaryBtn {
-        width: 450px;
+        width: 45vw;
+        margin: 0 5px;
       }
     }
   }

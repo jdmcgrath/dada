@@ -1,13 +1,12 @@
 @import "../../assets/styles/abstracts/variables";
 @import "../../assets/styles/main.scss";
 @import "../../assets//styles/layout/header";
-.smHeader {
-  box-shadow: 0px 2px 2.62px rgba(0, 0, 0, 0.23);
-  border-bottom: 10px solid #a0ebe7;
-  h1 {
-    color: #394167;
-    font-size: 1em;
-  }
+.smHeader{
+    box-shadow:0px 2px 2.62px rgba(0, 0, 0, 0.23);
+    border-bottom: 10px solid #A0EBE7;
+    h1{
+        color:#394167;
+    }
 }
 
 .pageContainer {
@@ -93,10 +92,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .smHeader h1 {
-    margin: 0 0 15px 0;
-    font-size: 23px;
-  }
 
   .pageContainer {
     .bookOverview {
@@ -138,12 +133,5 @@
         font-size: 20px;
       }
     }
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .smHeader h1 {
-    margin: 0 0 2px 0;
-    font-size: 23px;
   }
 }

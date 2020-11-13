@@ -4,9 +4,6 @@
 .smHeader {
   box-shadow: 0px 2px 2.62px rgba(0, 0, 0, 0.23);
   border-bottom: 10px solid #a0ebe7;
-  h1 {
-    font-size: 14px;
-  }
 }
 
 .pageContainer {
@@ -16,7 +13,8 @@
   height: 85vh;
   margin: 20px auto 0 auto;
   padding-bottom: 0px;
-  p {
+  
+  .paragraph {
     font-size: 14px;
   }
 
@@ -29,21 +27,18 @@
     }
 }
 
-@media only screen and (width: 768px) {
-  .smHeader h1 {
-    margin-bottom: 15px;
-    margin-left: 0px;
-    font-size: 23px;
-  }
+@media only screen and (min-width: 768px) {
+  
   .pageContainer {
     height: 85vh;
     margin: 20px auto 0 auto;
     padding-bottom: 0px;
-  }
-  .pageContainer p {
-    font-size: 28px;
-  }
 
+    .paragraph {
+      font-size: 28px;
+    }
+  }
+  
   .btnContainer {
     padding-bottom: 5px;
     margin-bottom: 10px;
@@ -53,20 +48,13 @@
   }
 }
 
-@media only screen and (width: 1024px) {
-  .smHeader h1 {
-    margin-bottom: 3px;
-    margin-left: 0px;
-    font-size: 23px;
-  }
+@media only screen and (min-width: 1024px) {
 
   .pageContainer {
     margin: 20px auto 0 auto;
     padding-bottom: 0px;
   }
-  .pageContainer p {
-    font-size: 28px;
-  }
+
   .btnContainer {
     padding-bottom: 10px;
     .secondaryBtn {
