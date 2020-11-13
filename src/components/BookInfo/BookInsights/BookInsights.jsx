@@ -5,7 +5,6 @@ import { Link } from "@reach/router";
 const BookInsights = (props) => {
   const [currentBook, setCurrentBook] = useState(0);
 
-  const [currentInsight, setCurrentInsight] = useState(0);
 
     const [currentInsight, setCurrentInsight] = useState(0);
     const [count, setCount] = useState(0);
