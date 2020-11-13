@@ -10,8 +10,6 @@ import { faArrowCircleUp } from "@fortawesome/free-solid-svg-icons";
 const BookSmartCard = (props) => {
     const [count, setCount] = useState(0);
 
-    console.log(props)
-
     const { BookId,
             Title, 
             Author,
@@ -33,7 +31,6 @@ const BookSmartCard = (props) => {
                 <div className={styles.bookSmartVotes}>
                     <span onClick={increaseCount} className={styles.voteIcon}><FontAwesomeIcon icon={faArrowCircleUp} /></span>
                     <h5 className={styles.voteCounter}>{count}</h5>
-                    {/* <span onClick={reduceCount} className={styles.voteIcon}><FontAwesomeIcon icon={faArrowCircleDown} /></span> */}
                 </div> 
             </div> 
             <Link to={`book-info/${BookId}`} doc={props.doc}>
