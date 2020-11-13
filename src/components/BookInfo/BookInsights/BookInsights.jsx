@@ -29,25 +29,25 @@ const BookInsights = (props) => {
       <>
         <header className={styles.smHeader}>
           <h1>
-            {props.docs[currentBook].KeyInsights[currentInsight].insightTitle}
+            Book Smarts
           </h1>
         </header>
         <div className={styles.pageContainer}>
-          <p className={styles.paragraph}>
-            {props.docs[currentBook].KeyInsights[currentInsight].insightRead}
-          </p>
+          <div className={styles.pageContent}>
+            <h2>{props.docs[currentBook].KeyInsights[currentInsight].insightTitle}</h2>
+            <p className={styles.paragraph}>
+              {props.docs[currentBook].KeyInsights[currentInsight].insightRead}
+            </p>
+          </div>
           <div className={styles.btnContainer}>
             <Link to={`../../book-insight/${count}`}>
               <button className={styles.secondaryBtn} onClick={nextInsight}>
                 Next Highlight
               </button>
             </Link>
-            <Link to={`../../../${currentBook}`}>
-              <button className={styles.secondaryBtn}>Book Info</button>
-            </Link>
           </div>
-          <BottomNavBar />
         </div>
+        <BottomNavBar />
       </>
     );
 }
