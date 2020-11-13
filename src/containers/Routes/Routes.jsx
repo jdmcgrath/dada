@@ -57,7 +57,7 @@ const Routes = (props) => {
             <BookSmarts path="categories/book-smarts" docs={docs} user={user} />
             <Categories path="categories" user={user} />
             <Favorites path="favorites" user={user} />
-            <Login path="login-page" user={user} />
+            <Login path="login-page" user={user} handleUser={props.handleUser}/>
             <Rejection path="/categories/sos/rejection" user={user} />
             <RegisteredUserProfile path ="/registereduserprofile" user={user} />
             <Screaming path="/categories/sos/screaming" user={user} />
