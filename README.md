@@ -2,18 +2,16 @@
 
 # Dada Parenting Advice
 
-The Dada web app uses the BrewDog API to display a collection of their *finest* drinks. <br />
-A user can search for a particular brew they like via the searchbox, or filter the results to their liking. <br />
-In this project, props were needed to be passed down component trees (prop drilling), and data transmitted around using functions as props (e.g. the search term from the input in the navbar must have the data passed to the cards to display the correct brews. <br /><br />
-I learned a lot about props and their use in Functional React in this project, as well as learning to use an API efficiently to make as few calls as possible through storing data locally (temporarily). <br />
-<br />
-React is great for building scalable development ecosystems, I really enjoy the use of components as it makes the code easier to break down into small chunks, and easier to work on in large groups (by breaking it up). <br />
+Dada is a parenting advice app with dads in mind.
+The Dada web app uses the Firebase and the Cloud Firestore to host and manage the content that the user sees, all easily managed on the backend.
 
 ### Tech
 
 This site uses the following languages, principles & softwares:
 
   - Functional React
+  - Firebase hosting
+  - Cloud Firestore (Firebase NoSQL Database)
   - HTML
   - SCSS / CSS
   - Postman
