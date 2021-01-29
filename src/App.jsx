@@ -6,7 +6,7 @@ import firebase from "./firebase";
 export const App = () => {
 
   // user state to be passed through Routes
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(); 
 
   // check user onmount and if user changes
   const checkForUser = () => {
